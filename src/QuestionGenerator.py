@@ -2,6 +2,9 @@ import random
 import copy
 import collections
 import string
+import uuid
+
+from data.prompts import prompt_0_clean, prompt_1_clean, prompt_2_clean, prompt_3_clean
 
 # generates a random value for variables
 def id_generator(size=6, chars=string.ascii_lowercase): # + string.digits):
@@ -142,6 +145,7 @@ class QuestionGenerator:
 				for i in range(0, 10):
 					var_name = "__var" + str(i) + "__"
 					var_value = id_generator(random.choice(range(1,5)))
+					#var_value = str(uuid.uuid4()).split('-')[0]
 
 					if var_name in new_fact:
 						new_fact = new_fact.replace(var_name, var_value)
@@ -183,7 +187,8 @@ class QuestionGenerator:
 	def get_prompt(self, with_rule = False, with_example = True):
 		
 		final_prompt = []
-		prompt = "As an expert translator from description logics in ontologies to natural language, your job is to transform the chain of explanations for an inference into a compact and simple sentence in natural langage. In descritpion logics, x|isA|Y represent an inheritance relation, while x|property|z represents a relation between two individuals. The explanation should not refer to the individual names, but rather the semantic concepts they represent."
+		#prompt = "As an expert translator from description logics in ontologies to natural language, your job is to transform the chain of explanations for an inference into a compact and simple sentence in natural langage. In descritpion logics, x|isA|Y represent an inheritance relation, while x|property|z represents a relation between two individuals. The explanation should not refer to the individual names, but rather the semantic concepts they represent."
+		prompt = prompt_3_clean
 		user_init_prompt = self.build_cot_elem('user', prompt)
 		final_prompt.append(user_init_prompt)
 
@@ -192,7 +197,7 @@ class QuestionGenerator:
 				question = example.question_
 				rule = example.rule_
 				answer = example.answer_
-	
+
 				if(with_rule):
 					final_prompt.append(self.build_cot_elem("user", question + " " + rule))
 				else:

@@ -3,7 +3,7 @@ import os
 import random
 import copy
 
-class DataHandler:
+class QuestionHandler:
     def __init__(self, folder_path, folder_name):
         self.folder_path_ = folder_path
         self.folder_name_ = folder_name
@@ -80,15 +80,15 @@ class DataHandler:
         with open(path_folder + path_file + '.json', "w") as file:
             file.write(json_object)
 
-    def load_questions(self, path_to_folder, variation_name):
-        res = []
-        path_to_var = path_to_folder + "/" + variation_name + "/"
-        for q in os.listdir(path_to_var):
-            with open(path_to_var + q, 'r') as file:
-                data = json.load(file)
-                res.append(data)
+    # def load_questions(self, path_to_folder, variation_name):
+    #     res = []
+    #     path_to_var = path_to_folder + "/" + variation_name + "/"
+    #     for q in os.listdir(path_to_var):
+    #         with open(path_to_var + q, 'r') as file:
+    #             data = json.load(file)
+    #             res.append(data)
 
-        return res
+    #     return res
     
 class AnswerHandler:
     def __init__(self, folder_path, folder_name):
@@ -148,7 +148,6 @@ class AnswerHandler:
             file.write(json_object)
     
     def write_to_file(self, path_file, saved_answer):
-        print("writing answer to : ", path_file)
         with open(path_file, 'r') as infile:
                 my_data = json.load(infile)
             
@@ -157,12 +156,22 @@ class AnswerHandler:
         with open(path_file, 'w') as outfile:
             json.dump(my_data, outfile, indent = 2)
               
-    def save_answer(self, filename_answer, answer_id, selected_classes, answer):
+    def save_answer(self, filename_answer, answer_id, selected_classes, question, answer):
         saving_path = filename_answer
-        saved_answer = {"id" : answer_id, "selected_classes":  selected_classes, "answer" : answer}
+        saved_answer = {"id" : answer_id, "selected_classes":  selected_classes, "question" : question,"answer" : answer}
         self.write_to_file(saving_path, saved_answer)
    
     def load_answers(self, path_to_folder, variation_name):
+        res = []
+        path_to_var = path_to_folder + "/" + variation_name + "/"
+        for q in os.listdir(path_to_var):
+            with open(path_to_var + q, 'r') as file:
+                data = json.load(file)
+                res.append(data)
+
+        return res
+    
+    def load_questions(self, path_to_folder, variation_name):
         res = []
         path_to_var = path_to_folder + "/" + variation_name + "/"
         for q in os.listdir(path_to_var):
