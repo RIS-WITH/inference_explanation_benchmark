@@ -11,10 +11,11 @@ class OllamaHandler:
 		res_elem["content"] = tokens
 		return res_elem
 
-	def build_question(self, main_question, current_question):
+	def build_question(self, main_question, current_question, with_CoT = True):
 		formatted_question = main_question["init_prompt"]
 		formatted_question.append(self.build_cot_elem("user", current_question))
-		formatted_question.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
+		if(with_CoT == True):
+			formatted_question.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
         
 		return formatted_question
 
