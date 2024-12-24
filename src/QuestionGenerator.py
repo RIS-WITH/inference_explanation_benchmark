@@ -4,7 +4,39 @@ import collections
 import string
 import uuid
 
-from data.prompts import prompt_0_clean, prompt_1_clean, prompt_2_clean, prompt_3_clean
+from data.prompts import prompt_0_clean, prompt_1_clean, prompt_2_clean, prompt_3_clean, prompt_test
+
+class PromptGenerator:
+	def __init__(self, prompt):
+		self.init_prompt_ = prompt
+		self.examples_ = []
+
+	def build_cot_elem(self, role, tokens):
+		res_elem = {}
+		res_elem["role"]= role
+		res_elem["content"] = tokens
+		return res_elem
+
+	def build_prompt(self, with_CoT = True, with_rule = False):
+		final_prompt = []
+		clean_prompt = self.init_prompt_.replace("\n", "").replace("\t", "").replace("      ", "")
+		user_init_prompt = self.build_cot_elem('user', clean_prompt)
+		final_prompt.append(user_init_prompt)
+
+		if(with_CoT == True):
+			for example in self.examples_:
+				question = example.question_
+				rule = example.rule_
+				answer = example.answer_
+
+				if(with_rule):
+					final_prompt.append(self.build_cot_elem("user", question + " " + rule))
+				else:
+					final_prompt.append(self.build_cot_elem("user", question))
+				final_prompt.append(self.build_cot_elem("assistant",  answer))
+		
+		return final_prompt
+    
 
 # generates a random value for variables
 def id_generator(size=6, chars=string.ascii_lowercase): # + string.digits):
@@ -17,7 +49,7 @@ def isInList(input, pattern):
 			return True
 	return False
  
- 
+# contains every generated variation of a question
 class InstantiatedQuestion:
 	""" Stores an instantiated generated question """
 	def __init__(self, fact, explanation, id_question, rule, selected_classes):
@@ -34,6 +66,7 @@ class InstantiatedQuestion:
 		for e in self.explanations_:
 			print("\t", e)
 
+# contains a top level question, and generated variations
 class Question:
 	def __init__(self, init_question, id_question, class_variables, rule):
 		# a ne pas mettre dans le dataset final
@@ -47,13 +80,15 @@ class Question:
 		self.init_prompt_rule_ = None
 
 class QuestionGenerator:
-	def __init__(self):
+	def __init__(self, prompt_generator):
 		self.questions_ = []
 		self.examples_ = []
+		self.prompt_generator_ = prompt_generator
 	
 	def add_example(self, example):
 		self.examples_.append(example)
-     
+		self.prompt_generator_.examples_.append(example)
+    
 	def replace_template(self, old_template, template_dict):
      
 		new_fact = copy.deepcopy(old_template)
@@ -82,13 +117,15 @@ class QuestionGenerator:
 
 		return (instantiated_fact, instantiated_explanations)
 
-	def add_question(self, question):
+	def add_question(self, question, with_CoT = True):
 
 		new_id = "q"+str(len(self.questions_))
 		new_question = Question([question.fact_, question.explanations_, question.rule_], new_id, question.classes_var_, question.rule_)
-  
-		new_question.init_prompt_ = self.get_prompt(False)
-		new_question.init_prompt_rule_ = self.get_prompt(True)
+
+		prompt_with_rule = self.prompt_generator_.build_prompt(with_CoT, True)
+		prompt_without_rule = self.prompt_generator_.build_prompt(with_CoT, False)
+		new_question.init_prompt_ = prompt_without_rule
+		new_question.init_prompt_rule_ = prompt_with_rule
   
 		template_fact, template_explanations = self.generate_template(question.fact_, question.explanations_, question.template_dict_)
 		new_question.template_question_ = [template_fact, template_explanations]
@@ -184,49 +221,23 @@ class QuestionGenerator:
 			for v in selected_question.generated_questions_:
 				v.print_question()
 
-	def get_prompt(self, with_rule = False, with_example = True):
-		
-		final_prompt = []
-		#prompt = "As an expert translator from description logics in ontologies to natural language, your job is to transform the chain of explanations for an inference into a compact and simple sentence in natural langage. In descritpion logics, x|isA|Y represent an inheritance relation, while x|property|z represents a relation between two individuals. The explanation should not refer to the individual names, but rather the semantic concepts they represent."
-		prompt = prompt_3_clean
-		user_init_prompt = self.build_cot_elem('user', prompt)
-		final_prompt.append(user_init_prompt)
-
-		if(with_example == True):
-			for example in self.examples_:
-				question = example.question_
-				rule = example.rule_
-				answer = example.answer_
-
-				if(with_rule):
-					final_prompt.append(self.build_cot_elem("user", question + " " + rule))
-				else:
-					final_prompt.append(self.build_cot_elem("user", question))
-				final_prompt.append(self.build_cot_elem("assistant",  answer))
-		
-		#print("final prompt is :", final_prompt)
-		return final_prompt
-	
-	def build_cot_elem(self, role, tokens):
-		res_elem = {}
-		res_elem["role"]= role
-		res_elem["content"] = tokens
-		return res_elem
-
-	def build_question(self, question, with_rule = False, with_prompt = False):
+	def build_question(self, question, with_rule = False, with_CoT = True):
 		res = []
-  
-		if(with_prompt == True):
-			res = self.get_prompt(with_rule)
 
+		# Get the prompt with Chain of Thought (with rules or not) or without it
+		res = self.prompt_generator_.build_prompt(with_CoT, with_rule)
+		
+  		# Build the explanation into one single string, separated by commas	
 		explanation_str = ', '.join(question.explanations_)
 
+		question_str = "S: inference = " + question.fact_ + " / explanations = " + explanation_str + ". "
 		if(with_rule):
-			res.append(self.build_cot_elem("user", "S: inference = " + question.fact_ + " / explanations = " + explanation_str + ". " + question.rule_))
-		else:
-			res.append(self.build_cot_elem("user", "S: inference = " + question.fact_ + " / explanations = " + explanation_str + "."))
-		res.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
+			question_str + question.rule_
+		res.append(self.build_cot_elem("user", question_str))
 
+		if(with_CoT == True):
+			res.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
+		
 		return res
 
 
