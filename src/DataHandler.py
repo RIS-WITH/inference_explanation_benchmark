@@ -7,33 +7,34 @@ class QuestionHandler:
     def __init__(self, folder_path, folder_name):
         self.folder_path_ = folder_path
         self.folder_name_ = folder_name
-        self.create_question_folders()
-       
-    def create_question_folders(self):
+        self.variation_types_  = ["baseline", "shuffle", "rule"]
+        self.create_dataset_folders()
+    
+    def create_dataset_folders(self):
+        question_path = self.folder_path_ + self.folder_name_
         try:
-            os.mkdir(self.folder_path_ + self.folder_name_)
-            os.mkdir(self.folder_path_ + self.folder_name_ + "/baseline")
-            os.mkdir(self.folder_path_ + self.folder_name_ + "/shuffle")
-            os.mkdir(self.folder_path_ + self.folder_name_ + "/rule")
-            print(f"Directory '{self.folder_name_}' created successfully.")
+            os.mkdir(question_path)
+            for var_folder in self.variation_types_:
+                os.mkdir(question_path + "/" + var_folder)
+            print(f"Directory '{question_path}' created successfully.")
         except FileExistsError:
-            print(f"Directory '{self.folder_name_}' already exists.")
+            print(f"Directory '{question_path}' already exists.")
         except PermissionError:
-            print(f"Permission denied: Unable to create '{self.folder_name_}'.")
+            print(f"Permission denied: Unable to create '{question_path}'.")
         except Exception as e:
             print(f"An error occurred: {e}")
-                
-    def save_question(self, question, generator):
+             
+    def create_and_save_question_variation(self, question, generator):
         saving_path = self.folder_path_ + self.folder_name_
         
         filename_b = question.id_question_ + "_baseline"
-        self.create_variation_directories(question, saving_path + "/baseline/", filename_b)
+        self.create_variation_file(question, saving_path + "/baseline/", filename_b)
 
         filename_s = question.id_question_ + "_shuffle"
-        self.create_variation_directories(question, saving_path + "/shuffle/", filename_s)
+        self.create_variation_file(question, saving_path + "/shuffle/", filename_s)
 
         filename_r = question.id_question_ + "_rule"
-        self.create_variation_directories(question, saving_path + "/rule/", filename_r, with_rule=True)
+        self.create_variation_file(question, saving_path + "/rule/", filename_r, with_rule=True)
 
         # loop over variations of the question (indiv names and classes)
         for var_question in question.generated_questions_:
@@ -65,7 +66,7 @@ class QuestionHandler:
         with open(path_file + '.json', 'w') as outfile:
             json.dump(my_data, outfile, indent = 2)
 
-    def create_variation_directories(self, question, path_folder, path_file, with_rule = False):
+    def create_variation_file(self, question, path_folder, path_file, with_rule = False):
         init_prompt = []
         if(with_rule == True):
             init_prompt = question.init_prompt_rule_
@@ -80,44 +81,48 @@ class QuestionHandler:
         with open(path_folder + path_file + '.json', "w") as file:
             file.write(json_object)
 
-    # def load_questions(self, path_to_folder, variation_name):
-    #     res = []
-    #     path_to_var = path_to_folder + "/" + variation_name + "/"
-    #     for q in os.listdir(path_to_var):
-    #         with open(path_to_var + q, 'r') as file:
-    #             data = json.load(file)
-    #             res.append(data)
+    def load_questions(self, path_to_folder, variation_name):
+        res = []
+        path_to_var = path_to_folder + "/" + variation_name + "/"
+        for q in os.listdir(path_to_var):
+            with open(path_to_var + q, 'r') as file:
+                data = json.load(file)
+                res.append(data)
 
-    #     return res
+        return res
     
 class AnswerHandler:
-    def __init__(self, folder_path, folder_name):
+    def __init__(self, folder_path, folder_name, model_name):
         self.folder_path_ = folder_path
         self.folder_name_ = folder_name
+        self.model_name_ = model_name
         self.filename_b_ = None
         self.filename_s_ = None
         self.filename_r_ = None
         self.variation_types = ["baseline", "shuffle", "rule"]
-        self.create_answer_folders()
+        self.create_model_folder()
         
-    def create_answer_folders(self):
-        saving_path = self.folder_path_ + self.folder_name_
+    def create_model_folder(self):
+        answer_path = self.folder_path_ + self.folder_name_
+        model_path = answer_path + "/" + self.model_name_
         try:
-            os.mkdir(saving_path)
-            for var_type in self.variation_types:
-                os.mkdir(saving_path + "/" + var_type)
-            print(f"Directory '{self.folder_name_}' created successfully.")
+            os.mkdir(answer_path)
+            for var_folder in self.variation_types:
+                os.mkdir(model_path + "/" + var_folder)
+            print(f"Directory '{model_path}' created successfully.")
         except FileExistsError:
-            print(f"Directory '{self.folder_name_}' already exists.")
+            print(f"Directory '{model_path}' already exists.")
         except PermissionError:
-            print(f"Permission denied: Unable to create '{self.folder_name_}'.")
+            print(f"Permission denied: Unable to create '{model_path}'.")
         except Exception as e:
             print(f"An error occurred: {e}")
+        os.mkdir(model_path)
     
-    def create_answer_folder(self, variation_name):
-        saving_path = self.folder_path_ + self.folder_name_
+    def create_variation_folder(self, variation_name):
+        answer_path = self.folder_path_ + self.folder_name_
+        model_path = answer_path + "/" + self.model_name_
         try:
-            os.mkdir(saving_path + "/" + variation_name)
+            os.mkdir(model_path + "/" + variation_name)
             print(f"Directory '{variation_name}' created successfully.")
         except FileExistsError:
             print(f"Directory '{variation_name}' already exists.")
@@ -129,7 +134,8 @@ class AnswerHandler:
     def create_answer_file(self, id_question, id_var, question):
     
         id_answer =  "a" + id_question[1:] + "_" + id_var[0]
-        filename_answer = self.folder_path_ + self.folder_name_ + "/" + id_var + "/" + id_answer + '.json'
+        filename_dir = self.folder_path_ + self.folder_name_ + "/" + self.model_name_
+        filename_answer = filename_dir + "/" + id_var + "/" + id_answer + '.json'
 
         answer_dict = {"id": id_answer, "template": question['template'], "answers": []}
         json_object = json.dumps(answer_dict, indent=2)
