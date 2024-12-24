@@ -40,8 +40,7 @@ init_explanations_q1 = [
                         ]
 
 
-rule_1 = "The used rule was : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d), \
-          Support(?s), isOn(?o,?s), isInFrontOf(?r,?s) -> canManipulate(?r, ?o)."
+rule_1 = "The used rule was : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d), Support(?s), isOn(?o,?s), isInFrontOf(?r,?s) -> canManipulate(?r, ?o)."
 
 question_1 = QuestionInstance(init_fact_q1, init_explanations_q1, rule_1, class_variables_q1, template_dict_q1)
 
@@ -70,8 +69,7 @@ init_explanations_q2 = [
                         "mug_3_disp|isA|ManipulableDisposition",
                         ]
 
-rule_2 = "The used rule was : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d) \
-          -> canManipulate(?r, ?o)."
+rule_2 = "The used rule was : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d) -> canManipulate(?r, ?o)."
 
 question_2 = QuestionInstance(init_fact_q2, init_explanations_q2, rule_2, class_variables_q2, template_dict_q2)
 
@@ -106,7 +104,6 @@ init_explanations_q3 = [
                         "integer#2|lessThan|integer#4"
                         ]
 
-rule_3 = "The used rule was : Robot(?r), Object(?o), hasGraspingAffordance(?r, ?o), IsInFrontOf(?r,?o), Gripper(?g), hasComponent(?r,?g),\
-          isFree(?g, boolean#true), hasWeightPayload(?g,?w1), hasWeight(?o, ?w2), swrlb:lessThan(?w2,?w1) -> canGrasp(?r, ?o)."
+rule_3 = "The used rule was : Robot(?r), Object(?o), hasGraspingAffordance(?r, ?o), IsInFrontOf(?r,?o), Gripper(?g), hasComponent(?r,?g), isFree(?g, boolean#true), hasWeightPayload(?g,?w1), hasWeight(?o, ?w2), swrlb:lessThan(?w2,?w1) -> canGrasp(?r, ?o)."
 
 question_3 = QuestionInstance(init_fact_q3, init_explanations_q3, rule_3, class_variables_q3, template_dict_q3)
