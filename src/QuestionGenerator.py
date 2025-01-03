@@ -95,7 +95,8 @@ class QuestionGenerator:
   
 		for id_elem in range(0, len(old_template)):
 			for template_param in template_dict:
-				if(template_param in old_template[id_elem]):
+				#if(template_param in old_template[id_elem]):
+				if(template_param == old_template[id_elem]):
 					new_fact[id_elem] = template_dict[template_param]
      
 		return new_fact
@@ -119,7 +120,7 @@ class QuestionGenerator:
 
 	def add_question(self, question, with_CoT = True):
 
-		new_id = "q"+str(len(self.questions_))
+		new_id = question.name_ #"q"+str(len(self.questions_))
 		new_question = Question([question.fact_, question.explanations_, question.rule_], new_id, question.classes_var_, question.rule_)
 
 		prompt_with_rule = self.prompt_generator_.build_prompt(with_CoT, True)
@@ -135,7 +136,7 @@ class QuestionGenerator:
 	def create_question(self, question, with_rule = False):
      
 		explanation_str = ', '.join(question.explanations_)
-		res = "S: inference = " + question.fact_ + " / explanations = " + explanation_str + ". "
+		res = "-Inference : " + question.fact_ + " \n -Justifications : " + explanation_str + ". "
   
 		if(with_rule):
 			res += question.rule_
@@ -230,13 +231,13 @@ class QuestionGenerator:
   		# Build the explanation into one single string, separated by commas	
 		explanation_str = ', '.join(question.explanations_)
 
-		question_str = "S: inference = " + question.fact_ + " / explanations = " + explanation_str + ". "
+		question_str = "-Inference : " + question.fact_ + " \n -Justifications : " + explanation_str + ". "
 		if(with_rule):
 			question_str + question.rule_
 		res.append(self.build_cot_elem("user", question_str))
 
 		if(with_CoT == True):
-			res.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
+			res.append(self.build_cot_elem("assistant", "Let's translate. translation is "))
 		
 		return res
 
