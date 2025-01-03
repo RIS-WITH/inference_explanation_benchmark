@@ -1,43 +1,54 @@
 from src.OllamaHandler import OllamaHandler
 from src.DataHandler import AnswerHandler
+import numpy as np
+import copy
 
 if __name__ == '__main__':
     print(" -- hellollama -- ")
-
-    #models = ["llama3.2", "llama3.1", "gemma2:2b", "gemma2", "mistral", "phi3", "phi3:medium"]
+    # "llama3.2", "llama3.1", "gemma2:2b", "gemma2", "phi3", "phi3:medium", "gemma2:27b"
+    # ========== 1.7GB ====== 5.0GB ====   1.6GB   ====  5.4GB =====   16GB === 2.2GB === 14GB ======== 4.9GB =========  2GB  ==== ==    7.1GB    ===== 13GB =====
+    # models = ["gemma:2b", "gemma:7b", "gemma2:2b", "gemma2:7b", "gemma2:27b", "phi3", "phi3:medium", "llama3.1", "llama3.2:3b", "mistral-nemo", "mistral-small", ""]
+    models = ["llama3.2:3b", "llama3.1", "gemma2:2b", "gemma2:7b", "phi3", "phi3:medium"]
     # set the list of examples
 
-    model = "gemma2:27b"
-
-    ollama = OllamaHandler(model)
- 
     question_path = "/home/bdussard/"
-    questions_folder = "dataset_q3"
+    questions_folder = "dataset_questions_glpp"
+    questions_without_answers = []
+    #model = "gemma2:27b"
+    for model in models:
+        ollama = OllamaHandler(model)
     
-    answer_path = "/home/bdussard/"
-    answer_folder = "answer_folder_noCoT"
-    answer_model = model
-    
-    answer_saver = AnswerHandler(answer_path, answer_folder, model)
-    
-     #  ================ LOAD QUESTIONS FROM FILE =============
-    questions_baseline = answer_saver.load_questions(question_path + questions_folder, "baseline")
-    questions_shuffle = answer_saver.load_questions(question_path + questions_folder, "shuffle")
-    questions_rule = answer_saver.load_questions(question_path + questions_folder, "rule")
-    
-    questions_dict = {'baseline': questions_baseline, 'shuffle': questions_shuffle, 'rule' :questions_rule}
-    
-    for question_key in questions_dict:
-        print(" ===  evaluating questions ", question_key)
-        answer_saver.create_variation_folder(question_key)
-        for question in questions_dict[question_key]:
-            id_question = question['id']
-            filename_answer = answer_saver.create_answer_file(id_question, question_key, question)
-            for question_var in question['questions']:
-                formatted_question = ollama.build_question(question, question_var['question'], with_CoT=True)
-                print(" -- question is : ", formatted_question[-2]['content'])
-                answer = ollama.call(formatted_question)
-                print(" -- answer is :", answer)
-                answer_id = "a" + question_var['id'][1:]
-                # adding question_var['question'] to improve readibility in file
-                answer_saver.save_answer(filename_answer, answer_id, question_var['selected_classes'], question_var['question'], answer)
+        answer_path = "/home/bdussard/"
+        answer_folder = "answers_questions_glpp"
+        answer_model = model
+        
+        answer_saver = AnswerHandler(answer_path, answer_folder, model)
+        
+        #  ================ LOAD QUESTIONS FROM FILE =============
+        questions_baseline = answer_saver.load_questions(question_path + questions_folder, "baseline")
+        questions_shuffle = answer_saver.load_questions(question_path + questions_folder, "shuffle")
+        questions_rule = answer_saver.load_questions(question_path + questions_folder, "rule")
+        
+        questions_dict = {'baseline': questions_baseline, 'shuffle': questions_shuffle, 'rule' :questions_rule}
+        
+        for question_key in questions_dict:
+            print(" ===  evaluating questions ", question_key)
+            answer_saver.create_variation_folder(question_key)
+            for question in questions_dict[question_key]:
+                id_question = question['id']
+                filename_answer = answer_saver.create_answer_file(id_question, question_key, question)
+                for question_var in question['questions']:
+                    formatted_question = ollama.build_question(question['init_prompt'], question_var['question'], with_CoT=True)
+                    #print(" -- question is : ", formatted_question[-2]['content'])
+                    print("========= new question ========")
+                    answer = ollama.call(formatted_question, True, False)
+                    #print(" -- answer is :", answer)
+                    print("===============================")
+                    if(answer == ""):
+                        questions_without_answers.append(formatted_question)
+                        
+                    answer_id = "a" + question_var['id'][1:]
+                    # adding question_var['question'] to improve readibility in file
+                    answer_saver.save_answer(filename_answer, answer_id, question_var['selected_classes'], question_var['question'], answer)
+                    
+    np.save(answer_path + "question_without_answers.npy", questions_without_answers)
