@@ -103,20 +103,18 @@ class AnswerHandler:
         self.create_model_folder()
         
     def create_model_folder(self):
+        
         answer_path = self.folder_path_ + self.folder_name_
-        model_path = answer_path + "/" + self.model_name_
-        try:
-            os.mkdir(answer_path)
+
+        if not os.path.exists(answer_path):
+            os.makedirs(answer_path)
+        if not os.path.exists(os.path.join(answer_path, self.model_name_)):
+            model_path = os.path.join(answer_path, self.model_name_)
+            os.makedirs(model_path)
             for var_folder in self.variation_types:
-                os.mkdir(model_path + "/" + var_folder)
-            print(f"Directory '{model_path}' created successfully.")
-        except FileExistsError:
-            print(f"Directory '{model_path}' already exists.")
-        except PermissionError:
-            print(f"Permission denied: Unable to create '{model_path}'.")
-        except Exception as e:
-            print(f"An error occurred: {e}")
-        os.mkdir(model_path)
+                var_path = os.path.join(answer_path, self.model_name_, var_folder)
+                os.mkdir(var_path)
+        
     
     def create_variation_folder(self, variation_name):
         answer_path = self.folder_path_ + self.folder_name_
