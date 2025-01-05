@@ -26,13 +26,14 @@ explanation_weight = [
                     "Gripper|SubClassOf|EndEffector",
                     "pepper|hasComponent|pepper_left_gripper",
                     "pepper_left_gripper|hasWeightLimit|integer#40",
-                    "box_2|hasWeight|integer#20"
+                    "box_2|hasWeight|integer#20",
+                    "lesserThan(integer#20,integer#40)"
                     ]
 
 # =============== Explanations why the class LiftableDisposition is inferred =============
-liftable_easy = "LiftableDisposition|SubClassOf|"
-liftable_medium= "LiftableDisposition|SubClassOf|(isDispositionOf some (hasPart min 2 GraspablePart))"
-liftable_hard = "LiftableDisposition|SubClassOf|(isDispositionOf some (hasPart min 2 (GraspablePart and (isAttached value boolean#false)))"
+liftable_easy = "LiftableDisposition|EquivalentTo|"
+liftable_medium= "LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 GraspablePart))"
+liftable_hard = "LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 (GraspablePart and (isAttached value boolean#false)))"
 
 explanations_liftable_easy= ["box_2_disp|Type|LiftableDisposition"]
 
@@ -57,9 +58,9 @@ explanations_liftable_hard = [
                             ]
 
 # =============== Explanations why the class LiftingCapability is inferred =============
-lifting_easy = "LiftingCapability|SubClassOf|"
-lifting_medium= "LiftingCapability|SubClassOf|(isCapabilityOf some (hasComponent min 2 Gripper)"
-lifting_hard = "LiftingCapability|SubClassOf|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasSomethingInHands value boolean#false))"
+lifting_easy = "LiftingCapability|EquivalentTo|"
+lifting_medium= "LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper)"
+lifting_hard = "LiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasSomethingInHands value boolean#false))"
 
 explanations_lifting_easy= ["pepper_capa|Type|LiftingCapability"]
 
@@ -84,23 +85,22 @@ explanations_lifting_hard = [
 
 # =============== Explanations why the property isTouchableBy exists =============
 object_lift_available_easy = "isTouchableBy" # box isTouchableBy agent
-object_lift_available_medium = "(isOnTouchableSupport o isNear)|SubPropertyOf|isTouchableBy" # box isOnTouchableSupport table isNear agent
-object_lift_available_hard = "(isOnTouchableSupport o isNear)|SubPropertyOf|isTouchableBy, isFacing|SubPropertyOf|IsNear" # box isOnTouchableSupport table isFacing agent
+object_lift_available_medium = "(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy" 
+object_lift_available_hard = "(isOnTouchableSupport o isInAccessibleArea o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
 
 explanations_object_lift_easy = ["box_2|isTouchableBy|pepper"]
 
 explanations_object_lift_medium = [
-                                "box_2|isTouchableBy|pepper",
                                 object_lift_available_medium,
                                 "box_2|isOnTouchableSupport|table_1",
-                                "table_1|isNear|pepper"
+                                "table_1|isWithinMovingRangeOf|pepper"
                                 ]
 
 explanations_object_lift_hard = [
-                                "box_2|isTouchableBy|pepper",
                                 object_lift_available_hard,
                                 "box_2|isOnTouchableSupport|table_1",
-                                "table_1|isFacing|pepper"
+                                "table_1|isInAccessibleArea|locker_room",
+                                "locker_room|isWithinMovingRangeOf|pepper"
                                 ]
 
 # Concatenate the explanations according to the complexity level (easy, medium, hard)
@@ -123,6 +123,7 @@ template_dict_lift = {'pepper': '__var0__',
                     'handle_1' : '__var5__',
                     'handle_2' : '__var5__',
                     'table_1' : '__var6__',
+                    'locker_room' : '__var7__',
                     'Robot': '__agent__',
                     'Box': '__object__',
                     'Gripper': '__component__'
@@ -131,17 +132,17 @@ template_dict_lift = {'pepper': '__var0__',
 class_variables_final_lift = { 
                     "__object__" : ["StorageBox", "Stool", "Chair", "Bookshelf"],
                     "__agent__" :   ["Robot", "Pr2", "Pepper", "Tiago"],
-                    "__component__" :   ["Gripper", "Hand", "Claw"]
+                    "__component__" : ["Gripper", "MechanicalHandGripper", "ClawGripper", "TwoFingerGripper", "VacuumGripper"]
                      }
 
 lift_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d),\
                isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)."
                
-question_lift_easy = QuestionInstance(name="question_lift_easy", fact=fact_lift, explanations=explanations_lift_easy,
+question_lift_easy = QuestionInstance(name="q_lift_easy", fact=fact_lift, explanations=explanations_lift_easy,
                                        rule=lift_rule, classes_var=class_variables_final_lift, template_dict=template_dict_lift)
 
-question_lift_medium= QuestionInstance(name="question_lift_medium", fact=fact_lift, explanations=explanations_lift_medium,
+question_lift_medium= QuestionInstance(name="q_lift_medium", fact=fact_lift, explanations=explanations_lift_medium,
                                        rule=lift_rule, classes_var=class_variables_final_lift, template_dict=template_dict_lift)
 
-question_lift_hard = QuestionInstance(name="question_lift_hard", fact=fact_lift, explanations=explanations_lift_hard,
+question_lift_hard = QuestionInstance(name="q_lift_hard", fact=fact_lift, explanations=explanations_lift_hard,
                                        rule=lift_rule, classes_var=class_variables_final_lift, template_dict=template_dict_lift)

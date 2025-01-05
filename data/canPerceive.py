@@ -26,13 +26,14 @@ explanation_force = [
                     "RGBCamera|SubClassOf|Camera",
                     "pepper|hasComponent|realsense",
                     "realsense|hasMaximumDistanceRange|integer#40",
-                    "cube_1|isAtDistance|integer#5"
+                    "cube_1|isAtDistance|integer#5",
+                    "greaterThan(integer#40,integer#5)"
                     ]
 
 # =============== Explanations why the class PerceivingDisposition is inferred =============
-perceivable_easy = "PerceivingDisposition|SubClassOf|"
-perceivable_medium= "PerceivingDisposition|SubClassOf|(isDispositionOf some (hasPart some QRCode))"
-perceivable_hard = "PerceivingDisposition|SubClassOf|(isDispositionOf some (hasPart some (QRCode and (isVisible value boolean#true)))"
+perceivable_easy = "PerceivingDisposition|EquivalentTo|"
+perceivable_medium= "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some QRCode))"
+perceivable_hard = "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (QRCode and (isVisible value boolean#true)))"
 
 explanations_perceivable_easy= ["cube_1_disp|Type|PerceivingDisposition"]
 
@@ -53,8 +54,8 @@ explanations_perceivable_hard = [
 
 # =============== Explanations why the class PerceivingCapability is inferred =============
 perceiving_easy = "PerceivingCapability|SubClassOf|"
-perceiving_medium= "PerceivingCapability|SubClassOf|(isCapabilityOf some (hasComponent some RGBCamera)"
-perceiving_hard = "PerceivingCapability|SubClassOf|(isCapabilityOf some ((hasComponent some RGBCamera) and (hasComponent some QRCodeDetectionAlgo))"
+perceiving_medium= "PerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some RGBCamera)"
+perceiving_hard = "PerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some RGBCamera) and (hasComponent some QRCodeDetectionAlgo))"
 
 explanations_perceiving_easy= ["pepper_capa|Type|PerceivingCapability"]
 
@@ -76,23 +77,22 @@ explanations_perceiving_hard = [
 
 # =============== Explanations why the property isApproachableBy exists =============
 object_perceive_available_easy = "isVisibleBy" # cube isVisibleBy agent
-object_perceive_available_medium = "(isOnVisibleSupport o isNear)|SubPropertyOf|isVisibleBy" # box isOnVisibleSupport table isNear agent
-object_perceive_available_hard = "(isOnVisibleSupport o isNear)|SubPropertyOf|isVisibleBy, isFacing|SubPropertyOf|IsNear" # box isOnVisibleSupport table isFacing agent
+object_perceive_available_medium = "(hasQRCode o isInFrontOf)|SubPropertyOf|isVisibleBy" # box hasQRCode qr_code_1 isInFrontOf agent
+object_perceive_available_hard = "(hasQRCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy" # box hasQRCode qr_code_1 isInFrontOf camera isCameraOf pepper
 
 explanations_object_perceive_easy = ["cube_1|isVisibleBy|pepper"]
 
 explanations_object_perceive_medium = [
-                                "cube_1|isVisibleBy|pepper",
                                 object_perceive_available_medium,
-                                "cube_1|isOnVisibleSupport|table_1",
-                                "table_1|isNear|pepper"
+                                "cube_1|hasQRCode|qr_code_1",
+                                "qr_code_1|isInFrontOf|pepper"
                                 ]
 
 explanations_object_perceive_hard = [
-                                "cube_1|isVisibleBy|pepper",
                                 object_perceive_available_hard,
-                                "cube_1|isOnVisibleSupport|table_1",
-                                "table_1|isFacing|pepper"
+                                "cube_1|hasQRCode|qr_code_1",
+                                "qr_code_1|isInFrontOf|realsense",
+                                "realsense|isCameraOf|pepper",
                                 ]
 
 # Concatenate the explanations according to the complexity level (easy, medium, hard)
@@ -120,19 +120,19 @@ template_dict_perceive = {'pepper': '__var0__',
                     }
 
 class_variables_final_perceive = { 
-                    "__object__" : ["Box", "Cube", "Spoon", "Fork", "Pot"],
+                    "__object__" : ["Box", "Cube", "Spoon", "Fork", "Pot", "Plate"],
                     "__agent__" :   ["Robot", "Pr2", "Pepper", "Tiago"],
-                    "__component__" : ["RGBDCamera", "RGBCamera", "Webcam", "SecurityCamera"]
+                    "__component__" : ["RealsenseL515", "RGBCamera", "Webcam", "KinectV2", "RealsenseD435i"]
                      }
 
 perceive_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d),\
                  isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)."
                
-question_perceive_easy = QuestionInstance(name="question_perceive_easy", fact=fact_perceive, explanations=explanations_perceive_easy,
+question_perceive_easy = QuestionInstance(name="q_perceive_easy", fact=fact_perceive, explanations=explanations_perceive_easy,
                                        rule=perceive_rule, classes_var=class_variables_final_perceive, template_dict=template_dict_perceive)
 
-question_perceive_medium= QuestionInstance(name="question_perceive_medium", fact=fact_perceive, explanations=explanations_perceive_medium,
+question_perceive_medium= QuestionInstance(name="q_perceive_medium", fact=fact_perceive, explanations=explanations_perceive_medium,
                                        rule=perceive_rule, classes_var=class_variables_final_perceive, template_dict=template_dict_perceive)
 
-question_perceive_hard = QuestionInstance(name="question_perceive_hard", fact=fact_perceive, explanations=explanations_perceive_hard,
+question_perceive_hard = QuestionInstance(name="q_perceive_hard", fact=fact_perceive, explanations=explanations_perceive_hard,
                                        rule=perceive_rule, classes_var=class_variables_final_perceive, template_dict=template_dict_perceive)

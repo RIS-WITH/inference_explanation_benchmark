@@ -26,13 +26,14 @@ explanation_width = [
                     "Gripper|SubClassOf|EndEffector",
                     "pepper|hasComponent|pepper_left_gripper",
                     "pepper_left_gripper|hasOpeningWidth|integer#20",
-                    "mug_3|hasWidth|integer#10"
+                    "mug_3|hasWidth|integer#10",
+                    "greaterThan(integer#20,integer#10)"
                     ]
 
 # =============== Explanations why the class GraspableDisposition is inferred =============
-graspable_easy = "GraspableDisposition|SubClassOf|"
-graspable_medium= "GraspableDisposition|SubClassOf|(isDispositionOf some (hasPart some Handle))"
-graspable_hard = "GraspableDisposition|SubClassOf|(isDispositionOf some (hasPart some (Handle and (IsInUse value boolean#false)))"
+graspable_easy = "GraspableDisposition|EquivalentTo|"
+graspable_medium= "GraspableDisposition|EquivalentTo|(isDispositionOf some (hasPart some Handle))"
+graspable_hard = "GraspableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (Handle and (IsInUse value boolean#false)))"
 
 explanations_graspable_easy= ["mug_3_disp|Type|GraspableDisposition"]
 
@@ -52,9 +53,9 @@ explanations_graspable_hard = [
                                 ]
 
 # =============== Explanations why the class GraspingCapability is inferred =============
-grasping_easy = "GraspingCapability|SubClassOf|"
-grasping_medium= "GraspingCapability|SubClassOf|(isCapabilityOf some (hasComponent some Gripper)"
-grasping_hard = "GraspingCapability|SubClassOf|(isCapabilityOf some (hasComponent some (Gripper and (holdsSomething value boolean#false))"
+grasping_easy = "GraspingCapability|EquivalentTo|"
+grasping_medium= "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)"
+grasping_hard = "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some (Gripper and (holdsSomething value boolean#false))"
 
 explanations_grasping_easy= ["pepper_capa|Type|GraspingCapability"]
 
@@ -74,24 +75,23 @@ explanations_grasping_hard = [
                                 ]
 
 # =============== Explanations why the property isReachable exists =============
-object_grasp_available_easy = "isReachableBy" # mug isReachableBy agent
-object_grasp_available_medium = "(isContainedIn o isNear)|SubPropertyOf|isReachableBy" # mug isContainedIn cupboard isNear agent
-object_grasp_available_hard = "(isContainedIn o isNear)|SubPropertyOf|isReachableBy, isInFrontOf|SubPropertyOf|IsNear" # mug isContainedIn cupboard isNear agent
+object_grasp_available_easy = "isReachableBy" 
+object_grasp_available_medium = "(isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy" 
+object_grasp_available_hard = "(isContainedIn o isLocatedInArea o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy"
 
 explanations_object_grasp_easy = ["mug_3|isReachableBy|pepper"]
 
 explanations_object_grasp_medium = [
-                                "mug_3|isReachableBy|pepper",
                                 object_grasp_available_medium,
                                 "mug_3|isContainedIn|cupboard_1",
-                                "cupboard_1|isNear|pepper"
+                                "cupboard_1|isWithinGraspRangeOf|pepper"
                                 ]
 
 explanations_object_grasp_hard = [
-                                "mug_3|isReachableBy|pepper",
                                 object_grasp_available_hard,
                                 "mug_3|isContainedIn|cupboard_1",
-                                "cupboard_1|isInFrontOf|pepper"
+                                "cupboard_1|isLocatedInArea|storage_room",
+                                "storage_room|isWithinGraspRangeOf|pepper"
                                 ]
 
 # Concatenate the explanations according to the complexity level (easy, medium, hard)
@@ -105,32 +105,34 @@ print("hard : ", explanations_grasp_hard)
 
 fact_grasp = "pepper|canGrasp|mug_3"
 
-template_dict_grasp = {'pepper': '__var0__',  
-                            'mug_3': '__var1__',
-                            'mug_3_disp': '__var2__',
-                            'pepper_capa': '__var3__',
-                            'pepper_left_gripper' : '__var4__',
-                            'handle_3' : '__var5__',
-                            'cupboard_1' : '__var6__',
-                            'Robot': '__agent__',
-                            'Mug': '__object__',
-                            'Gripper': '__component__'
-                            }
+template_dict_grasp = {
+                      'pepper': '__var0__',  
+                      'mug_3': '__var1__',
+                      'mug_3_disp': '__var2__',
+                      'pepper_capa': '__var3__',
+                      'pepper_left_gripper' : '__var4__',
+                      'handle_3' : '__var5__',
+                      'cupboard_1' : '__var6__',
+                      'storage_room' : '__var7__',
+                      'Robot': '__agent__',
+                      'Mug': '__object__',
+                      'Gripper': '__component__'
+                      }
 
 class_variables_final_grasp = { 
                     "__object__" : ["Mug", "Cup", "Knife", "Fork", "Pot"],
                     "__agent__" :   ["Robot", "Pr2", "Pepper", "Tiago"],
-                    "__component__" :   ["Gripper", "Hand", "Claw"]
+                    "__component__" : ["Gripper", "MechanicalHandGripper", "ClawGripper", "TwoFingerGripper", "VacuumGripper"]
                      }
 
 grasp_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d),\
                isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)."
                
-question_grasp_easy = QuestionInstance(name="question_grasp_easy", fact=fact_grasp, explanations=explanations_grasp_easy,
+question_grasp_easy = QuestionInstance(name="q_grasp_easy", fact=fact_grasp, explanations=explanations_grasp_easy,
                                        rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
 
-question_grasp_medium= QuestionInstance(name="question_grasp_medium", fact=fact_grasp, explanations=explanations_grasp_medium,
+question_grasp_medium= QuestionInstance(name="q_grasp_medium", fact=fact_grasp, explanations=explanations_grasp_medium,
                                        rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
 
-question_grasp_hard = QuestionInstance(name="question_grasp_hard", fact=fact_grasp, explanations=explanations_grasp_hard,
+question_grasp_hard = QuestionInstance(name="q_grasp_hard", fact=fact_grasp, explanations=explanations_grasp_hard,
                                        rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
