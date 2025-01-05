@@ -36,18 +36,61 @@ prompt_rdf = "You are an AI model specialized in transforming formal logical inf
     In this task: \n\
     \t You will interpret inferences and justifications derived from the resolution of SWRL rules. \n\
     \t SWRL rules are used in ontologies to infer new facts based on known facts and logical conditions. \n\
-    \t Each inference is accompanied by a set of justifications in the form of triples. These triples specify semantic relationships between entities or concepts such as\
+    \t Each inference is accompanied by a set of justifications in the form of triples. \
+    These triples specify semantic relationships between entities or concepts such as\
     indiv_1|Type|ConceptX (which means the individual indiv_1 is an instance of the class ConceptX),\
     ConceptX|SubClassOf|ConceptY (which means that ConceptX inherits from ConceptY),\
+    ConceptX|EquivalentTo|(hasXProperty some ConceptY) (which means that all individuals matching the hasXProperty some ConceptY field will inherit from ConceptX),\
     indiv_0|hasXProperty|indiv_1 (indiv_0 is related to indiv_1 through the semantics of hasXProperty),\
     or indiv_2|hasYProperty|boolean#false (indiv_2 has the datatype value boolean#false to the property hasYProperty).\
+    (hasXProperty o hasYProperty)|SubPropertyOf|hasZProperty corresponds to a property chain axiom.\
     Your goal: \n\
     \tConvert the SWRL inference and its supporting justifications into a natural language sentence. \n\
     \tEnsure the explanation is clear, concise, and accessible to someone unfamiliar with SWRL or Description Logics. \n\
-    \t The generated explanation must be one or few natural language sentences, and not a list or bullet points. \n\
-    \t The generated explanation must not contain the names of the individuals, but only the concepts and properties (indiv_1|Type|Human translates to The human) \n\
-    Here is an example: Input: Inference: xhz|hasBrother|okm / justifications: xhz|Type|Human, xhz|hasSibling|okm, okm|Type|Man\
-    Output in Natural Language : The human has a brother because he has a sibling who is a man."
+    \tThe generated explanation must be one or few natural language sentences, and not a list or bullet points, it\
+    must not contain the names of the individuals, but only the concepts and properties (indiv_1|Type|Human translates to The human),\
+    and should contain all of the justifications for that inference to have been made. \n\
+    Here is an example: Input: Inference: xhz|hasBrother|okm / Justifications: xhz|Type|Human, xhz|hasSibling|okm, okm|Type|Man\
+    Output : The human has a brother because he has a sibling who is a man."
+
+prompt_without_ontology_explanations = "You are an AI model specialized in explaining formal logical inferences and their justifications in natural language. \n\
+            Task Overview:\
+            Convert inferences and justifications from SWRL rules into concise, clear, and natural language explanations. \
+            SWRL rules infer new facts in ontologies based on known facts and logical conditions.\
+            Input:\
+            \tInference: A statement derived from SWRL rules.\n\
+            \tJustifications: Triples specifying semantic relationships between entities or concepts.\
+            \tRule: The SWRL rule used to make such an inference.\n\
+            Output Requirements:\n\
+            \tClarity: Write a single, fluent sentence or short paragraph without any break-down or bullet points.\n\
+            \tCompleteness: Include all relevant justifications into the explanation.\n\
+            \tConcept-Driven: Don't refer to individual names (e.g., indiv_1|Type|Human becomes 'The human').\n\
+            \tEdge Case:  For inferences involving chains, equivalent concepts, subclasses or subproperties, explicitly reflect these relationships in the explanation.\n\
+            Examples:\n\
+            Input: -Inference: xhz|hasBrother|okm\n -Justifications: xhz|Type|Human, xhz|hasSibling|okm, okm|Type|Man\n -Rule: Human(?a), hasSibling(?a,?b), Man(?b) -> hasBrother(?a,?b).\n\
+            Output: 'The human has a brother because he has a sibling who is a man'."
+            
+prompt_with_ontology_explanations = "You are an AI model specialized in explaining formal logical inferences and their justifications in natural language. \n\
+            Task Overview:\
+            Convert inferences and justifications from SWRL rules into concise, clear, and natural language explanations. \
+            SWRL rules infer new facts in ontologies based on known facts and logical conditions.\
+            Input:\
+            \tInference: A statement derived from SWRL rules.\n\
+            \tJustifications: Triples specifying semantic relationships between entities or concepts , such as:\n\
+            \t\tindiv_1|Type|ConceptX -> 'indiv_1 is an instance of ConceptX'.\n\
+            \t\tConceptX|SubClassOf|ConceptY -> 'ConceptX inherits from ConceptY'.\n\
+            \t\tConceptX|EquivalentTo|(hasXProperty some ConceptY) -> 'ConceptX applies to individuals with the property hasXProperty some ConceptY'.\n\
+            \t\tindiv_0|hasXProperty|indiv_1 -> 'indiv_0 relates to indiv_1 via hasXProperty'.\n\
+            \t\t(hasXProperty o hasYProperty)|SubPropertyOf|hasZProperty -> 'The composition of hasXProperty and hasYProperty is a subproperty of hasZProperty'.\n\
+            \tRule: The SWRL rule used to make such an inference.\n\
+            Output Requirements:\n\
+            \tClarity: Write a single, fluent sentence or short paragraph without any break-down or bullet points.\n\
+            \tCompleteness: Include all relevant justifications into the explanation.\n\
+            \tConcept-Driven: Don't refer to individual names (e.g., indiv_1|Type|Human becomes 'The human').\n\
+            \tEdge Case:  For inferences involving chains, equivalent concepts, subclasses or subproperties, explicitly reflect these relationships in the explanation.\n\
+            Examples:\n\
+            Input: -Inference: xhz|hasBrother|okm\n -Justifications: xhz|Type|Human, xhz|hasSibling|okm, okm|Type|Man\n -Rule: Human(?a), hasSibling(?a,?b), Man(?b) -> hasBrother(?a,?b).\n\
+            Output: 'The human has a brother because he has a sibling who is a man'."
 
 prompt_0_clean = prompt_0.replace('\t', '')
 prompt_1_clean = prompt_1.replace('\t', '')
