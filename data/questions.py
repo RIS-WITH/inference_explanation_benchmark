@@ -1,13 +1,15 @@
 # =================== Q1 ====================
 
 class QuestionInstance:
-    def __init__(self, name, fact, explanations, rule, classes_var, template_dict):
+    def __init__(self, name, fact, explanations, rule, classes_var, template_dict, ground_truth_sentence, concept_rule):
         self.name_ = name
         self.fact_ = fact
         self.explanations_ = explanations
         self.rule_ = rule
         self.classes_var_ = classes_var
         self.template_dict_ = template_dict
+        self.gt_template_sentence_ = ground_truth_sentence
+        self.concepts_rule_ = concept_rule
      
 class_variables_q1 = {
                     "__support__" : ["Desk", "Table", "Cupboard"],
@@ -43,7 +45,7 @@ init_explanations_q1 = [
 
 rule_1 = "-Rule : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d), Support(?s), isOn(?o,?s), isInFrontOf(?r,?s) -> canManipulate(?r, ?o)."
 
-question_1 = QuestionInstance("q1", init_fact_q1, init_explanations_q1, rule_1, class_variables_q1, template_dict_q1)
+#question_1 = QuestionInstance("q1", init_fact_q1, init_explanations_q1, rule_1, class_variables_q1, template_dict_q1)
 
 
 # =================== Q2 ====================
@@ -72,7 +74,7 @@ init_explanations_q2 = [
 
 rule_2 = "-Rule : Robot(?r), hasCapability(?r, ?c), ManipulationCapability(?c), Mug(?o), hasDisposition(?o, ?d), ManipulableDisposition(?d) -> canManipulate(?r, ?o)."
 
-question_2 = QuestionInstance("q2",init_fact_q2, init_explanations_q2, rule_2, class_variables_q2, template_dict_q2)
+#question_2 = QuestionInstance("q2",init_fact_q2, init_explanations_q2, rule_2, class_variables_q2, template_dict_q2)
 
 # =================== Q3 ====================
 class_variables_q3 = { 
@@ -107,7 +109,7 @@ init_explanations_q3 = [
 
 rule_3 = "-Rule : Robot(?r), Object(?o), hasGraspingAffordance(?r, ?o), IsInFrontOf(?r,?o), Gripper(?g), hasComponent(?r,?g), isFree(?g, boolean#true), hasWeightPayload(?g,?w1), hasWeight(?o, ?w2), swrlb:lessThan(?w2,?w1) -> canGrasp(?r, ?o)."
 
-question_3 = QuestionInstance("q3",init_fact_q3, init_explanations_q3, rule_3, class_variables_q3, template_dict_q3)
+#question_3 = QuestionInstance("q3",init_fact_q3, init_explanations_q3, rule_3, class_variables_q3, template_dict_q3)
 
 
 final_ex1_rule = "Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), Closet(?x), isIn(?o, ?x), isInFrontOf(?a, ?x), (hasComponent some (Gripper and (holdsSomething value false)))(?a), hasGripper(?a, ?g), hasOpeningWidth(?g, ?w1), hasWidth(?o, ?w2), greaterThan(?w1, ?w2), (hasDoor some (isOpen value true))(?x) -> canGrasp(?a, ?o)."
@@ -267,9 +269,9 @@ init_explanations_grasp_indirect_inheritance = [
                         "mug_3|hasWidth|integer#10"
                         ]
 
-final_question_1_simple = QuestionInstance("q_grasp_easy", init_fact_grasp, init_explanations_grasp_direct, grasp_rule, class_variables_final_grasp, template_dict_grasp_direct)
-final_question_1_medium = QuestionInstance("q_grasp_medium", init_fact_grasp, init_explanations_grasp_indirect, grasp_rule, class_variables_final_grasp, template_dict_grasp_indirect)
-final_question_1_hard = QuestionInstance("q_grasp_hard", init_fact_grasp, init_explanations_grasp_indirect_inheritance, grasp_rule, class_variables_final_grasp, template_dict_grasp_indirect_inheritance)
+# final_question_1_simple = QuestionInstance("q_grasp_easy", init_fact_grasp, init_explanations_grasp_direct, grasp_rule, class_variables_final_grasp, template_dict_grasp_direct)
+# final_question_1_medium = QuestionInstance("q_grasp_medium", init_fact_grasp, init_explanations_grasp_indirect, grasp_rule, class_variables_final_grasp, template_dict_grasp_indirect)
+# final_question_1_hard = QuestionInstance("q_grasp_hard", init_fact_grasp, init_explanations_grasp_indirect_inheritance, grasp_rule, class_variables_final_grasp, template_dict_grasp_indirect_inheritance)
 
 
 # QUESTION 2 (3 levels for lifting and liftable + weight)
@@ -400,9 +402,9 @@ init_explanations_lift_indirect_inheritance = [
                         "book_1|hasWeight|integer#150",
                         ]
 
-final_question_2_simple = QuestionInstance("q_lift_easy", init_fact_lift, init_explanations_lift_direct, lift_rule, class_variables_final_lift, template_dict_lift_direct)
-final_question_2_medium = QuestionInstance("q_lift_medium", init_fact_lift, init_explanations_lift_indirect, lift_rule, class_variables_final_lift, template_dict_lift_indirect)
-final_question_2_hard = QuestionInstance("q_lift_hard", init_fact_lift, init_explanations_lift_indirect_inheritance, lift_rule, class_variables_final_lift, template_dict_lift_indirect_inheritance)
+# final_question_2_simple = QuestionInstance("q_lift_easy", init_fact_lift, init_explanations_lift_direct, lift_rule, class_variables_final_lift, template_dict_lift_direct)
+# final_question_2_medium = QuestionInstance("q_lift_medium", init_fact_lift, init_explanations_lift_indirect, lift_rule, class_variables_final_lift, template_dict_lift_indirect)
+# final_question_2_hard = QuestionInstance("q_lift_hard", init_fact_lift, init_explanations_lift_indirect_inheritance, lift_rule, class_variables_final_lift, template_dict_lift_indirect_inheritance)
 
 # QUESTION 3 (3 levels for pushing and pushable + force)
 pushing_direct = "c|isA|PushingCapability"
@@ -534,9 +536,9 @@ init_explanations_push_indirect_inheritance = [
                         "book_1|requiresForce|integer#60"
                         ]
 
-final_question_3_simple = QuestionInstance("q_push_easy", init_fact_push, init_explanations_push_direct, push_rule, class_variables_final_push, template_dict_push_direct)
-final_question_3_medium = QuestionInstance("q_push_medium", init_fact_push, init_explanations_push_indirect, push_rule, class_variables_final_push, template_dict_push_indirect)
-final_question_3_hard = QuestionInstance("q_push_hard", init_fact_push, init_explanations_push_indirect_inheritance, push_rule, class_variables_final_push, template_dict_push_indirect_inheritance)
+# final_question_3_simple = QuestionInstance("q_push_easy", init_fact_push, init_explanations_push_direct, push_rule, class_variables_final_push, template_dict_push_direct)
+# final_question_3_medium = QuestionInstance("q_push_medium", init_fact_push, init_explanations_push_indirect, push_rule, class_variables_final_push, template_dict_push_indirect)
+# final_question_3_hard = QuestionInstance("q_push_hard", init_fact_push, init_explanations_push_indirect_inheritance, push_rule, class_variables_final_push, template_dict_push_indirect_inheritance)
 
 
 # QUESTION 4 (3 levels for movingTo and movableTo + network available)
