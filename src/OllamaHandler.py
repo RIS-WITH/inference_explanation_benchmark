@@ -12,13 +12,27 @@ class OllamaHandler:
 		res_elem["content"] = tokens
 		return res_elem
 
+	def build_and_call(self, main_prompt, current_question, with_CoT = True):
+		formatted_question = self.build_question(main_prompt, current_question, with_CoT)
+		#print("\t\tformatted question : ", formatted_question)
+		answer = self.call(formatted_question, False, False)
+		return answer
+     
 	def build_question(self, main_prompt, current_question, with_CoT = True):
-		formatted_question = copy.deepcopy(main_prompt) # need to do a deepcopy otherwise it modifies the initial prompt
-		formatted_question.append(self.build_cot_elem("user", current_question))
+
+		formatted_question = []
   
 		if(with_CoT == True):
+			formatted_question = copy.deepcopy(main_prompt)  # need to do a deepcopy otherwise it modifies the initial prompt
+			formatted_question.append(self.build_cot_elem("user", current_question))
 			formatted_question.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
-        
+		else:
+			init_prompt = copy.deepcopy(main_prompt[0]) # add the initial prompt
+			init_prompt['content'] += "\nThe inference to explain is : " + current_question + "Let's translate." # add the question
+			
+			formatted_question.append(init_prompt)
+			#formatted_question.append(self.build_cot_elem("assistant", "A: Let's translate. translation is "))
+			
 		return formatted_question
 
 	def call(self, question, verbose = False, full_verbose = False):
