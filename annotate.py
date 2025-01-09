@@ -134,10 +134,10 @@ def display_question_menu(base_path, eval_path):
         q for q in questions_paths 
         if os.path.exists(os.path.join(eval_path, f"{q}_evaluations.json"))
     ]
-
+   
     questions_counts = {}
     questions_completion = {}
-    for idx, question in enumerate(questions, 1):
+    for idx, question in enumerate(questions_paths, 1):
         status = 0
         for ev in evaluated_questions:
             if question in ev:
@@ -145,6 +145,7 @@ def display_question_menu(base_path, eval_path):
                 break
 
         question_id = question.replace('_b', '').replace('_r', '').replace('_s', '')
+        question_id = question_id.split("/")[-1]
         if question_id in questions_completion.keys():
             questions_completion[question_id] += status
             questions_counts[question_id] += 1
