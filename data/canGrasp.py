@@ -1,11 +1,4 @@
-class QuestionInstance:
-    def __init__(self, name, fact, explanations, rule, classes_var, template_dict):
-        self.name_ = name
-        self.fact_ = fact
-        self.explanations_ = explanations
-        self.rule_ = rule
-        self.classes_var_ = classes_var
-        self.template_dict_ = template_dict
+from data.questions import QuestionInstance
 
 # ====================== canGrasp ===================
 
@@ -25,53 +18,75 @@ explanation_width = [
                     "pepper_left_gripper|Type|Gripper",
                     "Gripper|SubClassOf|EndEffector",
                     "pepper|hasComponent|pepper_left_gripper",
-                    "pepper_left_gripper|hasOpeningWidth|integer#20",
-                    "mug_3|hasWidth|integer#10",
-                    "greaterThan(integer#20,integer#10)"
+                    "pepper_left_gripper|hasOpeningWidth|integer#2",
+                    "mug_3|hasWidth|integer#1",
+                    "greaterThan(integer#2,integer#1)"
                     ]
 
 # =============== Explanations why the class GraspableDisposition is inferred =============
-graspable_easy = "GraspableDisposition|EquivalentTo|"
-graspable_medium= "GraspableDisposition|EquivalentTo|(isDispositionOf some (hasPart some Handle))"
-graspable_hard = "GraspableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (Handle and (IsInUse value boolean#false)))"
+graspable_easy = "GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+graspable_medium= "GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true)))"
+graspable_hard = "GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some (GraspablePart and (IsAlreadyInUse value boolean#false)) and (isATouchableObject value boolean#true)))"
 
-explanations_graspable_easy= ["mug_3_disp|Type|GraspableDisposition"]
+explanations_graspable_easy= [
+                                graspable_easy,
+                                "mug_3_disp|isDispositionOf|mug_3",
+                                "mug_3|hasPart|handle_3",
+                                "handle_3|Type|HandGrip",
+                                "HandGrip|SubClassOf|GraspablePart"
+                                ]
 
 explanations_graspable_medium = [
                                 graspable_medium,
                                 "mug_3_disp|isDispositionOf|mug_3",
                                 "mug_3|hasPart|handle_3",
-                                "handle_3|Type|Handle",
+                                "handle_3|Type|HandGrip",
+                                "HandGrip|SubClassOf|GraspablePart",
+                                "mug_3|isATouchableObject|boolean#true",
                                 ]
 
 explanations_graspable_hard = [
                                 graspable_hard,
                                 "mug_3_disp|isDispositionOf|mug_3",
                                 "mug_3|hasPart|handle_3",
-                                "handle_3|Type|Handle",
-                                "handle_3|isInUse|boolean#false"
+                                "handle_3|Type|HandGrip",
+                                "HandGrip|SubClassOf|GraspablePart",
+                                "handle_3|IsAlreadyInUse|boolean#false",
+                                "mug_3|isATouchableObject|boolean#true",
                                 ]
 
 # =============== Explanations why the class GraspingCapability is inferred =============
-grasping_easy = "GraspingCapability|EquivalentTo|"
-grasping_medium= "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)"
-grasping_hard = "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some (Gripper and (holdsSomething value boolean#false))"
+grasping_easy = "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)"
+grasping_medium= "GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo))"
+grasping_hard = "GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Gripper and (holdsSomething value boolean#false)) and (hasComponent some MotionPlanningAlgo))"
 
-explanations_grasping_easy= ["pepper_capa|Type|GraspingCapability"]
+explanations_grasping_easy= [
+                                grasping_easy,
+                                "pepper_capa|isCapabilityOf|pepper",
+                                "pepper|hasComponent|pepper_left_gripper",
+                                "pepper_left_gripper|Type|MechanicalHand",
+                                "MechanicalHand|SubClassOf|Gripper"
+                                ]
 
 explanations_grasping_medium = [
                                 grasping_medium,
                                 "pepper_capa|isCapabilityOf|pepper",
                                 "pepper|hasComponent|pepper_left_gripper",
-                                "pepper_left_gripper|Type|Gripper",
+                                "pepper_left_gripper|Type|MechanicalHand",
+                                "MechanicalHand|SubClassOf|Gripper",
+                                "pepper|hasComponent|move_it",
+                                "move_it|Type|MotionPlanningAlgo",
                                 ]
 
 explanations_grasping_hard = [
                                 grasping_hard,
                                 "pepper_capa|isCapabilityOf|pepper",
                                 "pepper|hasComponent|pepper_left_gripper",
-                                "pepper_left_gripper|Type|Gripper",
-                                "pepper_left_gripper|holdsSomething|boolean#false"
+                                "pepper_left_gripper|Type|MechanicalHand",
+                                "MechanicalHand|SubClassOf|Gripper",
+                                "pepper_left_gripper|holdsSomething|boolean#false",
+                                "pepper|hasComponent|move_it",
+                                "move_it|Type|MotionPlanningAlgo",
                                 ]
 
 # =============== Explanations why the property isReachable exists =============
@@ -99,9 +114,9 @@ explanations_grasp_easy = explanation_robot_capa + explanations_grasping_easy + 
 explanations_grasp_medium = explanation_robot_capa + explanations_grasping_medium + explanation_object_disp + explanations_graspable_medium + explanations_object_grasp_medium + explanation_width
 explanations_grasp_hard= explanation_robot_capa + explanations_grasping_hard + explanation_object_disp + explanations_graspable_hard + explanations_object_grasp_hard + explanation_width
 
-print("easy : ", explanations_grasp_easy)
-print("medium : ", explanations_grasp_medium)
-print("hard : ", explanations_grasp_hard)
+# print("easy : ", explanations_grasp_easy)
+# print("medium : ", explanations_grasp_medium)
+# print("hard : ", explanations_grasp_hard)
 
 fact_grasp = "pepper|canGrasp|mug_3"
 
@@ -114,25 +129,88 @@ template_dict_grasp = {
                       'handle_3' : '__var5__',
                       'cupboard_1' : '__var6__',
                       'storage_room' : '__var7__',
+                      'move_it' : '__var8__',
                       'Robot': '__agent__',
+                      'MechanicalHand': '__component__',
                       'Mug': '__object__',
-                      'Gripper': '__component__'
+                      'HandGrip': '__part__'
                       }
 
-class_variables_final_grasp = { 
-                    "__object__" : ["Mug", "Cup", "Knife", "Fork", "Pot"],
-                    "__agent__" :   ["Robot", "Pr2", "Pepper", "Tiago"],
-                    "__component__" : ["Gripper", "MechanicalHandGripper", "ClawGripper", "TwoFingerGripper", "VacuumGripper"]
-                     }
+new_objects = ["Hammer"," Toy Bucket", "Suitcase", "Shovel", "Mug", "CookingPot", "Lunchbox"]
+new_parts = ["Grip", "Hold", "HandGrip", "Handle"]
+
+class VariableConcept:
+  def __init__(self, concept, label):
+    self.concept_ = concept
+    self.label_ = label
+
+object_list = [
+              VariableConcept('Mug', 'mug'), 
+              VariableConcept('Hammer', 'hammer'), 
+              VariableConcept('ToyBucket', 'toy bucket'), 
+              VariableConcept('Suitcase', 'suitcase'), 
+              VariableConcept('Shovel', 'shovel'), 
+              VariableConcept('CookingPot', 'cooking pot'),
+              VariableConcept('Lunchbox', 'lunchbox')
+              ]
+
+part_list = [
+              VariableConcept('Handle', 'handle'), 
+              VariableConcept('HandGrip', 'hand grip'), 
+              VariableConcept('Grip', 'grip'), 
+              VariableConcept('Hold', 'hold')
+              ]
+
+agent_list = [
+              VariableConcept('Robot', 'robot'), 
+              VariableConcept('Pr2', 'pr2'), 
+              VariableConcept('Pepper', 'pepper'), 
+              VariableConcept('Tiago', 'tiago')
+              ]
+
+component_list = [
+              VariableConcept('MechanicalHand', 'mechanical hand'), 
+              VariableConcept('Claw', 'claw'), 
+              VariableConcept('TwoFingerClaw', 'two-finger claw'), 
+              VariableConcept('Manipulator', 'manipulator')
+              ]
+
+class_variables_final_grasp = {
+                            "__object__" : object_list,
+                            "__part__" :  part_list,
+                            "__agent__" :   agent_list,
+                            "__component__" : component_list
+                              }
 
 grasp_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d),\
                isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)."
-               
-question_grasp_easy = QuestionInstance(name="q_grasp_easy", fact=fact_grasp, explanations=explanations_grasp_easy,
-                                       rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
 
-question_grasp_medium= QuestionInstance(name="q_grasp_medium", fact=fact_grasp, explanations=explanations_grasp_medium,
-                                       rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
+concepts_rule = ['grasping', 'graspable', 'reach', 'opening', 'object_width', 'can grasp']
 
-question_grasp_hard = QuestionInstance(name="q_grasp_hard", fact=fact_grasp, explanations=explanations_grasp_hard,
-                                       rule=grasp_rule, classes_var=class_variables_final_grasp, template_dict=template_dict_grasp)
+# gt_grasp_easy = "The __agent__ can grasp the __object__ because on one hand it has the grasping capability through its __component__ which is a gripper. \
+#                  On the other hand, the __object__ has the disposition of being graspable because it has a __part__. \
+#                  Moreover the __object__ is reachable by the __agent__."
+
+# gt_grasp_medium = "The __agent__ can grasp the __object__ because on one hand it has the grasping capability through its __component__ which is a gripper, \
+#                   and being equipped with a motion planning algorithm. On the other hand, the __object__ has the disposition of being graspable \
+#                   because it has a __part__ and is a touchable object. Moreover the __object__ is reachable by the __agent__ because \
+#                   it is contained in something which is within the grasping range of the __agent__."
+                 
+# gt_grasp_hard = "The __agent__ can grasp the __object__ because on one hand it has the grasping capability through its __component__ which is a gripper, \
+#                   not currently holding something, and being equipped with a motion planning algorithm. On the other hand, the __object__ has the disposition \
+#                   of being graspable because it is a touchable object, and has a __part__ which is not already in use by someone. \
+#                   Moreover the __object__ is reachable by the __agent__ because it is contained in something which is located in an area within the \
+#                   grasping range of the __agent__."
+                           
+question_grasp_easy = QuestionInstance(name="q_grasp_easy", fact=fact_grasp, explanations=explanations_grasp_easy, rule=grasp_rule, 
+                                       classes_var=class_variables_final_grasp, template_dict=template_dict_grasp, ground_truth_sentence=None, 
+                                       concept_rule=concepts_rule)
+
+question_grasp_medium= QuestionInstance(name="q_grasp_medium", fact=fact_grasp, explanations=explanations_grasp_medium, rule=grasp_rule, 
+                                        classes_var=class_variables_final_grasp, template_dict=template_dict_grasp, ground_truth_sentence=None,
+                                        concept_rule=concepts_rule)
+
+question_grasp_hard = QuestionInstance(name="q_grasp_hard", fact=fact_grasp, explanations=explanations_grasp_hard, rule=grasp_rule, 
+                                       classes_var=class_variables_final_grasp, template_dict=template_dict_grasp, ground_truth_sentence=None,
+                                       concept_rule=concepts_rule)
+
