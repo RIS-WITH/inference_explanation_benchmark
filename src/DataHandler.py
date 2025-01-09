@@ -41,19 +41,19 @@ class QuestionHandler:
 
             # random names, with example, without rule
             baseline_question = generator.create_question(var_question, with_rule = False)
-            saved_data = {"id" : var_question.id_question_ + "b", "selected_classes" : var_question.selected_classes_, "question" : baseline_question}
+            saved_data = {"id" : var_question.id_question_ + "b", "selected_classes" : var_question.selected_classes_, "selected_names" : var_question.selected_names_, "question" : baseline_question, "gt_sentence" : var_question.sentence_}
             self.write_to_file(saving_path + "/baseline/" + filename_b, saved_data)
 
             # random names, shuffled_explanations, with example, without rule
             var_question_shuffled = copy.deepcopy(var_question)
             random.shuffle(var_question_shuffled.explanations_)
             shuffled_question = generator.create_question(var_question_shuffled, with_rule = False)
-            saved_data = {"id" : var_question.id_question_ + "s", "selected_classes" : var_question.selected_classes_, "question" : shuffled_question}
+            saved_data = {"id" : var_question.id_question_ + "s", "selected_classes" : var_question.selected_classes_, "selected_names" : var_question.selected_names_, "question" : shuffled_question, "gt_sentence" : var_question.sentence_}
             self.write_to_file(saving_path + "/shuffle/" + filename_s, saved_data)
 
             # random names, with example, with rule
             rule_question = generator.create_question(var_question, with_rule = True)
-            saved_data = {"id" : var_question.id_question_ + "r", "selected_classes" : var_question.selected_classes_, "question" : rule_question}
+            saved_data = {"id" : var_question.id_question_ + "r", "selected_classes" : var_question.selected_classes_, "selected_names" : var_question.selected_names_, "question" : rule_question, "gt_sentence" : var_question.sentence_}
             self.write_to_file(saving_path + "/rule/" + filename_r, saved_data)   
 
     def write_to_file(self, path_file, saved_question):
@@ -75,7 +75,7 @@ class QuestionHandler:
             init_prompt = question.init_prompt_
             rule = None
 
-        question_dict = {"id": question.id_question_, "template": question.template_question_, 'rule': rule, "init_prompt" : init_prompt, "questions": []}
+        question_dict = {"id": question.id_question_, "template": question.template_question_, "concepts_rule": question.concepts_rule_, 'rule': rule, "init_prompt" : init_prompt, "questions": []}
         json_object = json.dumps(question_dict, indent=2)
 
         with open(path_folder + path_file + '.json', "w") as file:
@@ -135,7 +135,7 @@ class AnswerHandler:
         filename_dir = self.folder_path_ + self.folder_name_ + "/" + self.model_name_
         filename_answer = filename_dir + "/" + id_var + "/" + id_answer + '.json'
 
-        answer_dict = {"id": id_answer, "template": question['template'], "answers": []}
+        answer_dict = {"id": id_answer, "template": question['template'], "concepts" : question['concepts_rule'], "answers": []}
         json_object = json.dumps(answer_dict, indent=2)
 
         with open(filename_answer, "w") as file:
@@ -145,7 +145,7 @@ class AnswerHandler:
                
     def create_variation_file(self, question, path_folder, path_file):
     
-        answer_dict = {"id": question.id_question_, "template": question.template_question_, "answers": []}
+        answer_dict = {"id": question.id_question_, "template": question.template_question_, "concepts" : question['concepts_rule'], "answers": []}
         json_object = json.dumps(answer_dict, indent=2)
 
         with open(path_folder + path_file + '.json', "w") as file:
