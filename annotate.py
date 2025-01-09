@@ -16,14 +16,21 @@ def evaluate_answers(json_file_path, target_file):
         evaluations = []
         current_index = 0
         total_answers = len(data['answers'])
+        concepts = data['concepts']
 
         while current_index < total_answers:
 
             answer_data = data['answers'][current_index]
             question_id = answer_data['id']
             question = answer_data['question']
-            answer = answer_data['answer']
+            answer_parts = answer_data['answer'].split("\n")
+            answer = ""
+            for part in answer_parts:
+                if len(part) > 20: 
+                    answer = part
+                    break
             selected_classes = answer_data['selected_classes']
+            missing_concepts =  []
 
             os.system('cls' if os.name == 'nt' else 'clear')
             print_progress_bar(current_index + 1, total_answers)
@@ -39,9 +46,9 @@ def evaluate_answers(json_file_path, target_file):
 
             # Count selected classes in the answer
             matched_classes = 0
-            total_classes = len(selected_classes)
+            total_classes = len(selected_classes) + len(concepts)
 
-            for key, value in selected_classes.items():
+            for value in selected_classes:
                 if value.lower() in answer.lower():
                     matched_classes += 1
                 else:
@@ -51,6 +58,21 @@ def evaluate_answers(json_file_path, target_file):
                         verify = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
                     if verify == 'y':
                         matched_classes += 1
+                    else:
+                        missing_concepts.append(value)
+                   
+            for value in concepts:
+                if value.lower() in answer.lower():
+                    matched_classes += 1
+                else:
+                    print(f"\033[93mThe selected concept '{value}' was not found in the answer.\033[0m")
+                    verify = input(f"\033[1mDoes '{value}' actually belong to the answer? (y/n): \033[0m").strip().lower()
+                    while verify not in ['y', 'n']:
+                        verify = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
+                    if verify == 'y':
+                        matched_classes += 1
+                    else:
+                        missing_concepts.append(value)
 
             score = matched_classes / total_classes if total_classes > 0 else 0
 
@@ -61,14 +83,14 @@ def evaluate_answers(json_file_path, target_file):
                     'question_id': question_id,
                     'is_correct': correct == 'y',
                     'score': score,
-                    'selected_classes': selected_classes
+                    'missing_concepts': missing_concepts
                 }
             else:
                 evaluations.append({
                     'question_id': question_id,
                     'is_correct': correct == 'y',
                     'score': score,
-                    'selected_classes': selected_classes
+                    'missing_concepts': missing_concepts
                 })
 
             # Navigation options
