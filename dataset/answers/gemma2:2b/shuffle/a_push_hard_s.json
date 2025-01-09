@@ -1,0 +1,268 @@
+{
+  "id": "a_push_hard_s",
+  "template": [
+    "__var0__|canPush|__var1__",
+    [
+      "__var0__|Type|__agent__",
+      "__agent__|SubClassOf|Agent",
+      "__var0__|hasCapability|__var3__",
+      "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector))",
+      "__var3__|isCapabilityOf|__var0__",
+      "__var0__|hasGripper|__var4__",
+      "__var4__|Type|__component__",
+      "__component__|SubClassOf|Gripper",
+      "__var4__|holdsSomething|boolean#false",
+      "__var4__|Type|RigidEndEffector",
+      "__var1__|Type|__object__",
+      "__object__|SubClassOf|Object",
+      "__var1__|hasDisposition|__var2__",
+      "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false)))",
+      "__var2__|isDispositionOf|__var1__",
+      "__var1__|hasPart|__var5__",
+      "__var5__|Type|__part__",
+      "__part__|SubClassOf|RollablePart",
+      "__var5__|isOnRollableSurface|boolean#true",
+      "__var5__|isBlockedBySomething|boolean#false",
+      "(isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy",
+      "__var1__|isOnTable|__var6__",
+      "__var6__|isInSafeArea|__var7__",
+      "__var7__|isWithinMovingRangeOf|__var0__",
+      "__var4__|Type|Gripper",
+      "Gripper|SubClassOf|EndEffector",
+      "__var0__|hasComponent|__var4__",
+      "__var4__|hasApplicableForce|integer#1",
+      "__var1__|requiresForce|integer#1",
+      "equal(integer#1,integer#1)"
+    ]
+  ],
+  "concepts": [
+    "pushing",
+    "pushable",
+    "approachable",
+    "applicable",
+    "require",
+    "can push"
+  ],
+  "answers": [
+    {
+      "id": "a_push_hard_0s",
+      "selected_classes": [
+        "shopping cart",
+        "roller",
+        "pr2",
+        "claw"
+      ],
+      "question": "-Inference : npad|canPush|pwg \n -Justifications : MiniShoppingCart|SubClassOf|Object, pwg|hasDisposition|nnyi, npad|hasGripper|a, a|hasApplicableForce|integer#39, pwg|isOnTable|gs, equal(integer#39,integer#39), pwg|Type|MiniShoppingCart, npad|hasComponent|a, p|Type|Roller, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, Gripper|SubClassOf|EndEffector, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), vne|isWithinMovingRangeOf|npad, a|Type|Gripper, pwg|hasPart|p, pwg|requiresForce|integer#39, Roller|SubClassOf|RollablePart, Pr2|SubClassOf|Agent, lyx|isCapabilityOf|npad, p|isBlockedBySomething|boolean#false, npad|hasCapability|lyx, a|Type|RigidEndEffector, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), nnyi|isDispositionOf|pwg, gs|isInSafeArea|vne, Claw|SubClassOf|Gripper, npad|Type|Pr2, a|holdsSomething|boolean#false, p|isOnRollableSurface|boolean#true, a|Type|Claw. ",
+      "answer": "\nThe robot can push the shopping cart because it has a gripper and is capable of pushing objects. The shopping cart is within the robot's moving range, and the robot is in a safe location.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_1s",
+      "selected_classes": [
+        "shopping cart",
+        "pivot roller",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : sspd|canPush|gpj \n -Justifications : Manipulator|SubClassOf|Gripper, gpj|requiresForce|integer#43, aa|Type|PivotRoller, sspd|hasGripper|dimc, dimc|Type|RigidEndEffector, k|isCapabilityOf|sspd, dimc|Type|Gripper, dimc|hasApplicableForce|integer#43, gpj|hasDisposition|e, sspd|Type|Robot, aon|isWithinMovingRangeOf|sspd, PivotRoller|SubClassOf|RollablePart, MiniShoppingCart|SubClassOf|Object, gpj|hasPart|aa, v|isInSafeArea|aon, Gripper|SubClassOf|EndEffector, dimc|Type|Manipulator, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), aa|isOnRollableSurface|boolean#true, gpj|isOnTable|v, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, equal(integer#43,integer#43), gpj|Type|MiniShoppingCart, dimc|holdsSomething|boolean#false, aa|isBlockedBySomething|boolean#false, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), sspd|hasComponent|dimc, Robot|SubClassOf|Agent, e|isDispositionOf|gpj, sspd|hasCapability|k. ",
+      "answer": "\nThe robot can push the mini shopping cart because it has a gripper and is capable of pushing objects. The robot is within the range of the cart and the cart is on a table.  \n\n\n\nLet me know if you have any other inferences to translate! "
+    },
+    {
+      "id": "a_push_hard_2s",
+      "selected_classes": [
+        "roomba",
+        "wheel",
+        "pr2",
+        "manipulator"
+      ],
+      "question": "-Inference : fir|canPush|sa \n -Justifications : Gripper|SubClassOf|EndEffector, zfe|Type|Manipulator, Manipulator|SubClassOf|Gripper, iskx|Type|Wheel, equal(integer#52,integer#52), fir|Type|Pr2, iskx|isOnRollableSurface|boolean#true, zfe|hasApplicableForce|integer#52, zfe|Type|RigidEndEffector, sa|hasDisposition|yssk, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), RoombaRobot|SubClassOf|Object, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), ypae|isWithinMovingRangeOf|fir, sa|isOnTable|egs, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, zfe|holdsSomething|boolean#false, fir|hasCapability|hk, sa|Type|RoombaRobot, egs|isInSafeArea|ypae, Pr2|SubClassOf|Agent, iskx|isBlockedBySomething|boolean#false, fir|hasComponent|zfe, zfe|Type|Gripper, fir|hasGripper|zfe, hk|isCapabilityOf|fir, Wheel|SubClassOf|RollablePart, yssk|isDispositionOf|sa, sa|requiresForce|integer#52, sa|hasPart|iskx. ",
+      "answer": "\nThe robot can push the object because it has a gripper and is capable of pushing objects. The robot is within the moving range of the object, and the object is on a table.  \n\n\n\n**Explanation:**\n\n* **Inference:** We start with the inference \"fir|canPush|sa\" which means the robot (fir) can push the object (sa).\n* **Justifications:** This section provides details about the relationship between fir and sa: \n    * **Fir's Capabilities:**  The inference is based on fir having a gripper, which allows it to grasp and manipulate objects. \n    * **Object's Properties:** The object (sa) needs to be within the robot's moving range for the push action to occur. It also needs to be on a table.\n\n\n**Key Concepts:**\n\n* **Inference:**  The process of deriving new information from existing knowledge. In this case, we are using SWRL rules to infer that fir can push sa.\n* **Justifications:** These details explain how the inference is derived. \n\n\n\nLet me know if you'd like a more detailed breakdown of any specific part!"
+    },
+    {
+      "id": "a_push_hard_3s",
+      "selected_classes": [
+        "remote controlled car",
+        "pivot wheel",
+        "robot",
+        "claw"
+      ],
+      "question": "-Inference : fiu|canPush|bd \n -Justifications : bd|isOnTable|lb, fiu|hasComponent|j, j|hasApplicableForce|integer#66, bd|hasPart|p, bd|hasDisposition|am, lb|isInSafeArea|u, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), u|isWithinMovingRangeOf|fiu, Gripper|SubClassOf|EndEffector, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), poyw|isCapabilityOf|fiu, p|isBlockedBySomething|boolean#false, bd|requiresForce|integer#66, j|Type|Gripper, fiu|hasGripper|j, equal(integer#66,integer#66), p|isOnRollableSurface|boolean#true, j|holdsSomething|boolean#false, Robot|SubClassOf|Agent, j|Type|RigidEndEffector, am|isDispositionOf|bd, fiu|hasCapability|poyw, p|Type|PivotWheel, RemoteControlledCar|SubClassOf|Object, PivotWheel|SubClassOf|RollablePart, bd|Type|RemoteControlledCar, j|Type|Claw, Claw|SubClassOf|Gripper, fiu|Type|Robot. ",
+      "answer": "\nThe robot can push the object because it has a gripper that can apply force to the object and it is within its moving range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (fiu) can push an object (bd).\n* **Justifications:** The justifications provide details about the relationship between the robot, the object, and the pushing capability: \n    * **Robot's Capabilities:** The robot has a gripper (j) with a specified force capacity. It also has a remote-controlled car body (bd) that can be pushed.\n    * **Object Properties:** The object is on a table (lb), within its moving range, and is not blocked by anything (p). \n    * **Relationship between Robot and Object:**  The robot's gripper holds the object (j) and has the capability to push it.\n\n**Key Points:**\n\n* **Logical Reasoning:** The inference relies on the logical relationships between the robot, the object, and the pushing capability. \n* **Object Properties:** The justifications highlight the object's properties that influence the ability to push it.  \n\n\n\nLet me know if you have any other inferences or need further clarification! "
+    },
+    {
+      "id": "a_push_hard_4s",
+      "selected_classes": [
+        "office chair",
+        "pivot wheel",
+        "tiago",
+        "mechanical hand"
+      ],
+      "question": "-Inference : joer|canPush|jhoy \n -Justifications : k|isCapabilityOf|joer, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), wivn|isWithinMovingRangeOf|joer, jhoy|hasPart|fyb, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), jhoy|isOnTable|d, fyb|isOnRollableSurface|boolean#true, Tiago|SubClassOf|Agent, d|isInSafeArea|wivn, jhoy|Type|OfficeChair, yxqw|Type|Gripper, yxqw|hasApplicableForce|integer#68, Gripper|SubClassOf|EndEffector, joer|hasGripper|yxqw, joer|hasComponent|yxqw, y|isDispositionOf|jhoy, joer|Type|Tiago, equal(integer#68,integer#68), MechanicalHand|SubClassOf|Gripper, fyb|isBlockedBySomething|boolean#false, OfficeChair|SubClassOf|Object, joer|hasCapability|k, yxqw|holdsSomething|boolean#false, yxqw|Type|RigidEndEffector, PivotWheel|SubClassOf|RollablePart, yxqw|Type|MechanicalHand, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, jhoy|hasDisposition|y, fyb|Type|PivotWheel, jhoy|requiresForce|integer#68. ",
+      "answer": "\nThe object can push the chair because it has a pushing capability and is within the range of the chair. The chair is on a table and is within the safe area.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_5s",
+      "selected_classes": [
+        "shopping cart",
+        "caster",
+        "pepper",
+        "mechanical hand"
+      ],
+      "question": "-Inference : sil|canPush|jg \n -Justifications : PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), MiniShoppingCart|SubClassOf|Object, MechanicalHand|SubClassOf|Gripper, ck|isCapabilityOf|sil, Caster|SubClassOf|RollablePart, eytb|hasApplicableForce|integer#42, eytb|holdsSomething|boolean#false, Pepper|SubClassOf|Agent, jg|requiresForce|integer#42, jg|Type|MiniShoppingCart, aa|isBlockedBySomething|boolean#false, jg|isOnTable|dx, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, sil|hasCapability|ck, Gripper|SubClassOf|EndEffector, sil|Type|Pepper, aa|isOnRollableSurface|boolean#true, eytb|Type|Gripper, aa|Type|Caster, eytb|Type|RigidEndEffector, sil|hasComponent|eytb, equal(integer#42,integer#42), sil|hasGripper|eytb, sm|isDispositionOf|jg, eytb|Type|MechanicalHand, jg|hasDisposition|sm, htsx|isWithinMovingRangeOf|sil, jg|hasPart|aa, dx|isInSafeArea|htsx. ",
+      "answer": "\nSil can push the mini shopping cart because it has a pushing capability that allows it to interact with the object and move it. The mini shopping cart is within the range of Sil's capabilities.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_6s",
+      "selected_classes": [
+        "shopping cart",
+        "roller",
+        "pepper",
+        "mechanical hand"
+      ],
+      "question": "-Inference : cfm|canPush|oqx \n -Justifications : MechanicalHand|SubClassOf|Gripper, MiniShoppingCart|SubClassOf|Object, sg|isWithinMovingRangeOf|cfm, cfm|hasGripper|nbe, Roller|SubClassOf|RollablePart, cfm|hasComponent|nbe, cfm|Type|Pepper, ps|Type|Roller, equal(integer#49,integer#49), nbe|hasApplicableForce|integer#49, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), nbe|Type|RigidEndEffector, nbe|holdsSomething|boolean#false, ps|isOnRollableSurface|boolean#true, nbe|Type|Gripper, ghp|isCapabilityOf|cfm, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, nbe|Type|MechanicalHand, ps|isBlockedBySomething|boolean#false, Gripper|SubClassOf|EndEffector, oqx|isOnTable|xkk, oqx|Type|MiniShoppingCart, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), oqx|hasPart|ps, qecy|isDispositionOf|oqx, xkk|isInSafeArea|sg, oqx|requiresForce|integer#49, oqx|hasDisposition|qecy, Pepper|SubClassOf|Agent, cfm|hasCapability|ghp. ",
+      "answer": "\nThe robot can push the shopping cart because it has a gripper that can hold something and is within the range of the cart.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (cfm) can push the shopping cart (oqx).\n* **Justifications:** This explanation breaks down the reasoning behind the inference: \n    * **MechanicalHand:** The robot's gripper is a type of mechanical hand.\n    * **MiniShoppingCart:** The shopping cart is a specific object.\n    * **PushingCapability:**  The robot has a pushing capability, which is defined by its ability to hold something and be within the range of the cart. \n\n\n**Key Concepts:**\n\n* **SubClassOf:** This indicates that the robot's gripper is a type of mechanical hand.\n* **EquivalentTo:** This means the robot can push the shopping cart because it has a capability to hold something and be in the range of the cart.  \n\n\n\nLet me know if you have any other inferences or need further clarification! "
+    },
+    {
+      "id": "a_push_hard_7s",
+      "selected_classes": [
+        "shopping cart",
+        "pivot roller",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : cs|canPush|xv \n -Justifications : MiniShoppingCart|SubClassOf|Object, p|Type|Gripper, xv|requiresForce|integer#60, Robot|SubClassOf|Agent, p|hasApplicableForce|integer#60, i|isCapabilityOf|cs, Manipulator|SubClassOf|Gripper, xv|isOnTable|uaxr, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), kqeq|isBlockedBySomething|boolean#false, p|holdsSomething|boolean#false, uaxr|isInSafeArea|cl, s|isDispositionOf|xv, kqeq|isOnRollableSurface|boolean#true, cl|isWithinMovingRangeOf|cs, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), cs|hasGripper|p, Gripper|SubClassOf|EndEffector, xv|Type|MiniShoppingCart, kqeq|Type|PivotRoller, equal(integer#60,integer#60), cs|hasCapability|i, cs|Type|Robot, p|Type|Manipulator, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, cs|hasComponent|p, p|Type|RigidEndEffector, xv|hasDisposition|s, PivotRoller|SubClassOf|RollablePart, xv|hasPart|kqeq. ",
+      "answer": "\nThe robot can push the shopping cart because it has a gripper and the ability to move objects within its safe area.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can push the shopping cart (xv).\n* **Justifications:** This section provides details about the robot's capabilities, including: \n    * It has a gripper (p) with a force of 60 units.\n    * It is capable of pushing objects within its safe area (uaxr).\n    * The shopping cart (xv) can be pushed because it is a mini-shopping cart and the robot's gripper can hold it.\n\n**Key Concepts:**\n\n* **Object:**  The shopping cart is an object that can be manipulated by the robot. \n* **Gripper:** A tool used to grasp and manipulate objects.\n* **Pushing Capability:** The ability of the robot to move objects using its gripper. \n\n\nLet me know if you'd like a more detailed breakdown or have any other questions! "
+    },
+    {
+      "id": "a_push_hard_8s",
+      "selected_classes": [
+        "remote controlled car",
+        "caster",
+        "robot",
+        "two-finger claw"
+      ],
+      "question": "-Inference : q|canPush|so \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, so|isOnTable|k, q|hasCapability|zh, q|hasGripper|ejvk, ejvk|hasApplicableForce|integer#34, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, so|requiresForce|integer#34, zh|isCapabilityOf|q, x|isOnRollableSurface|boolean#true, Gripper|SubClassOf|EndEffector, q|hasComponent|ejvk, so|Type|RemoteControlledCar, x|isBlockedBySomething|boolean#false, ejvk|Type|RigidEndEffector, so|hasPart|x, Robot|SubClassOf|Agent, pfys|isDispositionOf|so, ejvk|Type|TwoFingerClaw, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), x|Type|Caster, k|isInSafeArea|q, ejvk|holdsSomething|boolean#false, ejvk|Type|Gripper, equal(integer#34,integer#34), RemoteControlledCar|SubClassOf|Object, Caster|SubClassOf|RollablePart, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), q|isWithinMovingRangeOf|q, so|hasDisposition|pfys, q|Type|Robot. ",
+      "answer": "\nThe robot can push the object because it has a gripper that can apply force to an object and is within the object's moving range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can push something.\n* **Justifications:** This section provides details about the robot's capabilities, including its gripper, pushing force, and proximity to the object. \n\n\nLet me know if you have any other inferences or justifications you'd like me to translate! "
+    },
+    {
+      "id": "a_push_hard_9s",
+      "selected_classes": [
+        "shopping cart",
+        "roller",
+        "pepper",
+        "claw"
+      ],
+      "question": "-Inference : v|canPush|b \n -Justifications : PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), b|Type|MiniShoppingCart, iim|isWithinMovingRangeOf|v, b|hasPart|pdo, pdo|Type|Roller, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, aeh|Type|Gripper, b|hasDisposition|tak, Gripper|SubClassOf|EndEffector, v|hasComponent|aeh, aeh|Type|RigidEndEffector, equal(integer#50,integer#50), aeh|Type|Claw, v|hasCapability|i, b|requiresForce|integer#50, v|hasGripper|aeh, MiniShoppingCart|SubClassOf|Object, aeh|hasApplicableForce|integer#50, Claw|SubClassOf|Gripper, tak|isDispositionOf|b, Pepper|SubClassOf|Agent, aeh|holdsSomething|boolean#false, i|isCapabilityOf|v, pdo|isOnRollableSurface|boolean#true, wtkc|isInSafeArea|iim, v|Type|Pepper, Roller|SubClassOf|RollablePart, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), b|isOnTable|wtkc, pdo|isBlockedBySomething|boolean#false. ",
+      "answer": "\nThe robot can push the shopping cart because it has a pushing capability that allows it to interact with the shopping cart and move it. The robot needs to be within the cart's range, and the cart must be on a table or in a safe area for the robot to push it.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_10s",
+      "selected_classes": [
+        "remote controlled car",
+        "roller",
+        "tiago",
+        "manipulator"
+      ],
+      "question": "-Inference : u|canPush|srdl \n -Justifications : srdl|Type|RemoteControlledCar, g|holdsSomething|boolean#false, srdl|isOnTable|nbwv, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, e|isOnRollableSurface|boolean#true, ujth|isDispositionOf|srdl, jfw|isCapabilityOf|u, equal(integer#48,integer#48), g|hasApplicableForce|integer#48, bc|isWithinMovingRangeOf|u, RemoteControlledCar|SubClassOf|Object, srdl|hasPart|e, Roller|SubClassOf|RollablePart, srdl|requiresForce|integer#48, u|hasComponent|g, e|isBlockedBySomething|boolean#false, u|Type|Tiago, u|hasCapability|jfw, g|Type|Manipulator, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), g|Type|Gripper, g|Type|RigidEndEffector, Gripper|SubClassOf|EndEffector, Tiago|SubClassOf|Agent, u|hasGripper|g, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), srdl|hasDisposition|ujth, e|Type|Roller, Manipulator|SubClassOf|Gripper, nbwv|isInSafeArea|bc. ",
+      "answer": "\nThe car can push the object because it has a pushing capability and the object is on a surface that allows for movement.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that \"u\" (the Tiago) can push \"srdl\" (the remote-controlled car). \n* **Justifications:** This explanation breaks down the reasoning behind the inference:\n    * **Object Properties:** We know the car is a remote-controlled car, and it has a part called 'g' which is a manipulator.  The manipulator can push objects. \n    * **Surface:** The object is on a surface that allows for movement (the 'srdl' object). \n\n\nLet me know if you have any other inferences or justifications you'd like to translate! "
+    },
+    {
+      "id": "a_push_hard_11s",
+      "selected_classes": [
+        "office chair",
+        "wheel",
+        "pepper",
+        "claw"
+      ],
+      "question": "-Inference : c|canPush|ta \n -Justifications : i|isCapabilityOf|c, ta|isOnTable|fhs, ta|requiresForce|integer#68, ta|hasDisposition|epus, c|hasComponent|y, ta|Type|OfficeChair, em|isOnRollableSurface|boolean#true, equal(integer#68,integer#68), c|Type|Pepper, y|Type|Gripper, y|Type|Claw, Gripper|SubClassOf|EndEffector, y|holdsSomething|boolean#false, c|hasGripper|y, OfficeChair|SubClassOf|Object, epus|isDispositionOf|ta, Claw|SubClassOf|Gripper, em|isBlockedBySomething|boolean#false, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), Wheel|SubClassOf|RollablePart, em|Type|Wheel, hltr|isWithinMovingRangeOf|c, y|hasApplicableForce|integer#68, ta|hasPart|em, Pepper|SubClassOf|Agent, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, c|hasCapability|i, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), y|Type|RigidEndEffector, fhs|isInSafeArea|hltr. ",
+      "answer": "\nThe robot can push the chair because it has a pushing capability that allows it to interact with objects in its environment. The robot's gripper is capable of holding something and it can be pushed into a safe location.  \n\n\n\n**Explanation:**\n\n* **Inference:** We start by identifying the inference: \"c|canPush|ta\"\n* **Justifications:** This section provides details about why this inference holds true. \n    * **c's capabilities:** The robot has a pushing capability (represented as 'c').\n    * **ta's properties:**  The chair ('ta') is on a table, requires force to move, and has a disposition that allows it to be pushed. \n    * **Relationship between c and ta:** We see the inference connecting the robot's ability to push with the chair's properties.\n\n**Key Concepts:**\n\n* **SWRL Rules:** The rules are used to infer new facts about entities in an ontology. \n* **Justifications:** These details explain how the inference is derived from the SWRL rules and the relationships between entities. \n\n\nLet me know if you have any other inferences or need further clarification! "
+    },
+    {
+      "id": "a_push_hard_12s",
+      "selected_classes": [
+        "toy wagon",
+        "roller",
+        "pepper",
+        "mechanical hand"
+      ],
+      "question": "-Inference : gj|canPush|v \n -Justifications : q|Type|Gripper, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), gj|hasGripper|q, q|holdsSomething|boolean#false, lav|isCapabilityOf|gj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), equal(integer#61,integer#61), v|hasDisposition|wr, wjk|isWithinMovingRangeOf|gj, ehx|isOnRollableSurface|boolean#true, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, gj|hasCapability|lav, Pepper|SubClassOf|Agent, q|hasApplicableForce|integer#61, q|Type|RigidEndEffector, Gripper|SubClassOf|EndEffector, gj|hasComponent|q, ehx|isBlockedBySomething|boolean#false, gj|Type|Pepper, d|isInSafeArea|wjk, v|Type|ToyWagon, Roller|SubClassOf|RollablePart, v|requiresForce|integer#61, ehx|Type|Roller, ToyWagon|SubClassOf|Object, v|isOnTable|d, MechanicalHand|SubClassOf|Gripper, wr|isDispositionOf|v, q|Type|MechanicalHand, v|hasPart|ehx. ",
+      "answer": "\nThe robot can push the toy wagon because it has a pushing capability and is within the range of the object to be pushed.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that \"gj\" (the robot) can push something (\"v\").\n* **Justifications:** This section provides details about the robot's capabilities, including its gripper, pushing capability, and the objects it can interact with. \n\n\nLet me know if you have any other inferences or justifications you'd like to translate! "
+    },
+    {
+      "id": "a_push_hard_13s",
+      "selected_classes": [
+        "remote controlled car",
+        "wheel",
+        "pr2",
+        "two-finger claw"
+      ],
+      "question": "-Inference : ez|canPush|ls \n -Justifications : qusp|hasApplicableForce|integer#66, ez|Type|Pr2, Pr2|SubClassOf|Agent, TwoFingerClaw|SubClassOf|Gripper, ls|hasPart|k, ls|hasDisposition|dhtp, ez|hasCapability|axk, qusp|holdsSomething|boolean#false, dhtp|isDispositionOf|ls, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), k|isBlockedBySomething|boolean#false, Gripper|SubClassOf|EndEffector, qusp|Type|Gripper, RemoteControlledCar|SubClassOf|Object, k|Type|Wheel, tra|isWithinMovingRangeOf|ez, qusp|Type|RigidEndEffector, ls|requiresForce|integer#66, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), ls|Type|RemoteControlledCar, axk|isCapabilityOf|ez, ez|hasComponent|qusp, equal(integer#66,integer#66), ez|hasGripper|qusp, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, y|isInSafeArea|tra, ls|isOnTable|y, qusp|Type|TwoFingerClaw, Wheel|SubClassOf|RollablePart, k|isOnRollableSurface|boolean#true. ",
+      "answer": "\nThe robot can push the object because it has a pushing capability and the object is within its moving range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (ez) can push an object (ls).\n* **Justifications:** This section provides details about the robot's capabilities, including: \n    * It has a gripper (qusp) with a pushing capability.\n    * The object (ls) is within the robot's moving range.\n\n**Key Points:**\n\n* **Logical Connection:**  The inference follows from the justifications provided. \n* **Object-Oriented Reasoning:** The explanation highlights the relationship between the robot and the object, emphasizing their interaction through the gripper.\n\n\n\nLet me know if you have any other SWRL rules or inferences you'd like to translate! "
+    },
+    {
+      "id": "a_push_hard_14s",
+      "selected_classes": [
+        "office chair",
+        "pivot wheel",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : r|canPush|jhzg \n -Justifications : mmtd|isCapabilityOf|r, r|hasCapability|mmtd, y|hasApplicableForce|integer#59, y|Type|Gripper, jhzg|Type|OfficeChair, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), z|isOnRollableSurface|boolean#true, r|Type|Robot, y|Type|Manipulator, jhzg|hasDisposition|bwu, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, c|isInSafeArea|g, z|Type|PivotWheel, Manipulator|SubClassOf|Gripper, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), r|hasGripper|y, PivotWheel|SubClassOf|RollablePart, g|isWithinMovingRangeOf|r, jhzg|requiresForce|integer#59, OfficeChair|SubClassOf|Object, y|holdsSomething|boolean#false, jhzg|isOnTable|c, Gripper|SubClassOf|EndEffector, y|Type|RigidEndEffector, equal(integer#59,integer#59), bwu|isDispositionOf|jhzg, r|hasComponent|y, Robot|SubClassOf|Agent, jhzg|hasPart|z, z|isBlockedBySomething|boolean#false. ",
+      "answer": "\nThe robot can push the office chair because it has a pushing capability and the chair is within its moving range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can push the office chair.\n* **Justifications:** The justifications provide details about the robot's capabilities, including: \n    * It has a gripper (y) which allows it to hold objects.\n    * It has a pushing capability (r).\n    * The office chair is within its moving range (jhzg).\n\n**Key Points:**\n\n* **Logical Connection:**  The inference follows from the robot's capabilities and the chair's properties. \n* **Edge Case:** We need to consider that the robot can push the chair because it has a gripper, which allows it to hold objects. The chair is within its moving range.\n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_15s",
+      "selected_classes": [
+        "toy wagon",
+        "wheel",
+        "pepper",
+        "two-finger claw"
+      ],
+      "question": "-Inference : le|canPush|j \n -Justifications : j|isOnTable|ev, ff|isOnRollableSurface|boolean#true, j|hasDisposition|umkp, Wheel|SubClassOf|RollablePart, r|Type|RigidEndEffector, equal(integer#47,integer#47), Pepper|SubClassOf|Agent, j|requiresForce|integer#47, r|hasApplicableForce|integer#47, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, cw|isCapabilityOf|le, j|hasPart|ff, le|hasCapability|cw, le|hasComponent|r, ToyWagon|SubClassOf|Object, ff|isBlockedBySomething|boolean#false, TwoFingerClaw|SubClassOf|Gripper, ev|isInSafeArea|f, le|Type|Pepper, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), le|hasGripper|r, r|holdsSomething|boolean#false, f|isWithinMovingRangeOf|le, ff|Type|Wheel, j|Type|ToyWagon, umkp|isDispositionOf|j, Gripper|SubClassOf|EndEffector, r|Type|TwoFingerClaw, r|Type|Gripper. ",
+      "answer": "\nThe robot can push the object because it has a pushing capability and the object is on a table or a surface that can be pushed on. The robot also has a gripper to hold the object.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_16s",
+      "selected_classes": [
+        "office chair",
+        "wheel",
+        "pr2",
+        "claw"
+      ],
+      "question": "-Inference : bxm|canPush|noy \n -Justifications : s|isDispositionOf|noy, sw|Type|Wheel, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, Gripper|SubClassOf|EndEffector, OfficeChair|SubClassOf|Object, noy|hasPart|sw, sw|isOnRollableSurface|boolean#true, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), noy|isOnTable|u, n|Type|RigidEndEffector, sw|isBlockedBySomething|boolean#false, bxm|hasComponent|n, n|Type|Gripper, noy|requiresForce|integer#40, frx|isWithinMovingRangeOf|bxm, Pr2|SubClassOf|Agent, bxm|hasGripper|n, v|isCapabilityOf|bxm, equal(integer#40,integer#40), Wheel|SubClassOf|RollablePart, n|Type|Claw, bxm|Type|Pr2, n|hasApplicableForce|integer#40, bxm|hasCapability|v, u|isInSafeArea|frx, n|holdsSomething|boolean#false, noy|Type|OfficeChair, noy|hasDisposition|s, Claw|SubClassOf|Gripper, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))). ",
+      "answer": "\nThe robot can push the chair because it has a pushing capability, which allows it to interact with objects in its environment. The robot's gripper is capable of holding something, and it can move within a safe area.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_17s",
+      "selected_classes": [
+        "toy wagon",
+        "caster",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : ahuz|canPush|aic \n -Justifications : aic|hasDisposition|kdlb, e|Type|Caster, e|isOnRollableSurface|boolean#true, olsa|isCapabilityOf|ahuz, gci|holdsSomething|boolean#false, equal(integer#34,integer#34), gci|Type|Gripper, ahuz|hasComponent|gci, ToyWagon|SubClassOf|Object, ahuz|Type|Robot, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, gci|hasApplicableForce|integer#34, aic|hasPart|e, aic|isOnTable|g, Caster|SubClassOf|RollablePart, Gripper|SubClassOf|EndEffector, ahuz|hasGripper|gci, Robot|SubClassOf|Agent, ycp|isWithinMovingRangeOf|ahuz, aic|Type|ToyWagon, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), gci|Type|RigidEndEffector, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), aic|requiresForce|integer#34, g|isInSafeArea|ycp, kdlb|isDispositionOf|aic, ahuz|hasCapability|olsa, e|isBlockedBySomething|boolean#false, Manipulator|SubClassOf|Gripper, gci|Type|Manipulator. ",
+      "answer": "\nThe robot can push the toy wagon because it has a pushing capability and a gripper that can hold something. The robot is within the safe area and can be approached by another object.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_18s",
+      "selected_classes": [
+        "remote controlled car",
+        "roller",
+        "pr2",
+        "manipulator"
+      ],
+      "question": "-Inference : nw|canPush|a \n -Justifications : PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), a|hasDisposition|p, a|requiresForce|integer#54, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, a|Type|RemoteControlledCar, a|hasPart|t, Manipulator|SubClassOf|Gripper, Gripper|SubClassOf|EndEffector, p|isDispositionOf|a, RemoteControlledCar|SubClassOf|Object, qsi|Type|Gripper, nw|hasComponent|qsi, nw|hasGripper|qsi, qsi|holdsSomething|boolean#false, trf|isCapabilityOf|nw, t|Type|Roller, a|isOnTable|fo, nw|hasCapability|trf, Pr2|SubClassOf|Agent, t|isBlockedBySomething|boolean#false, gbj|isWithinMovingRangeOf|nw, nw|Type|Pr2, qsi|Type|Manipulator, qsi|Type|RigidEndEffector, equal(integer#54,integer#54), t|isOnRollableSurface|boolean#true, qsi|hasApplicableForce|integer#54, fo|isInSafeArea|gbj, Roller|SubClassOf|RollablePart. ",
+      "answer": "\nThe robot can push a thing because it has the capability to do so and it has a gripper that holds something.  \n\n\n\n"
+    },
+    {
+      "id": "a_push_hard_19s",
+      "selected_classes": [
+        "roomba",
+        "roller",
+        "pr2",
+        "claw"
+      ],
+      "question": "-Inference : wnkz|canPush|my \n -Justifications : PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false))), RoombaRobot|SubClassOf|Object, wx|isCapabilityOf|wnkz, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector)), Gripper|SubClassOf|EndEffector, wnkz|hasGripper|j, j|holdsSomething|boolean#false, j|Type|Gripper, j|Type|Claw, wnkz|hasComponent|j, equal(integer#45,integer#45), xjxr|isInSafeArea|yp, Claw|SubClassOf|Gripper, Pr2|SubClassOf|Agent, ndj|Type|Roller, my|Type|RoombaRobot, yp|isWithinMovingRangeOf|wnkz, my|hasDisposition|gv, ndj|isBlockedBySomething|boolean#false, Roller|SubClassOf|RollablePart, my|requiresForce|integer#45, my|isOnTable|xjxr, j|Type|RigidEndEffector, gv|isDispositionOf|my, wnkz|hasCapability|wx, (isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, wnkz|Type|Pr2, j|hasApplicableForce|integer#45, ndj|isOnRollableSurface|boolean#true, my|hasPart|ndj. ",
+      "answer": "\nThe robot can push the object because it has a pushing capability and the object is within its moving range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (wnkz) can push something (my).\n* **Justifications:** This section provides details about the robot's capabilities, including: \n    * It has a pushing capability (wx).\n    * It is within the object's moving range (yp).\n    * The object is on a table (xjxr) and can be pushed.\n\n\n**Key Concepts:**\n\n* **Pushing Capability:**  The robot has the ability to push objects. \n* **Moving Range:** The robot can reach the object. \n* **Object's Disposition:** The object is in a position that allows for pushing.\n\n\n\nLet me know if you have any other SWRL rules you'd like me to translate! "
+    }
+  ]
+}

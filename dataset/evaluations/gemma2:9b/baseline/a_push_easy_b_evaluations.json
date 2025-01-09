@@ -1,0 +1,18 @@
+[
+    {
+        "question_id": "a_push_easy_0b",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_1b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "remote controlled car",
+            "agent",
+            "object"
+        ]
+    }
+]
