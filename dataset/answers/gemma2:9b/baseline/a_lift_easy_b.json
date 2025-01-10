@@ -47,7 +47,7 @@
       "id": "a_lift_easy_0b",
       "selected_classes": [
         "cooking pot",
-        "hold",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -69,7 +69,7 @@
       "id": "a_lift_easy_2b",
       "selected_classes": [
         "laundry basket",
-        "grip",
+        "handle",
         "pr2",
         "manipulator"
       ],
@@ -80,7 +80,7 @@
       "id": "a_lift_easy_3b",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "tiago",
         "two-finger claw"
       ],
@@ -91,7 +91,7 @@
       "id": "a_lift_easy_4b",
       "selected_classes": [
         "laundry basket",
-        "grip",
+        "handle",
         "robot",
         "claw"
       ],
@@ -102,7 +102,7 @@
       "id": "a_lift_easy_5b",
       "selected_classes": [
         "oven tray",
-        "grip",
+        "handle",
         "pepper",
         "claw"
       ],
@@ -113,7 +113,7 @@
       "id": "a_lift_easy_6b",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pepper",
         "claw"
       ],
@@ -135,7 +135,7 @@
       "id": "a_lift_easy_8b",
       "selected_classes": [
         "laundry basket",
-        "hold",
+        "handle",
         "pepper",
         "two-finger claw"
       ],
@@ -146,7 +146,7 @@
       "id": "a_lift_easy_9b",
       "selected_classes": [
         "bucket",
-        "grip",
+        "handle",
         "tiago",
         "two-finger claw"
       ],
@@ -157,7 +157,7 @@
       "id": "a_lift_easy_10b",
       "selected_classes": [
         "cooking pot",
-        "hold",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -179,7 +179,7 @@
       "id": "a_lift_easy_12b",
       "selected_classes": [
         "bucket",
-        "hold",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -190,7 +190,7 @@
       "id": "a_lift_easy_13b",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pepper",
         "two-finger claw"
       ],
@@ -201,7 +201,7 @@
       "id": "a_lift_easy_14b",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -212,7 +212,7 @@
       "id": "a_lift_easy_15b",
       "selected_classes": [
         "cooking pot",
-        "hold",
+        "handle",
         "robot",
         "manipulator"
       ],
@@ -234,7 +234,7 @@
       "id": "a_lift_easy_17b",
       "selected_classes": [
         "bucket",
-        "grip",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -245,7 +245,7 @@
       "id": "a_lift_easy_18b",
       "selected_classes": [
         "laundry basket",
-        "grip",
+        "handle",
         "robot",
         "two-finger claw"
       ],

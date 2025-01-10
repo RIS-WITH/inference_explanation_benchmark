@@ -114,7 +114,7 @@
       "id": "q_lift_medium_1r",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -137,7 +137,7 @@
       "id": "q_lift_medium_2r",
       "selected_classes": [
         "tool box",
-        "grip",
+        "handle",
         "tiago",
         "manipulator"
       ],
@@ -183,7 +183,7 @@
       "id": "q_lift_medium_4r",
       "selected_classes": [
         "tool box",
-        "hold",
+        "handle",
         "robot",
         "mechanical hand"
       ],
@@ -229,7 +229,7 @@
       "id": "q_lift_medium_6r",
       "selected_classes": [
         "oven tray",
-        "grip",
+        "handle",
         "pepper",
         "two-finger claw"
       ],
@@ -252,7 +252,7 @@
       "id": "q_lift_medium_7r",
       "selected_classes": [
         "cooking pot",
-        "hold",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -298,7 +298,7 @@
       "id": "q_lift_medium_9r",
       "selected_classes": [
         "tool box",
-        "hold",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -321,7 +321,7 @@
       "id": "q_lift_medium_10r",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -367,7 +367,7 @@
       "id": "q_lift_medium_12r",
       "selected_classes": [
         "tool box",
-        "hold",
+        "handle",
         "tiago",
         "claw"
       ],
@@ -413,7 +413,7 @@
       "id": "q_lift_medium_14r",
       "selected_classes": [
         "tool box",
-        "hold",
+        "handle",
         "pepper",
         "claw"
       ],
@@ -436,7 +436,7 @@
       "id": "q_lift_medium_15r",
       "selected_classes": [
         "tool box",
-        "grip",
+        "handle",
         "robot",
         "manipulator"
       ],
@@ -505,7 +505,7 @@
       "id": "q_lift_medium_18r",
       "selected_classes": [
         "cooking pot",
-        "hold",
+        "handle",
         "pepper",
         "claw"
       ],
@@ -528,7 +528,7 @@
       "id": "q_lift_medium_19r",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "robot",
         "manipulator"
       ],

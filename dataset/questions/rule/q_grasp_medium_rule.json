@@ -85,7 +85,7 @@
       "id": "q_grasp_medium_0r",
       "selected_classes": [
         "suitcase",
-        "hold",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -232,7 +232,7 @@
       "id": "q_grasp_medium_7r",
       "selected_classes": [
         "hammer",
-        "grip",
+        "handle",
         "pr2",
         "mechanical hand"
       ],
@@ -253,7 +253,7 @@
       "id": "q_grasp_medium_8r",
       "selected_classes": [
         "toy bucket",
-        "hold",
+        "handle",
         "pr2",
         "claw"
       ],
@@ -358,7 +358,7 @@
       "id": "q_grasp_medium_13r",
       "selected_classes": [
         "hammer",
-        "grip",
+        "handle",
         "tiago",
         "claw"
       ],
@@ -379,7 +379,7 @@
       "id": "q_grasp_medium_14r",
       "selected_classes": [
         "shovel",
-        "grip",
+        "handle",
         "robot",
         "mechanical hand"
       ],
@@ -400,7 +400,7 @@
       "id": "q_grasp_medium_15r",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pr2",
         "mechanical hand"
       ],
@@ -463,7 +463,7 @@
       "id": "q_grasp_medium_18r",
       "selected_classes": [
         "hammer",
-        "grip",
+        "handle",
         "pepper",
         "two-finger claw"
       ],

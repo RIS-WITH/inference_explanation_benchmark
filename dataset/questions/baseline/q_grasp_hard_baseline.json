@@ -110,7 +110,7 @@
       "id": "q_grasp_hard_1b",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -154,7 +154,7 @@
       "id": "q_grasp_hard_3b",
       "selected_classes": [
         "toy bucket",
-        "hold",
+        "handle",
         "robot",
         "manipulator"
       ],
@@ -220,7 +220,7 @@
       "id": "q_grasp_hard_6b",
       "selected_classes": [
         "mug",
-        "hold",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -308,7 +308,7 @@
       "id": "q_grasp_hard_10b",
       "selected_classes": [
         "toy bucket",
-        "grip",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -373,7 +373,7 @@
       "id": "q_grasp_hard_13b",
       "selected_classes": [
         "mug",
-        "grip",
+        "handle",
         "pr2",
         "claw"
       ],
@@ -417,7 +417,7 @@
       "id": "q_grasp_hard_15b",
       "selected_classes": [
         "toy bucket",
-        "hold",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -461,7 +461,7 @@
       "id": "q_grasp_hard_17b",
       "selected_classes": [
         "shovel",
-        "hold",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -483,7 +483,7 @@
       "id": "q_grasp_hard_18b",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -504,7 +504,7 @@
       "id": "q_grasp_hard_19b",
       "selected_classes": [
         "toy bucket",
-        "hold",
+        "handle",
         "tiago",
         "mechanical hand"
       ],

@@ -80,7 +80,7 @@
       "id": "q_grasp_easy_0s",
       "selected_classes": [
         "shovel",
-        "grip",
+        "handle",
         "pepper",
         "two-finger claw"
       ],
@@ -118,7 +118,7 @@
       "id": "q_grasp_easy_2s",
       "selected_classes": [
         "hammer",
-        "grip",
+        "handle",
         "robot",
         "mechanical hand"
       ],
@@ -175,7 +175,7 @@
       "id": "q_grasp_easy_5s",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -213,7 +213,7 @@
       "id": "q_grasp_easy_7s",
       "selected_classes": [
         "hammer",
-        "grip",
+        "handle",
         "robot",
         "claw"
       ],
@@ -232,7 +232,7 @@
       "id": "q_grasp_easy_8s",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "pr2",
         "claw"
       ],
@@ -251,7 +251,7 @@
       "id": "q_grasp_easy_9s",
       "selected_classes": [
         "mug",
-        "grip",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -270,7 +270,7 @@
       "id": "q_grasp_easy_10s",
       "selected_classes": [
         "suitcase",
-        "hold",
+        "handle",
         "pepper",
         "mechanical hand"
       ],
@@ -289,7 +289,7 @@
       "id": "q_grasp_easy_11s",
       "selected_classes": [
         "lunchbox",
-        "hold",
+        "handle",
         "pr2",
         "manipulator"
       ],
@@ -327,7 +327,7 @@
       "id": "q_grasp_easy_13s",
       "selected_classes": [
         "suitcase",
-        "grip",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -365,7 +365,7 @@
       "id": "q_grasp_easy_15s",
       "selected_classes": [
         "toy bucket",
-        "hold",
+        "handle",
         "pr2",
         "mechanical hand"
       ],
@@ -384,7 +384,7 @@
       "id": "q_grasp_easy_16s",
       "selected_classes": [
         "toy bucket",
-        "grip",
+        "handle",
         "pepper",
         "claw"
       ],
@@ -403,7 +403,7 @@
       "id": "q_grasp_easy_17s",
       "selected_classes": [
         "shovel",
-        "hold",
+        "handle",
         "tiago",
         "manipulator"
       ],
@@ -422,7 +422,7 @@
       "id": "q_grasp_easy_18s",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "robot",
         "manipulator"
       ],
@@ -441,7 +441,7 @@
       "id": "q_grasp_easy_19s",
       "selected_classes": [
         "toy bucket",
-        "grip",
+        "handle",
         "tiago",
         "manipulator"
       ],
