@@ -167,7 +167,7 @@
       "id": "q_lift_hard_3b",
       "selected_classes": [
         "oven tray",
-        "grip",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -215,7 +215,7 @@
       "id": "q_lift_hard_5b",
       "selected_classes": [
         "oven tray",
-        "grip",
+        "handle",
         "robot",
         "manipulator"
       ],
@@ -239,7 +239,7 @@
       "id": "q_lift_hard_6b",
       "selected_classes": [
         "tool box",
-        "hold",
+        "handle",
         "robot",
         "mechanical hand"
       ],
@@ -263,7 +263,7 @@
       "id": "q_lift_hard_7b",
       "selected_classes": [
         "cooking pot",
-        "grip",
+        "handle",
         "robot",
         "two-finger claw"
       ],
@@ -335,7 +335,7 @@
       "id": "q_lift_hard_10b",
       "selected_classes": [
         "suitcase",
-        "hold",
+        "handle",
         "tiago",
         "claw"
       ],
@@ -359,7 +359,7 @@
       "id": "q_lift_hard_11b",
       "selected_classes": [
         "laundry basket",
-        "hold",
+        "handle",
         "pr2",
         "two-finger claw"
       ],
@@ -430,7 +430,7 @@
       "id": "q_lift_hard_14b",
       "selected_classes": [
         "bucket",
-        "grip",
+        "handle",
         "pr2",
         "mechanical hand"
       ],
@@ -478,7 +478,7 @@
       "id": "q_lift_hard_16b",
       "selected_classes": [
         "bucket",
-        "grip",
+        "handle",
         "tiago",
         "mechanical hand"
       ],
@@ -502,7 +502,7 @@
       "id": "q_lift_hard_17b",
       "selected_classes": [
         "bucket",
-        "grip",
+        "handle",
         "pepper",
         "manipulator"
       ],
@@ -526,7 +526,7 @@
       "id": "q_lift_hard_18b",
       "selected_classes": [
         "oven tray",
-        "hold",
+        "handle",
         "pr2",
         "manipulator"
       ],
@@ -550,7 +550,7 @@
       "id": "q_lift_hard_19b",
       "selected_classes": [
         "laundry basket",
-        "grip",
+        "handle",
         "pr2",
         "manipulator"
       ],
