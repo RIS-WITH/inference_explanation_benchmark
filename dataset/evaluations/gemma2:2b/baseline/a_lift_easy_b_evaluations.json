@@ -1,0 +1,257 @@
+[
+    {
+        "question_id": "a_lift_easy_0b",
+        "is_correct": true,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "hand grip",
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_2b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3b",
+        "is_correct": false,
+        "score": 0.3333333333333333,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_6b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_7b",
+        "is_correct": false,
+        "score": 0.8333333333333334,
+        "missing_concepts": [
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_8b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9b",
+        "is_correct": true,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10b",
+        "is_correct": true,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_11b",
+        "is_correct": true,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12b",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_13b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_14b",
+        "is_correct": true,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_15b",
+        "is_correct": false,
+        "score": 0.3333333333333333,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_16b",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "hand grip",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_17b",
+        "is_correct": true,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18b",
+        "is_correct": true,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19b",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]
