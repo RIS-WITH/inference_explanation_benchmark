@@ -36,14 +36,13 @@
       "greaterThan(integer#2,integer#1)"
     ]
   ],
-  "concepts": [
-    "grasping",
-    "graspable",
-    "reach",
-    "opening",
-    "object_width",
-    "can grasp"
-  ],
+  "concepts" : [
+  "can grasp", 
+  "graspable disposition", "1GraspablePart", "touchable_object", "object_not_already_used",
+  "grasping capability", "1gripper", "motion_planing_algo", "empty_gripper",
+  "reachable", "is_contained_in", "container_in_area", "within_grasping_range",
+  "opening width", "object_width"   
+],
   "answers": [
     {
       "id": "a_grasp_hard_0s",

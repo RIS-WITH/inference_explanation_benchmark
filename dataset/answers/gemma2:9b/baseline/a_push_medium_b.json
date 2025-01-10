@@ -32,14 +32,13 @@
       "equal(integer#1,integer#1)"
     ]
   ],
-  "concepts": [
-    "pushing",
-    "pushable",
-    "approachable",
-    "applicable",
-    "require",
-    "can push"
-  ],
+  "concepts" : [
+  "can push", 
+  "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface",
+  "pushing capability", "min1gripper", "empty_hand",
+  "approachable", "object_on_table", "table_in_moving_range_robot",
+  "applicable force", "required_force"   
+],
   "answers": [
     {
       "id": "a_push_medium_0b",

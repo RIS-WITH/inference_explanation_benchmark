@@ -43,14 +43,13 @@
       "lesserThan(integer#1,integer#2)"
     ]
   ],
-  "concepts": [
-    "lifting",
-    "liftable",
-    "touchable",
-    "weight limit",
-    "object_weight",
-    "can lift"
-  ],
+  "concepts" : [
+  "can lift", 
+  "liftable disposition", "min2holdable_part", "can_be_used", "holding_parts_not_attached",
+  "lifting capability", "min2gripper", "motion_planing_algo", "empty_hands",
+  "touchable", "on_touchable_support", "in_accessible_area", "moving_range_robot",
+  "weight limit", "object_weight"  
+],
   "answers": [
     {
       "id": "a_lift_hard_0s",

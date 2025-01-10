@@ -28,14 +28,13 @@
       "equal(integer#1,integer#1)"
     ]
   ],
-  "concepts": [
-    "pushing",
-    "pushable",
-    "approachable",
-    "applicable",
-    "require",
-    "can push"
-  ],
+  "concepts" : [
+  "can push", 
+  "pushable disposition", "min1rollable_part",
+  "pushing capability", "min1gripper", 
+  "approachable", 
+  "applicable force", "required_force"  
+],
   "answers": [
     {
       "id": "a_push_easy_0r",
