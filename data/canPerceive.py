@@ -182,6 +182,58 @@ perceive_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(
 
 concepts_rule = ['perceiving', 'perceivable', 'visible', 'camera range', 'object_distance', 'can perceive']
 
+concept_easy = {
+                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
+                'disp' : ['perceivable disposition', "1scannable_part"], 
+                'capa': ['perceiving capability', '1camera'], 
+                'property' : ['object_visible_by_robot'],
+                'constraint' : ['camera range', 'object_distance']
+                }
+
+
+concept_medium = {
+                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
+                'disp' : ['perceivable disposition',"1scannable_part", "scannable_part_registered"], 
+                'capa': ['perceiving capability', '1camera', 'camera_active'], 
+                'property' : ['object_visible_by_robot', 'object_has_scannable_code', 'code_in_front_of_camera'],
+                'constraint' : ['camera range', 'object_distance']
+                }
+
+concept_hard = {
+                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
+                'disp' : ['perceivable disposition', "1scannable_part", "scannable_part_registered", 'scannable_part_visible'],
+                'capa': ['perceiving capability', '1camera', 'camera_active', 'scan_detection_algo' ], 
+                'property' : ['object_visible_by_robot', 'object_has_scannable_code', 'code_in_front_of_camera', 'camera_of_robot'],
+                'constraint' : ['camera range', 'object_distance']
+                }
+
+#easy
+# "concepts" : [
+#   "can perceive", 
+#   "perceivable disposition", "1scannable_part",
+#   "perceiving capability", "1camera", 
+#   "object_visible_by_robot", 
+#   "camera range", "object_distance"  
+# ]
+
+# medium
+# "concepts" : [
+#   "can perceive", 
+#   "perceivable disposition", "1scannable_part", "scannable_part_registered",
+#   "perceiving capability", "1camera", "camera_active",
+#   "object_visible_by_robot", "object_has_scannable_code", "code_in_front_of_camera",
+#   "camera range", "object_distance"    
+# ]
+
+# hard
+# "concepts" : [
+#   "can perceive", 
+#   "perceivable disposition", "1scannable_part", "scannable_part_registered", "scannable_part_visible",
+#   "perceiving capability", "1camera", "camera_active", "scan_detection_algo",
+#   "object_visible_by_robot", "object_has_scannable_code", "code_in_front_of_camera", "camera_of_robot",
+#   "camera range", "object_distance"   
+# ]
+
 # gt_perceive_easy = "The __agent__ can perceive the __object__ because on one hand it has the perceiving capability through its __component__ which is a camera. \
 #                  On the other hand, the __object__ has the disposition of being perceivable because it has a __part__, a scannable code. \
 #                  Moreover the __object__ is visible by the __agent__."

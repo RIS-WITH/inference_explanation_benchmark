@@ -189,6 +189,58 @@ component_list = [
               VariableConcept('Manipulator', 'manipulator')
               ]
 
+
+concept_easy = {
+                'rule' : ['can lift', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['liftable disposition', "min2holdable_part"], 
+                'capa': ['lifting capability', 'min2gripper'], 
+                'property' : ['touchable'],
+                'constraint' : ['weight limit', 'object_weight']
+                }
+
+
+concept_medium = {
+                'rule' : ['can lift', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['liftable disposition',"min2holdable_part", "can_be_used"], 
+                'capa': ['lifting capability', 'min2gripper', 'motion_planing_algo'], 
+                'property' : ['touchable', 'on_touchable_support', 'moving_range_robot'],
+                'constraint' : ['weight limit', 'object_weight']
+                }
+
+concept_hard = {
+                'rule' : ['can lift', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['liftable disposition', "min2holdable_part", "can_be_used", 'holding_parts_not_attached'],
+                'capa': ['lifting capability', 'min2gripper', 'motion_planing_algo', 'empty_hands' ], 
+                'property' : ['touchable', 'on_touchable_support', 'in_accessible_area', 'moving_range_robot'],
+                'constraint' : ['weight limit', 'object_weight']
+                }
+# easy
+# "concepts" : [
+#   "can lift", 
+#   "liftable disposition", "min2holdable_part",
+#   "lifting capability", "min2gripper", 
+#   "touchable", 
+#   "weight limit", "object_weight"  
+# ]
+
+# medium
+# "concepts" : [
+#   "can lift", 
+#   "liftable disposition", "min2holdable_part", "can_be_used",
+#   "lifting capability", "min2gripper", "motion_planing_algo",
+#   "touchable", "on_touchable_support", "moving_range_robot",
+#   "weight limit", "object_weight"  
+# ]
+
+# hard
+# "concepts" : [
+#   "can lift", 
+#   "liftable disposition", "min2holdable_part", "can_be_used", "holding_parts_not_attached",
+#   "lifting capability", "min2gripper", "motion_planing_algo", "empty_hands",
+#   "touchable", "on_touchable_support", "in_accessible_area", "moving_range_robot",
+#   "weight limit", "object_weight"  
+# ]
+
 class_variables_final_lift = { 
                     "__object__" : object_list,
                     "__part__" :  part_list,

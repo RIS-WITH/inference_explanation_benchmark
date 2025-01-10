@@ -187,6 +187,58 @@ grasp_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), 
 
 concepts_rule = ['grasping', 'graspable', 'reach', 'opening', 'object_width', 'can grasp']
 
+
+concept_easy = {
+                'rule' : ['can grasp', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['graspable disposition', "1GraspablePart"], 
+                'capa': ['grasping capability', '1gripper'], 
+                'property' : ['reachable'],
+                'constraint' : ['opening width', 'object_width']
+                }
+
+concept_medium = {
+                'rule' : ['can grasp', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['graspable disposition', "1GraspablePart", "touchable_object"], 
+                'capa': ['grasping capability', '1gripper', 'motion_planing_algo'], 
+                'property' : ['reachable', 'is_contained_in', 'within_grasping_range'],
+                'constraint' : ['opening width', 'object_width']
+                }
+
+concept_hard = {
+                'rule' : ['can grasp', '__robot__', '__component__', '__object__', '__part__'],
+                'disp' : ['graspable disposition',"1GraspablePart", "touchable_object", 'object_not_already_used'],
+                'capa': ['grasping capability', '1gripper', 'motion_planing_algo', 'empty_hand' ], 
+                'property' : ['reachable', 'is_contained_in', 'container_in_area', 'within_grasping_range'],
+                'constraint' : ['opening width', 'object_width']
+                }
+
+# easy
+# "concepts" : [
+#   "can grasp", 
+#   "graspable disposition", "1GraspablePart",
+#   "grasping capability", "1gripper", 
+#   "reachable", 
+#   "opening width", "object_width"  
+# ]
+
+# medium
+# "concepts" : [
+#   "can grasp", 
+#   "graspable disposition", "1GraspablePart", "touchable_object",
+#   "grasping capability", "1gripper", "motion_planing_algo",
+#   "reachable", "is_contained_in", "within_grasping_range",
+#   "opening width", "object_width"    
+# ]
+
+# hard
+# "concepts" : [
+#   "can grasp", 
+#   "graspable disposition", "1GraspablePart", "touchable_object", "object_not_already_used",
+#   "grasping capability", "1gripper", "motion_planing_algo", "empty_gripper",
+#   "reachable", "is_contained_in", "container_in_area", "within_grasping_range",
+#   "opening width", "object_width"   
+# ]
+
 # gt_grasp_easy = "The __agent__ can grasp the __object__ because on one hand it has the grasping capability through its __component__ which is a gripper. \
 #                  On the other hand, the __object__ has the disposition of being graspable because it has a __part__. \
 #                  Moreover the __object__ is reachable by the __agent__."

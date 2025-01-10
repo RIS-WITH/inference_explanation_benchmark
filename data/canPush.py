@@ -179,6 +179,58 @@ push_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Ob
 
 concepts_rule = ['pushing', 'pushable', 'approachable', 'applicable_force', 'required_force', 'can push']
 
+concept_easy = {
+                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
+                'disp' : ['pushable disposition', "min1rollable_part"], 
+                'capa': ['pushing capability', 'min1gripper'], 
+                'property' : ['approachable'],
+                'constraint' : ['applicable force', 'required_force']
+                }
+
+
+concept_medium = {
+                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
+                'disp' : ['pushable disposition', "min1rollable_part", "rollable_part_on_rollable_surface"], 
+                'capa': ['pushing capability', 'min1gripper', 'empty_hand'], 
+                'property' : ['approachable', 'object_on_table', 'table_in_moving_range_robot'],
+                'constraint' : ['applicable force', 'required_force']
+                }
+
+concept_hard = {
+                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
+                'disp' : ['pushable disposition', "min1rollable_part", "rollable_part_on_rollable_surface", 'rollable_part_unblocked'],
+                'capa': ['pushing capability', 'min1gripper', 'empty_hand', 'rigid' ], 
+                'property' : ['approachable', 'object_on_table', 'table_in_safe_area', 'table_in_moving_range_robot'],
+                'constraint' : ['applicable force', 'required_force']
+                }
+
+#easy
+# "concepts" : [
+#   "can push", 
+#   "pushable disposition", "min1rollable_part",
+#   "pushing capability", "min1gripper", 
+#   "approachable", 
+#   "applicable force", "required_force"  
+# ]
+
+# medium
+# "concepts" : [
+#   "can push", 
+#   "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface",
+#   "pushing capability", "min1gripper", "empty_hand",
+#   "approachable", "object_on_table", "table_in_moving_range_robot",
+#   "applicable force", "required_force"   
+# ]
+
+# hard
+# "concepts" : [
+#   "can push", 
+#   "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
+#   "pushing capability", "min1gripper", "empty_hand", "rigid",
+#   "approachable", "object_on_table", "table_in_safe_area", "table_in_moving_range_robot",
+#   "applicable force", "required_force"     
+# ]
+
 # gt_push_easy = "The __agent__ can push the __object__ because on one hand it has the pushing capability through having at least one gripper, \
 #                 thanks to its __component__. On the other hand, the __object__ has the disposition of being pushable because it has some __part__ which is a wheel. \
 #                 Moreover the __object__ is approachable by the __agent__."
