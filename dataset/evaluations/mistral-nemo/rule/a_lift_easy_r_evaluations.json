@@ -1,0 +1,147 @@
+[
+    {
+        "question_id": "a_lift_easy_0r",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_2r",
+        "is_correct": false,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3r",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "liftable disposition",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4r",
+        "is_correct": false,
+        "score": 0.8333333333333334,
+        "missing_concepts": [
+            "min2holdable_part",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_6r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_7r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_8r",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9r",
+        "is_correct": true,
+        "score": 0.8333333333333334,
+        "missing_concepts": [
+            "liftable disposition",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_11r",
+        "is_correct": true,
+        "score": 0.8333333333333334,
+        "missing_concepts": [
+            "liftable disposition",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_13r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_14r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_15r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_16r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_easy_17r",
+        "is_correct": false,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18r",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "liftable disposition",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19r",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    }
+]
