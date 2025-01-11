@@ -9,39 +9,45 @@
     },
     {
         "question_id": "a_lift_easy_1b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "hand grip",
+            "liftable disposition",
             "min2holdable_part",
             "touchable"
         ]
     },
     {
         "question_id": "a_lift_easy_2b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
-            "min2gripper"
+            "min2gripper",
+            "touchable"
         ]
     },
     {
         "question_id": "a_lift_easy_3b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
-            "min2gripper"
+            "min2gripper",
+            "touchable"
         ]
     },
     {
         "question_id": "a_lift_easy_4b",
         "is_correct": false,
-        "score": 0.8333333333333334,
+        "score": 0.75,
         "missing_concepts": [
+            "liftable disposition",
             "weight limit",
             "object_weight"
         ]
@@ -49,26 +55,29 @@
     {
         "question_id": "a_lift_easy_5b",
         "is_correct": true,
-        "score": 0.8333333333333334,
+        "score": 0.75,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part"
         ]
     },
     {
         "question_id": "a_lift_easy_6b",
         "is_correct": true,
-        "score": 0.8333333333333334,
+        "score": 0.75,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part"
         ]
     },
     {
         "question_id": "a_lift_easy_7b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable"
@@ -77,25 +86,29 @@
     {
         "question_id": "a_lift_easy_8b",
         "is_correct": true,
-        "score": 1.0,
-        "missing_concepts": []
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
     },
     {
         "question_id": "a_lift_easy_9b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper"
         ]
     },
     {
         "question_id": "a_lift_easy_10b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper"
         ]
@@ -103,9 +116,10 @@
     {
         "question_id": "a_lift_easy_11b",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "hand grip",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable"
@@ -114,15 +128,16 @@
     {
         "question_id": "a_lift_easy_12b",
         "is_correct": true,
-        "score": 0.8333333333333334,
+        "score": 0.75,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part"
         ]
     },
     {
         "question_id": "a_lift_easy_13b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.75,
         "missing_concepts": [
             "handle",
@@ -132,19 +147,22 @@
     },
     {
         "question_id": "a_lift_easy_14b",
-        "is_correct": false,
-        "score": 0.8333333333333334,
+        "is_correct": true,
+        "score": 0.6666666666666666,
         "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
             "weight limit",
             "object_weight"
         ]
     },
     {
         "question_id": "a_lift_easy_15b",
-        "is_correct": true,
-        "score": 0.5833333333333334,
+        "is_correct": false,
+        "score": 0.5,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "weight limit",
@@ -154,9 +172,10 @@
     {
         "question_id": "a_lift_easy_16b",
         "is_correct": true,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "hand grip",
+            "liftable disposition",
             "min2holdable_part",
             "weight limit",
             "object_weight"
@@ -164,29 +183,32 @@
     },
     {
         "question_id": "a_lift_easy_17b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper"
         ]
     },
     {
         "question_id": "a_lift_easy_18b",
-        "is_correct": true,
-        "score": 0.75,
+        "is_correct": false,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper"
         ]
     },
     {
         "question_id": "a_lift_easy_19b",
-        "is_correct": false,
-        "score": 0.75,
+        "is_correct": true,
+        "score": 0.6666666666666666,
         "missing_concepts": [
+            "liftable disposition",
             "min2holdable_part",
             "weight limit",
             "object_weight"

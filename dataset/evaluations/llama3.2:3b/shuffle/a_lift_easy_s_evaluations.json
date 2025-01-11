@@ -4,17 +4,18 @@
         "is_correct": false,
         "score": 0.75,
         "missing_concepts": [
+            "liftable disposition",
             "min2holdable_part",
-            "min2gripper",
-            "touchable"
+            "min2gripper"
         ]
     },
     {
         "question_id": "a_lift_easy_1s",
         "is_correct": true,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "hand grip",
+            "liftable disposition",
             "min2holdable_part",
             "weight limit",
             "object_weight"
@@ -23,9 +24,10 @@
     {
         "question_id": "a_lift_easy_2s",
         "is_correct": false,
-        "score": 0.5,
+        "score": 0.4166666666666667,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -35,10 +37,11 @@
     },
     {
         "question_id": "a_lift_easy_3s",
-        "is_correct": true,
-        "score": 0.5833333333333334,
+        "is_correct": false,
+        "score": 0.5,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -48,9 +51,10 @@
     {
         "question_id": "a_lift_easy_4s",
         "is_correct": false,
-        "score": 0.5833333333333334,
+        "score": 0.5,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -60,29 +64,32 @@
     {
         "question_id": "a_lift_easy_5s",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
             "liftable disposition",
             "min2holdable_part",
-            "touchable"
+            "touchable",
+            "object_weight"
         ]
     },
     {
         "question_id": "a_lift_easy_6s",
-        "is_correct": true,
-        "score": 0.8333333333333334,
+        "is_correct": false,
+        "score": 0.75,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part"
         ]
     },
     {
         "question_id": "a_lift_easy_7s",
         "is_correct": false,
-        "score": 0.75,
+        "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper"
         ]
@@ -90,9 +97,10 @@
     {
         "question_id": "a_lift_easy_8s",
         "is_correct": false,
-        "score": 0.5833333333333334,
+        "score": 0.5,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "weight limit",
@@ -102,9 +110,10 @@
     {
         "question_id": "a_lift_easy_9s",
         "is_correct": false,
-        "score": 0.5,
+        "score": 0.4166666666666667,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -141,31 +150,35 @@
     },
     {
         "question_id": "a_lift_easy_12s",
-        "is_correct": false,
+        "is_correct": true,
         "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
-            "touchable",
             "object_weight"
         ]
     },
     {
         "question_id": "a_lift_easy_13s",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
-            "touchable"
+            "touchable",
+            "object_weight"
         ]
     },
     {
         "question_id": "a_lift_easy_14s",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5,
         "missing_concepts": [
+            "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "weight limit",
@@ -175,9 +188,10 @@
     {
         "question_id": "a_lift_easy_15s",
         "is_correct": false,
-        "score": 0.5,
+        "score": 0.4166666666666667,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -188,21 +202,23 @@
     {
         "question_id": "a_lift_easy_16s",
         "is_correct": false,
-        "score": 0.5833333333333334,
+        "score": 0.5,
         "missing_concepts": [
             "hand grip",
             "liftable disposition",
             "min2holdable_part",
             "min2gripper",
-            "touchable"
+            "touchable",
+            "object_weight"
         ]
     },
     {
         "question_id": "a_lift_easy_17s",
-        "is_correct": true,
-        "score": 0.5,
+        "is_correct": false,
+        "score": 0.4166666666666667,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -213,9 +229,10 @@
     {
         "question_id": "a_lift_easy_18s",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable"
@@ -224,8 +241,9 @@
     {
         "question_id": "a_lift_easy_19s",
         "is_correct": false,
-        "score": 0.6666666666666666,
+        "score": 0.5833333333333334,
         "missing_concepts": [
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "weight limit",
