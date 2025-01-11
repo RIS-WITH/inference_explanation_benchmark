@@ -1,0 +1,161 @@
+[
+    {
+        "question_id": "a_lift_medium_0r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_1r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_2r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_medium_3r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_4r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_medium_5r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_6r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_7r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_8r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_medium_9r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_10r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_11r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_medium_12r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_13r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_14r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_15r",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_lift_medium_16r",
+        "is_correct": false,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_17r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_18r",
+        "is_correct": true,
+        "score": 0.875,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_19r",
+        "is_correct": true,
+        "score": 0.9375,
+        "missing_concepts": [
+            "on_touchable_support"
+        ]
+    }
+]
