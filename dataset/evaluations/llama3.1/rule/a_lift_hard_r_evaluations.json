@@ -1,0 +1,255 @@
+[
+    {
+        "question_id": "a_lift_hard_0r",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_1r",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_2r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_3r",
+        "is_correct": false,
+        "score": 0.5789473684210527,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_4r",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_5r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_6r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_7r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_8r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_9r",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_10r",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_11r",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_12r",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_13r",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_14r",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "empty_hands",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_15r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_16r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_17r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_18r",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "min2gripper",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_19r",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    }
+]
