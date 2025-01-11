@@ -1,0 +1,256 @@
+[
+    {
+        "question_id": "a_lift_medium_0s",
+        "is_correct": true,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_1s",
+        "is_correct": false,
+        "score": 0.625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_2s",
+        "is_correct": false,
+        "score": 0.625,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_3s",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_4s",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_5s",
+        "is_correct": true,
+        "score": 0.6875,
+        "missing_concepts": [
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_6s",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_7s",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_8s",
+        "is_correct": true,
+        "score": 0.6875,
+        "missing_concepts": [
+            "hand grip",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_9s",
+        "is_correct": true,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_10s",
+        "is_correct": true,
+        "score": 0.8125,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_11s",
+        "is_correct": true,
+        "score": 0.8125,
+        "missing_concepts": [
+            "hand grip",
+            "min2holdable_part",
+            "can_be_used"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_12s",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_13s",
+        "is_correct": true,
+        "score": 0.625,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_14s",
+        "is_correct": false,
+        "score": 0.75,
+        "missing_concepts": [
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_15s",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_16s",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "hand grip",
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_17s",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_18s",
+        "is_correct": false,
+        "score": 0.625,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_19s",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo"
+        ]
+    }
+]
