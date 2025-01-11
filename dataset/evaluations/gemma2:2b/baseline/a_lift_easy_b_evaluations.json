@@ -1,7 +1,7 @@
 [
     {
         "question_id": "a_lift_easy_0b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.6666666666666666,
         "missing_concepts": [
             "handle",
@@ -66,10 +66,11 @@
     },
     {
         "question_id": "a_lift_easy_5b",
-        "is_correct": true,
-        "score": 0.5,
+        "is_correct": false,
+        "score": 0.4166666666666667,
         "missing_concepts": [
             "handle",
+            "liftable disposition",
             "min2holdable_part",
             "min2gripper",
             "touchable",
@@ -79,7 +80,7 @@
     },
     {
         "question_id": "a_lift_easy_6b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.5,
         "missing_concepts": [
             "handle",
@@ -93,8 +94,9 @@
     {
         "question_id": "a_lift_easy_7b",
         "is_correct": false,
-        "score": 0.8333333333333334,
+        "score": 0.75,
         "missing_concepts": [
+            "liftable disposition",
             "min2gripper",
             "touchable"
         ]
@@ -128,7 +130,7 @@
     },
     {
         "question_id": "a_lift_easy_10b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
@@ -140,7 +142,7 @@
     },
     {
         "question_id": "a_lift_easy_11b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.4166666666666667,
         "missing_concepts": [
             "hand grip",
@@ -167,7 +169,7 @@
     },
     {
         "question_id": "a_lift_easy_13b",
-        "is_correct": true,
+        "is_correct": false,
         "score": 0.5,
         "missing_concepts": [
             "handle",
@@ -213,8 +215,8 @@
         "score": 0.6666666666666666,
         "missing_concepts": [
             "hand grip",
+            "liftable disposition",
             "min2holdable_part",
-            "min2gripper",
             "touchable"
         ]
     },
@@ -244,10 +246,9 @@
     {
         "question_id": "a_lift_easy_19b",
         "is_correct": true,
-        "score": 0.5,
+        "score": 0.5833333333333334,
         "missing_concepts": [
             "handle",
-            "liftable disposition",
             "min2holdable_part",
             "touchable",
             "weight limit",
