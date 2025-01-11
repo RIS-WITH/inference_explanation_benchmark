@@ -1,0 +1,421 @@
+[
+    {
+        "question_id": "a_lift_hard_0s",
+        "is_correct": true,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_1s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_2s",
+        "is_correct": false,
+        "score": 0.21052631578947367,
+        "missing_concepts": [
+            "handle",
+            "pepper",
+            "mechanical hand",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_3s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_4s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_5s",
+        "is_correct": true,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_6s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_7s",
+        "is_correct": true,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_8s",
+        "is_correct": false,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_9s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_10s",
+        "is_correct": false,
+        "score": 0.05263157894736842,
+        "missing_concepts": [
+            "suitcase",
+            "handle",
+            "tiago",
+            "claw",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_11s",
+        "is_correct": true,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_12s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_13s",
+        "is_correct": false,
+        "score": 0.15789473684210525,
+        "missing_concepts": [
+            "hand grip",
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_14s",
+        "is_correct": true,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_15s",
+        "is_correct": false,
+        "score": 0.3157894736842105,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_16s",
+        "is_correct": false,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_17s",
+        "is_correct": false,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_18s",
+        "is_correct": false,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_19s",
+        "is_correct": false,
+        "score": 0.2631578947368421,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "min2gripper",
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]
