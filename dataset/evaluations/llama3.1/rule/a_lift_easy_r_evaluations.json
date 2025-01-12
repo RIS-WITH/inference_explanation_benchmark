@@ -4,17 +4,15 @@
         "is_correct": true,
         "score": 0.8333333333333334,
         "missing_concepts": [
-            "min2holdable_part",
+            "liftable disposition",
             "touchable"
         ]
     },
     {
         "question_id": "a_lift_easy_1r",
         "is_correct": false,
-        "score": 0.9166666666666666,
-        "missing_concepts": [
-            "min2holdable_part"
-        ]
+        "score": 1.0,
+        "missing_concepts": []
     },
     {
         "question_id": "a_lift_easy_2r",
@@ -34,10 +32,9 @@
     },
     {
         "question_id": "a_lift_easy_4r",
-        "is_correct": false,
-        "score": 0.8333333333333334,
+        "is_correct": true,
+        "score": 0.9166666666666666,
         "missing_concepts": [
-            "min2holdable_part",
             "touchable"
         ]
     },
@@ -116,34 +113,34 @@
     },
     {
         "question_id": "a_lift_easy_14r",
-        "is_correct": false,
-        "score": 0.8333333333333334,
+        "is_correct": true,
+        "score": 0.9166666666666666,
         "missing_concepts": [
-            "min2holdable_part",
             "touchable"
         ]
     },
     {
         "question_id": "a_lift_easy_15r",
-        "is_correct": false,
+        "is_correct": true,
         "score": 1.0,
         "missing_concepts": []
     },
     {
         "question_id": "a_lift_easy_16r",
         "is_correct": true,
-        "score": 0.9166666666666666,
-        "missing_concepts": [
-            "object_weight"
-        ]
+        "score": 1.0,
+        "missing_concepts": []
     },
     {
         "question_id": "a_lift_easy_17r",
         "is_correct": true,
-        "score": 0.8333333333333334,
+        "score": 0.5833333333333334,
         "missing_concepts": [
+            "handle",
+            "min2holdable_part",
             "min2gripper",
-            "touchable"
+            "touchable",
+            "object_weight"
         ]
     },
     {
@@ -157,9 +154,8 @@
     {
         "question_id": "a_lift_easy_19r",
         "is_correct": false,
-        "score": 0.8333333333333334,
+        "score": 0.9166666666666666,
         "missing_concepts": [
-            "min2holdable_part",
             "touchable"
         ]
     }
