@@ -37,10 +37,10 @@
   ],
   "concepts" : [
   "can push", 
-  "pushable", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
+  "pushable", "on a rollable_surface", "unblocked",
   "pushing", "empty_hand", "rigid",
-  "approachable", "object_on_table", "table_in_safe_area", "table_in_moving_range_robot",
-  "applicable force", "required_force"     
+  "approachable", "on the table", "safe area", "moving range",
+  "applicable force", "required force"     
 ],
   "answers": [
     {
