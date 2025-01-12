@@ -36,7 +36,7 @@
   "can push", 
   "pushable", "on a rollable surface",
   "pushing", "empty_hand",
-  "approachable", "on the table", "moving range",
+  "approachable", "on a table", "moving range",
   "applicable force", "required force"   
   ],
   "answers": [

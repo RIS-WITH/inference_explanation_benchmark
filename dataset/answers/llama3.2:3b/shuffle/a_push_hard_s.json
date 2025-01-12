@@ -39,7 +39,7 @@
   "can push", 
   "pushable", "on a rollable_surface", "unblocked",
   "pushing", "empty_hand", "rigid",
-  "approachable", "on the table", "safe area", "moving range",
+  "approachable", "on a table", "safe area", "moving range",
   "applicable force", "required force"     
 ],
   "answers": [
