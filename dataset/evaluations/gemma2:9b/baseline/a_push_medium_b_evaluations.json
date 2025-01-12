@@ -1,0 +1,178 @@
+[
+    {
+        "question_id": "a_push_medium_0b",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_medium_1b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "empty_hand"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_2b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_3b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_4b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "on a rollable surface",
+            "empty_hand",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_5b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "on a rollable surface",
+            "empty_hand",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_6b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "empty_hand",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_7b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "on a rollable surface",
+            "empty_hand",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_8b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_9b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "on a rollable surface",
+            "empty_hand",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_10b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_11b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "empty_hand",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_12b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_13b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_14b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "on a rollable surface",
+            "empty_hand",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_15b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_16b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "approachable",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_17b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_18b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "empty_hand"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_19b",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table"
+        ]
+    }
+]
