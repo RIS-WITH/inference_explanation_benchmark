@@ -1,0 +1,215 @@
+[
+    {
+        "question_id": "a_push_medium_0b",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_1b",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "empty_hand",
+            "approachable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_2b",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_3b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_4b",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_5b",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_6b",
+        "is_correct": false,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "pushable",
+            "on a table",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_7b",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_8b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_9b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "approachable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_10b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_11b",
+        "is_correct": false,
+        "score": 0.5714285714285714,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand",
+            "on a table",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_12b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_13b",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_14b",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "pushable",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_15b",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_16b",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "pepper",
+            "empty_hand",
+            "approachable",
+            "on a table",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_17b",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "empty_hand",
+            "approachable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_18b",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_19b",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "approachable",
+            "on a table"
+        ]
+    }
+]
