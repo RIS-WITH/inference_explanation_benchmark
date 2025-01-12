@@ -32,14 +32,12 @@
       "equal(integer#1,integer#1)"
     ]
   ],
-  "concepts": [
-    "pushing",
-    "pushable",
-    "approachable",
-    "applicable",
-    "force",
-    "require",
-    "can push"
+  "concepts" : [
+  "can push", 
+  "pushable", "on a rollable surface",
+  "pushing", "empty_hand",
+  "approachable", "on the table", "moving range",
+  "applicable force", "required force"   
   ],
   "answers": [
     {
