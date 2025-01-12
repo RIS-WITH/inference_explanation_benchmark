@@ -207,8 +207,8 @@ concept_hard = {
 #easy
 # "concepts" : [
 #   "can push", 
-#   "pushable disposition", "min1rollable_part",
-#   "pushing capability", "min1gripper", 
+#   "pushable",
+#   "pushing", 
 #   "approachable", 
 #   "applicable force", "required_force"  
 # ]
@@ -216,8 +216,8 @@ concept_hard = {
 # medium
 # "concepts" : [
 #   "can push", 
-#   "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface",
-#   "pushing capability", "min1gripper", "empty_hand",
+#   "pushable", "rollable_part_on_rollable_surface",
+#   "pushing", "empty_hand",
 #   "approachable", "object_on_table", "table_in_moving_range_robot",
 #   "applicable force", "required_force"   
 # ]
@@ -225,8 +225,8 @@ concept_hard = {
 # hard
 # "concepts" : [
 #   "can push", 
-#   "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
-#   "pushing capability", "min1gripper", "empty_hand", "rigid",
+#   "pushable", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
+#   "pushing", "empty_hand", "rigid",
 #   "approachable", "object_on_table", "table_in_safe_area", "table_in_moving_range_robot",
 #   "applicable force", "required_force"     
 # ]

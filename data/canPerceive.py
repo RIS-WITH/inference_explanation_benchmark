@@ -210,8 +210,8 @@ concept_hard = {
 #easy
 # "concepts" : [
 #   "can perceive", 
-#   "perceivable disposition", "1scannable_part",
-#   "perceiving capability", "1camera", 
+#   "perceivable",
+#   "perceiving",
 #   "object_visible_by_robot", 
 #   "camera range", "object_distance"  
 # ]
@@ -219,8 +219,8 @@ concept_hard = {
 # medium
 # "concepts" : [
 #   "can perceive", 
-#   "perceivable disposition", "1scannable_part", "scannable_part_registered",
-#   "perceiving capability", "1camera", "camera_active",
+#   "perceivable", "scannable_part_registered",
+#   "perceiving","camera_active",
 #   "object_visible_by_robot", "object_has_scannable_code", "code_in_front_of_camera",
 #   "camera range", "object_distance"    
 # ]
@@ -228,8 +228,8 @@ concept_hard = {
 # hard
 # "concepts" : [
 #   "can perceive", 
-#   "perceivable disposition", "1scannable_part", "scannable_part_registered", "scannable_part_visible",
-#   "perceiving capability", "1camera", "camera_active", "scan_detection_algo",
+#   "perceivable", "scannable_part_registered", "scannable_part_visible",
+#   "perceiving","camera_active", "scan_detection_algo",
 #   "object_visible_by_robot", "object_has_scannable_code", "code_in_front_of_camera", "camera_of_robot",
 #   "camera range", "object_distance"   
 # ]

@@ -215,8 +215,8 @@ concept_hard = {
 # easy
 # "concepts" : [
 #   "can grasp", 
-#   "graspable disposition", "1GraspablePart",
-#   "grasping capability", "1gripper", 
+#  "graspable",
+#   "grasping",
 #   "reachable", 
 #   "opening width", "object_width"  
 # ]
@@ -224,8 +224,8 @@ concept_hard = {
 # medium
 # "concepts" : [
 #   "can grasp", 
-#   "graspable disposition", "1GraspablePart", "touchable_object",
-#   "grasping capability", "1gripper", "motion_planing_algo",
+#  "graspable", "touchable_object",
+#   "grasping","motion_planing_algo",
 #   "reachable", "is_contained_in", "within_grasping_range",
 #   "opening width", "object_width"    
 # ]
@@ -233,8 +233,8 @@ concept_hard = {
 # hard
 # "concepts" : [
 #   "can grasp", 
-#   "graspable disposition", "1GraspablePart", "touchable_object", "object_not_already_used",
-#   "grasping capability", "1gripper", "motion_planing_algo", "empty_gripper",
+#  "graspable", "touchable_object", "object_not_already_used",
+#   "grasping","motion_planing_algo", "empty_gripper",
 #   "reachable", "is_contained_in", "container_in_area", "within_grasping_range",
 #   "opening width", "object_width"   
 # ]
