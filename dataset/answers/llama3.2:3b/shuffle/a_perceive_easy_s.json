@@ -30,8 +30,8 @@
   ],
   "concepts" : [
   "can perceive", 
-  "perceivable disposition", "1scannable_part",
-  "perceiving capability", "1camera", 
+  "perceivable",
+  "perceiving",
   "object_visible_by_robot", 
   "camera range", "object_distance"  
 ],

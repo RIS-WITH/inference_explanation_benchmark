@@ -30,8 +30,8 @@
   ],
   "concepts" : [
   "can grasp", 
-  "graspable disposition", "1GraspablePart",
-  "grasping capability", "1gripper", 
+ "graspable",
+  "grasping",
   "reachable", 
   "opening width", "object_width"  
 ],

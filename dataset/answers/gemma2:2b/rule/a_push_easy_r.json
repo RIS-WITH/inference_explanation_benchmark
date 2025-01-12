@@ -30,8 +30,8 @@
   ],
   "concepts" : [
   "can push", 
-  "pushable disposition", "min1rollable_part",
-  "pushing capability", "min1gripper", 
+  "pushable",
+  "pushing", 
   "approachable", 
   "applicable force", "required_force"  
 ],

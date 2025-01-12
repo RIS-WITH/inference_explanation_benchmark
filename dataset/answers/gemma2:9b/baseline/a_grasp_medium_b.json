@@ -35,8 +35,8 @@
   ],
  "concepts" : [
   "can grasp", 
-  "graspable disposition", "1GraspablePart", "touchable_object",
-  "grasping capability", "1gripper", "motion_planing_algo",
+ "graspable", "touchable_object",
+  "grasping","motion_planing_algo",
   "reachable", "is_contained_in", "within_grasping_range",
   "opening width", "object_width"    
 ],

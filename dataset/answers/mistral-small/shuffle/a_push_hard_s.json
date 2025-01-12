@@ -37,8 +37,8 @@
   ],
   "concepts" : [
   "can push", 
-  "pushable disposition", "min1rollable_part", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
-  "pushing capability", "min1gripper", "empty_hand", "rigid",
+  "pushable", "rollable_part_on_rollable_surface", "rollable_part_unblocked",
+  "pushing", "empty_hand", "rigid",
   "approachable", "object_on_table", "table_in_safe_area", "table_in_moving_range_robot",
   "applicable force", "required_force"     
 ],
