@@ -33,7 +33,7 @@
   "perceivable",
   "perceiving",
   "object_visible_by_robot", 
-  "camera range", "object_distance"  
+  "range", "object_distance"  
 ],
   "answers": [
     {

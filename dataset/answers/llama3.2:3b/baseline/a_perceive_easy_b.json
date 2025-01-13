@@ -28,13 +28,12 @@
       "greaterThan(integer#2,integer#1)"
     ]
   ],
-  "concepts": [
-    "perceiving",
-    "perceivable",
-    "visible",
-    "camera range",
-    "object_distance",
-    "can perceive"
+  "concepts" : [
+  "can perceive", 
+  "perceivable",
+  "perceiving",
+  "object_visible_by_robot", 
+  "range", "object_distance"  
   ],
   "answers": [
     {
