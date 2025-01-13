@@ -1,0 +1,235 @@
+[
+    {
+        "question_id": "a_push_hard_0s",
+        "is_correct": true,
+        "score": 0.6470588235294118,
+        "missing_concepts": [
+            "roller",
+            "on a rollable surface",
+            "pushing",
+            "empty_hand",
+            "rigid",
+            "safe area"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_1s",
+        "is_correct": false,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "unblocked",
+            "pushing",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_2s",
+        "is_correct": false,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "pushable",
+            "unblocked",
+            "pushing",
+            "rigid",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_3s",
+        "is_correct": true,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "on a rollable surface",
+            "rigid",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_4s",
+        "is_correct": false,
+        "score": 0.7647058823529411,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "rigid",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_5s",
+        "is_correct": true,
+        "score": 0.9411764705882353,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_6s",
+        "is_correct": false,
+        "score": 0.6470588235294118,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "empty_hand",
+            "rigid"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_7s",
+        "is_correct": false,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "rigid"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_8s",
+        "is_correct": false,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_9s",
+        "is_correct": true,
+        "score": 0.6470588235294118,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_10s",
+        "is_correct": false,
+        "score": 0.6470588235294118,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "rigid",
+            "safe area",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_11s",
+        "is_correct": false,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "rigid"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_12s",
+        "is_correct": true,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_13s",
+        "is_correct": true,
+        "score": 0.9411764705882353,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_14s",
+        "is_correct": true,
+        "score": 0.8235294117647058,
+        "missing_concepts": [
+            "pivot wheel",
+            "on a table",
+            "safe area"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_15s",
+        "is_correct": true,
+        "score": 0.7647058823529411,
+        "missing_concepts": [
+            "pushable",
+            "rigid",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_16s",
+        "is_correct": true,
+        "score": 0.8823529411764706,
+        "missing_concepts": [
+            "pushable",
+            "rigid"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_17s",
+        "is_correct": true,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_18s",
+        "is_correct": true,
+        "score": 0.7647058823529411,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_19s",
+        "is_correct": false,
+        "score": 0.7647058823529411,
+        "missing_concepts": [
+            "roller",
+            "on a rollable surface",
+            "rigid",
+            "approachable"
+        ]
+    }
+]
