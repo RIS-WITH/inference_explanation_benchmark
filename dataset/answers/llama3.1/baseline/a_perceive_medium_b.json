@@ -34,7 +34,7 @@
  ],
  "concepts" : [
   "can perceive", 
-  "perceivable", "registered",
+  "perceivable", "qr_registered",
   "perceiving","active",
   "object_visible_by_robot", "has a scannable_code", "code_in_front_of_camera",
   "range", "object_distance"    
