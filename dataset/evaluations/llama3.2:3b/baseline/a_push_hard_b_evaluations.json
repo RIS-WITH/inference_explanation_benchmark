@@ -1,0 +1,313 @@
+[
+    {
+        "question_id": "a_push_hard_0b",
+        "is_correct": false,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "empty_hand",
+            "rigid",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_1b",
+        "is_correct": true,
+        "score": 0.4117647058823529,
+        "missing_concepts": [
+            "pivot roller",
+            "manipulator",
+            "pushable",
+            "on a rollable surface",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "safe area",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_2b",
+        "is_correct": true,
+        "score": 0.7058823529411765,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_3b",
+        "is_correct": true,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_4b",
+        "is_correct": true,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area",
+            "moving range",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_5b",
+        "is_correct": false,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "caster",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_6b",
+        "is_correct": true,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_7b",
+        "is_correct": true,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "pivot roller",
+            "manipulator",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_8b",
+        "is_correct": false,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "caster",
+            "pushable",
+            "unblocked",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_9b",
+        "is_correct": false,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_10b",
+        "is_correct": false,
+        "score": 0.4117647058823529,
+        "missing_concepts": [
+            "roller",
+            "manipulator",
+            "pushable",
+            "on a rollable surface",
+            "empty_hand",
+            "rigid",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_11b",
+        "is_correct": true,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "on a rollable surface",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "safe area",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_12b",
+        "is_correct": true,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "roller",
+            "mechanical hand",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_13b",
+        "is_correct": true,
+        "score": 0.5882352941176471,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_14b",
+        "is_correct": true,
+        "score": 0.6470588235294118,
+        "missing_concepts": [
+            "pushable",
+            "on a rollable surface",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_15b",
+        "is_correct": false,
+        "score": 0.4117647058823529,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "unblocked",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_16b",
+        "is_correct": true,
+        "score": 0.4117647058823529,
+        "missing_concepts": [
+            "wheel",
+            "claw",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_17b",
+        "is_correct": false,
+        "score": 0.47058823529411764,
+        "missing_concepts": [
+            "caster",
+            "manipulator",
+            "empty_hand",
+            "rigid",
+            "on a table",
+            "safe area",
+            "moving range",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_18b",
+        "is_correct": true,
+        "score": 0.5294117647058824,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "empty_hand",
+            "rigid",
+            "approachable",
+            "on a table",
+            "safe area",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_hard_19b",
+        "is_correct": true,
+        "score": 0.5882352941176471,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "on a rollable surface",
+            "unblocked",
+            "empty_hand",
+            "rigid",
+            "approachable"
+        ]
+    }
+]
