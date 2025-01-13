@@ -1,0 +1,203 @@
+[
+    {
+        "question_id": "a_perceive_medium_0s",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_perceive_medium_1s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_2s",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "qr_registered"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_3s",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "qr_registered",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_4s",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "perceivable",
+            "qr_registered",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_5s",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_perceive_medium_6s",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_7s",
+        "is_correct": false,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "qr_registered",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_8s",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_9s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_10s",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "perceivable",
+            "qr_registered",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_11s",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_12s",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_13s",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_14s",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_15s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_16s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_17s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "qr_registered",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_18s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_19s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    }
+]
