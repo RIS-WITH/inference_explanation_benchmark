@@ -31,6 +31,7 @@
       "__var1__|isAtDistance|integer#1",
       "greaterThan(integer#2,integer#1)"
     ]
+ ],
  "concepts" : [
   "can perceive", 
   "perceivable", "registered",
