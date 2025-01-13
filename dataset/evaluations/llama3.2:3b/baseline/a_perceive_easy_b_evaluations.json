@@ -1,0 +1,178 @@
+[
+    {
+        "question_id": "a_perceive_easy_0b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_1b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_2b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_3b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_4b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_5b",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_6b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_7b",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_8b",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_9b",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_10b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_11b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_12b",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_13b",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_14b",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_15b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_16b",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_17b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_18b",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_19b",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable"
+        ]
+    }
+]
