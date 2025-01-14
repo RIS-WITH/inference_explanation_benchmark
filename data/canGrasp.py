@@ -19,7 +19,7 @@ explanation_width = [
                     "Gripper|SubClassOf|EndEffector",
                     "pepper|hasComponent|pepper_left_gripper",
                     "pepper_left_gripper|hasOpeningWidth|integer#2",
-                    "mug_3|hasWidth|integer#1",
+                    "mug_3|hasHoldingPartWidth|integer#1",
                     "greaterThan(integer#2,integer#1)"
                     ]
 
