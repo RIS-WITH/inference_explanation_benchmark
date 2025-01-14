@@ -1,0 +1,182 @@
+[
+    {
+        "question_id": "a_perceive_medium_0r",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_1r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_2r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_3r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_4r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_5r",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_6r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_7r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_8r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_9r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_10r",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_11r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_12r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_13r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_14r",
+        "is_correct": true,
+        "score": 0.5714285714285714,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "qr_registered",
+            "object_visible_by_robot",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_15r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_16r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_17r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_18r",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_19r",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "code_in_front_of_camera"
+        ]
+    }
+]
