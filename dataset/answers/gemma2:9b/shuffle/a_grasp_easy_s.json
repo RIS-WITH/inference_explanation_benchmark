@@ -32,7 +32,7 @@
     "grasping",
     "graspable",
     "reachable",
-    "opening",
+    "opening width",
     "object_width",
     "can grasp"
   ],
