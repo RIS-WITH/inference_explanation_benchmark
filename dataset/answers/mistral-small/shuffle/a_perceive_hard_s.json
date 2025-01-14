@@ -36,12 +36,12 @@
       "greaterThan(integer#2,integer#1)"
     ]
   ],
-  "concepts" : [
+   "concepts" : [
   "can perceive", 
-  "perceivable", "scannable_part_registered", "scannable_part_visible",
-  "perceiving","camera_active", "scan_detection_algo",
-  "object_visible_by_robot", "object_has_scannable_code", "code_in_front_of_camera", "camera_of_robot",
-  "camera range", "object_distance"   
+  "perceivable", "registered", "scannable_part_visible",
+  "perceiving", "active", "scan_detection_algo",
+  "object_visible_by_robot", "code_in_front_of_camera", "robot's camera",
+  "range", "object_distance"   
 ],
   "answers": [
     {
