@@ -137,7 +137,7 @@ template_dict_grasp = {
                       }
 
 new_objects = ["Hammer"," Toy Bucket", "Suitcase", "Shovel", "Mug", "CookingPot", "Lunchbox"]
-new_parts = ["Grip", "Hold", "HandGrip", "Handle"]
+new_parts = ["Grip", "HandGrip", "Handle"]
 
 class VariableConcept:
   def __init__(self, concept, label):
@@ -158,7 +158,7 @@ part_list = [
               VariableConcept('Handle', 'handle'), 
               VariableConcept('HandGrip', 'hand grip'), 
               VariableConcept('Grip', 'grip'), 
-              VariableConcept('Hold', 'hold')
+              # VariableConcept('Hold', 'hold')
               ]
 
 agent_list = [
@@ -183,15 +183,15 @@ class_variables_final_grasp = {
                               }
 
 grasp_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d),\
-               isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)."
+               isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)."
 
 concepts_rule = ['grasping', 'graspable', 'reach', 'opening', 'object_width', 'can grasp']
 
 
 concept_easy = {
                 'rule' : ['can grasp', '__robot__', '__component__', '__object__', '__part__'],
-                'disp' : ['graspable disposition', "1GraspablePart"], 
-                'capa': ['grasping capability', '1gripper'], 
+                'disp' : ['graspable'], 
+                'capa': ['grasping '], 
                 'property' : ['reachable'],
                 'constraint' : ['opening width', 'object_width']
                 }
@@ -209,7 +209,7 @@ concept_hard = {
                 'disp' : ['graspable disposition',"1GraspablePart", "touchable_object", 'object_not_already_used'],
                 'capa': ['grasping capability', '1gripper', 'motion_planing_algo', 'empty_hand' ], 
                 'property' : ['reachable', 'is_contained_in', 'container_in_area', 'within_grasping_range'],
-                'constraint' : ['opening width', 'object_width']
+                'constraint' : ['opening width', 'handle_width']
                 }
 
 # easy
