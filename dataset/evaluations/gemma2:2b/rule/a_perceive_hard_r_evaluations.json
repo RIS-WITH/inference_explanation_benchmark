@@ -1,0 +1,303 @@
+[
+    {
+        "question_id": "a_perceive_hard_0r",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "scan tag",
+            "rgb camera",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_1r",
+        "is_correct": true,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_2r",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_3r",
+        "is_correct": true,
+        "score": 0.3333333333333333,
+        "missing_concepts": [
+            "scan tag",
+            "webcam",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_4r",
+        "is_correct": true,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_5r",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "qr tag",
+            "rgb camera",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_6r",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_7r",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "2d barcode",
+            "kinect v2",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_8r",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_9r",
+        "is_correct": true,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_10r",
+        "is_correct": true,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "qr code",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_11r",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "qr code",
+            "webcam",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_12r",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_13r",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_14r",
+        "is_correct": false,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_15r",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_16r",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "qr code",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_17r",
+        "is_correct": true,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_18r",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_19r",
+        "is_correct": false,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera"
+        ]
+    }
+]
