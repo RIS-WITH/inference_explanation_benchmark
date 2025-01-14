@@ -36,8 +36,8 @@
   "concepts": [
     "grasping",
     "graspable",
-    "reach",
-    "opening",
+    "reachable",
+    "opening width",
     "object_width",
     "can grasp"
   ],
@@ -50,8 +50,8 @@
         "pepper",
         "manipulator"
       ],
-      "question": "-Inference : yj|canGrasp|k \n -Justifications : lep|hasOpeningWidth|integer#71, hay|isWithinGraspRangeOf|yj, k|isContainedIn|hay, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, yj|Type|Pepper, k|Type|Suitcase, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), k|hasDisposition|b, k|hasPart|yfmc, b|isDispositionOf|k, k|isATouchableObject|boolean#true, Gripper|SubClassOf|EndEffector, greaterThan(integer#71,integer#35), k|hasHoldingPartWidth|integer#35, yj|hasComponent|m, yj|hasComponent|lep, yj|hasComponent|lep, m|Type|MotionPlanningAlgo, Pepper|SubClassOf|Agent, lep|Type|Gripper, lep|Type|Manipulator, x|isCapabilityOf|yj, Hold|SubClassOf|GraspablePart, Manipulator|SubClassOf|Gripper, yfmc|Type|Hold, Suitcase|SubClassOf|Object, yj|hasCapability|x. ",
-      "answer": " the robot can grasp the suitcase because it has a grasping capability with a gripper and motion planning algorithm, and the suitcase is within its reachable range, having a part that is graspable and touchable. The gripper's opening width is greater than the suitcase's holding part width, ensuring a secure grasp."
+      "question": "-Inference : yj|canGrasp|k \n -Justifications : lep|hasOpeningWidth|integer#71, hay|isWithinGraspRangeOf|yj, k|isContainedIn|hay, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, yj|Type|Pepper, k|Type|Suitcase, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), k|hasDisposition|b, k|hasPart|yfmc, b|isDispositionOf|k, k|isATouchableObject|boolean#true, Gripper|SubClassOf|EndEffector, greaterThan(integer#71,integer#35), k|hasHoldingPartWidth|integer#35, yj|hasComponent|m, yj|hasComponent|lep, yj|hasComponent|lep, m|Type|MotionPlanningAlgo, Pepper|SubClassOf|Agent, lep|Type|Gripper, lep|Type|Manipulator, x|isCapabilityOf|yj, Handle|SubClassOf|GraspablePart, Manipulator|SubClassOf|Gripper, yfmc|Type|Handle, Suitcase|SubClassOf|Object, yj|hasCapability|x. ",
+      "answer": " the robot can grasp the suitcase because it has a grasping capability with a gripper and motion planning algorithm, and the suitcase is within its reachable range. The suitcase has a graspable disposition due to its touchable handle part, which fits within the gripper's opening width."
     },
     {
       "id": "a_grasp_medium_1s",
@@ -138,7 +138,7 @@
         "pr2",
         "claw"
       ],
-      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : fbbs|Type|Hold, Gripper|SubClassOf|EndEffector, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), anug|Type|Claw, ToyBucket|SubClassOf|Object, zlyv|hasComponent|anug, dh|isContainedIn|j, zlyv|hasComponent|fn, zlyv|Type|Pr2, anug|hasOpeningWidth|integer#71, Claw|SubClassOf|Gripper, dh|hasDisposition|owuq, dh|hasPart|fbbs, Hold|SubClassOf|GraspablePart, anug|Type|Gripper, fn|Type|MotionPlanningAlgo, Pr2|SubClassOf|Agent, dh|isATouchableObject|boolean#true, owuq|isDispositionOf|dh, dh|Type|ToyBucket, zlyv|hasCapability|x, greaterThan(integer#71,integer#68), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, dh|hasHoldingPartWidth|integer#68, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), j|isWithinGraspRangeOf|zlyv. ",
+      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : fbbs|Type|Handle, Gripper|SubClassOf|EndEffector, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), anug|Type|Claw, ToyBucket|SubClassOf|Object, zlyv|hasComponent|anug, dh|isContainedIn|j, zlyv|hasComponent|fn, zlyv|Type|Pr2, anug|hasOpeningWidth|integer#71, Claw|SubClassOf|Gripper, dh|hasDisposition|owuq, dh|hasPart|fbbs, Handle|SubClassOf|GraspablePart, anug|Type|Gripper, fn|Type|MotionPlanningAlgo, Pr2|SubClassOf|Agent, dh|isATouchableObject|boolean#true, owuq|isDispositionOf|dh, dh|Type|ToyBucket, zlyv|hasCapability|x, greaterThan(integer#71,integer#68), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, dh|hasHoldingPartWidth|integer#68, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), j|isWithinGraspRangeOf|zlyv. ",
       "answer": " the robot can grasp the toy bucket because it has a grasping capability with a gripper that has an opening width greater than the holding part width of the toy bucket, and the toy bucket is within the reachable range of the robot."
     },
     {

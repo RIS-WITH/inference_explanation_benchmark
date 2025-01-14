@@ -36,8 +36,8 @@
   "concepts": [
     "grasping",
     "graspable",
-    "reach",
-    "opening",
+    "reachable",
+    "opening width",
     "object_width",
     "can grasp"
   ],
@@ -50,8 +50,8 @@
         "pepper",
         "manipulator"
       ],
-      "question": "-Inference : yj|canGrasp|k \n -Justifications : yj|Type|Pepper, Pepper|SubClassOf|Agent, yj|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|yj, yj|hasComponent|lep, lep|Type|Manipulator, Manipulator|SubClassOf|Gripper, yj|hasComponent|m, m|Type|MotionPlanningAlgo, k|Type|Suitcase, Suitcase|SubClassOf|Object, k|hasDisposition|b, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), b|isDispositionOf|k, k|hasPart|yfmc, yfmc|Type|Hold, Hold|SubClassOf|GraspablePart, k|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, k|isContainedIn|hay, hay|isWithinGraspRangeOf|yj, lep|Type|Gripper, Gripper|SubClassOf|EndEffector, yj|hasComponent|lep, lep|hasOpeningWidth|integer#71, k|hasHoldingPartWidth|integer#35, greaterThan(integer#71,integer#35). ",
-      "answer": " the pepper can grasp the suitcase because it has a grasping capability thanks to its manipulator component and motion planning algorithm, which enables it to interact with objects that are within its reach and have a graspable part, such as the suitcase, which is touchable and has a holding part width smaller than the robot's gripper opening width."
+      "question": "-Inference : yj|canGrasp|k \n -Justifications : yj|Type|Pepper, Pepper|SubClassOf|Agent, yj|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|yj, yj|hasComponent|lep, lep|Type|Manipulator, Manipulator|SubClassOf|Gripper, yj|hasComponent|m, m|Type|MotionPlanningAlgo, k|Type|Suitcase, Suitcase|SubClassOf|Object, k|hasDisposition|b, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), b|isDispositionOf|k, k|hasPart|yfmc, yfmc|Type|Handle, Handle|SubClassOf|GraspablePart, k|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, k|isContainedIn|hay, hay|isWithinGraspRangeOf|yj, lep|Type|Gripper, Gripper|SubClassOf|EndEffector, yj|hasComponent|lep, lep|hasOpeningWidth|integer#71, k|hasHoldingPartWidth|integer#35, greaterThan(integer#71,integer#35). ",
+      "answer": " the pepper can grasp the suitcase because it has a grasping capability thanks to its manipulator component and motion planning algorithm, and the suitcase has a handle that is within reach of the pepper's gripper and is touchable."
     },
     {
       "id": "a_grasp_medium_1b",
@@ -138,8 +138,8 @@
         "pr2",
         "claw"
       ],
-      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : zlyv|Type|Pr2, Pr2|SubClassOf|Agent, zlyv|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, anug|Type|Claw, Claw|SubClassOf|Gripper, zlyv|hasComponent|fn, fn|Type|MotionPlanningAlgo, dh|Type|ToyBucket, ToyBucket|SubClassOf|Object, dh|hasDisposition|owuq, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), owuq|isDispositionOf|dh, dh|hasPart|fbbs, fbbs|Type|Hold, Hold|SubClassOf|GraspablePart, dh|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, dh|isContainedIn|j, j|isWithinGraspRangeOf|zlyv, anug|Type|Gripper, Gripper|SubClassOf|EndEffector, zlyv|hasComponent|anug, anug|hasOpeningWidth|integer#71, dh|hasHoldingPartWidth|integer#68, greaterThan(integer#71,integer#68). ",
-      "answer": " the pr2 can grasp the toy bucket because it has a grasping capability thanks to its claw gripper and motion planning algorithm, and the bucket is an object with a holdable part that is within reach of the robot's end effector."
+      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : zlyv|Type|Pr2, Pr2|SubClassOf|Agent, zlyv|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, anug|Type|Claw, Claw|SubClassOf|Gripper, zlyv|hasComponent|fn, fn|Type|MotionPlanningAlgo, dh|Type|ToyBucket, ToyBucket|SubClassOf|Object, dh|hasDisposition|owuq, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), owuq|isDispositionOf|dh, dh|hasPart|fbbs, fbbs|Type|Handle, Handle|SubClassOf|GraspablePart, dh|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, dh|isContainedIn|j, j|isWithinGraspRangeOf|zlyv, anug|Type|Gripper, Gripper|SubClassOf|EndEffector, zlyv|hasComponent|anug, anug|hasOpeningWidth|integer#71, dh|hasHoldingPartWidth|integer#68, greaterThan(integer#71,integer#68). ",
+      "answer": " the pr2 can grasp the toy bucket because it has a grasping capability thanks to its claw gripper and motion planning algorithm, and the toy bucket is an object with a handle that is within reach of the robot's end effector and has a disposition for being touched and grasped."
     },
     {
       "id": "a_grasp_medium_9b",

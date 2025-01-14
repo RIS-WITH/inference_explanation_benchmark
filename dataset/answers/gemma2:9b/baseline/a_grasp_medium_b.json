@@ -36,8 +36,8 @@
   "concepts": [
     "grasping",
     "graspable",
-    "reach",
-    "opening",
+    "reachable",
+    "opening width",
     "object_width",
     "can grasp"
   ],
@@ -50,8 +50,8 @@
         "pepper",
         "manipulator"
       ],
-      "question": "-Inference : yj|canGrasp|k \n -Justifications : yj|Type|Pepper, Pepper|SubClassOf|Agent, yj|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|yj, yj|hasComponent|lep, lep|Type|Manipulator, Manipulator|SubClassOf|Gripper, yj|hasComponent|m, m|Type|MotionPlanningAlgo, k|Type|Suitcase, Suitcase|SubClassOf|Object, k|hasDisposition|b, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), b|isDispositionOf|k, k|hasPart|yfmc, yfmc|Type|Hold, Hold|SubClassOf|GraspablePart, k|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, k|isContainedIn|hay, hay|isWithinGraspRangeOf|yj, lep|Type|Gripper, Gripper|SubClassOf|EndEffector, yj|hasComponent|lep, lep|hasOpeningWidth|integer#71, k|hasHoldingPartWidth|integer#35, greaterThan(integer#71,integer#35). ",
-      "answer": "\n\nThe Pepper robot can grasp the suitcase because it has a grasping capability due to its manipulator component which includes a gripper and motion planning algorithm. The suitcase is graspable as it has a hold part and is touchable, and it is within the robot's reachable range. Additionally, the gripper's opening width is greater than the suitcase's holding part width, allowing for a secure grasp. \n\n\n\n"
+      "question": "-Inference : yj|canGrasp|k \n -Justifications : yj|Type|Pepper, Pepper|SubClassOf|Agent, yj|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|yj, yj|hasComponent|lep, lep|Type|Manipulator, Manipulator|SubClassOf|Gripper, yj|hasComponent|m, m|Type|MotionPlanningAlgo, k|Type|Suitcase, Suitcase|SubClassOf|Object, k|hasDisposition|b, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), b|isDispositionOf|k, k|hasPart|yfmc, yfmc|Type|Handle, Handle|SubClassOf|GraspablePart, k|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, k|isContainedIn|hay, hay|isWithinGraspRangeOf|yj, lep|Type|Gripper, Gripper|SubClassOf|EndEffector, yj|hasComponent|lep, lep|hasOpeningWidth|integer#71, k|hasHoldingPartWidth|integer#35, greaterThan(integer#71,integer#35). ",
+      "answer": "\n\nThe Pepper robot can grasp the suitcase because it has a grasping capability that includes a manipulator (gripper) and motion planning algorithm. The suitcase is graspable due to its handle, which is a touchable part of the object.  The suitcase is within the robot's reach, and the gripper's opening width is greater than the suitcase's holding part width. \n\n\n\n"
     },
     {
       "id": "a_grasp_medium_1b",
@@ -138,8 +138,8 @@
         "pr2",
         "claw"
       ],
-      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : zlyv|Type|Pr2, Pr2|SubClassOf|Agent, zlyv|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, anug|Type|Claw, Claw|SubClassOf|Gripper, zlyv|hasComponent|fn, fn|Type|MotionPlanningAlgo, dh|Type|ToyBucket, ToyBucket|SubClassOf|Object, dh|hasDisposition|owuq, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), owuq|isDispositionOf|dh, dh|hasPart|fbbs, fbbs|Type|Hold, Hold|SubClassOf|GraspablePart, dh|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, dh|isContainedIn|j, j|isWithinGraspRangeOf|zlyv, anug|Type|Gripper, Gripper|SubClassOf|EndEffector, zlyv|hasComponent|anug, anug|hasOpeningWidth|integer#71, dh|hasHoldingPartWidth|integer#68, greaterThan(integer#71,integer#68). ",
-      "answer": "\n\nThe PR2 robot can grasp the toy bucket because it has a grasping capability that includes a claw gripper and motion planning algorithm. The bucket is graspable due to its holdable part and touchable nature. It is also within the robot's reach, as it is contained within an area reachable by the robot.  The robot's claw opening width is greater than the holding part width of the bucket, allowing for a secure grasp. \n\n\n\n"
+      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : zlyv|Type|Pr2, Pr2|SubClassOf|Agent, zlyv|hasCapability|x, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, anug|Type|Claw, Claw|SubClassOf|Gripper, zlyv|hasComponent|fn, fn|Type|MotionPlanningAlgo, dh|Type|ToyBucket, ToyBucket|SubClassOf|Object, dh|hasDisposition|owuq, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), owuq|isDispositionOf|dh, dh|hasPart|fbbs, fbbs|Type|Handle, Handle|SubClassOf|GraspablePart, dh|isATouchableObject|boolean#true, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, dh|isContainedIn|j, j|isWithinGraspRangeOf|zlyv, anug|Type|Gripper, Gripper|SubClassOf|EndEffector, zlyv|hasComponent|anug, anug|hasOpeningWidth|integer#71, dh|hasHoldingPartWidth|integer#68, greaterThan(integer#71,integer#68). ",
+      "answer": "\n\nThe PR2 robot can grasp the toy bucket because it has a grasping capability due to its claw and motion planning algorithm components. The bucket is graspable because it has a handle that is touchable and within the robot's reach. Additionally, the robot's claw opening width is greater than the holding part width of the bucket, allowing for a secure grasp. \n\n\n\n"
     },
     {
       "id": "a_grasp_medium_9b",

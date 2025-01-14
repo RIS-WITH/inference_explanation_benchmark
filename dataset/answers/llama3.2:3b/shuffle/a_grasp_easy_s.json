@@ -155,8 +155,8 @@
         "pepper",
         "mechanical hand"
       ],
-      "question": "-Inference : hcz|canGrasp|k \n -Justifications : rs|hasOpeningWidth|integer#65, uukc|Type|Hold, npmz|isDispositionOf|k, greaterThan(integer#65,integer#51), hcz|Type|Pepper, MechanicalHand|SubClassOf|Gripper, k|hasDisposition|npmz, f|isCapabilityOf|hcz, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), hcz|hasCapability|f, Gripper|SubClassOf|EndEffector, rs|Type|Gripper, Hold|SubClassOf|GraspablePart, k|hasPart|uukc, k|hasHoldingPartWidth|integer#51, hcz|hasComponent|rs, hcz|hasComponent|rs, k|Type|Suitcase, k|isReachableBy|hcz, Pepper|SubClassOf|Agent, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), Suitcase|SubClassOf|Object, rs|Type|MechanicalHand. ",
-      "answer": " the pepper can grasp the suitcase because it has a mechanical hand as an end effector, and the suitcase is grasped by the pepper, with its holding part width being less than the gripper's opening width."
+      "question": "-Inference : hcz|canGrasp|k \n -Justifications : rs|hasOpeningWidth|integer#65, uukc|Type|Handle, npmz|isDispositionOf|k, greaterThan(integer#65,integer#51), hcz|Type|Pepper, MechanicalHand|SubClassOf|Gripper, k|hasDisposition|npmz, f|isCapabilityOf|hcz, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), hcz|hasCapability|f, Gripper|SubClassOf|EndEffector, rs|Type|Gripper, Handle|SubClassOf|GraspablePart, k|hasPart|uukc, k|hasHoldingPartWidth|integer#51, hcz|hasComponent|rs, hcz|hasComponent|rs, k|Type|Suitcase, k|isReachableBy|hcz, Pepper|SubClassOf|Agent, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), Suitcase|SubClassOf|Object, rs|Type|MechanicalHand. ",
+      "answer": " the pepper can grasp because it has a mechanical hand as an end effector and its holding part width is greater than the opening width of the gripper, allowing for a secure grip. The pepper is capable of grasping due to its mechanical hand component, which is also a type of gripper."
     },
     {
       "id": "a_grasp_easy_11s",
@@ -166,8 +166,8 @@
         "pr2",
         "manipulator"
       ],
-      "question": "-Inference : f|canGrasp|lwvz \n -Justifications : lwvz|isReachableBy|f, slac|Type|Manipulator, Lunchbox|SubClassOf|Object, Gripper|SubClassOf|EndEffector, b|isDispositionOf|lwvz, f|hasCapability|mioo, lwvz|Type|Lunchbox, Pr2|SubClassOf|Agent, greaterThan(integer#72,integer#64), slac|Type|Gripper, Hold|SubClassOf|GraspablePart, slac|hasOpeningWidth|integer#72, mioo|isCapabilityOf|f, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), f|hasComponent|slac, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), lwvz|hasHoldingPartWidth|integer#64, f|Type|Pr2, f|hasComponent|slac, Manipulator|SubClassOf|Gripper, lwvz|hasDisposition|b, lwvz|hasPart|wo, wo|Type|Hold. ",
-      "answer": " the Pr2 can grasp the lunchbox because it has a manipulator that is capable of grasping and its component is a gripper, which is compatible with the lunchbox's holding part width, and the lunchbox is being held by the robot."
+      "question": "-Inference : f|canGrasp|lwvz \n -Justifications : lwvz|isReachableBy|f, slac|Type|Manipulator, Lunchbox|SubClassOf|Object, Gripper|SubClassOf|EndEffector, b|isDispositionOf|lwvz, f|hasCapability|mioo, lwvz|Type|Lunchbox, Pr2|SubClassOf|Agent, greaterThan(integer#72,integer#64), slac|Type|Gripper, Handle|SubClassOf|GraspablePart, slac|hasOpeningWidth|integer#72, mioo|isCapabilityOf|f, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), f|hasComponent|slac, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), lwvz|hasHoldingPartWidth|integer#64, f|Type|Pr2, f|hasComponent|slac, Manipulator|SubClassOf|Gripper, lwvz|hasDisposition|b, lwvz|hasPart|wo, wo|Type|Handle. ",
+      "answer": " the Pr2 can grasp the lunchbox because it has a grasping capability that includes its gripper component, and the lunchbox is part of the robot's manipulator end effector, allowing for a graspable handle with an opening width matching the holding part width of the lunchbox."
     },
     {
       "id": "a_grasp_easy_12s",
@@ -210,8 +210,8 @@
         "pr2",
         "mechanical hand"
       ],
-      "question": "-Inference : de|canGrasp|ra \n -Justifications : gpp|isCapabilityOf|de, de|Type|Pr2, ra|hasDisposition|zum, dpq|Type|Gripper, Pr2|SubClassOf|Agent, ra|hasPart|s, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), MechanicalHand|SubClassOf|Gripper, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), s|Type|Hold, ToyBucket|SubClassOf|Object, de|hasComponent|dpq, dpq|hasOpeningWidth|integer#51, greaterThan(integer#51,integer#33), ra|hasHoldingPartWidth|integer#33, dpq|Type|MechanicalHand, Hold|SubClassOf|GraspablePart, de|hasCapability|gpp, ra|Type|ToyBucket, ra|isReachableBy|de, zum|isDispositionOf|ra, Gripper|SubClassOf|EndEffector, de|hasComponent|dpq. ",
-      "answer": " the robot can grasp the object because it has a grasping capability that includes its mechanical hand, which is capable of holding and opening wider than the object, and the object is held by the robot."
+      "question": "-Inference : de|canGrasp|ra \n -Justifications : gpp|isCapabilityOf|de, de|Type|Pr2, ra|hasDisposition|zum, dpq|Type|Gripper, Pr2|SubClassOf|Agent, ra|hasPart|s, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), MechanicalHand|SubClassOf|Gripper, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), s|Type|Handle, ToyBucket|SubClassOf|Object, de|hasComponent|dpq, dpq|hasOpeningWidth|integer#51, greaterThan(integer#51,integer#33), ra|hasHoldingPartWidth|integer#33, dpq|Type|MechanicalHand, Handle|SubClassOf|GraspablePart, de|hasCapability|gpp, ra|Type|ToyBucket, ra|isReachableBy|de, zum|isDispositionOf|ra, Gripper|SubClassOf|EndEffector, de|hasComponent|dpq. ",
+      "answer": " the robot can grasp the object because it has a grasping capability that includes its mechanical hand, which can be opened to accommodate objects with a width greater than 33 units, and the object is disposed of by the robot's gripper."
     },
     {
       "id": "a_grasp_easy_16s",
@@ -232,8 +232,8 @@
         "tiago",
         "manipulator"
       ],
-      "question": "-Inference : rbba|canGrasp|txqd \n -Justifications : rbba|hasCapability|arsa, Hold|SubClassOf|GraspablePart, txqd|hasPart|jy, Tiago|SubClassOf|Agent, greaterThan(integer#73,integer#65), jy|Type|Hold, txqd|hasHoldingPartWidth|integer#65, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), esd|Type|Gripper, x|isDispositionOf|txqd, rbba|hasComponent|esd, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), arsa|isCapabilityOf|rbba, Manipulator|SubClassOf|Gripper, rbba|hasComponent|esd, txqd|hasDisposition|x, rbba|Type|Tiago, esd|hasOpeningWidth|integer#73, txqd|isReachableBy|rbba, esd|Type|Manipulator, txqd|Type|Shovel, Shovel|SubClassOf|Object, Gripper|SubClassOf|EndEffector. ",
-      "answer": " the Tiago can grasp the object because it has a grasping capability that utilizes its gripper component, which is capable of holding and manipulating objects, and the object is reachable by the Tiago's end effector."
+      "question": "-Inference : rbba|canGrasp|txqd \n -Justifications : rbba|hasCapability|arsa, Handle|SubClassOf|GraspablePart, txqd|hasPart|jy, Tiago|SubClassOf|Agent, greaterThan(integer#73,integer#65), jy|Type|Handle, txqd|hasHoldingPartWidth|integer#65, GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart), esd|Type|Gripper, x|isDispositionOf|txqd, rbba|hasComponent|esd, GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper), arsa|isCapabilityOf|rbba, Manipulator|SubClassOf|Gripper, rbba|hasComponent|esd, txqd|hasDisposition|x, rbba|Type|Tiago, esd|hasOpeningWidth|integer#73, txqd|isReachableBy|rbba, esd|Type|Manipulator, txqd|Type|Shovel, Shovel|SubClassOf|Object, Gripper|SubClassOf|EndEffector. ",
+      "answer": " the Tiago can grasp the handle because it has a grasping capability that includes its gripper component, and the handle is part of an object that the shovel (a type of end effector) can reach by the robot."
     },
     {
       "id": "a_grasp_easy_18s",
