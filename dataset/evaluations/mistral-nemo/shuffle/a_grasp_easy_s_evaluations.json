@@ -1,0 +1,182 @@
+[
+    {
+        "question_id": "a_grasp_easy_0s",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_1s",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "reachable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_2s",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "reachable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_3s",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_4s",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "grasping",
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_5s",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_6s",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_7s",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_grasp_easy_8s",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_9s",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_10s",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_11s",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "graspable",
+            "reachable",
+            "opening width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_12s",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_13s",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_14s",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_15s",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_16s",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "grasping",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_17s",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_18s",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_19s",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "grasping",
+            "graspable"
+        ]
+    }
+]
