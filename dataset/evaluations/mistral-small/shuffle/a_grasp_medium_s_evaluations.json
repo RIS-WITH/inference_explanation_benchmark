@@ -1,0 +1,224 @@
+[
+    {
+        "question_id": "a_grasp_medium_0s",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_1s",
+        "is_correct": false,
+        "score": 0.5714285714285714,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "touchable_object",
+            "is_contained_in",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_2s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_3s",
+        "is_correct": false,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "grasping",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_4s",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_5s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "motion_planing_algo",
+            "reachable",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_6s",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_7s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_8s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_9s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_10s",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "grasping",
+            "motion_planing_algo",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_11s",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_12s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "graspable",
+            "motion_planing_algo",
+            "reachable",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_13s",
+        "is_correct": false,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in",
+            "opening width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_14s",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable_object",
+            "motion_planing_algo",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_15s",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "motion_planing_algo",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_16s",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "graspable",
+            "motion_planing_algo",
+            "reachable",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_17s",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_18s",
+        "is_correct": false,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable_object",
+            "is_contained_in",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_19s",
+        "is_correct": false,
+        "score": 0.5714285714285714,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "motion_planing_algo",
+            "is_contained_in",
+            "within_grasping_range",
+            "object_width"
+        ]
+    }
+]
