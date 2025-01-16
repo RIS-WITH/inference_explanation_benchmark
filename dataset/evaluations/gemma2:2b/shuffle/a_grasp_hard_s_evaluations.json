@@ -1,0 +1,378 @@
+[
+    {
+        "question_id": "a_grasp_hard_0s",
+        "is_correct": false,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_1s",
+        "is_correct": false,
+        "score": 0.23529411764705882,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_2s",
+        "is_correct": false,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_3s",
+        "is_correct": true,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            "grasping",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_4s",
+        "is_correct": true,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_5s",
+        "is_correct": false,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_6s",
+        "is_correct": true,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "mug",
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_7s",
+        "is_correct": false,
+        "score": 0.23529411764705882,
+        "missing_concepts": [
+            "handle",
+            "claw",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_8s",
+        "is_correct": false,
+        "score": 0.17647058823529413,
+        "missing_concepts": [
+            "hand grip",
+            "tiago",
+            "two-finger claw",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_9s",
+        "is_correct": true,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_10s",
+        "is_correct": false,
+        "score": 0.23529411764705882,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            "grasping",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_11s",
+        "is_correct": true,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            "grasping",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_12s",
+        "is_correct": false,
+        "score": 0.4117647058823529,
+        "missing_concepts": [
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_13s",
+        "is_correct": false,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_14s",
+        "is_correct": false,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "mechanical hand",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_15s",
+        "is_correct": true,
+        "score": 0.23529411764705882,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_16s",
+        "is_correct": false,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_17s",
+        "is_correct": false,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_18s",
+        "is_correct": true,
+        "score": 0.29411764705882354,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "reachable",
+            "is_contained_in",
+            "container_in_area",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_hard_19s",
+        "is_correct": true,
+        "score": 0.35294117647058826,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "touchable",
+            "object_not_already_used",
+            " motion planning",
+            "empty_gripper",
+            "is_contained_in",
+            "container_in_area",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    }
+]
