@@ -38,7 +38,7 @@
   ],
   "concepts" : [
   "can grasp", 
-  "graspable", "touchable_object", "object_not_already_used",
+  "graspable", "touchable", "object_not_already_used",
   "grasping"," motion planning", "empty_gripper",
   "reachable", "is_contained_in", "container_in_area", "within_grasping_range",
   "opening width", "object_width"   
