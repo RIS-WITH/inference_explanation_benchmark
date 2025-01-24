@@ -447,13 +447,13 @@
       ],
       "selected_names": [
         "jor",
-        "tv",
+        "vt",
         "s",
         "tnaj",
         "u",
         "wqy"
       ],
-      "question": "-Inference : jor|canPush|tv \n -Justifications : jor|Type|Robot, Robot|SubClassOf|Agent, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), tnaj|isCapabilityOf|jor, jor|hasGripper|u, u|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, tv|Type|RemoteControlledCar, RemoteControlledCar|SubClassOf|Object, tv|hasDisposition|s, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)), s|isDispositionOf|tv, tv|hasPart|wqy, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, tv|isApproachableBy|jor, u|Type|Gripper, Gripper|SubClassOf|EndEffector, jor|hasComponent|u, u|hasApplicableForce|integer#30, tv|requiresForce|integer#30, equal(integer#30,integer#30). -Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),               isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1) -> canPush(?a, ?o).",
+      "question": "-Inference : jor|canPush|vt \n -Justifications : jor|Type|Robot, Robot|SubClassOf|Agent, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), tnaj|isCapabilityOf|jor, jor|hasGripper|u, u|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, vt|Type|RemoteControlledCar, RemoteControlledCar|SubClassOf|Object, vt|hasDisposition|s, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)), s|isDispositionOf|vt, vt|hasPart|wqy, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, vt|isApproachableBy|jor, u|Type|Gripper, Gripper|SubClassOf|EndEffector, jor|hasComponent|u, u|hasApplicableForce|integer#30, vt|requiresForce|integer#30, equal(integer#30,integer#30). -Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),               isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1) -> canPush(?a, ?o).",
       "gt_sentence": null
     }
   ]
