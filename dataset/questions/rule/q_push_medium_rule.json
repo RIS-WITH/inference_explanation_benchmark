@@ -410,14 +410,14 @@
       ],
       "selected_names": [
         "t",
-        "t",
+        "qzd",
         "ayi",
         "ap",
         "rvb",
         "suxv",
         "kck"
       ],
-      "question": "-Inference : t|canPush|t \n -Justifications : t|Type|Pepper, Pepper|SubClassOf|Agent, t|hasCapability|ap, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false)), ap|isCapabilityOf|t, t|hasGripper|rvb, rvb|Type|Claw, Claw|SubClassOf|Gripper, rvb|holdsSomething|boolean#false, t|Type|RemoteControlledCar, RemoteControlledCar|SubClassOf|Object, t|hasDisposition|ayi, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true))), ayi|isDispositionOf|t, t|hasPart|suxv, suxv|Type|PivotRoller, PivotRoller|SubClassOf|RollablePart, suxv|isOnRollableSurface|boolean#true, (isOnTable o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, t|isOnTable|kck, kck|isWithinMovingRangeOf|t, rvb|Type|Gripper, Gripper|SubClassOf|EndEffector, t|hasComponent|rvb, rvb|hasApplicableForce|integer#51, t|requiresForce|integer#51, equal(integer#51,integer#51). -Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),               isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1) -> canPush(?a, ?o).",
+      "question": "-Inference : t|canPush|qzd \n -Justifications : t|Type|Pepper, Pepper|SubClassOf|Agent, t|hasCapability|ap, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false)), ap|isCapabilityOf|t, t|hasGripper|rvb, rvb|Type|Claw, Claw|SubClassOf|Gripper, rvb|holdsSomething|boolean#false, qzd|Type|RemoteControlledCar, RemoteControlledCar|SubClassOf|Object, qzd|hasDisposition|ayi, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true))), ayi|isDispositionOf|qzd, qzd|hasPart|suxv, suxv|Type|PivotRoller, PivotRoller|SubClassOf|RollablePart, suxv|isOnRollableSurface|boolean#true, (isOnTable o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy, qzd|isOnTable|kck, kck|isWithinMovingRangeOf|t, rvb|Type|Gripper, Gripper|SubClassOf|EndEffector, t|hasComponent|rvb, rvb|hasApplicableForce|integer#51, qzd|requiresForce|integer#51, equal(integer#51,integer#51). -Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),               isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1) -> canPush(?a, ?o).",
       "gt_sentence": null
     },
     {
