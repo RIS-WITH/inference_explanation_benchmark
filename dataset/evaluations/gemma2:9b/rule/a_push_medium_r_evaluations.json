@@ -155,9 +155,9 @@
         "is_correct": true,
         "score": 0.7857142857142857,
         "missing_concepts": [
-            "pivot roller",
             "on a rollable surface",
-            "empty_hand"
+            "empty_hand",
+            "approachable"
         ]
     },
     {

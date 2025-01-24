@@ -214,18 +214,15 @@
     {
         "question_id": "a_push_medium_16r",
         "is_correct": false,
-        "score": 0.2857142857142857,
+        "score": 0.5,
         "missing_concepts": [
-            "remote controlled car",
             "pivot roller",
             "claw",
             "pushable",
             "on a rollable surface",
             "empty_hand",
             "on a table",
-            "moving range",
-            "applicable force",
-            "required force"
+            "moving range"
         ]
     },
     {

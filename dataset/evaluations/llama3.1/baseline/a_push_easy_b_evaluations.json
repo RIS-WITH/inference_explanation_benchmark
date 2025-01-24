@@ -144,8 +144,9 @@
     {
         "question_id": "a_push_easy_19b",
         "is_correct": true,
-        "score": 0.9,
+        "score": 0.8,
         "missing_concepts": [
+            "pivot wheel",
             "approachable"
         ]
     }

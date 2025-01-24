@@ -172,11 +172,10 @@
     },
     {
         "question_id": "a_push_easy_19r",
-        "is_correct": true,
-        "score": 0.8,
+        "is_correct": false,
+        "score": 0.9,
         "missing_concepts": [
-            "pivot wheel",
-            "pushable"
+            "pivot wheel"
         ]
     }
 ]

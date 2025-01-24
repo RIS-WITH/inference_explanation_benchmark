@@ -246,10 +246,9 @@
     },
     {
         "question_id": "a_push_medium_16s",
-        "is_correct": false,
-        "score": 0.2857142857142857,
+        "is_correct": true,
+        "score": 0.35714285714285715,
         "missing_concepts": [
-            "remote controlled car",
             "pivot roller",
             "claw",
             "pushable",

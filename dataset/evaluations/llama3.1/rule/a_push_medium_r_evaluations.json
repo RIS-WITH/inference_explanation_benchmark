@@ -171,13 +171,11 @@
     {
         "question_id": "a_push_medium_16r",
         "is_correct": false,
-        "score": 0.6428571428571429,
+        "score": 0.7857142857142857,
         "missing_concepts": [
-            "remote controlled car",
             "empty_hand",
-            "on a table",
-            "moving range",
-            "required force"
+            "approachable",
+            "on a table"
         ]
     },
     {

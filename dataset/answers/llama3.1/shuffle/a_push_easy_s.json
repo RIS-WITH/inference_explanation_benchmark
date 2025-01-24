@@ -253,8 +253,8 @@
         "robot",
         "two-finger claw"
       ],
-      "question": "-Inference : jor|canPush|tv \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, equal(integer#30,integer#30), u|Type|TwoFingerClaw, tv|isApproachableBy|jor, u|Type|Gripper, RemoteControlledCar|SubClassOf|Object, u|hasApplicableForce|integer#30, jor|hasGripper|u, jor|hasComponent|u, s|isDispositionOf|tv, Robot|SubClassOf|Agent, tv|hasPart|wqy, tnaj|isCapabilityOf|jor, tv|Type|RemoteControlledCar, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, tv|hasDisposition|s, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), tv|requiresForce|integer#30, Gripper|SubClassOf|EndEffector, jor|Type|Robot, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)). ",
-      "answer": " the robot can push the remote controlled car because it has a gripper capable of applying sufficient force to move the car, which is designed to be pushed and has a pivot wheel allowing it to roll."
+      "question": "-Inference : jor|canPush|vt \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, equal(integer#30,integer#30), u|Type|TwoFingerClaw, vt|isApproachableBy|jor, u|Type|Gripper, RemoteControlledCar|SubClassOf|Object, u|hasApplicableForce|integer#30, jor|hasGripper|u, jor|hasComponent|u, s|isDispositionOf|vt, Robot|SubClassOf|Agent, vt|hasPart|wqy, tnaj|isCapabilityOf|jor, vt|Type|RemoteControlledCar, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, vt|hasDisposition|s, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), vt|requiresForce|integer#30, Gripper|SubClassOf|EndEffector, jor|Type|Robot, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)). ",
+      "answer": " the robot can push the remote controlled car because it has a pushing capability thanks to its gripper which is capable of applying sufficient force and the car being approachable, having a rollable part that allows it to be pushed, and requiring a force within the robot's capabilities."
     }
   ]
 }

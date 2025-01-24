@@ -152,10 +152,11 @@
     },
     {
         "question_id": "a_push_easy_19r",
-        "is_correct": true,
-        "score": 0.9,
+        "is_correct": false,
+        "score": 0.8,
         "missing_concepts": [
-            "pivot wheel"
+            "applicable force",
+            "required_force"
         ]
     }
 ]

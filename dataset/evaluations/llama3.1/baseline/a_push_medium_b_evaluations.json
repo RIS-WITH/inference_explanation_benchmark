@@ -169,15 +169,11 @@
     {
         "question_id": "a_push_medium_16b",
         "is_correct": false,
-        "score": 0.5,
+        "score": 0.7857142857142857,
         "missing_concepts": [
-            "pepper",
             "empty_hand",
             "approachable",
-            "on a table",
-            "moving range",
-            "applicable force",
-            "required force"
+            "on a table"
         ]
     },
     {

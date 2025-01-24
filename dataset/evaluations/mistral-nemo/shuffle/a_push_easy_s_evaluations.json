@@ -168,7 +168,7 @@
     },
     {
         "question_id": "a_push_easy_19s",
-        "is_correct": false,
+        "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
             "pushable"

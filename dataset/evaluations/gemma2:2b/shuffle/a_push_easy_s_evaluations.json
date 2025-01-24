@@ -212,13 +212,12 @@
     },
     {
         "question_id": "a_push_easy_19s",
-        "is_correct": false,
-        "score": 0.5,
+        "is_correct": true,
+        "score": 0.6,
         "missing_concepts": [
-            "remote controlled car",
             "pivot wheel",
             "pushable",
-            "applicable force",
+            "approachable",
             "required_force"
         ]
     }

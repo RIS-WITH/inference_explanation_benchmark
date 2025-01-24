@@ -144,10 +144,11 @@
     {
         "question_id": "a_push_medium_16b",
         "is_correct": true,
-        "score": 0.8571428571428571,
+        "score": 0.7857142857142857,
         "missing_concepts": [
-            "approachable",
-            "required force"
+            "on a rollable surface",
+            "empty_hand",
+            "approachable"
         ]
     },
     {

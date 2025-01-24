@@ -253,8 +253,8 @@
         "robot",
         "two-finger claw"
       ],
-      "question": "-Inference : jor|canPush|tv \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, equal(integer#30,integer#30), u|Type|TwoFingerClaw, tv|isApproachableBy|jor, u|Type|Gripper, RemoteControlledCar|SubClassOf|Object, u|hasApplicableForce|integer#30, jor|hasGripper|u, jor|hasComponent|u, s|isDispositionOf|tv, Robot|SubClassOf|Agent, tv|hasPart|wqy, tnaj|isCapabilityOf|jor, tv|Type|RemoteControlledCar, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, tv|hasDisposition|s, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), tv|requiresForce|integer#30, Gripper|SubClassOf|EndEffector, jor|Type|Robot, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)). ",
-      "answer": " The robot can push the remote-controlled car because it has a gripper with sufficient force to apply, and the car has a pivot wheel that makes it rollable and approachable by the robot."
+      "question": "-Inference : jor|canPush|vt \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, equal(integer#30,integer#30), u|Type|TwoFingerClaw, vt|isApproachableBy|jor, u|Type|Gripper, RemoteControlledCar|SubClassOf|Object, u|hasApplicableForce|integer#30, jor|hasGripper|u, jor|hasComponent|u, s|isDispositionOf|vt, Robot|SubClassOf|Agent, vt|hasPart|wqy, tnaj|isCapabilityOf|jor, vt|Type|RemoteControlledCar, wqy|Type|PivotWheel, PivotWheel|SubClassOf|RollablePart, vt|hasDisposition|s, jor|hasCapability|tnaj, PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper), vt|requiresForce|integer#30, Gripper|SubClassOf|EndEffector, jor|Type|Robot, PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart)). ",
+      "answer": " The robot can push the remote-controlled car because it has a gripper with sufficient force to apply, and the car has a pivot wheel that makes it rollable, thus having a pushable disposition."
     }
   ]
 }

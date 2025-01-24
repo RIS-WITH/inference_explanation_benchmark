@@ -145,10 +145,8 @@
     },
     {
         "question_id": "a_push_easy_19s",
-        "is_correct": true,
-        "score": 0.9,
-        "missing_concepts": [
-            "approachable"
-        ]
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
     }
 ]

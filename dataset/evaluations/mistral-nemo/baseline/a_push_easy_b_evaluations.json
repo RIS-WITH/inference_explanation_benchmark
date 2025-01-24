@@ -135,7 +135,10 @@
     {
         "question_id": "a_push_easy_19b",
         "is_correct": false,
-        "score": 1.0,
-        "missing_concepts": []
+        "score": 0.8,
+        "missing_concepts": [
+            "applicable force",
+            "required_force"
+        ]
     }
 ]

@@ -221,12 +221,10 @@
     {
         "question_id": "a_push_medium_16s",
         "is_correct": false,
-        "score": 0.35714285714285715,
+        "score": 0.5,
         "missing_concepts": [
-            "pepper",
-            "claw",
+            "pivot roller",
             "pushable",
-            "empty_hand",
             "approachable",
             "on a table",
             "moving range",
