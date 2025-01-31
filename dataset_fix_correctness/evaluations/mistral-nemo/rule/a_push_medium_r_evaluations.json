@@ -1,0 +1,224 @@
+[
+    {
+        "question_id": "a_push_medium_0r",
+        "answer": " the Tiago robot can push the office chair because it has a pushing capability with its claw gripper, which is not currently holding anything, and the chair has a pushable disposition due to its roller being on a rollable surface. The robot can approach the chair as it is within its moving range, and its applicable force matches the chair's required force for pushing.",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_1r",
+        "answer": " the pepper robot can push the remote-controlled car because it has a pushing capability through its gripper, which is applicable for objects with a pushable disposition like the car, and the robot can approach the car while having sufficient force to move it.",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "pivot wheel",
+            "on a rollable surface",
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_2r",
+        "answer": " the robot can push the mini shopping cart because it's an agent with a pushing capability through its claw gripper, which has sufficient force to match the cart's requirement. The cart is approachable by the robot and has a pushable disposition due to its caster being on a rollable surface.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_3r",
+        "answer": " the PR2 robot can push the office chair because it has a pushing capability through its gripper, which isn't holding anything, and the chair has a pushable disposition due to its pivot roller being on a rollable surface. The chair is also approachable by the robot, and the robot's gripper has sufficient force to match the chair's required force for pushing.",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_4r",
+        "answer": " The Tiago robot can push the remote-controlled car because it has a pushing capability through its gripper, which isn't holding anything, and the car is approachable by the robot with a pushable disposition due to its pivot roller being on a rollable surface. Both the robot's gripper and the car require equal applicable force for pushing.",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_5r",
+        "answer": " the Tiago robot can push the office chair because it has a pushing capability with its two-finger claw gripper that isn't holding anything else, and the chair has a pushable disposition due to its casters being on a rollable surface within the robot's moving range. The robot's applicable force matches the chair's required force for pushing.",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "approachable",
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_6r",
+        "answer": " the PR2 robot can push the office chair because it has a pushing capability through its gripper, which isn't holding anything, and the chair has a pushable disposition due to its casters being on a rollable surface. The robot can approach the chair as it's within its moving range, and both the robot's gripper force and the chair's required force are equal.",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "on a table"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_7r",
+        "answer": " the robot Tiago can push the mini shopping cart because it has a pushing capability with its two-finger claw gripper that isn't holding anything, and the cart is approachable by the robot as it's on a table within its moving range. The robot's applicable force matches the cart's required force for pushing.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "on a rollable surface"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_8r",
+        "answer": " the robot can push the Roomba because it's an agent with a pushing capability through its gripper, and the Roomba has a pushable disposition due to its rollable parts being on a rollable surface. The robot's gripper can apply sufficient force to move the Roomba, which is within its moving range on the table.",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_9r",
+        "answer": " the Tiago robot can push the mini shopping cart because it has a pushing capability through its claw gripper which isn't holding anything, and the cart is approachable by the robot with the required force matching the gripper's applicable force.",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "on a rollable surface",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_10r",
+        "answer": " the pepper robot can push the toy wagon because it has a pushing capability through its mechanical gripper which is strong enough to handle the wagon's required force, and the wagon is approachable by the robot as it is on a table within its moving range and has a rollable part on a rollable surface.",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "pushable",
+            "empty_hand"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_11r",
+        "answer": " The Tiago robot can push the Roomba because it has a pushing capability with its claw gripper and the Roomba is approachable by the Tiago, being on a table within its moving range. Both require equal force for pushing.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "on a rollable surface",
+            "empty_hand"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_12r",
+        "answer": " the robot can push the Roomba because it has a pushing capability through its gripper, which isn't holding anything at the moment. The Roomba is approachable by the robot and requires exactly the force that the robot's gripper can apply.",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "on a rollable surface",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_13r",
+        "answer": " the robot can push the toy wagon because it has a pushing capability through its gripper and the wagon is approachable by the robot with the required force being applicable by the robot's end effector.",
+        "is_correct": true,
+        "score": 0.5714285714285714,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "on a rollable surface",
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_14r",
+        "answer": " the robot can push the remote-controlled car because it has a pushing capability through its gripper and the car has a pushable disposition due to having rollable parts on a rollable surface. The robot can approach the car, and its gripper has sufficient force to match the car's required force for pushing.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_15r",
+        "answer": " the PR2 robot can push the mini shopping cart because it has a pushing capability through its gripper, which isn't holding anything at the moment. The cart is approachable by the robot and has a pushable disposition due to its roller being on a rollable surface. Additionally, the robot's gripper can apply enough force to move the cart as required.",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_16r",
+        "answer": " the Pepper robot can push the remote-controlled car because it has a pushing capability through its gripper, which isn't holding anything, and the car has a pushable disposition due to its pivot roller being on a rollable surface. The robot can approach the car, and its gripper has sufficient force to match the car's required force for pushing.",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "remote controlled car",
+            "claw",
+            "empty_hand",
+            "approachable",
+            "on a table",
+            "applicable force",
+            "required force"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_17r",
+        "answer": " the pepper robot can push the toy wagon because it has a pushing capability through its mechanical gripper which isn't holding anything else, and the wagon is approachable by the robot with its pivot roller on a rollable surface, requiring exactly the force that the robot's gripper can apply.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "pushable",
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_18r",
+        "answer": " the Pepper robot can push the mini shopping cart because it has a pushing capability through its gripper, which isn't holding anything, and the cart has a pushable disposition due to its rollable part being on a rollable surface. The robot can approach the cart, and its gripper has sufficient force to match the cart's required force for pushing.",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "on a table",
+            "moving range"
+        ]
+    },
+    {
+        "question_id": "a_push_medium_19r",
+        "answer": " the robot can push the Roomba because it's an agent with a pushing capability through its mechanical hand gripper, which has sufficient force to match the Roomba's requirement. The Roomba is approachable by the robot and has a pushable disposition due to its rollable pivot roller being on a suitable surface.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "empty_hand",
+            "on a table",
+            "moving range"
+        ]
+    }
+]
