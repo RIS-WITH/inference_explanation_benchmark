@@ -1,0 +1,225 @@
+[
+    {
+        "question_id": "a_grasp_medium_0b",
+        "answer": " the Pepper robot can grasp the suitcase because it has a grasping capability thanks to its gripper and motion planning algorithm, while the suitcase is graspable due to having a handle that is touchable and within reach of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_1b",
+        "answer": " the PR2 robot can grasp the shovel because it has a grasping capability thanks to its claw gripper and motion planning algorithm, which allow it to reach the shovel that is within its grasp range and has a handgrip suitable for gripping by its claw with an opening width greater than the shovel's holding part width.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_2b",
+        "answer": " the robot can grasp the mug because it has a grasping capability thanks to its claw and motion planning algorithm, while the mug is graspable due to having a handle that's reachable by the robot's gripper, whose opening width is greater than the mug's holding part width.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_3b",
+        "answer": " the Pepper robot can grasp the mug because it has a grasping capability thanks to its gripper and motion planning algorithm, and the mug is graspable due to having a handle that fits within the robot's gripper opening width.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "reachable",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_4b",
+        "answer": " the robot can grasp the suitcase because it has a grasping capability thanks to its gripper and motion planning algorithm, while the suitcase has a graspable disposition due to its handgrip part being touchable and within reach of the robot's gripper opening width.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_5b",
+        "answer": " the robot Tiago can grasp the toy bucket because it has a grasping capability thanks to its mechanical hand and motion planning algorithm, which are compatible with the bucket's graspable disposition due to its hand grip being touchable and within reach of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_6b",
+        "answer": " the robot Tiago can grasp the suitcase because it has a grasping capability thanks to its gripper and motion planning algorithm, and the suitcase is graspable due to its handle being reachable by the robot's gripper which has an opening width greater than the suitcase's holding part width.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_7b",
+        "answer": " the PR2 robot can grasp the hammer because it has a grasping capability thanks to its mechanical hand and motion planning algorithm, which allow it to reach the hammer that is within its grasp range. The hammer is graspable due to having a grip part that is touchable and its width being less than the opening width of the robot's gripper.",
+        "is_correct": false,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_8b",
+        "answer": " The PR2 robot can grasp the toy bucket because it has a grasping capability thanks to its claw gripper and motion planning algorithm, and the bucket is reachable with its handle being within the gripper's opening width.",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_9b",
+        "answer": " the robot Tiago can grasp the cooking pot because it has a grasping capability thanks to its gripper and motion planning algorithm, while the pot is graspable due to its handgrip part being touchable and within reach of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_10b",
+        "answer": " the PR2 robot can grasp the cooking pot because it has a grasping capability thanks to its gripper and motion planning algorithm, and the pot is reachable by the robot as it contains a handle that fits within the gripper's opening width.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "graspable",
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_11b",
+        "answer": " the robot can grasp the suitcase because it has a grasping capability thanks to its gripper and motion planning algorithm, and the suitcase is graspable due to its handle being reachable by the robot's gripper which has an opening width greater than the suitcase's holding part width.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_12b",
+        "answer": " the robot can grasp the shovel because it has a grasping capability thanks to its claw gripper and motion planning algorithm, and the shovel is graspable due to having a handgrip part that is touchable and within reach of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_13b",
+        "answer": " the robot Tiago can grasp the hammer because it has a grasping capability thanks to its claw gripper and motion planning algorithm, which allow it to reach the hammer that is within its grasp range. The hammer is graspable due to having a grip part that is touchable.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "is_contained_in",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_14b",
+        "answer": " the robot can grasp the shovel because it has a grasping capability thanks to its mechanical hand and motion planning algorithm, which allow it to reach objects within its grasp range. The shovel is graspable due to having a grip that fits within the robot's gripper opening width.",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "touchable_object",
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_15b",
+        "answer": " the PR2 robot can grasp the suitcase because it has a grasping capability thanks to its mechanical hand and motion planning algorithm, while the suitcase is graspable due to having a grip that fits within the robot's gripper opening width.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "touchable_object",
+            "reachable",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_16b",
+        "answer": " the PR2 robot can grasp the mug because it has a grasping capability thanks to its gripper and motion planning algorithm, and the mug is graspable due to having a handgrip part that is touchable and within reach of the robot's gripper opening width.",
+        "is_correct": false,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_17b",
+        "answer": " the robot can grasp the suitcase because it has a grasping capability thanks to its mechanical hand and motion planning algorithm, while the suitcase has a graspable disposition due to its hand grip being touchable and within reach of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "is_contained_in",
+            "within_grasping_range",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_18b",
+        "answer": " the Pepper robot can grasp the hammer because it has a grasping capability with a two-finger claw gripper and motion planning algorithm, and the hammer is graspable due to its grippable part being touchable within the robot's reachable range, with the opening width of the gripper being greater than the holding part width of the hammer.",
+        "is_correct": false,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "is_contained_in"
+        ]
+    },
+    {
+        "question_id": "a_grasp_medium_19b",
+        "answer": " the PR2 robot can grasp the mug because it has a grasping capability thanks to its gripper and motion planning algorithm, which allow it to reach the mug whose handle is graspable and within its gripper's opening range.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "touchable_object",
+            "is_contained_in",
+            "within_grasping_range"
+        ]
+    }
+]
