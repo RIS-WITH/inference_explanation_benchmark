@@ -1,0 +1,264 @@
+[
+    {
+        "question_id": "a_lift_medium_0s",
+        "answer": " the Pepper robot can lift the laundry basket because it has a lifting capability with its two-finger claw gripper and motion planning algorithm, which allows it to grasp handles of objects within its moving range. The basket's weight is within the claw's limit and it is currently on a touchable support.",
+        "is_correct": false,
+        "score": 0.8125,
+        "missing_concepts": [
+            "liftable disposition",
+            "can_be_used",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_1s",
+        "answer": " the robot can lift the suitcase because it has a lifting capability thanks to its gripper and motion planning algorithm, which allows it to grasp and move objects within its range. The suitcase is liftable due to its weight being less than the robot's weight limit and having grippable parts.",
+        "is_correct": false,
+        "score": 0.75,
+        "missing_concepts": [
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_2s",
+        "answer": " The robot can lift the toolbox because it has a lifting capability thanks to its grippers and motion planning algorithm, allowing it to safely grasp and manipulate the toolbox within its moving range.",
+        "is_correct": true,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "on_touchable_support",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_3s",
+        "answer": " the Pepper robot can lift the laundry basket because it has a lifting capability thanks to its two-finger claw gripper and motion planning algorithm, and the basket is touchable by the robot as it's on a support within its moving range. The basket's weight is below the gripper's limit, and it has hand grips for better handling.",
+        "is_correct": false,
+        "score": 0.8125,
+        "missing_concepts": [
+            "liftable disposition",
+            "can_be_used",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_4s",
+        "answer": " The robot can lift the toolbox because it has a lifting capability thanks to its gripper and motion planning algorithm, allowing it to safely grasp holdable parts within its moving range, with the toolbox being one such part that it can use and lift due to its weight limit.",
+        "is_correct": false,
+        "score": 0.8125,
+        "missing_concepts": [
+            "min2gripper",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_5s",
+        "answer": " the PR2 robot can lift the bucket because it has claws as end-effectors within its moving range that are capable of gripping handles and lifting objects up to a certain weight limit.",
+        "is_correct": false,
+        "score": 0.625,
+        "missing_concepts": [
+            "liftable disposition",
+            "can_be_used",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_6s",
+        "answer": " the pepper robot can lift the oven tray because its two-finger claw gripper has a weight limit greater than the tray's weight and it is within the robot's moving range.",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_7s",
+        "answer": " the pepper robot can lift the cooking pot because it has a manipulator with lifting capability that includes motion planning algorithms and grippers capable of handling objects within its moving range, while the pot is on a touchable support and has holdable parts.",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "liftable disposition",
+            "can_be_used",
+            "motion_planing_algo",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_8s",
+        "answer": " the PR2 robot can lift the cooking pot because it has a lifting capability thanks to its gripper components and motion planning algorithm, and the pot's weight is within the robot's weight limit.",
+        "is_correct": true,
+        "score": 0.5625,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_9s",
+        "answer": " The Pepper robot can lift the toolbox because it has a lifting capability through its manipulators within its moving range, and the toolbox has a lifting disposition with holdable parts that are usable by the robot's grippers, given the weight limit of the manipulators and the toolbox's weight being less than the limit.",
+        "is_correct": false,
+        "score": 0.8125,
+        "missing_concepts": [
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_10s",
+        "answer": " Pepper robot can lift the suitcase because it has a lifting capability with its manipulator grippers within range of the suitcase, which is touchable and liftable due to its weight being less than the gripper's limit.",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "motion_planing_algo",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_11s",
+        "answer": " the robot can lift the bucket because it has lifting capability thanks to its gripper component and motion planning algorithm, allowing it to safely grasp and move the bucket within its moving range.",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "touchable",
+            "on_touchable_support",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_12s",
+        "answer": " the robot Tiago can lift the toolbox because it has a lifting capability thanks to its gripper components and motion planning algorithm, and the toolbox is touchable by the robot's end effector within its moving range, with its weight being less than the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_13s",
+        "answer": " the robot can lift the toolbox because it has a lifting capability thanks to its two claws and motion planning algorithm, which are within its moving range. The toolbox is liftable due to its hand grips and being usable, and it's also touchable by the robot as it's on a support within its reach.",
+        "is_correct": false,
+        "score": 0.875,
+        "missing_concepts": [
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_14s",
+        "answer": " the pepper robot can lift the toolbox because its claw gripper has a lifting capability thanks to motion planning algorithms and the toolbox is holdable with a weight within the robot's limit when it's within its moving range.",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_15s",
+        "answer": " The robot can lift the toolbox because it has a lifting capability thanks to its manipulator and motion planning algorithm, which allow it to grip and move objects within its moving range, including the toolbox that weighs less than its weight limit.",
+        "is_correct": false,
+        "score": 0.625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_16s",
+        "answer": " the pepper robot can lift the laundry basket because it has a lifting capability thanks to its two mechanical hands, each with a gripper capable of holding parts of the basket, which weighs less than the robot's weight limit and is within its moving range. The robot also has motion planning algorithms to coordinate its movements during lifting.",
+        "is_correct": false,
+        "score": 0.8125,
+        "missing_concepts": [
+            "can_be_used",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_17s",
+        "answer": " the manipulator-equipped robot can lift the laundry basket because it has a lifting capability thanks to its gripper component and motion planning algorithm, and the basket is touchable by the robot due to being on a support within its moving range. The robot's weight limit allows for lifting the basket's weight.",
+        "is_correct": false,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_18s",
+        "answer": " the robot Pepper can lift the cooking pot because it has a lifting capability thanks to its two claws and motion planning algorithm, which allows it to grip and lift objects up to 77 pounds, with the pot being lighter than that limit and within the robot's moving range.",
+        "is_correct": true,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_19s",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability thanks to its grippers and motion planning algorithm, and the pot is within its moving range and can be used. The pot's weight is less than the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.6875,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "on_touchable_support"
+        ]
+    }
+]
