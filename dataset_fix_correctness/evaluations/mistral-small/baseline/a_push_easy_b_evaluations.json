@@ -32,7 +32,7 @@
     {
         "question_id": "a_push_easy_4b",
         "answer": " the robot can push the Roomba because it has a pushing capability with at least one gripper, and the Roomba is approachable and has a rollable part that makes it pushable. The force required to push the Roomba matches the applicable force of the robot's gripper.",
-        "is_correct": true,
+        "is_correct": false,
         "score": 1.0,
         "missing_concepts": []
     },
