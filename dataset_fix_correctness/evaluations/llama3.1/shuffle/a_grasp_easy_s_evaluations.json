@@ -1,0 +1,201 @@
+[
+    {
+        "question_id": "a_grasp_easy_0s",
+        "answer": " the pepper robot can grasp the shovel because it has a grasping capability thanks to its gripper component which is capable of holding objects with a width greater than that of the shovel's holding part, and the shovel being reachable by the robot.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_1s",
+        "answer": " the robot can grasp the shovel because it has a grasping capability thanks to its gripper component which is compatible with the shovel's holding part width and the shovel being reachable by the robot, and the robot's claw having an opening wide enough to accommodate the handle of the shovel.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_2s",
+        "answer": " the robot can grasp the hammer because it has a mechanical hand with an opening width greater than the hammer's holding part width, and the robot has a grasping capability thanks to its gripper component being capable of gripping objects like the hammer.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "reachable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_3s",
+        "answer": " the tiago can grasp the mug because it has a grasping capability thanks to its gripper component which is capable of holding objects with a width within its opening range, and the mug being reachable by the robot and having a disposition that allows for grasping.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "hand grip",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_4s",
+        "answer": " the Tiago can grasp the toy bucket because it has a grasping capability thanks to its gripper component which is capable of grasping the hand grip part of the bucket, and the bucket being reachable by the robot.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_5s",
+        "answer": " the robot can grasp the cooking pot because it has a grasping capability thanks to its mechanical hand with an opening width that matches the pot's holding part width, and the pot being reachable by the robot.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_6s",
+        "answer": " the pepper robot can grasp the suitcase because it has a grasping capability thanks to its gripper component which is capable of handling objects with handles that are within its graspable size range.",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_7s",
+        "answer": " the robot can grasp the hammer because it has a grasping capability thanks to its gripper component which is capable of grasping parts with an opening width greater than 57, and the hammer being reachable by the robot and having a holding part width less than 63.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_8s",
+        "answer": " the pr2 can grasp the cooking pot because it has a grasping capability thanks to its gripper component and the pot's holding part width is less than the robot's claw opening width, allowing it to reach and hold the pot securely.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_9s",
+        "answer": " the robot can grasp the mug because it has a grasping capability thanks to its gripper component being able to reach and hold the mug, which is within the gripper's holding capacity.",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_10s",
+        "answer": " the pepper robot can grasp the suitcase because it has a grasping capability thanks to its mechanical hand which is capable of gripping objects with handles that are wider than 51 units, and the suitcase being reachable by the robot and having a disposition that allows for grasping.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_11s",
+        "answer": " the pr2 can grasp the lunchbox because it has a grasping capability thanks to its gripper component which is capable of handling objects with an opening width up to 72mm, and the lunchbox has a holding part width within this range, making it reachable by the robot's end effector.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_12s",
+        "answer": " the pr2 can grasp the lunchbox because it has a grasping capability thanks to its gripper component which is capable of holding objects with an opening width greater than that of the lunchbox, and the lunchbox being reachable by the pr2.",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_13s",
+        "answer": " the robot can grasp the suitcase because it has a grasping capability thanks to its gripper which is capable of gripping objects with an opening width up to 71mm, and the suitcase being within reach of the robot.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_14s",
+        "answer": " the robot can grasp the mug because it has a grasping capability thanks to its mechanical hand which is capable of gripping objects with handles up to a certain width, and the mug being an object that can be grasped by such a hand.",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "graspable",
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_15s",
+        "answer": " the pr2 can grasp the toy bucket because it has a grasping capability thanks to its mechanical hand component which is capable of gripping objects with a handle part that fits within its opening width, and the robot is reachable by the object and has a disposition for holding it.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_16s",
+        "answer": " the pepper can grasp the toy bucket because it has a grasping capability thanks to its claw component which is capable of gripping objects with a width greater than the bucket's holding part width, and the bucket has a disposition for being grasped by the pepper's end effector.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_17s",
+        "answer": " the tiago can grasp the shovel because it has a grasping capability thanks to its gripper component which is compatible with the shovel's handle and the robot's arm being able to reach the shovel, and the shovel being a graspable object.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_18s",
+        "answer": " the robot can grasp the cooking pot because it has a grasping capability thanks to its gripper component which is capable of gripping objects with an opening width greater than the pot's holding part width, and the pot being reachable by the robot.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_19s",
+        "answer": " the robot can grasp the toy bucket because it has a grasping capability thanks to its gripper component, which is capable of gripping objects with a width up to 58 units, and the toy bucket is reachable by the robot and has a holding part width of 56 units, fitting within the gripper's capacity.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "graspable"
+        ]
+    }
+]
