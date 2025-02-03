@@ -1,0 +1,229 @@
+[
+    {
+        "question_id": "a_perceive_medium_0r",
+        "answer": "The Tiago robot can perceive the book because it has a perceiving capability through its RealsenseD435i camera component which is active and within range of the book. The book has a QR tag that is visible to the camera, registered, and in front of the robot.  ",
+        "is_correct": true,
+        "score": 0.8571428571428571,
+        "missing_concepts": [
+            "perceivable",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_1r",
+        "answer": "The Pepper robot can perceive the table because it has a perceiving capability through its RGB camera which is active and capable of seeing objects within a range of 78 units. The table is at a distance of 43 units from the robot, making it within the camera's range. Additionally, the table has a QR code that is registered and visible to the robot, further enabling perception.",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_2r",
+        "answer": "The Pr2 robot can perceive the table because it has a perceiving capability through its RealsenseL515 camera component. The table has a perceiving disposition due to its registered scan tag which is visible by the robot. The robot's camera has a maximum distance range greater than the distance between the robot and the table, allowing for perception. ",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_3r",
+        "answer": "The Tiago robot can perceive the plate because it has a perceiving capability through its webcam component. The plate has a perceiving disposition due to its QR tag which is visible by the Tiago robot.  The Tiago robot's webcam range exceeds the distance between itself and the plate, confirming that the robot can see the plate. ",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "qr_registered",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_4r",
+        "answer": "The Pr2 robot can perceive the cube because it has a perceiving capability through its RealsenseL515 camera component. The camera is active and within range of the cube, which has a QR tag that is visible to the camera.  The cube also has a perceiving disposition due to the registered QR tag, and the robot's camera can perceive objects at distances greater than its maximum range. ",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_5r",
+        "answer": "The robot hex can perceive the appliance h because it has a perceiving capability through its RGB camera component. The appliance has a perceiving disposition due to its scannable tag which is registered and visible to the robot within its maximum distance range.  ",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_6r",
+        "answer": "The Pepper robot can perceive the luggage because it has a perceiving capability through its RGB camera which is active and within range of the luggage. The luggage has a registered QR code that is visible to the robot, and the robot's camera has a maximum distance range greater than the distance between the robot and the luggage. ",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_7r",
+        "answer": "The robot can perceive the cube because it has a perceiving capability through its RGB camera component. The cube has a perceiving disposition due to its scannable tag which is registered and visible by the robot. The robot's camera range exceeds the distance between the robot and the cube.",
+        "is_correct": false,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_8r",
+        "answer": "The robot can perceive the table because it has a perceiving capability through its RealsenseD435i camera component. The table has a perceivable disposition due to its registered QR code, which is visible by the robot. The robot's camera has a maximum distance range greater than the distance between the robot and the table. ",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_9r",
+        "answer": "The Tiago robot can perceive the box because it has a perceiving capability through its webcam component. The box has a perceiving disposition due to its registered 2D barcode, which is visible by the Tiago robot within its maximum distance range.  ",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_10r",
+        "answer": "The Tiago robot can perceive the cube because it has a perceiving capability through its webcam component. The cube has a perceiving disposition due to its registered 2D barcode, which is visible by the Tiago robot within its maximum distance range.  ",
+        "is_correct": true,
+        "score": 0.7857142857142857,
+        "missing_concepts": [
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_11r",
+        "answer": "The Tiago robot can perceive the appliance because it has a perceiving capability through its RealsenseD435i camera component. The camera is active and within range of the appliance, which has a scannable code registered as visible by the robot.  ",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_12r",
+        "answer": "The Pr2 robot can perceive the luggage because it has a perceiving capability through its RealsenseL515 camera component. The luggage has a 2D barcode that is registered and visible to the robot within its maximum distance range.  ",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_13r",
+        "answer": "The robot dm can perceive the box o because it has a perceiving capability through its RealsenseL515 camera component, which is active and within range of the box. The box has a QR tag that is visible to the robot and registered, indicating that the robot can perceive it.  ",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_14r",
+        "answer": "The Tiago robot can perceive the plate because it has a perceiving capability through its RealsenseL515 camera component. The plate has a scannable code that is visible to the Tiago robot within its maximum distance range.  ",
+        "is_correct": true,
+        "score": 0.6428571428571429,
+        "missing_concepts": [
+            "perceivable",
+            "qr_registered",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_15r",
+        "answer": "The Pepper robot can perceive the appliance because it has a perceiving capability through its RealsenseD435i camera component. The camera is active and within range of the appliance, which has a 2D barcode that is registered and visible to the robot.  ",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "has a scannable_code",
+            "code_in_front_of_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_16r",
+        "answer": "The Tiago robot can perceive the book because it has a perceiving capability through its RGB camera which is active and within range of the book. The book has a perceivable disposition due to its registered QR code, which is visible by the Tiago robot.  ",
+        "is_correct": true,
+        "score": 0.9285714285714286,
+        "missing_concepts": [
+            "has a scannable_code"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_17r",
+        "answer": "The Pr2 robot can perceive the book because it has a perceiving capability through its KinectV2 camera component. The book has a perceivable disposition due to its scannable tag, which is visible by the robot. The robot's camera range exceeds the distance between itself and the book.",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "qr_registered",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_18r",
+        "answer": "The robot 'ocr' can perceive the cube 'mk' because it has a perceiving capability through its KinectV2 camera component. The cube has a registered QR code which is visible to the robot within its maximum distance range.  ",
+        "is_correct": true,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_medium_19r",
+        "answer": "The robot 'ocr' can perceive the cube 'mk' because it has a perceiving capability through its KinectV2 camera component. The cube has a registered QR code which is visible to the robot within its maximum distance range.  ",
+        "is_correct": false,
+        "score": 0.7142857142857143,
+        "missing_concepts": [
+            "perceivable",
+            "active",
+            "has a scannable_code",
+            "code_in_front_of_camera"
+        ]
+    }
+]
