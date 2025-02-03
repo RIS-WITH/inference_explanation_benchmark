@@ -1,0 +1,244 @@
+[
+    {
+        "question_id": "a_push_easy_0s",
+        "answer": "The robot can push the toy wagon because it has a gripper and is capable of pushing objects with a certain force. The robot is also able to interact with the toy wagon by having a part that allows for pushing, and the robot is an agent.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "caster",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_1s",
+        "answer": "The robot can push the object because it has a gripper and is capable of pushing objects thanks to its mechanical hand, which is a part of the robot. The object is remote-controlled and can be pushed by the robot.",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "caster",
+            "approachable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_2s",
+        "answer": "The robot can push the office chair because it has a gripper and is capable of pushing objects with a force of 60 units.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_3s",
+        "answer": "The robot can push the mini shopping cart because it has a gripper and a pushing capability, which allows it to interact with the mini shopping cart. The robot's gripper is capable of interacting with the mini shopping cart.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "caster",
+            "pushable",
+            "approachable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_4s",
+        "answer": "The robot can push the object because it has a gripper and the object requires force to be pushed. The robot is capable of pushing the object.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "wheel",
+            "approachable",
+            "applicable force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_5s",
+        "answer": "The robot can push the office chair because it has a gripper and the capability to push, which is equivalent to having a gripper with at least one gripper. The office chair is approchable by the robot.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_6s",
+        "answer": "The robot can push the car because it has a gripper and the ability to apply force. The car needs to be within reach of the robot, and the robot must have a gripper.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "pushing",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_7s",
+        "answer": "The robot can push the object because it has a gripper and a pushing capability. The object is a mini shopping cart that can be pushed by the robot.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "caster",
+            "approachable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_8s",
+        "answer": "The robot can push the office chair because it has a gripper and the ability to apply force. The robot is capable of pushing the chair due to its gripper and the chair's disposition being approachable by the robot.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_9s",
+        "answer": "The robot can push the object because it has a gripper and is capable of applying force to move objects.  ",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "pushing",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_10s",
+        "answer": "The robot can push the object because it has a gripper and the ability to apply force. The object is remote-controlled and can be pushed by the robot.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "caster",
+            "pushing",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_11s",
+        "answer": "The robot can push the object because it has a gripper and the object requires force to be pushed. The robot has a capability to push the object.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "approachable",
+            "applicable force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_12s",
+        "answer": "The robot can push something because it has a gripper and the ability to apply force.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "roomba",
+            "wheel",
+            "pushable",
+            "pushing",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_13s",
+        "answer": "The robot can push the chair because it has a gripper and the ability to apply force. The robot is capable of pushing the chair, as it has a gripper that can be used for this purpose.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "roller",
+            "pushable",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_14s",
+        "answer": "The robot can push because it has a gripper and the ability to apply force.  It is a Tiago robot that can be pushed by another object with a similar shape.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "roomba",
+            "wheel",
+            "pushing",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_15s",
+        "answer": "The robot can push the object because it has a gripper and a pushing capability. The object is remote-controlled and can be pushed by the robot.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "caster",
+            "approachable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_16s",
+        "answer": "The robot can push the shopping cart because it has a gripper and the ability to apply force. The shopping cart is approchable by the robot, and the robot has a pushing capability.  ",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_17s",
+        "answer": "The robot can push the mcdf because it has a gripper and is capable of pushing objects.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "pivot roller",
+            "pushable",
+            "approachable",
+            "applicable force",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_18s",
+        "answer": "The robot can push the object because it has a gripper and is capable of pushing with a force of 60 units.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "approachable",
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_19s",
+        "answer": "The robot can push the car because it has a gripper and the ability to apply force. The robot's gripper is capable of pushing the car, which is a remote-controlled car.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "pivot wheel",
+            "pushable",
+            "approachable",
+            "required_force"
+        ]
+    }
+]
