@@ -1,0 +1,271 @@
+[
+    {
+        "question_id": "a_lift_hard_0b",
+        "answer": " the pepper robot can lift the bucket because it has a lifting capability thanks to its grippers and motion planning algorithm, and the bucket is an object with a liftable disposition due to its handles being detachable and usable, and the robot's weight limit is greater than the bucket's weight.",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_1b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the basket is liftable due to having two handles that are not attached to anything and can be used for lifting, with the robot being within range of the basket and having sufficient weight capacity.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_2b",
+        "answer": " the pepper can lift the bucket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the bucket is liftable due to having two handles that are not attached to anything else and can be used for lifting, with the pepper being within moving range of the bucket and both being on a support surface.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_3b",
+        "answer": " the robot can lift the oven tray because it has a lifting capability thanks to its grippers and motion planning algorithm, and the tray is an object with a liftable disposition due to having two grip parts that are not attached to anything and can be used, and the robot is within moving range of the tray.",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_4b",
+        "answer": " the pepper robot can lift the laundry basket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the basket is liftable due to having two handles that are not attached to anything else and can be used for lifting. Additionally, the robot's grippers have a weight limit greater than the basket's weight.",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_5b",
+        "answer": " the robot can lift the oven tray because it has a lifting capability thanks to its grippers and motion planning algorithm, and the tray is an object with a liftable disposition due to having two grip parts that are not attached to anything and can be used for holding.",
+        "is_correct": false,
+        "score": 0.631578947368421,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_6b",
+        "answer": " the robot can lift the toolbox because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the toolbox has a liftable disposition due to its holdable parts being detachable and usable, with the robot being within range and having sufficient lifting capacity.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_7b",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability thanks to its grippers and motion planning algorithm, and the pot has a liftable disposition due to its grip parts being detachable and usable, with the robot being within range and having sufficient weight capacity.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_8b",
+        "answer": " the pepper robot can lift the cooking pot because it has a lifting capability thanks to its grippers and motion planning algorithm, and the pot has a liftable disposition due to its handgrips being detachable and usable, with the robot being within range and having sufficient weight capacity.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_9b",
+        "answer": " the tiago can lift the laundry basket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the basket is liftable due to having hand grips that are not attached to anything and can be used for holding. Additionally, the robot's weight limit of 73 units is greater than the basket's weight of 43 units.",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_10b",
+        "answer": " the tiago can lift the suitcase because it has a lifting capability thanks to its grippers and motion planning algorithm, and the suitcase has a liftable disposition with holdable parts that are not attached to anything else and can be used. The robot's gripper weight limit is greater than the suitcase's weight.",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_11b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability thanks to its grippers and motion planning algorithm, and the basket is liftable due to being holdable by its parts and capable of being used. Additionally, the robot's end effector weight limit exceeds the basket's weight.",
+        "is_correct": true,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_12b",
+        "answer": " the tiago can lift the cooking pot because it has a lifting capability thanks to its grippers and motion planning algorithm, and the pot has a liftable disposition due to its handgrips being detachable and usable, with the tiago being within moving range of the pot.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_13b",
+        "answer": " the robot can lift the suitcase because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, the suitcase being an object that can be lifted with its handgrips not attached to anything and usable, and the robot's mechanical hands having a weight limit greater than the suitcase's weight.",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_14b",
+        "answer": " the pr2 robot can lift the bucket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the bucket has a liftable disposition due to its grip parts being detachable and usable, with the robot being within range and having enough lifting capacity.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_15b",
+        "answer": " the pepper robot can lift the laundry basket because it has a lifting capability thanks to its grippers and motion planning algorithm, and the basket has a liftable disposition due to its handles being detachable and usable for holding. The robot's weight limit exceeds the basket's weight, allowing it to lift the object safely.",
+        "is_correct": false,
+        "score": 0.6842105263157895,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_16b",
+        "answer": " the Tiago can lift the bucket because it has a lifting capability thanks to its mechanical hands and motion planning algorithm, and the bucket has a liftable disposition with a weight below the robot's gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.5263157894736842,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_17b",
+        "answer": " the pepper robot can lift the bucket because it has a lifting capability thanks to its grippers and motion planning algorithm, and the bucket is liftable due to having two grip parts that are not attached to anything and can be used, with the robot being within range of the bucket and able to touch it.",
+        "is_correct": true,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "empty_hands",
+            "on_touchable_support",
+            "in_accessible_area",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_18b",
+        "answer": " the pr2 can lift the oven tray because it has a lifting capability thanks to its grippers and motion planning algorithm, and the tray has a liftable disposition with holdable parts that are not attached to anything else and can be used. Additionally, the pr2 is within moving range of the tray, which is on a touchable support in an accessible area.",
+        "is_correct": true,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "empty_hands",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_19b",
+        "answer": " the pr2 can lift the laundry basket because it has a lifting capability thanks to its grippers and motion planning algorithm, and the basket has a liftable disposition due to having two grip parts that are not attached to anything and can be used for holding.",
+        "is_correct": true,
+        "score": 0.631578947368421,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support",
+            "in_accessible_area",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]
