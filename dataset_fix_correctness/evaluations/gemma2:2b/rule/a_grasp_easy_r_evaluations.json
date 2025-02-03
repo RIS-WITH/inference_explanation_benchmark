@@ -1,6 +1,7 @@
 [
     {
         "question_id": "a_grasp_easy_0r",
+        "answer": "The robot can grasp the shovel because it has a grasping capability and the shovel is reachable by the robot. The robot has a gripper that can open up to a certain width, which is greater than the shovel's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -9,6 +10,7 @@
     },
     {
         "question_id": "a_grasp_easy_1r",
+        "answer": "The Tiago can grasp the shovel because it has a grasping capability and the shovel is reachable by the Tiago. The shovel has a holding part width that is greater than the opening width of the Tiago's gripper.  ",
         "is_correct": false,
         "score": 0.9,
         "missing_concepts": [
@@ -17,6 +19,7 @@
     },
     {
         "question_id": "a_grasp_easy_2r",
+        "answer": "The robot can grasp the hammer because it has a grasping capability and the hammer is reachable by the robot. The robot has a gripper with an opening width greater than the holding part width of the hammer.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -25,6 +28,7 @@
     },
     {
         "question_id": "a_grasp_easy_3r",
+        "answer": "The robot can grasp the mug because it has a grasping capability and the mug is reachable by the robot. The robot's gripper has an opening width greater than the mug's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -33,6 +37,7 @@
     },
     {
         "question_id": "a_grasp_easy_4r",
+        "answer": "The Tiago robot can grasp the toy bucket because it has a grasping capability and the bucket is reachable by the robot's gripper. The robot's gripper has an opening width greater than the bucket's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -41,6 +46,7 @@
     },
     {
         "question_id": "a_grasp_easy_5r",
+        "answer": "The robot can grasp the cooking pot because it has a grasping capability and the pot is reachable by the robot. The robot's gripper has an opening width greater than the pot's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -49,6 +55,7 @@
     },
     {
         "question_id": "a_grasp_easy_6r",
+        "answer": "The robot can grasp the suitcase because it has a grasping capability and the robot's component (gripper) is able to grasp the suitcase. The robot's opening width is greater than the suitcase's holding part width.  ",
         "is_correct": true,
         "score": 0.8,
         "missing_concepts": [
@@ -58,6 +65,7 @@
     },
     {
         "question_id": "a_grasp_easy_7r",
+        "answer": "The robot can grasp the hammer because it has a grasping capability and the hammer is reachable by the robot. The robot has a gripper that can grasp objects with a certain width.  ",
         "is_correct": true,
         "score": 0.7,
         "missing_concepts": [
@@ -68,6 +76,7 @@
     },
     {
         "question_id": "a_grasp_easy_8r",
+        "answer": "The robot can grasp the cooking pot because it has a grasping capability and the pot is reachable by the robot. The robot has an opening width that is greater than the holding part width of the pot.  ",
         "is_correct": true,
         "score": 0.8,
         "missing_concepts": [
@@ -77,6 +86,7 @@
     },
     {
         "question_id": "a_grasp_easy_9r",
+        "answer": "The robot can grasp the mug because it has a grasping capability and the mug is reachable by the robot. The robot's gripper has an opening width greater than the mug's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -85,6 +95,7 @@
     },
     {
         "question_id": "a_grasp_easy_10r",
+        "answer": "The robot can grasp the suitcase because it has a grasping capability and the suitcase is reachable by the robot. The robot's gripper has an opening width greater than the suitcase's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -93,6 +104,7 @@
     },
     {
         "question_id": "a_grasp_easy_11r",
+        "answer": "The robot can grasp the lunchbox because it has a grasping capability and the lunchbox is reachable by the robot. The robot's gripper has an opening width greater than the lunchbox's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -101,6 +113,7 @@
     },
     {
         "question_id": "a_grasp_easy_12r",
+        "answer": "The robot can grasp the lunchbox because it has a grasping capability and the lunchbox is reachable by the robot. The robot's gripper has an opening width greater than the lunchbox's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -109,6 +122,7 @@
     },
     {
         "question_id": "a_grasp_easy_13r",
+        "answer": "The robot can grasp the suitcase because it has a grasping capability and the robot's gripper is able to reach the suitcase. The robot's gripper has an opening width greater than the suitcase's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -117,6 +131,7 @@
     },
     {
         "question_id": "a_grasp_easy_14r",
+        "answer": "The robot can grasp the mug because it has a grasping capability and the mug is reachable by the robot. The robot's gripper has an opening width greater than the mug's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -125,6 +140,7 @@
     },
     {
         "question_id": "a_grasp_easy_15r",
+        "answer": "The robot can grasp the toy bucket because it has a grasping capability and the bucket is reachable by the robot. The robot's gripper has an opening width greater than the bucket's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -133,6 +149,7 @@
     },
     {
         "question_id": "a_grasp_easy_16r",
+        "answer": "The robot can grasp the toy bucket because it has a grasping capability and the bucket is reachable by the robot. The robot's gripper has an opening width greater than the bucket's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -141,6 +158,7 @@
     },
     {
         "question_id": "a_grasp_easy_17r",
+        "answer": "The robot can grasp the shovel because it has a grasping capability and the shovel is reachable by the robot. The robot's gripper has an opening width greater than the shovel's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [
@@ -149,6 +167,7 @@
     },
     {
         "question_id": "a_grasp_easy_18r",
+        "answer": "The robot can grasp the cooking pot because it has a grasping capability and the robot's gripper opening width is greater than the pot's holding part width.  ",
         "is_correct": true,
         "score": 0.8,
         "missing_concepts": [
@@ -158,6 +177,7 @@
     },
     {
         "question_id": "a_grasp_easy_19r",
+        "answer": "The robot can grasp the bucket because it has a grasping capability and the bucket is reachable by the robot. The robot has a gripper that can open to a certain width, which is greater than the bucket's holding part width.  ",
         "is_correct": true,
         "score": 0.9,
         "missing_concepts": [

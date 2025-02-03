@@ -1,0 +1,252 @@
+[
+    {
+        "question_id": "a_grasp_easy_0s",
+        "answer": "The robot can grasp something because it has a gripper that can hold objects with a certain width and the ability to grip them.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "shovel",
+            "handle",
+            "grasping",
+            "graspable",
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_1s",
+        "answer": "The robot can grasp the shovel because it has a gripper that can grasp objects and is capable of doing so based on its component structure.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "handle",
+            "grasping",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_2s",
+        "answer": "The robot can grasp the hammer because it has a mechanical hand with a grip capability and the ability to reach the hammer.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_3s",
+        "answer": "The robot can grasp the mug because it has a gripper that can grasp objects and its grip width is greater than 61.  ",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "hand grip",
+            "grasping",
+            "graspable",
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_4s",
+        "answer": "The Tiago can grasp the object because it has a gripper that can grasp objects and is capable of grasping them. The object is reachable by the Tiago.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_5s",
+        "answer": "The robot can grasp the pot because it has a grip that can hold objects with a width of 60 and is reachable by the object. The robot is capable of grasping due to its mechanical hand, which is a type of gripper.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_6s",
+        "answer": "The robot can grasp the suitcase because it has a grasping capability and its component is a claw that can grasp objects. The robot's gripper is capable of grasping the suitcase due to its size, shape, and the presence of a handle on the object.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_7s",
+        "answer": "The robot can grasp because it has a gripper that can hold objects and the object is reachable by the robot, and the robot has a component for grasping.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_8s",
+        "answer": "The robot can grasp the pot because it has a claw and a gripper that are capable of grasping, and the pot is reachable by the robot. The robot's grip is designed to be able to hold the pot.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_9s",
+        "answer": "The robot can grasp the mug because it has a grasping capability and is able to reach the mug. The robot is capable of grasping due to its gripper component which is designed for gripping objects.  ",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_10s",
+        "answer": "The robot can grasp the object because it has a grasping capability and the object is graspable. The robot's mechanical hand has a component that allows it to grasp objects.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_11s",
+        "answer": "The robot can grasp the lunchbox because it has a gripper that can grasp objects and is capable of grasping the lunchbox based on its design and capabilities.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_12s",
+        "answer": "The robot can grasp the lunchbox because it has a two-finger claw that can grip objects with a width of 46 units and a opening width of 60 units, and the robot is capable of grasping the lunchbox.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "hand grip",
+            "graspable",
+            "reachable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_13s",
+        "answer": "The robot can grasp the object because it has a gripper that can grasp objects with a width greater than 60 and is capable of grasping.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "reachable",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_14s",
+        "answer": "The robot can grasp the mug because it has a gripper that can grasp objects and is capable of grasping the mug based on its shape and size.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_15s",
+        "answer": "The robot can grasp the object because it has a grasping capability and is able to reach the object.  ",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "mechanical hand",
+            "graspable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_16s",
+        "answer": "The robot can grasp because it has a gripper that is capable of grasping and the robot has a component that allows for grasping.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "toy bucket",
+            "handle",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_17s",
+        "answer": "The robot can grasp the object because it has a grasping capability and is able to manipulate objects thanks to its gripper component.  ",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_18s",
+        "answer": "The robot can grasp because it has a gripper that can hold objects with a width of 62 units and an opening width of 77 units. The robot's gripper is capable of grasping the object, which is a cooking pot.  ",
+        "is_correct": false,
+        "score": 0.7,
+        "missing_concepts": [
+            "handle",
+            "graspable",
+            "reachable"
+        ]
+    },
+    {
+        "question_id": "a_grasp_easy_19s",
+        "answer": "The robot can grasp the object because it has a grip and is capable of grasping objects with a certain width. The robot is a Tiago, which is a type of agent that can grasp objects.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "graspable",
+            "reachable",
+            "opening width",
+            "object_width"
+        ]
+    }
+]
