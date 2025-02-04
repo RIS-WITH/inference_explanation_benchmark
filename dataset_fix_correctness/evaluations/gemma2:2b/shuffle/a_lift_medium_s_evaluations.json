@@ -1,0 +1,341 @@
+[
+    {
+        "question_id": "a_lift_medium_0s",
+        "answer": "The robot can lift the laundry basket because it has a lifting capability and can be used to pick up objects. The robot has a gripper that can lift heavy objects.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_1s",
+        "answer": "The robot can lift the object because it has a lifting capability and can be used to lift objects of a certain weight. The robot can lift an object that is within its moving range, and it has a grip component.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "mechanical hand",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_2s",
+        "answer": "The robot can lift the toolbox because it has a lifting capability thanks to its grippers and motion planning algorithm. The toolbox is within the robot's moving range, and the robot can be used to lift the toolbox.  ",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "on_touchable_support",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_3s",
+        "answer": "The robot can lift the laundry basket because it has a lifting capability and can be used to hold objects. The robot has a gripper that can lift up to 60 pounds.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_4s",
+        "answer": "The robot can lift the object because it has a mechanical hand and a lifting capability that allows it to be used for holding and lifting objects.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_5s",
+        "answer": "The robot can lift the object because it has a claw and a lifting capability that allows it to pick up objects with a weight limit of 41 units.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_6s",
+        "answer": "The robot can lift the object because it has a lifting capability and can be used to lift objects. The object has weight limit of 46 and can be lifted by the robot.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_7s",
+        "answer": "The robot can lift the object because it has a gripper and a lifting capability. The object is within the robot's moving range.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "can_be_used",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_8s",
+        "answer": "The robot can lift the object because it has a lifting capability and is designed to be used for lifting objects. The robot has a weight limit, and it can be used to lift objects that are within its moving range.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "hand grip",
+            "claw",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_9s",
+        "answer": "The robot can lift the toolbox because it has a lifting capability and can be used to hold objects. The robot's manipulator component allows it to lift heavy objects.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_10s",
+        "answer": "The robot can lift a suitcase because it has the capability to lift objects and can be used for that purpose. The robot has a weight limit of 72 units, and it can be used to lift a suitcase.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_11s",
+        "answer": "The robot can lift something because it has a mechanical hand that can grip and hold objects. The robot's weight limit is 74, and the object must be within its moving range to be lifted.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "bucket",
+            "hand grip",
+            "min2holdable_part",
+            "can_be_used",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_12s",
+        "answer": "The robot can lift the object because it has a lifting capability and can be used to lift objects of weight up to 58 units.  It can be used to lift the object by using its claw, which is part of the robot's gripper. The object is within the robot's moving range.",
+        "is_correct": false,
+        "score": 0.5625,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_13s",
+        "answer": "The robot can lift the object because it has a lifting capability and can be used to lift objects. The object can be lifted by the robot due to its weight limit and the robot's ability to move in the desired direction.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "hand grip",
+            "claw",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_14s",
+        "answer": "The robot can lift something because it has a gripper that can be used to hold objects and the object weighs less than 75.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "tool box",
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_15s",
+        "answer": "The robot can lift the toolbox because it has a gripper that can be used to lift objects and has a weight limit of 78.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "lifting capability",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_16s",
+        "answer": "The robot can lift a weight of 49 pounds because it has the capability to lift, based on its mechanical hand grip, which is part of a larger gripper that can be used for lifting.  ",
+        "is_correct": false,
+        "score": 0.4375,
+        "missing_concepts": [
+            "laundry basket",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "weight limit"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_17s",
+        "answer": "The robot can lift the object because it has a lifting capability and can be used to lift objects.  It has a weight limit of 75, and it can be used to lift objects that are within its range.",
+        "is_correct": true,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "manipulator",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_18s",
+        "answer": "The robot can lift the pot because it has a lifting capability and can be used to hold objects. The robot is capable of lifting a weight of 69 kg, and it can be used to hold objects.  ",
+        "is_correct": true,
+        "score": 0.4375,
+        "missing_concepts": [
+            "handle",
+            "claw",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "weight limit"
+        ]
+    },
+    {
+        "question_id": "a_lift_medium_19s",
+        "answer": "The robot can lift the pot because it has a lifting capability and can be used to hold the pot. The robot has a manipulator component that allows it to lift the pot.  ",
+        "is_correct": false,
+        "score": 0.375,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "motion_planing_algo",
+            "touchable",
+            "on_touchable_support",
+            "moving_range_robot",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]
