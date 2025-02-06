@@ -61,7 +61,7 @@
     {
         "question_id": "a_push_medium_5r",
         "answer": " the tiago can push the office chair because it has a pushing capability thanks to its two-finger claw gripper which can apply sufficient force to move the chair, and the chair is approachable by the tiago and has a caster that allows it to roll on a surface.",
-        "is_correct": false,
+        "is_correct": true,
         "score": 0.7142857142857143,
         "missing_concepts": [
             "pushable",
@@ -73,7 +73,7 @@
     {
         "question_id": "a_push_medium_6r",
         "answer": " the robot can push the office chair because it has a pushing capability thanks to its claw gripper which can apply the necessary force required by the chair, and the chair is approachable by the robot and has a caster that allows it to roll on a surface.",
-        "is_correct": false,
+        "is_correct": true,
         "score": 0.7142857142857143,
         "missing_concepts": [
             "pushable",

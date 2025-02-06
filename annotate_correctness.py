@@ -10,104 +10,70 @@ def print_progress_bar(current, total, bar_length=40):
 
 def evaluate_answers(json_file_path, target_file):
     try:
+        old_folder = "dataset"
+        old_path = json_file_path.replace("dataset_fix_correctness", old_folder)
+        
         with open(json_file_path, 'r') as file:
             data = json.load(file)
-
+            
+        with open(target_file, 'r') as file2:
+            target_data = json.load(file2)
+            
         evaluations = []
         current_index = 0
         total_answers = len(data['answers'])
-        concepts = data['concepts']
+        
+        for answer, eval in zip(data['answers'], target_data):
+            if(answer['id'] == eval['question_id']):
+                answer_data = data['answers'][current_index]
+                question_id = answer_data['id']
+                question = answer_data['question']
+                answer_parts = answer_data['answer'].split("\n")
+                answer = ""
+                for part in answer_parts:
+                    if len(part) > 20: 
+                        answer = part
+                        break
+                    
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print_progress_bar(current_index + 1, total_answers)
 
-        while current_index < total_answers:
+                print("\033[1m\033[94mQuestion ID:\033[0m", f"\033[92m{question_id}\033[0m")
+                print("\033[1m\033[94mQuestion:\033[0m", f"\033[93m{question}\033[0m")
+                print("\033[1m\033[94mAnswer:\033[0m", f"\033[95m{answer}\033[0m\n")
+                
+                print("Previous eval :", eval)
+                
+                #Validate the answer
+                correct = input("\033[1mIs the answer correct? (y/n): \033[0m").strip().lower()
+                while correct not in ['y', 'n']:
+                    correct = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
 
-            answer_data = data['answers'][current_index]
-            question_id = answer_data['id']
-            question = answer_data['question']
-            answer_parts = answer_data['answer'].split("\n")
-            answer = ""
-            for part in answer_parts:
-                if len(part) > 20: 
-                    answer = part
-                    break
-            selected_classes = answer_data['selected_classes']
-            missing_concepts =  []
-
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print_progress_bar(current_index + 1, total_answers)
-
-            print("\033[1m\033[94mQuestion ID:\033[0m", f"\033[92m{question_id}\033[0m")
-            print("\033[1m\033[94mQuestion:\033[0m", f"\033[93m{question}\033[0m")
-            print("\033[1m\033[94mAnswer:\033[0m", f"\033[95m{answer}\033[0m\n")
-
-            # Validate the answer
-            correct = input("\033[1mIs the answer correct? (y/n): \033[0m").strip().lower()
-            while correct not in ['y', 'n']:
-                correct = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
-
-            # Count selected classes in the answer
-            matched_classes = 0
-            total_classes = len(selected_classes) + len(concepts)
-
-            for value in selected_classes:
-                if value.lower() in answer.lower():
-                    matched_classes += 1
-                else:
-                    print(f"\033[93mThe selected class '{value}' was not found in the answer.\033[0m")
-                    verify = input(f"\033[1mDoes '{value}' actually belong to the answer? (y/n): \033[0m").strip().lower()
-                    while verify not in ['y', 'n']:
-                        verify = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
-                    if verify == 'y':
-                        matched_classes += 1
-                    else:
-                        missing_concepts.append(value)
-                   
-            for value in concepts:
-                if value.lower() in answer.lower():
-                    matched_classes += 1
-                else:
-                    print(f"\033[93mThe selected concept '{value}' was not found in the answer.\033[0m")
-                    verify = input(f"\033[1mDoes '{value}' actually belong to the answer? (y/n): \033[0m").strip().lower()
-                    while verify not in ['y', 'n']:
-                        verify = input("\033[1mInvalid input. Please type 'y' or 'n': \033[0m").strip().lower()
-                    if verify == 'y':
-                        matched_classes += 1
-                    else:
-                        missing_concepts.append(value)
-
-            score = matched_classes / total_classes if total_classes > 0 else 0
-
-            # Ensure only the latest evaluation for a question is kept
-            existing_evaluation_index = next((i for i, eval in enumerate(evaluations) if eval['question_id'] == question_id), None)
-            if existing_evaluation_index is not None:
-                evaluations[existing_evaluation_index] = {
-                    'question_id': question_id,
-                    'is_correct': correct == 'y',
-                    'score': score,
-                    'missing_concepts': missing_concepts
-                }
-            else:
                 evaluations.append({
-                    'question_id': question_id,
+                    'question_id': eval['question_id'],
+                    'answer': answer,
                     'is_correct': correct == 'y',
-                    'score': score,
-                    'missing_concepts': missing_concepts
+                    'score': eval['score'],
+                    'missing_concepts': eval['missing_concepts']
                 })
-
-            # Navigation options
-            nav = input("\033[1mPress Enter to continue, 'b' to go back to the previous question, or 'q' to quit: \033[0m").strip().lower()
-            if nav == 'b':
-                continue
-            elif nav == 'q':
-                break
+                
+                # Navigation options
+                nav = input("\033[1mPress Enter to continue, 'b' to go back to the previous question, or 'q' to quit: \033[0m").strip().lower()
+                if nav == 'b':
+                    continue
+                elif nav == 'q':
+                    break
+                else:
+                    current_index += 1
             else:
-                current_index += 1
-
+                print("error question and eval do not match")
+                return 0
         # Write evaluations to a file
         with open(target_file, 'w') as output_file:
             json.dump(evaluations, output_file, indent=4)
 
         print(f"\033[92mEvaluations saved to {target_file}\033[0m")
-
+        
     except FileNotFoundError:
         print(f"\033[91mThe file {json_file_path} was not found.\033[0m")
     except json.JSONDecodeError:
@@ -245,7 +211,7 @@ def display_variant_menu(base_path, eval_path, question, model):
     return variations[int(choice) - 1]
 
 def main():
-    root_path = "/home/bdussard/inference_explanation/dataset/"
+    root_path = "/home/bdussard/inference_explanation/dataset_fix_correctness/"
     base_path = root_path + "answers"
     evaluations_path = root_path + "evaluations"
 

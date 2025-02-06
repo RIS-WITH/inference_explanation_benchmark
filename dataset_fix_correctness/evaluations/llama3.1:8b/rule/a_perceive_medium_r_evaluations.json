@@ -194,7 +194,7 @@
     {
         "question_id": "a_perceive_medium_19r",
         "answer": " the Tiago can perceive the luggage because it has a perceiving capability thanks to its active webcam and the luggage has a scannable disposition with a registered QR code that is within the camera's maximum distance range.",
-        "is_correct": false,
+        "is_correct": true,
         "score": 0.7142857142857143,
         "missing_concepts": [
             "perceivable",
