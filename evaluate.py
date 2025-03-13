@@ -6,22 +6,25 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 import math
-from fitter import Fitter, get_common_distributions, get_distributions
 from scipy import stats
-from scipy.stats import gamma
-from sklearn.neighbors import KernelDensity
-from scipy.stats import pearsonr, ttest_ind, spearmanr
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
 
 pd.options.mode.chained_assignment = None
 
 # Path to the dataset directory
-data_dir = "/home/bdussard/inference_explanation/dataset/evaluations"
-data_dir2 = "/home/bdussard/inference_explanation/dataset_fix_correctness/evaluations"
+data_directory = "/home/bdussard/inference_explanation/dataset/evaluations"
 
-
-
+# Enable LaTeX-style font rendering
+plt.rcParams.update({
+    "text.usetex": True,  # Use LaTeX for text
+    "font.family": "serif",  # Use a serif font
+    "font.size": 12,  # Base font size
+    "axes.labelsize": 12,  # Axis labels
+    "xtick.labelsize": 10,  # X-axis tick size
+    "ytick.labelsize": 10,  # Y-axis tick size
+    "axes.titlesize": 14,  # Title size
+})
 
 def get_question(data_structure, model, condition, question, variation_id):
     # Navigate to the specific variation
@@ -34,7 +37,7 @@ def get_question(data_structure, model, condition, question, variation_id):
     return None 
 
 def explore_and_store_data(base_dir):
-    # Structure to hold the data
+
     data_structure = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     for root, _, files in os.walk(base_dir):
         for file in files:
@@ -52,24 +55,15 @@ def explore_and_store_data(base_dir):
                     data_structure[model][condition][question_name].extend(file_data)
     return data_structure
 
-# Run the function to populate the structure
-answers_array = explore_and_store_data(data_dir)
+
+answers_array = explore_and_store_data(data_directory)
 
 model = "llama3.1:8b"
 condition = "baseline"
 question = "grasp_easy"
 question_id = "a_grasp_easy_1b"
 
-answers_correctness = explore_and_store_data(data_dir2)
-# question_data = get_question(data_structure, model, condition, question, question_id)
-
-# if question_data:
-#     print("Question Data:", json.dumps(question_data, indent=4))
-# else:
-#     print(f"Question {question_id} not found in {model}/{condition}/{question}.")
-    
 # Example: Accessing data for a specific model, condition, and variation
-# model = "llama3.1:8b", condition = "baseline", variation = "a_grasp_easy_b"
 example_data = answers_array["llama3.1:8b"]["baseline"]["grasp_easy"]
 
 def compute_stats(data):
@@ -91,7 +85,6 @@ def compute_stats(data):
 
 # Example usage of compute_stats
 stats = compute_stats(example_data)
-#print("Stats:", json.dumps(stats, indent=4))
 
 models = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
 
@@ -106,8 +99,6 @@ for model in models:
             for condition in conditions:
                 data = answers_array[model][condition][question+"_"+difficulty]
                 stats = compute_stats(data)
-                # print("For m=", model, " ,q=", question, " ,d=", difficulty, " ,c=", condition)
-                # print(" Stats:", json.dumps(stats, indent=4))
                 id = "_".join([model, question, difficulty, condition])
                 scores.append([id, stats['average_score']])
    
@@ -148,29 +139,23 @@ def sturge_optimal_bins(data: np.array) -> int:
 
 df = flatten_data(answers_array)
 
-df_correctness = flatten_data(answers_correctness)
-#df_correctness.to_csv("/home/bdussard/inference_explanation/df_correctness.csv")
-
-#print(df.head(), df_correctness.head())
-
-
 def generate_distplot(dataframe, model, condition = "baseline", difficulties = ["easy", "medium", "hard"]):
     datas = []
     for difficulty in difficulties:
         chosen_data = dataframe[(dataframe["model"] == model) & (dataframe["complexity"] == difficulty) & (dataframe["condition"] == condition)]["score"]
         datas.append(chosen_data*100)
 
-def generate_histplot(dataframe, models, difficulties):
-    colors = ["green", "orange", "red"]
-    complexity_colors = {"easy": "green", "medium": "orange", "hard": "red"}
-    fig, axes = plt.subplots(2,3)
+def generate_histplot(dataframe, models, complexity_colors = {"easy": "green", "medium": "orange", "hard": "red"}, condition = "baseline"):
 
+    fig, axes = plt.subplots(3,2)
+    fig.set_figheight(9)
+    fig.set_figwidth(10)
+    
     for model, ax in zip(models, axes.flatten()):
-        for i in range(0, len(difficulties)):
+        for complexity, color in complexity_colors.items():
             chosen_data = dataframe[(dataframe["model"] == model) 
-                            & (dataframe["condition"] == "baseline")
-                            & (dataframe["complexity"] == difficulties[i])]
-                            # & (dataframe["question"] == 'perceive')]
+                            & (dataframe["condition"] == condition)
+                            & (dataframe["complexity"] == complexity)]
             chosen_data["score"]= chosen_data["score"]*100
             correctness_rate = len(chosen_data[chosen_data["is_correct"] == True])/len(chosen_data)
             
@@ -178,40 +163,47 @@ def generate_histplot(dataframe, models, difficulties):
             custom_kde_kws={"bw_adjust": 2, "cut": 2, "clip": (custom_clip)}
             
             
-            if(difficulties[i]=="easy"):
+            if(complexity == "easy"):
                 nb_items = 10
-            elif(difficulties[i]=="medium"):
+            elif(complexity == "medium"):
                 nb_items = 14
-            elif(difficulties[i]=="hard"):
+            elif(complexity == "hard"):
                 nb_items = 17
+            
             custom_binwidth = 100 / nb_items
                 
             sns.histplot(data=chosen_data, x="score", kde=True, binwidth=custom_binwidth, binrange=(-custom_binwidth/2, 100 + custom_binwidth/2), legend=True, stat='count', 
-                         ax=ax, color=colors[i], kde_kws=custom_kde_kws, common_norm=True)
-            
-            ax.axvline(x = correctness_rate*100, color = colors[i], linestyle = 'dashed')
+                         ax=ax, color=color, kde_kws=custom_kde_kws, common_norm=True)
+            # To prevent overlap between hard and medium on this particular graph, we offset it by 0.5
+            if(complexity == "medium" and model == "llama3.2:3b"):
+                ax.axvline(x = correctness_rate*100 + 0.5, color = color, linestyle = 'dashed')
+            else:
+                ax.axvline(x = correctness_rate*100, color =color, linestyle = 'dashed')
             ax.set_title(model)
-            ax.set_ylim(0, len(chosen_data))
+            ax.set_ylim(0, 60)
             ax.set_xlim(0, 105)
-            
-            hist_legend = [mpatches.Patch(color=color, alpha=0.5, label=complexity) for complexity, color in complexity_colors.items()]
-            legend_hist = ax.legend(handles=hist_legend, title="Complexity level", loc="upper left", fontsize=8, title_fontsize=8)
+            ax.set_xlabel("Accuracy")
+            ax.set_ylabel("Frequency")
+            ax.minorticks_on()
+               
+    hist_legend = [mpatches.Patch(color=color, alpha=0.5, label=complexity) for complexity, color in complexity_colors.items()]
+    legend_hist = fig.legend(handles=hist_legend, title="Completeness distribution", loc="upper left", fontsize=11, 
+                             title_fontsize=11, ncol = 3, columnspacing=0.5, alignment='left')
 
-            line_legend = [mlines.Line2D([], [], color=color, linestyle="--", linewidth=2, label=complexity) for complexity, color in complexity_colors.items()]
-            legend_lines = ax.legend(handles=line_legend, title="Correctness rate", loc="center left", fontsize=8, title_fontsize=8)
-            
-            ax.add_artist(legend_hist)
-
-        plt.xlabel("Completion Score (%)")
-        plt.ylabel("Frequency")
-    fig.suptitle("Completion Score distribution for all models on baseline condition")
-    plt.tight_layout()
+    line_legend = [mlines.Line2D([], [], color=color, linestyle="--", linewidth=2, label=complexity) for complexity, color in complexity_colors.items()]
+    legend_lines = fig.legend(handles=line_legend, title="Correctness score", loc="upper center", fontsize=11, 
+                              title_fontsize=11, ncol = 3, columnspacing=0.5, alignment='left')
+        
+    fig.add_artist(legend_hist)
+    fig.subplots_adjust(wspace=0.15, hspace=0.4)
+    fig.legend()
     plt.show()
-
-def generate_average_histplot(dataframe, models, condition_colors = {"baseline": "blue", "rule": "orange", "shuffle": "red"}):
-    fig, axes = plt.subplots(2,3)
-    #fig.suptitle("Completion Score distribution over all 6 models")
     
+def generate_average_histplot(dataframe, models, condition_colors = {"baseline": "blue", "rule": "orange", "shuffle": "red"}):
+    fig, axes = plt.subplots(3,2)
+    fig.set_figheight(9)
+    fig.set_figwidth(10)
+
     for model, ax in zip(models, axes.flatten()):
         for condition, color in condition_colors.items():
             chosen_data = dataframe[(dataframe["model"] == model) 
@@ -229,20 +221,21 @@ def generate_average_histplot(dataframe, models, condition_colors = {"baseline":
         
             ax.axvline(x = correctness_rate*100, linestyle = 'dashed', color = color)
             ax.set_title(model)
-            ax.set_ylim(0, 100)
+            ax.set_ylim(0, 80)
             ax.set_xlim(0, 105)
-            ax.set_xlabel("Completion Score (%) - (3s CoT)")
+            ax.set_xlabel("Accuracy")
             ax.set_ylabel("Frequency")
+            ax.minorticks_on()
 
-        hist_legend = [mpatches.Patch(color=color, alpha=0.5, label=condition) for condition, color in condition_colors.items()]
-        legend_hist = ax.legend(handles=hist_legend, title="Condition", loc="upper left", fontsize=10, title_fontsize=10,  bbox_to_anchor=(0, 1))
+    hist_legend = [mpatches.Patch(color=color, alpha=0.5, label=condition) for condition, color in condition_colors.items()]
+    legend_hist = fig.legend(handles=hist_legend, title="Completeness", loc="upper left", fontsize=10, title_fontsize=10)
 
-        line_legend = [mlines.Line2D([], [], color=color, linestyle="--", linewidth=2, label=condition) for condition, color in condition_colors.items()]
-        legend_lines = ax.legend(handles=line_legend, title="Correctness rate", loc="upper left", fontsize=10, title_fontsize=10, bbox_to_anchor=(0, 0.82))
-        
-        ax.add_artist(legend_hist)
-    plt.subplots_adjust(wspace=0.15, hspace=0.2)
-    #plt.tight_layout()
+    line_legend = [mlines.Line2D([], [], color=color, linestyle="--", linewidth=2, label=condition) for condition, color in condition_colors.items()]
+    legend_lines = fig.legend(handles=line_legend, title="Correctness", loc="upper center", fontsize=10, title_fontsize=10)
+    
+    fig.add_artist(legend_hist)
+    fig.subplots_adjust(wspace=0.18, hspace=0.4)
+    fig.legend()
     plt.show()
 
 def generate_histplot_all_models_single_plot(dataframe, models, condition = "baseline"):
@@ -286,7 +279,7 @@ def generate_histplot_all_models_single_plot(dataframe, models, condition = "bas
         #            linewidth=2)
         #sns.displot(data=chosen_data, x="score", kind="kde", legend=True, stat='count', kde_kws=custom_kde_kws, common_norm=True, color = color, multiple="stack" )
     # ======== generate legends ========= 
-    plt.xlabel("Completion Score (%)")
+    plt.xlabel("Completion score (%)")
     plt.ylabel("Count")
     
     hist_legend = [mpatches.Patch(color=color, alpha=0.5, label=model) for model, color in models_colored.items()]
@@ -299,13 +292,8 @@ def generate_histplot_all_models_single_plot(dataframe, models, condition = "bas
     plt.tight_layout()
     plt.show()
 
-# generate_average_histplot(df, ["llama3.1:8b"], conditions)
-# generate_average_histplot(df_correctness, ["llama3.1:8b"], conditions)
-# ==================== 1 model on baseline condition with all 4 questions ================
-#generate_distplot(df, model="llama3.2:3b")
-
 # ==================== 6 subplots with each difficulty level ================
-models_reordered = ["llama3.2:3b", "gemma2:2b", "llama3.1:8b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
+models_reordered = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
 
 models_colored = {"llama3.2:3b": 'green',
                  "gemma2:2b": 'red',
@@ -314,13 +302,13 @@ models_colored = {"llama3.2:3b": 'green',
                  "mistral-nemo:12b": 'orange',
                  "mistral-small:22b": 'brown'}
 
-new_models = ["llama3.2:3b", "gemma2:2b", "llama3.1:8b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
 # ======== generate 6 subplots with each model and average of difficulty levels ===
-#generate_average_histplot(df_correctness, new_models, conditions)
+condition_colors = {"baseline": "blue"}
+generate_average_histplot(df, models_reordered, condition_colors)
 condition_colors = {"baseline": "blue", "rule": "orange"}
-generate_average_histplot(df_correctness, new_models, condition_colors)
+generate_average_histplot(df, models_reordered, condition_colors)
 condition_colors = {"baseline": "blue", "shuffle": "red"}
-generate_average_histplot(df_correctness, new_models, condition_colors)
+generate_average_histplot(df, models_reordered, condition_colors)
 
 # ======== generate 1 plot with each model and average of difficulty levels ===
 # generate_histplot_all_models_single_plot(df, models_reordered, "baseline")
@@ -328,7 +316,7 @@ generate_average_histplot(df_correctness, new_models, condition_colors)
 # generate_histplot_all_models_single_plot(df, models_reordered, "shuffle")
 
 # ======== generate 6 subplots with each model and each difficulty level, on baseline ===
-generate_histplot(df_correctness, new_models, ["easy", "medium", "hard"])
+generate_histplot(df, models_reordered)
 
 def compute_correlations(dataframe, models):
     for model in models:
@@ -396,6 +384,7 @@ def generate_barplot(dataframe, models, conditions, metric = "completion"):
     # Set colors for categories
     palette = {"Baseline": "blue", "Rule": "yellow"}
     grouped_data = dataframe.groupby(["model", "condition"])["score"].median().reset_index()
+    grouped_data = dataframe.groupby(["model", "condition"])["score"].mean().reset_index()
     # metrics :
     #IQR
     iqr_data = df.groupby("model")["score"].quantile(0.75) - df.groupby("model")["score"].quantile(0.25)
@@ -407,6 +396,7 @@ def generate_barplot(dataframe, models, conditions, metric = "completion"):
    
     grouped_data = grouped_data.drop(grouped_data[grouped_data['condition'] == 'shuffle'].index)
     print(grouped_data)
+    
     plt.figure(figsize=(10, 6))
     for model in models:
         for condition in conditions:
@@ -443,128 +433,14 @@ def generate_barplot(dataframe, models, conditions, metric = "completion"):
     # Format plot
     plt.title("Model Completion Rates")
     plt.xlabel("Model")
-    plt.ylabel("Completion Rate (%)")
+    plt.ylabel("Completeness Median Accuracy (\%)")
     plt.ylim(0, 100)  # Ensure proper scaling
     # plt.xticks(rotation=45)  # Rotate model names for better readability
     plt.legend(title="Category")  # Display legend
 
     plt.show()
 
-generate_barplot(df_correctness, new_models, ["baseline", "rule"])
-
-def test_function(dataframe, models):
-
-    grouped_data_completion = dataframe.groupby(["model", "condition"])["score"].median().reset_index()
-    grouped_data_completion = grouped_data_completion.drop(grouped_data_completion[grouped_data_completion['condition'] == 'shuffle'].index)
-    
-    grouped_data_correct = dataframe.groupby(["model", "condition"])["is_correct"].agg(
-                                    total_correct="sum",  # Count of True values
-                                    total_samples="count"  # Total number of rows in each group
-                                    )
-
-    # Calculate correctness rate
-    grouped_data_correct["correctness_rate"] = (grouped_data_correct["total_correct"] / grouped_data_correct["total_samples"])*100
-
-    grouped_data_correct = grouped_data_correct.reset_index()
-    grouped_data_correct = grouped_data_correct.drop(grouped_data_correct[grouped_data_correct['condition'] == 'shuffle'].index)
-    grouped_data_correct = grouped_data_correct.drop(columns=["total_correct", "total_samples"])
-    
-    print(grouped_data_correct)
-    
-    # df = grouped_data[grouped_data['condition'] == 'baseline']
-    # print("baseline values = ", df)
-    
-    data_baseline = {
-        "Model": [],
-        "Completion Score": [],
-        "Correct Score": [],
-        "Color": ["lightgray", "lightblue", "orangered", "pink", "purple"],
-        "EdgeColor": ["black", "blue", "brown", "red", "purple"]
-    }
-    
-    for model in models:
-        data_baseline["Model"].append(model)
-        data_baseline["Completion Score"].append(grouped_data[grouped_data['condition'] == 'baseline' & grouped_data['model'] == model])
-    
-    data_rule = {
-        "Model": ["gemma2:2b", "llama3.2:3b", "llama3.1:8b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"],
-        "Score": [87.3, 82.5, 29.4, 30.2, 22.6],
-        "Color": ["lightgray", "lightblue", "orangered", "pink", "purple"],
-        "EdgeColor": ["black", "blue", "brown", "red", "purple"]
-    }
-    
-    df = pd.DataFrame(data)
-
-    # Create figure
-    fig, ax = plt.subplots(figsize=(6, 5))
-
-    # Create bar plot
-    bars = sns.barplot(
-        data=df, 
-        x="Model", 
-        y="Score", 
-        palette=list(df["Color"]), 
-        edgecolor=list(df["EdgeColor"]), 
-        linewidth=2
-    )
-
-    # Add value labels inside bars, rotated
-    for bar, label in zip(bars.patches, df["Score"]):
-        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() - 5, f"{label:.1f}", 
-                ha="center", va="center", fontsize=12, color="black", fontweight="normal")
-
-    # Axis labels and title
-    ax.set_ylabel("Median Completion Score (IQR) (%)", fontsize=14, fontweight="bold")
-    # ax.set_xlabel("Model")
-    ax.set_title("Completion Score Comparison", fontsize=14, fontweight="bold")
-
-    # Adjust y-axis limits and grid style
-    ax.set_ylim(0, 100)  # Match scale
-    ax.yaxis.grid(True, linestyle="--", alpha=0.6)
-    ax.set_axisbelow(True)
-
-    # Custom x-axis labels with bold formatting
-    plt.xticks(fontsize=12, fontweight="bold")
-
-    # Remove top and right spines
-    sns.despine()
-    ax.text(-0.5, -1, "Model", fontsize=12, fontweight="bold", ha="left", va="top")
-    plt.show()
-
-#test_function(df_correctness, new_models)
-#compute_correlations(df, models_reordered)
-
-# single model, 3 levels, baseline condition
-# model_name = "gemma2:9b"
-# for difficulty in difficulties:
-#     chosen_data = df[(df["model"] == model_name) 
-#                      & (df["condition"] == "baseline" ) 
-#                      & (df["complexity"] == difficulty )]
-#     sns.histplot(data=chosen_data, x="score", kde=True, bins=20, legend=True, stat='count')
-# plt.title("Score Distribution for " + model_name + " on baseline condition")
-# plt.xlabel("Completion Score (%)")
-# plt.ylabel("Frequency")
-# plt.legend(title="Complexity level", loc='upper right', labels = difficulties) 
-# plt.show()
-
-# ========== Baseline condition, comparison between models on difficulty levels
-# fig, axes = plt.subplots(1,3)
-# for difficulty, ax in zip(difficulties, axes.flatten()):
-#     for model in models:
-#         chosen_data = df[(df["model"] == model) 
-#                         & (df["condition"] == "shuffle") 
-#                         & (df["complexity"] == difficulty)]
-#         sns.histplot(data=chosen_data, x="score", kde=True, bins=10, legend=True, stat='density', ax=ax)
-#         ax.set_title(difficulty + " condition")
-#         ax.legend(title="Complexity level", loc='upper left', labels = difficulties)
-#     plt.xlabel("Completion Score (%)")
-#     plt.ylabel("Frequency")
-#     plt.legend(title="Models", loc='upper left', labels = models) 
-# plt.tight_layout()
-# plt.show()
-
 def get_chosen_data(dataframe, model, condition, difficulty, question_id):
-    # print("getting data for ", model, condition, difficulty, question_id)
     df = get_model_data(dataframe, model)
     df = get_condition_data(df, condition)
     df = get_difficulty_data(df, difficulty)
@@ -610,7 +486,7 @@ def compute_scoring_table(dataframe, models, conditions = ["baseline", "rule", "
             for condition in conditions:
                 chosen_data = get_chosen_data(dataframe, models[i], condition, difficulty, question_id)
                 
-                average_score = chosen_data["score"].mean()
+                average_score = chosen_data["score"].median()
                 rounded_average_score = round(average_score, 2)
                 std_score = chosen_data["score"].std()
                 rounded_std_score = round(std_score, 2)
@@ -627,12 +503,40 @@ def compute_scoring_table(dataframe, models, conditions = ["baseline", "rule", "
                 else:
                     df_results["Hard score"][i] = str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"
                     df_results["Hard correct"][i] = rounded_correctness_rate
+                    
     if(question_id == None):
         print("Results for all questions on condition :", condition)
     else:
         print("Results for question :", question_id, " on condition :", condition)
     print(df_results)
 
+def compute_average_scoring_table(dataframe, models, conditions = ["baseline", "rule", "shuffle"], 
+                                  metric_completion = "mean"):
+    df_results = pd.DataFrame(columns=['Model', 'condition', 'Correctness score', 'Completeness Mean Score'])
+    df_results['Model'] = models
+
+    for model in models:
+        for condition in conditions:
+            chosen_data = dataframe[(dataframe["model"] == model) & (dataframe["condition"] == condition)]
+            
+            average_score = chosen_data["score"].mean()
+            rounded_average_score = round(average_score, 3)
+            std_score = chosen_data["score"].std()
+            rounded_std_score = round(std_score, 3)
+            
+            correctness_rate = len(chosen_data[chosen_data["is_correct"] == True])/len(chosen_data)
+            rounded_correctness_rate = round(correctness_rate, 3)
+            new_elem = np.array([model, condition, rounded_correctness_rate, 
+                                    str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"])
+            
+            #df_results = pd.concat([df_results, columns=df_results.columns, new_elem], ignore_index=True)
+            df_results = pd.concat([pd.DataFrame([new_elem], columns=df_results.columns), df_results], ignore_index=True)
+            # df_results.loc[-1] = np.array([model, condition, rounded_correctness_rate, 
+            #                                str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"])
+            # df_results["Correctness score"] = rounded_correctness_rate
+            # df_results["Completeness Mean Score"] = str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"
+    print(df_results)
+    
 def compare_scores(data_old, data_new, models, questions = ["grasp", "lift", "push", "perceive"]):
     for model in models:
         print("===== Average: ")
@@ -649,60 +553,4 @@ def compare_scores(data_old, data_new, models, questions = ["grasp", "lift", "pu
         #     compute_scoring_table(data_new, [model], conditions = ["baseline"], 
         #                           difficulties = ["easy", "medium", "hard"], question_id=question)
 
-#compare_scores(df, df_correctness, ["llama3.1:8b", "mistral-nemo:12b", "mistral-small:22b"])
-#
-# # ========= Completion score/ Correctness score by questions :
-# # ========= Average
-# print("====Old correctness ====")
-# print("average")
-compute_scoring_table(df, ["gemma2:2b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id=None)
-
-# print("question by question")
-# # # ========= Question by question
-# compute_scoring_table(df, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="perceive")
-# compute_scoring_table(df, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="push")
-# compute_scoring_table(df, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="lift")
-# compute_scoring_table(df, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="grasp")
-
-# print("====New correctness ====")
-# print("average")
-# compute_scoring_table(df_correctness, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id=None)
-
-# print("question by question")
-# # # # ========= Question by question
-# compute_scoring_table(df_correctness, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="perceive")
-# compute_scoring_table(df_correctness, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="push")
-# compute_scoring_table(df_correctness, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="lift")
-# compute_scoring_table(df_correctness, ["mistral-nemo:12b"], conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="grasp")
-
-# def compute_scoring_table(dataframe, model, conditions = ["baseline", "rule", "shuffle"], difficulties = ["easy", "medium", "hard"], question_id = "push"):
-#     df_results = pd.DataFrame(columns=['Model', 'Easy score', 'Easy correct', 'Medium score', 'Medium correct', 'Hard score', 'Hard correct'])
-#     df_results['Model'] = model
-
-#     for difficulty in difficulties:
-#         for condition in conditions:
-#             chosen_data = get_chosen_data(dataframe, model, condition, difficulty, question_id)
-            
-#             average_score = chosen_data["score"].mean()
-#             rounded_average_score = round(average_score, 2)
-#             std_score = chosen_data["score"].std()
-#             rounded_std_score = round(std_score, 2)
-            
-#             correctness_rate = len(chosen_data[chosen_data["is_correct"] == True])/len(chosen_data)
-#             rounded_correctness_rate = round(correctness_rate, 2)
-
-#             if(difficulty == "easy"):
-#                 print("easy : ", str(rounded_average_score) + "(± " + str(rounded_std_score) + ")", rounded_correctness_rate)
-#                 df_results["Easy score"][0] = str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"
-#                 df_results["Easy correct"][0] = rounded_correctness_rate
-#             elif(difficulty == "medium"):
-#                 print("medium : ", str(rounded_average_score) + "(± " + str(rounded_std_score) + ")", rounded_correctness_rate)
-#                 df_results["Medium score"][0] = str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"
-#                 df_results["Medium correct"][0] = rounded_correctness_rate
-#             else:
-#                 print("hard : ", str(rounded_average_score) + "(± " + str(rounded_std_score) + ")", rounded_correctness_rate)
-#                 df_results["Hard score"][0] = str(rounded_average_score) + "(± " + str(rounded_std_score) + ")"
-#                 df_results["Hard correct"][0] = rounded_correctness_rate
-
-# compute_scoring_table(df, "mistral-nemo:12b", conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="grasp")
-# compute_scoring_table(df_correctness, "mistral-nemo:12b", conditions = ["baseline"], difficulties = ["easy", "medium", "hard"], question_id="grasp")
+compute_scoring_table(df, ["gemma2:2b", "llama3.2:3b", "llama3.1:8b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"])
