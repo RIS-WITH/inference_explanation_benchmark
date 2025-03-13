@@ -12,7 +12,9 @@ class QuestionHandler:
     
     def create_dataset_folders(self):
         question_path = self.folder_path_ + self.folder_name_
+    
         try:
+            os.mkdir(self.folder_path_ + "/")
             os.mkdir(question_path)
             for var_folder in self.variation_types_:
                 os.mkdir(question_path + "/" + var_folder)

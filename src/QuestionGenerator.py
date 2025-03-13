@@ -5,8 +5,7 @@ import string
 import uuid
 import re
 
-from data.canGrasp import VariableConcept
-from data.prompts import prompt_0_clean, prompt_1_clean, prompt_2_clean, prompt_3_clean, prompt_test
+from data_elements.canGrasp import VariableConcept
 
 global_nb_var = 20
 

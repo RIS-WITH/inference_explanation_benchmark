@@ -1,4 +1,4 @@
-from data.questions import QuestionInstance
+from data_elements.questions import QuestionInstance
 # ====================== canLift ===================
 
 explanation_robot_capa = [
