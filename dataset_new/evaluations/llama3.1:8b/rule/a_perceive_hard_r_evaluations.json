@@ -1,0 +1,235 @@
+[
+    {
+        "question_id": "a_perceive_hard_0r",
+        "answer": " the pepper robot can perceive the book because it has a perceiving capability thanks to its camera and scan code detection algorithm, which are active and capable of detecting scannable parts within a certain distance range. The book also has a disposition for being perceived by having a visible and registered scannable part in front of the camera.",
+        "is_correct": false,
+        "score": 0.8666666666666667,
+        "missing_concepts": [
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_1r",
+        "answer": " the Tiago can perceive the cube because it has a perceiving capability based on its camera and scan code detection algorithm components being active, and the cube has a disposition that allows it to be perceived by the Tiago, given that the cube is within the camera's maximum distance range.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "qr tag",
+            "registered",
+            "scannable_part_visible",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_2r",
+        "answer": " the robot can perceive the book because it has a perceiving capability based on its camera being active and having scan code detection capabilities, and the book has a perceiving disposition due to its scannable QR tag being registered and visible to the robot's camera, which is within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.9333333333333333,
+        "missing_concepts": [
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_3r",
+        "answer": " the robot can perceive the appliance because it has a perceiving capability based on its webcam and scan code detection algorithm, and the appliance has a perceiving disposition due to its scannable part being registered and visible to the robot's camera, with the distance between them being within the camera's range.",
+        "is_correct": true,
+        "score": 0.8666666666666667,
+        "missing_concepts": [
+            "active",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_4r",
+        "answer": " the Tiago agent can perceive the appliance because it has a perceiving capability based on its camera and scan code detection algorithm components being active, and the appliance is an object with a disposition that allows it to be perceived by the agent, given that the appliance is within the camera's maximum distance range.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "qr tag",
+            "registered",
+            "scannable_part_visible",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_5r",
+        "answer": " the pepper robot can perceive the table because it has a perceiving capability thanks to its camera and scan code detection algorithm, and the table has a disposition that allows it to be perceived by the robot, with the added condition that the table is within the robot's maximum distance range.",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "qr tag",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_6r",
+        "answer": " the pepper robot can perceive the appliance because it has a perceiving capability thanks to its camera and scan code detection algorithm, the appliance being visible by the robot, and the distance between them is within the camera's maximum range.",
+        "is_correct": true,
+        "score": 0.6,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_7r",
+        "answer": " the pr2 robot can perceive the plate because it has a perceiving capability thanks to its kinect v2 camera being active and able to detect scan codes, and the plate has a disposition for being scanned with a scannable part in front of the camera and registered as visible.",
+        "is_correct": false,
+        "score": 0.7333333333333333,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_8r",
+        "answer": " the pepper robot can perceive the cube because it has a perceiving capability thanks to its camera and scan code detection algorithm, which are active and capable of detecting scannable parts within range, and the cube has a disposition that makes it visible to the robot's camera.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_9r",
+        "answer": " the Tiago can perceive the luggage because it has a perceiving capability based on its camera and scan code detection algorithm being active, and the luggage has a disposition that allows it to be perceived by the Tiago's camera, which is within its maximum distance range.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "scan tag",
+            "registered",
+            "scannable_part_visible",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_10r",
+        "answer": " the pepper robot can perceive the plate because it has a perceiving capability thanks to its kinect v2 camera and scan code detection algorithm, which are active and compatible with the plate's scannable qr code that is registered and visible. The plate is at a distance within the camera's range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "perceivable",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_11r",
+        "answer": " the pr2 robot can perceive the appliance because it has a perceiving capability based on its webcam and scan code detection algorithm, and the appliance has a perceiving disposition due to its qr code being registered and visible to the robot's camera, which is within the robot's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_12r",
+        "answer": " the pr2 robot can perceive the appliance because it has a perceiving capability thanks to its kinect v2 camera and scan code detection algorithm, which are active and capable of detecting scannable parts in front of it. The appliance has a disposition for being perceived by the robot, and it is within the maximum distance range of the camera.",
+        "is_correct": true,
+        "score": 0.7333333333333333,
+        "missing_concepts": [
+            "registered",
+            "scannable_part_visible",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_13r",
+        "answer": " the pepper robot can perceive the luggage because it has a perceiving capability based on its camera and scan code detection algorithm, which are active and capable of detecting scannable parts that are registered and visible. The luggage has a disposition for being perceived by the pepper robot, and it is within the maximum distance range of the camera.",
+        "is_correct": true,
+        "score": 0.8666666666666667,
+        "missing_concepts": [
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_14r",
+        "answer": " the pepper robot can perceive the cube because it has a perceiving capability thanks to its camera and scan code detection algorithm, the cube being an object with a scannable part in front of the camera, and the distance between them is within the camera's maximum range.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "active",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_15r",
+        "answer": " the robot can perceive the box because it has a perceiving capability thanks to its webcam and scan code detection algorithm, which are active and capable of detecting scannable parts within range, and the box has a disposition for being perceived by the robot due to having a registered and visible QR tag in front of the camera.",
+        "is_correct": true,
+        "score": 0.8666666666666667,
+        "missing_concepts": [
+            "object_visible_by_robot",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_16r",
+        "answer": " the Tiago agent can perceive the book because it has a perceiving capability based on its webcam and scan code detection algorithm, and the book has a perceiving disposition due to its QR code being registered and visible to the camera, with the book being within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_17r",
+        "answer": " the robot can perceive the cube because it has a perceiving capability thanks to its kinect v2 camera being active and able to detect scan codes, and the cube has a disposition for being perceived by having a scannable part in front of the camera that is registered and visible.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "object_visible_by_robot",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_18r",
+        "answer": " the robot can perceive the cube because it has a perceiving capability thanks to its webcam and scan code detection algorithm, and the cube has a scannable part that is visible and registered, with the robot being able to see it from within its maximum distance range.",
+        "is_correct": true,
+        "score": 0.7333333333333333,
+        "missing_concepts": [
+            "perceivable",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_19r",
+        "answer": " the pepper robot can perceive the appliance because it has a perceiving capability thanks to its webcam and scan code detection algorithm, and the appliance has a perceiving disposition due to its scannable part being registered and visible to the robot's camera, with the distance between them being within the camera's range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    }
+]

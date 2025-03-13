@@ -1,0 +1,265 @@
+{
+  "id": "a_grasp_medium_s",
+  "template": [
+    "__var0__|canGrasp|__var1__",
+    [
+      "__var0__|Type|__agent__",
+      "__agent__|SubClassOf|Agent",
+      "__var0__|hasCapability|__var3__",
+      "GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo))",
+      "__var3__|isCapabilityOf|__var0__",
+      "__var0__|hasComponent|__var4__",
+      "__var4__|Type|__component__",
+      "__component__|SubClassOf|Gripper",
+      "__var0__|hasComponent|__var8__",
+      "__var8__|Type|MotionPlanningAlgo",
+      "__var1__|Type|__object__",
+      "__object__|SubClassOf|Object",
+      "__var1__|hasDisposition|__var2__",
+      "GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true)))",
+      "__var2__|isDispositionOf|__var1__",
+      "__var1__|hasPart|__var5__",
+      "__var5__|Type|__part__",
+      "__part__|SubClassOf|GraspablePart",
+      "__var1__|isATouchableObject|boolean#true",
+      "(isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy",
+      "__var1__|isContainedIn|__var6__",
+      "__var6__|isWithinGraspRangeOf|__var0__",
+      "__var4__|Type|Gripper",
+      "Gripper|SubClassOf|EndEffector",
+      "__var0__|hasComponent|__var4__",
+      "__var4__|hasOpeningWidth|integer#2",
+      "__var1__|hasHoldingPartWidth|integer#1",
+      "greaterThan(integer#2,integer#1)"
+    ]
+  ],
+  "concepts" : [
+  "can grasp", 
+ "graspable", "touchable_object",
+  "grasping","motion_planing_algo",
+  "reachable", "is_contained_in", "within_grasping_range",
+  "opening width", "object_width"    
+],
+  "answers": [
+    {
+      "id": "a_grasp_medium_0s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "pepper",
+        "manipulator"
+      ],
+      "question": "-Inference : yj|canGrasp|k \n -Justifications : lep|hasOpeningWidth|integer#71, hay|isWithinGraspRangeOf|yj, k|isContainedIn|hay, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, yj|Type|Pepper, k|Type|Suitcase, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), k|hasDisposition|b, k|hasPart|yfmc, b|isDispositionOf|k, k|isATouchableObject|boolean#true, Gripper|SubClassOf|EndEffector, greaterThan(integer#71,integer#35), k|hasHoldingPartWidth|integer#35, yj|hasComponent|m, yj|hasComponent|lep, yj|hasComponent|lep, m|Type|MotionPlanningAlgo, Pepper|SubClassOf|Agent, lep|Type|Gripper, lep|Type|Manipulator, x|isCapabilityOf|yj, Handle|SubClassOf|GraspablePart, Manipulator|SubClassOf|Gripper, yfmc|Type|Handle, Suitcase|SubClassOf|Object, yj|hasCapability|x. ",
+      "answer": "\nThe robot can grasp the suitcase because it has a grasping capability that allows it to reach and hold the suitcase within its grasp range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (yj) can grasp an object (k).\n* **Justifications:** The justifications provide details about the robot's capabilities, including: \n    * It has a gripper component (lep) and a motion planning algorithm component (m).\n    * The robot is capable of grasping objects. \n    * The suitcase (k) is within the robot's grasp range.\n\n**Key Concepts:**\n\n* **Grasping Capability:**  The ability to hold an object using its gripper.\n* **Gripper:** A mechanical component used for grasping and manipulating objects.\n* **Motion Planning Algorithm:** A set of rules that guide the robot in planning its movements. \n\n\nLet me know if you'd like a more detailed explanation of any specific aspect! "
+    },
+    {
+      "id": "a_grasp_medium_1s",
+      "selected_classes": [
+        "shovel",
+        "hand grip",
+        "pr2",
+        "claw"
+      ],
+      "question": "-Inference : u|canGrasp|ohph \n -Justifications : v|Type|MotionPlanningAlgo, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), u|hasCapability|ibho, dgv|isDispositionOf|ohph, u|hasComponent|ab, u|hasComponent|v, Claw|SubClassOf|Gripper, u|hasComponent|ab, ab|hasOpeningWidth|integer#75, Shovel|SubClassOf|Object, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), ibho|isCapabilityOf|u, ohph|isATouchableObject|boolean#true, ohph|Type|Shovel, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, greaterThan(integer#75,integer#61), HandGrip|SubClassOf|GraspablePart, Pr2|SubClassOf|Agent, ohph|hasDisposition|dgv, ohph|hasHoldingPartWidth|integer#61, ab|Type|Claw, vzd|isWithinGraspRangeOf|u, Gripper|SubClassOf|EndEffector, vlv|Type|HandGrip, ohph|hasPart|vlv, ab|Type|Gripper, ohph|isContainedIn|vzd, u|Type|Pr2. ",
+      "answer": "\nThe robot can grasp the shovel because it has a grasping capability and is able to reach the shovel with its hand grip. The robot's component is designed for grasping, and the shovel is within its grasp range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_2s",
+      "selected_classes": [
+        "mug",
+        "handle",
+        "robot",
+        "claw"
+      ],
+      "question": "-Inference : loh|canGrasp|h \n -Justifications : h|isContainedIn|xmm, loh|hasCapability|jdho, h|hasDisposition|opfh, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, h|hasPart|w, Handle|SubClassOf|GraspablePart, xmm|isWithinGraspRangeOf|loh, h|Type|Mug, Claw|SubClassOf|Gripper, f|Type|Gripper, w|Type|Handle, h|isATouchableObject|boolean#true, h|hasHoldingPartWidth|integer#66, opfh|isDispositionOf|h, loh|hasComponent|zvtg, loh|hasComponent|f, Mug|SubClassOf|Object, zvtg|Type|MotionPlanningAlgo, jdho|isCapabilityOf|loh, loh|hasComponent|f, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), f|hasOpeningWidth|integer#71, greaterThan(integer#71,integer#66), Gripper|SubClassOf|EndEffector, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), loh|Type|Robot, f|Type|Claw, Robot|SubClassOf|Agent. ",
+      "answer": "\nThe robot can grasp the mug because it has a grasping capability that allows it to reach and hold the mug. The robot's grasping capability is based on its ability to grip objects with its claw, which is designed for this purpose.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_3s",
+      "selected_classes": [
+        "mug",
+        "handle",
+        "pepper",
+        "manipulator"
+      ],
+      "question": "-Inference : lk|canGrasp|tcc \n -Justifications : (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, Manipulator|SubClassOf|Gripper, greaterThan(integer#73,integer#58), tcc|Type|Mug, fb|hasOpeningWidth|integer#73, qoln|isDispositionOf|tcc, Gripper|SubClassOf|EndEffector, tcc|isATouchableObject|boolean#true, fb|Type|Manipulator, tcc|isContainedIn|pm, tcc|hasDisposition|qoln, lk|hasComponent|fb, lk|hasComponent|fb, Pepper|SubClassOf|Agent, lk|hasComponent|cl, lk|Type|Pepper, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), lk|hasCapability|fhw, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), Handle|SubClassOf|GraspablePart, jt|Type|Handle, fb|Type|Gripper, fhw|isCapabilityOf|lk, tcc|hasPart|jt, Mug|SubClassOf|Object, tcc|hasHoldingPartWidth|integer#58, cl|Type|MotionPlanningAlgo, pm|isWithinGraspRangeOf|lk. ",
+      "answer": "\nThe robot can grasp the mug because it has a grasping capability and the mug is within its reach. The robot's grasping capability is based on having a gripper component that can grasp objects, and the mug is within the robot's grasp range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_4s",
+      "selected_classes": [
+        "suitcase",
+        "hand grip",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : l|canGrasp|n \n -Justifications : greaterThan(integer#62,integer#46), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, ve|isWithinGraspRangeOf|l, w|Type|Manipulator, w|hasOpeningWidth|integer#62, tf|Type|MotionPlanningAlgo, Manipulator|SubClassOf|Gripper, HandGrip|SubClassOf|GraspablePart, Robot|SubClassOf|Agent, n|isContainedIn|ve, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), l|hasCapability|qq, w|Type|Gripper, n|hasDisposition|g, n|Type|Suitcase, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), n|hasHoldingPartWidth|integer#46, l|Type|Robot, qq|isCapabilityOf|l, Suitcase|SubClassOf|Object, l|hasComponent|tf, n|isATouchableObject|boolean#true, g|isDispositionOf|n, l|hasComponent|w, l|hasComponent|w, Gripper|SubClassOf|EndEffector, zmj|Type|HandGrip, n|hasPart|zmj. ",
+      "answer": "\nThe robot can grasp the object because it has a gripper that can grasp objects and its holding part width is greater than the object's width.  \n\n\n\nLet me know if you have any other inferences to translate! \n"
+    },
+    {
+      "id": "a_grasp_medium_5s",
+      "selected_classes": [
+        "toy bucket",
+        "hand grip",
+        "tiago",
+        "mechanical hand"
+      ],
+      "question": "-Inference : qzq|canGrasp|d \n -Justifications : Gripper|SubClassOf|EndEffector, qzq|hasComponent|dabx, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, dabx|hasOpeningWidth|integer#78, xlv|isCapabilityOf|qzq, d|isATouchableObject|boolean#true, HandGrip|SubClassOf|GraspablePart, greaterThan(integer#78,integer#67), qzq|hasComponent|dabx, Tiago|SubClassOf|Agent, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), qzq|hasCapability|xlv, vch|isWithinGraspRangeOf|qzq, d|hasDisposition|lao, qzq|Type|Tiago, lao|isDispositionOf|d, d|isContainedIn|vch, d|Type|ToyBucket, qzq|hasComponent|ef, dabx|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, ef|Type|MotionPlanningAlgo, d|hasHoldingPartWidth|integer#67, msgi|Type|HandGrip, dabx|Type|Gripper, d|hasPart|msgi, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), ToyBucket|SubClassOf|Object. ",
+      "answer": "\nThe robot can grasp the object because it has a grasping capability, as it has a gripper component that allows it to reach and hold objects within its grasp range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_6s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "tiago",
+        "manipulator"
+      ],
+      "question": "-Inference : ry|canGrasp|fb \n -Justifications : ry|hasComponent|bor, emg|hasOpeningWidth|integer#41, ry|Type|Tiago, fb|isContainedIn|cns, Gripper|SubClassOf|EndEffector, lxyu|isCapabilityOf|ry, Suitcase|SubClassOf|Object, bor|Type|MotionPlanningAlgo, fb|hasHoldingPartWidth|integer#35, fb|hasPart|drc, fb|isATouchableObject|boolean#true, gju|isDispositionOf|fb, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, greaterThan(integer#41,integer#35), ry|hasComponent|emg, fb|Type|Suitcase, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), Tiago|SubClassOf|Agent, Manipulator|SubClassOf|Gripper, fb|hasDisposition|gju, emg|Type|Manipulator, ry|hasCapability|lxyu, Handle|SubClassOf|GraspablePart, emg|Type|Gripper, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), drc|Type|Handle, cns|isWithinGraspRangeOf|ry, ry|hasComponent|emg. ",
+      "answer": "\nThe robot can grasp the suitcase because it has a gripper that can grasp objects and is capable of grasping the suitcase. The robot's gripper is within the range of the suitcase.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_7s",
+      "selected_classes": [
+        "hammer",
+        "handle",
+        "pr2",
+        "mechanical hand"
+      ],
+      "question": "-Inference : rvs|canGrasp|saku \n -Justifications : Pr2|SubClassOf|Agent, rvs|hasComponent|dav, Grip|SubClassOf|GraspablePart, dav|Type|MotionPlanningAlgo, rvs|hasCapability|d, xv|isDispositionOf|saku, bnwn|Type|Grip, Hammer|SubClassOf|Object, saku|hasHoldingPartWidth|integer#48, rvs|hasComponent|rdm, rvs|Type|Pr2, saku|hasPart|bnwn, rdm|Type|MechanicalHand, saku|hasDisposition|xv, saku|Type|Hammer, greaterThan(integer#65,integer#48), xhjy|isWithinGraspRangeOf|rvs, Gripper|SubClassOf|EndEffector, saku|isContainedIn|xhjy, saku|isATouchableObject|boolean#true, rdm|Type|Gripper, MechanicalHand|SubClassOf|Gripper, rvs|hasComponent|rdm, rdm|hasOpeningWidth|integer#65, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), d|isCapabilityOf|rvs, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)). ",
+      "answer": "\nThe robot can grasp the hammer because it has a component that allows for grasping, and the hammer is within its grasp range.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (rvs) can grasp the hammer (saku).\n* **Justifications:** This explanation breaks down the reasoning behind the inference: \n    * **Robot's Capabilities:** The robot has a component called \"rdm\" which is part of its design and allows it to grasp objects.  \n    * **Hammer's Properties:** The hammer (saku) is within the robot's grasp range, meaning it can be held by the robot's gripper. \n\n\n**Key Concepts:**\n\n* **SubClassOf:** This indicates a hierarchical relationship where \"rvs\" is a subclass of \"Pr2\".\n* **Component:**  A component refers to specific parts or elements within the robot's design.\n* **Grip:** A part of the robot that allows for grasping objects. \n* **Grasping Capability:** The ability of the robot to hold and manipulate objects. \n\n\n**Edge Case Considerations:**\n\n* **Object Properties:**  The hammer has a specific width (48) which is relevant to its graspability. \n* **Range:** The robot's grasp range is defined by the \"xhjy\" object, indicating that the hammer can be grasped within this range.\n\n\n\nLet me know if you have any other SWRL rules or inferences you'd like me to explain! "
+    },
+    {
+      "id": "a_grasp_medium_8s",
+      "selected_classes": [
+        "toy bucket",
+        "handle",
+        "pr2",
+        "claw"
+      ],
+      "question": "-Inference : zlyv|canGrasp|dh \n -Justifications : fbbs|Type|Handle, Gripper|SubClassOf|EndEffector, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), anug|Type|Claw, ToyBucket|SubClassOf|Object, zlyv|hasComponent|anug, dh|isContainedIn|j, zlyv|hasComponent|fn, zlyv|Type|Pr2, anug|hasOpeningWidth|integer#71, Claw|SubClassOf|Gripper, dh|hasDisposition|owuq, dh|hasPart|fbbs, Handle|SubClassOf|GraspablePart, anug|Type|Gripper, fn|Type|MotionPlanningAlgo, Pr2|SubClassOf|Agent, dh|isATouchableObject|boolean#true, owuq|isDispositionOf|dh, dh|Type|ToyBucket, zlyv|hasCapability|x, greaterThan(integer#71,integer#68), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, x|isCapabilityOf|zlyv, zlyv|hasComponent|anug, dh|hasHoldingPartWidth|integer#68, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), j|isWithinGraspRangeOf|zlyv. ",
+      "answer": "\nThe robot can grasp the object because it has a gripper that can hold objects, and the object is within its grasping range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_9s",
+      "selected_classes": [
+        "cooking pot",
+        "hand grip",
+        "tiago",
+        "two-finger claw"
+      ],
+      "question": "-Inference : ziw|canGrasp|rmqp \n -Justifications : TwoFingerClaw|SubClassOf|Gripper, rmqp|isATouchableObject|boolean#true, rmqp|hasHoldingPartWidth|integer#64, ziw|hasComponent|v, ziw|hasComponent|jrul, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), ziw|hasCapability|vn, Tiago|SubClassOf|Agent, HandGrip|SubClassOf|GraspablePart, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), rmqp|hasDisposition|r, ziw|hasComponent|v, vn|isCapabilityOf|ziw, l|Type|HandGrip, ziw|Type|Tiago, rmqp|Type|CookingPot, CookingPot|SubClassOf|Object, v|hasOpeningWidth|integer#72, rmqp|isContainedIn|ikd, v|Type|Gripper, Gripper|SubClassOf|EndEffector, greaterThan(integer#72,integer#64), jrul|Type|MotionPlanningAlgo, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, v|Type|TwoFingerClaw, r|isDispositionOf|rmqp, rmqp|hasPart|l, ikd|isWithinGraspRangeOf|ziw. ",
+      "answer": "\nThe robot can grasp the cooking pot because it has a grasping capability based on its gripper component and motion planning algorithm. The robot's grip is capable of holding the pot, which is within its reach.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_10s",
+      "selected_classes": [
+        "cooking pot",
+        "handle",
+        "pr2",
+        "two-finger claw"
+      ],
+      "question": "-Inference : f|canGrasp|i \n -Justifications : f|hasComponent|hko, fkyd|Type|TwoFingerClaw, i|hasHoldingPartWidth|integer#64, hko|Type|MotionPlanningAlgo, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), f|hasComponent|fkyd, fkyd|hasOpeningWidth|integer#67, vyi|isWithinGraspRangeOf|f, Gripper|SubClassOf|EndEffector, Pr2|SubClassOf|Agent, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, greaterThan(integer#67,integer#64), f|Type|Pr2, i|hasDisposition|jizy, jizy|isDispositionOf|i, CookingPot|SubClassOf|Object, tmn|isCapabilityOf|f, Handle|SubClassOf|GraspablePart, i|isATouchableObject|boolean#true, i|Type|CookingPot, i|isContainedIn|vyi, f|hasCapability|tmn, m|Type|Handle, i|hasPart|m, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), fkyd|Type|Gripper, TwoFingerClaw|SubClassOf|Gripper, f|hasComponent|fkyd. ",
+      "answer": "\nThe robot can grasp the object because it has a gripper that can grasp objects within its reach and is capable of grasping objects with a certain width.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot (represented by 'f') can grasp an object ('i').\n* **Justifications:** \n    * We need to understand the relationship between 'f' and 'i'. \n    * 'f' has a component called 'hko', which is a motion planning algorithm. This suggests that 'f' might be able to move in a way that allows it to grasp 'i'. \n    * 'i' is a cooking pot, and we know that the robot can grasp objects with a certain width.  \n\n**Key Points:**\n\n* **Logical Reasoning:** The inference relies on the logical relationships between components of the robot ('f') and the object ('i'). \n* **Object Properties:** We need to understand the properties of 'i' (cooking pot) to determine if it can be grasped by the robot.  \n\n\n\nLet me know if you have any other inferences or justifications you'd like me to translate! "
+    },
+    {
+      "id": "a_grasp_medium_11s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : veox|canGrasp|eq \n -Justifications : GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), mvyk|Type|Handle, eq|isContainedIn|pjh, eq|hasHoldingPartWidth|integer#68, ynmt|Type|Gripper, veox|Type|Robot, veox|hasComponent|xsee, veox|hasComponent|ynmt, sd|isDispositionOf|eq, veox|hasComponent|ynmt, Gripper|SubClassOf|EndEffector, greaterThan(integer#79,integer#68), Suitcase|SubClassOf|Object, Handle|SubClassOf|GraspablePart, eq|Type|Suitcase, Robot|SubClassOf|Agent, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), xsee|Type|MotionPlanningAlgo, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, ynmt|hasOpeningWidth|integer#79, ynmt|Type|Manipulator, eq|hasPart|mvyk, rge|isCapabilityOf|veox, veox|hasCapability|rge, pjh|isWithinGraspRangeOf|veox, Manipulator|SubClassOf|Gripper, eq|isATouchableObject|boolean#true, eq|hasDisposition|sd. ",
+      "answer": "\nThe robot can grasp the suitcase because it has a grasping capability that allows it to reach and hold the suitcase. The robot's gripper is designed for this purpose, with its motion planning algorithm enabling it to grasp objects within its range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_12s",
+      "selected_classes": [
+        "shovel",
+        "hand grip",
+        "robot",
+        "claw"
+      ],
+      "question": "-Inference : hhxw|canGrasp|r \n -Justifications : hhxw|hasComponent|l, r|hasHoldingPartWidth|integer#39, c|Type|Gripper, hhxw|hasComponent|c, greaterThan(integer#63,integer#39), rrb|Type|HandGrip, hhxw|Type|Robot, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), Robot|SubClassOf|Agent, Gripper|SubClassOf|EndEffector, r|isATouchableObject|boolean#true, l|Type|MotionPlanningAlgo, HandGrip|SubClassOf|GraspablePart, hhxw|hasComponent|c, r|isContainedIn|euxq, hhxw|hasCapability|q, r|Type|Shovel, c|hasOpeningWidth|integer#63, ntyc|isDispositionOf|r, Claw|SubClassOf|Gripper, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), r|hasDisposition|ntyc, Shovel|SubClassOf|Object, q|isCapabilityOf|hhxw, euxq|isWithinGraspRangeOf|hhxw, c|Type|Claw, r|hasPart|rrb. ",
+      "answer": "\nThe robot can grasp the object because it has a gripper with a holding part width of 39 and a shovel-like shape that can be grasped by the robot. The robot's grasping capability is based on its ability to reach the object, which is within the robot's grasp range.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_13s",
+      "selected_classes": [
+        "hammer",
+        "handle",
+        "tiago",
+        "claw"
+      ],
+      "question": "-Inference : oz|canGrasp|jmx \n -Justifications : jmx|hasPart|pwf, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, Claw|SubClassOf|Gripper, fwwl|isDispositionOf|jmx, Gripper|SubClassOf|EndEffector, jmx|isATouchableObject|boolean#true, Hammer|SubClassOf|Object, jmx|isContainedIn|ckkb, ckkb|isWithinGraspRangeOf|oz, oz|hasCapability|myif, fxk|hasOpeningWidth|integer#58, pwf|Type|Grip, oz|hasComponent|fxk, Tiago|SubClassOf|Agent, greaterThan(integer#58,integer#57), myif|isCapabilityOf|oz, oz|Type|Tiago, jmx|hasDisposition|fwwl, jmx|Type|Hammer, fxk|Type|Gripper, oz|hasComponent|hc, Grip|SubClassOf|GraspablePart, fxk|Type|Claw, jmx|hasHoldingPartWidth|integer#57, oz|hasComponent|fxk, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), hc|Type|MotionPlanningAlgo. ",
+      "answer": "\nThe hammer can grasp the object because it has a grip capability, which allows it to hold onto objects. The hammer is a graspable part of the object and can be grasped by the object.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_14s",
+      "selected_classes": [
+        "shovel",
+        "handle",
+        "robot",
+        "mechanical hand"
+      ],
+      "question": "-Inference : otwz|canGrasp|tcvw \n -Justifications : otwz|Type|Robot, MechanicalHand|SubClassOf|Gripper, qm|isWithinGraspRangeOf|otwz, greaterThan(integer#62,integer#44), Robot|SubClassOf|Agent, tcvw|isContainedIn|qm, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), tcvw|Type|Shovel, Gripper|SubClassOf|EndEffector, i|Type|MotionPlanningAlgo, fpcj|Type|MechanicalHand, tcvw|hasPart|wnm, otwz|hasComponent|fpcj, tcvw|hasHoldingPartWidth|integer#44, otwz|hasComponent|fpcj, wnm|Type|Grip, Grip|SubClassOf|GraspablePart, fpcj|hasOpeningWidth|integer#62, otwz|hasComponent|i, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, Shovel|SubClassOf|Object, tcvw|isATouchableObject|boolean#true, mcyd|isDispositionOf|tcvw, tcvw|hasDisposition|mcyd, fpcj|Type|Gripper, v|isCapabilityOf|otwz, otwz|hasCapability|v. ",
+      "answer": "\nThe robot can grasp the shovel because it has a gripper that can grasp objects within its reach and is capable of grasping the shovel.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can grasp the shovel.\n* **Justifications:** The justifications provide details about the robot's capabilities, including: \n    * It has a gripper (MechanicalHand) which is a sub-class of Gripper.\n    * It can grasp objects within its reach (isWithinGraspRangeOf).\n    * It has a shovel as an object it can grasp.\n\n\n**Key Concepts:**\n\n* **Subclasses and Equivalents:**  The justifications use terms like \"MechanicalHand\" and \"Gripper\" to indicate the robot's capabilities are based on specific sub-types of objects. \n* **Reach and Grasping:** The inference relies on the robot's ability to reach and grasp the shovel, which is supported by its gripper's functionality.\n\n\n\nLet me know if you have any other SWRL rules you'd like me to translate! "
+    },
+    {
+      "id": "a_grasp_medium_15s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "pr2",
+        "mechanical hand"
+      ],
+      "question": "-Inference : e|canGrasp|i \n -Justifications : i|hasDisposition|xf, e|Type|Pr2, e|hasCapability|dwm, k|Type|Gripper, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, e|hasComponent|k, Grip|SubClassOf|GraspablePart, i|hasPart|nuqq, xf|isDispositionOf|i, Suitcase|SubClassOf|Object, e|hasComponent|k, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), c|isWithinGraspRangeOf|e, i|Type|Suitcase, i|isATouchableObject|boolean#true, nuqq|Type|Grip, k|Type|MechanicalHand, Gripper|SubClassOf|EndEffector, greaterThan(integer#39,integer#30), Pr2|SubClassOf|Agent, MechanicalHand|SubClassOf|Gripper, dwm|isCapabilityOf|e, i|isContainedIn|c, gyh|Type|MotionPlanningAlgo, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), e|hasComponent|gyh, k|hasOpeningWidth|integer#39, i|hasHoldingPartWidth|integer#30. ",
+      "answer": "\nThe robot can grasp the suitcase because it has a gripper that can reach and grasp the suitcase. The robot's gripper is capable of grasping objects within its range.  \n\n\n\n**Explanation:**\n\n* **Inference:** This inference states that the robot (e) can grasp an object (i).\n* **Justifications:** \n    * **i:**  The justification explains that the object (i) has a disposition to be grasped, and it is a suitcase.\n    * **e:** The robot (e) has a gripper (k), which is capable of grasping objects within its range. \n\n\n**Key Points:**\n\n* **Logical Reasoning:** This inference relies on logical reasoning that the robot's gripper can grasp an object based on the object's disposition and the robot's capabilities.\n* **Object Properties:** The justifications highlight the properties of the object (suitcase) and the robot (e), such as its type, grip capability, and range. \n\n\n\nLet me know if you have any other SWRL rules you'd like to translate! "
+    },
+    {
+      "id": "a_grasp_medium_16s",
+      "selected_classes": [
+        "mug",
+        "hand grip",
+        "pr2",
+        "manipulator"
+      ],
+      "question": "-Inference : cqn|canGrasp|z \n -Justifications : Manipulator|SubClassOf|Gripper, z|hasPart|mgp, z|hasHoldingPartWidth|integer#33, wygg|isWithinGraspRangeOf|cqn, z|isATouchableObject|boolean#true, cqn|hasComponent|h, z|isContainedIn|wygg, peo|Type|Manipulator, mgp|Type|HandGrip, cqn|hasCapability|vfl, cqn|hasComponent|peo, HandGrip|SubClassOf|GraspablePart, Pr2|SubClassOf|Agent, z|hasDisposition|wtbi, wtbi|isDispositionOf|z, cqn|Type|Pr2, z|Type|Mug, cqn|hasComponent|peo, peo|Type|Gripper, Mug|SubClassOf|Object, Gripper|SubClassOf|EndEffector, h|Type|MotionPlanningAlgo, vfl|isCapabilityOf|cqn, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, peo|hasOpeningWidth|integer#61, greaterThan(integer#61,integer#33), GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)). ",
+      "answer": "\nThe robot can grasp the mug because it has a gripper component, which is capable of grasping objects within its reach. The robot's capability to grasp the mug is based on the mug being within its grasp range and the robot's ability to plan its motion for grasping.  \n\n\n\n"
+    },
+    {
+      "id": "a_grasp_medium_17s",
+      "selected_classes": [
+        "suitcase",
+        "hand grip",
+        "robot",
+        "mechanical hand"
+      ],
+      "question": "-Inference : ps|canGrasp|kjk \n -Justifications : Robot|SubClassOf|Agent, ps|hasComponent|uza, kbp|isCapabilityOf|ps, kjk|isContainedIn|lgs, uza|hasOpeningWidth|integer#37, greaterThan(integer#37,integer#32), lgs|isWithinGraspRangeOf|ps, ps|hasComponent|lce, (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, kjk|hasHoldingPartWidth|integer#32, HandGrip|SubClassOf|GraspablePart, uza|Type|MechanicalHand, ps|hasComponent|uza, ps|Type|Robot, uza|Type|Gripper, ps|hasCapability|kbp, lce|Type|MotionPlanningAlgo, kjk|Type|Suitcase, kjk|hasDisposition|enq, ebiv|Type|HandGrip, MechanicalHand|SubClassOf|Gripper, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), kjk|hasPart|ebiv, enq|isDispositionOf|kjk, Suitcase|SubClassOf|Object, kjk|isATouchableObject|boolean#true, Gripper|SubClassOf|EndEffector, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)). ",
+      "answer": "\nThe robot can grasp the suitcase because it has a gripper component that allows it to grasp objects, and the robot's capability to grasp is based on its mechanical hand and motion planning algorithm.  \n\n\n\nLet me know if you have any other inferences you'd like me to explain! "
+    },
+    {
+      "id": "a_grasp_medium_18s",
+      "selected_classes": [
+        "hammer",
+        "handle",
+        "pepper",
+        "two-finger claw"
+      ],
+      "question": "-Inference : m|canGrasp|g \n -Justifications : e|Type|Grip, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, greaterThan(integer#65,integer#44), g|hasDisposition|zt, m|hasComponent|lg, g|hasPart|e, g|isATouchableObject|boolean#true, Hammer|SubClassOf|Object, m|hasComponent|x, Grip|SubClassOf|GraspablePart, x|Type|TwoFingerClaw, Pepper|SubClassOf|Agent, g|hasHoldingPartWidth|integer#44, x|hasOpeningWidth|integer#65, n|isCapabilityOf|m, TwoFingerClaw|SubClassOf|Gripper, m|Type|Pepper, zt|isDispositionOf|g, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), d|isWithinGraspRangeOf|m, g|Type|Hammer, lg|Type|MotionPlanningAlgo, Gripper|SubClassOf|EndEffector, g|isContainedIn|d, m|hasComponent|x, m|hasCapability|n, x|Type|Gripper. ",
+      "answer": "\nThe object can grasp because it has a grip capability and the grip is within the range of the object.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that an object (represented by 'm') can grasp something else ('g').\n* **Justifications:** This section details how the inference was derived: \n    * **Object Properties:** We know the object has a grip, and it's part of a larger system.  \n    * **Grip Capability:** The object has a capability to grasp (represented by 'n').\n    * **Grasping Range:** The object is within the range of the other object for grasping. \n\n\nLet me know if you have any more inferences or need further clarification! "
+    },
+    {
+      "id": "a_grasp_medium_19s",
+      "selected_classes": [
+        "mug",
+        "handle",
+        "pr2",
+        "manipulator"
+      ],
+      "question": "-Inference : sem|canGrasp|tlk \n -Justifications : Pr2|SubClassOf|Agent, sem|hasCapability|rj, GraspingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some Gripper) and (hasComponent some MotionPlanningAlgo)), (isContainedIn o isWithinGraspRangeOf)|SubPropertyOf|isReachableBy, nmu|Type|Handle, ye|isDispositionOf|tlk, tlk|isATouchableObject|boolean#true, vaxn|Type|Gripper, Manipulator|SubClassOf|Gripper, GraspableDisposition|EquivalentTo|(isDispositionOf some ((hasPart some GraspablePart) and (isATouchableObject value boolean#true))), Handle|SubClassOf|GraspablePart, Gripper|SubClassOf|EndEffector, rj|isCapabilityOf|sem, sem|hasComponent|vaxn, tlk|hasPart|nmu, tlk|hasDisposition|ye, tlk|Type|Mug, sem|hasComponent|vaxn, vaxn|hasOpeningWidth|integer#52, vaxn|Type|Manipulator, bzeg|Type|MotionPlanningAlgo, Mug|SubClassOf|Object, rfh|isWithinGraspRangeOf|sem, tlk|isContainedIn|rfh, tlk|hasHoldingPartWidth|integer#42, sem|Type|Pr2, greaterThan(integer#52,integer#42), sem|hasComponent|bzeg. ",
+      "answer": "\nThe robot can grasp the mug because it has a grasping capability and its component is a manipulator with a grip that can hold the mug.  \n\n\n\n"
+    }
+  ]
+}

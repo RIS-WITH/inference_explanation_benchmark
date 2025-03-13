@@ -1,0 +1,172 @@
+[
+    {
+        "question_id": "a_push_easy_0s",
+        "answer": "The robot can push the toy wagon because it has a claw gripper with sufficient force to apply to the wagon, which requires that amount of force and has a disposition for being pushed. The robot also has a pushing capability and is capable of approaching the wagon.  ",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "caster"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_1s",
+        "answer": "The Pepper robot can push the remote-controlled car because it has a pushing capability through its gripper, which is strong enough to apply the required force. The car has a pushable disposition and is approachable by the robot.  ",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "caster"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_2s",
+        "answer": "The robot can push the office chair because it has a pushing capability due to its manipulator with a gripper that can apply enough force. The chair has a pushable disposition and requires a force equal to what the robot's gripper can apply.  ",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "wheel",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_3s",
+        "answer": "The robot can push the shopping cart because it has a pushing capability due to its gripper, which is capable of applying enough force to overcome the required force for pushing. The shopping cart has a pushable disposition thanks to its casters, and the robot is able to approach the cart.  ",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_4s",
+        "answer": "The robot can push the roomba because it has a gripper with enough force to apply to the roomba, which requires that amount of force and has a disposition for being pushed. The robot also has a pushing capability, making it capable of interacting with objects like the roomba.  ",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "wheel",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_5s",
+        "answer": "The Pepper robot can push the office chair because it has a two-finger claw gripper which allows it to exert enough force to move the chair. The chair has a pushable disposition and is approachable by the robot, making it possible for the robot to apply force to it.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "roller",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_6s",
+        "answer": "The Pepper robot can push the remote-controlled car because it has a manipulator gripper with sufficient force to apply to the car's roller, which allows for pushing. The car is approachable by the Pepper and has a disposition that allows it to be pushed.  ",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_7s",
+        "answer": "The robot can push the shopping cart because it has a pushing capability thanks to its gripper which is strong enough to apply the required force. The shopping cart is approachable by the robot and requires a force of 33 units to be moved, which matches the force the robot's gripper can apply.  Additionally, the shopping cart is considered pushable because it has a caster, which is a type of rollable part.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_8s",
+        "answer": "The Pr2 robot can push the office chair because it has a manipulator with a gripper capable of applying enough force to move an object requiring that much force. The office chair has a pushable disposition, meaning it can be pushed, and the robot is capable of pushing due to its manipulator's gripper. ",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "pivot wheel",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_9s",
+        "answer": "The pepper robot can push the remote-controlled car because it has a pushing capability due to its gripper which can apply enough force to overcome the car's required force for pushing. The car has a disposition that allows it to be pushed, and the robot is capable of approaching the car.  ",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_10s",
+        "answer": "The Tiago robot can push the remote-controlled car because it has a pushing capability due to its claw gripper, which can apply enough force to move the car. The car requires a force of 56 units to be moved and is approachable by the Tiago robot.  Additionally, the Tiago's caster wheels allow it to maneuver around the car, and the car itself has a disposition that allows it to be pushed.",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_11s",
+        "answer": "The Tiago robot can push the Roomba because it has a pushing capability due to its gripper which can apply enough force. The Roomba has a disposition requiring force and contains a rollable part, making it pushable.  ",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_12s",
+        "answer": "The Pepper robot can push the Roomba because it has a gripper capable of applying enough force to move something with a pushable disposition. The Roomba requires that amount of force to be moved and has a wheel, making it rollable.  ",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushing",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_13s",
+        "answer": "The Pr2 robot can push the office chair because it has a pushing capability due to its gripper which can apply enough force, and the chair has a pushable disposition as it contains a roller part that allows for movement when pushed by an agent like the Pr2. The robot is also capable of approaching the chair. ",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_14s",
+        "answer": "The Tiago robot can push the Roomba because it has a pushing capability due to its gripper which can apply the required force to move the Roomba. The Roomba requires a force of 40 units to be pushed, and the Tiago's gripper can exert that much force. Additionally, the Tiago is capable of approaching the Roomba, and the Roomba has a disposition to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_15s",
+        "answer": "The robot can push the remote-controlled car because it has a pushing capability due to its gripper and the car having a pushable disposition. The robot's gripper can apply enough force to move the car, which requires a force of 55 units.  ",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "caster",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_16s",
+        "answer": "The Tiago robot can push the mini shopping cart because it has a pushing capability due to its claw gripper, which can apply enough force to overcome the cart's required force for pushing. The cart is approachable by the Tiago and has wheels, making it pushable.  ",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_17s",
+        "answer": "The robot can push the RoombaRobot because it has a pushing capability due to its gripper which applies enough force to overcome the RoombaRobot's resistance and the RoombaRobot has a disposition for being pushed, indicated by its rollable part.  ",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_18s",
+        "answer": "The Pepper robot can push the Roomba because it has a pushing capability due to its mechanical hand gripper which can apply enough force. The Roomba has a pushable disposition as it contains wheels, and the robot is capable of approaching the Roomba.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_19s",
+        "answer": "The robot can push the remote-controlled car because it has a pushing capability which requires a gripper and the car has a pushable disposition, meaning it has a rollable part. The robot's gripper has an applicable force of at least 30 units, which is sufficient to move the car.  The car is approachable by the robot, and the robot itself is capable of pushing objects.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    }
+]

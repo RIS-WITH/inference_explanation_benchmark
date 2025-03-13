@@ -1,0 +1,237 @@
+[
+    {
+        "question_id": "a_lift_easy_0b",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with two-finger claws as its components, and the pot is holdable and touchable by the robot's gripper, which has a weight limit that allows it to handle the pot's weight.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "min2holdable_part"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability that includes its mechanical hands, which are capable of grasping and holding the basket, and the robot's mechanical hand has a weight limit below the basket's weight.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_2b",
+        "answer": " the Pr2 can lift the laundry basket because it has a lifting capability that includes its gripper component, which is capable of holding and touching the basket, and the basket's weight is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3b",
+        "answer": " the Tiago can lift the cooking pot because it has a lifting capability that includes its two-finger claw gripper, which is capable of holding and touching the pot, and the pot's weight is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability that includes its gripper components, which are capable of holding and touching the grip parts of the basket, and the robot itself can touch the gripper.",
+        "is_correct": false,
+        "score": 0.75,
+        "missing_concepts": [
+            "liftable disposition",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5b",
+        "answer": " the pepper can lift the oven tray because it has a lifting capability that includes its gripper components, which are capable of holding and touching the tray, and the tray itself is not too heavy for the pepper to lift.",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_6b",
+        "answer": " the pepper can lift the suitcase because it has a lifting capability that includes its gripper components, which are capable of holding and touching the suitcase, and the suitcase has a weight within the pepper's weight limit for lifting.",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_7b",
+        "answer": " the robot can lift the bucket because it has a lifting capability that includes its claw gripper, which is capable of grasping and holding the bucket, and the bucket itself is light enough for the robot to handle.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_8b",
+        "answer": " the pepper can lift the laundry basket because it has a lifting capability that includes two gripper components, and the laundry basket is made up of multiple holdable parts that are touchable by the pepper's gripper, with the basket being lighter than the weight limit of the gripper.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9b",
+        "answer": " the Tiago can lift the bucket because it has a lifting capability that involves its two-finger claw gripper, which is capable of holding and touching the bucket, and the bucket is lighter than the weight limit of the gripper.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10b",
+        "answer": " the pepper can lift the cooking pot because it has a lifting capability that includes its gripper component, which is capable of holding and touching the pot, and the pot is not too heavy for the pepper to lift.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_11b",
+        "answer": " the pepper can lift the suitcase because it has a lifting capability that includes its two-finger claw gripper, which can grasp and hold the suitcase, and the robot's weight limit for using this gripper is greater than the suitcase's weight.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12b",
+        "answer": " the Tiago can lift the bucket because it has a lifting capability that includes its mechanical hands, which are capable of grasping and holding the bucket, and the bucket is touchable by the robot and has a weight within the robot's lifting capacity.",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_13b",
+        "answer": " the pepper can lift the suitcase because it has a lifting capability that includes its two-finger claw gripper, which is capable of holding and touching the suitcase, and the suitcase is considered liftable with a weight limit greater than the pepper's lifting capacity.",
+        "is_correct": false,
+        "score": 0.75,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_14b",
+        "answer": " the Tiago can lift the suitcase because it has a lifting capability that includes its mechanical hands, which are capable of gripping and holding parts of the suitcase, allowing the robot to touch and handle it.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_15b",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability that includes its gripper component, which is capable of grasping and holding the pot, and the pot is touchable by the robot's end effector.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_16b",
+        "answer": " the pepper can lift the bucket because it has a lifting capability that includes its claw components, which are capable of grasping and holding the bucket, and the bucket is touchable by the pepper.",
+        "is_correct": true,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_17b",
+        "answer": " the Pr2 can lift the bucket because it has a lifting capability that includes its two-finger claw gripper, which is capable of holding and touching the bucket, and the bucket's weight is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability that includes its two-finger claw gripper, which is capable of holding and touching the basket, and the robot's component has a weight limit greater than the basket's weight.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19b",
+        "answer": " the Tiago can lift the laundry basket because it has a lifting capability that includes its gripper components, which are capable of grasping and holding the handle of the basket, allowing the Tiago to touch and manipulate the basket.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]

@@ -1,0 +1,273 @@
+[
+    {
+        "question_id": "a_lift_easy_0s",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability based on its gripper component, which is capable of holding and manipulating objects, and the pot being a holdable part with sufficient weight limit for the robot to handle.",
+        "is_correct": false,
+        "score": 0.75,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1s",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability based on its mechanical hand and gripper components, which are capable of holding and touching the basket, and the basket being touchable by the robot's hand.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_2s",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability based on its gripper component, which is part of a manipulator that is capable of holding and moving objects.",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3s",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability thanks to its two-finger claw grip, which is capable of holding and moving objects with a weight limit within its capacity.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4s",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability thanks to its gripper component, which is part of an agent and has a weight limit that allows it to hold the basket with sufficient force.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5s",
+        "answer": " the pepper can lift the oven tray because it has a lifting capability that requires at least two gripper components, and the tray is part of the pepper's claw with a weight limit that matches the pepper's weight capacity.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_6s",
+        "answer": " the Pepper can lift the suitcase because it has a lifting capability based on its grip and claw components, which are capable of holding and touching the suitcase, and the weight limit of the gripper is less than that of the suitcase.",
+        "is_correct": true,
+        "score": 0.75,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_7s",
+        "answer": " the robot can lift the bucket because it has a lifting capability based on its gripper component and the bucket being holdable and touchable by the robot, with the bucket's weight within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_8s",
+        "answer": " the pepper can lift the laundry basket because it has a lifting capability based on its two-finger claw component, which is also capable of gripping and holding objects, and the laundry basket being touchable by the pepper.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9s",
+        "answer": " the robot can lift the bucket because it has a lifting capability based on its gripper component, which is capable of holding and moving objects, and the bucket being disposed of by the two-finger claw.",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10s",
+        "answer": " the pepper can be lifted by the robot because it has a lifting capability based on its gripper component, which is part of the robot's manipulator and holds the pepper in place.",
+        "is_correct": false,
+        "score": 0.3333333333333333,
+        "missing_concepts": [
+            "cooking pot",
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_11s",
+        "answer": " the pepper can lift the suitcase because it has a lifting capability based on its gripper component, which is capable of handling objects with a weight within its weight limit, and the suitcase being an object that can be handled by the pepper's hand grip.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12s",
+        "answer": " the Tiago can lift the bucket because it has a lifting capability that relies on its mechanical hand and gripper components, which are capable of holding and manipulating objects with sufficient weight limit.",
+        "is_correct": true,
+        "score": 0.6666666666666666,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_13s",
+        "answer": " the pepper can lift the suitcase because it has a lifting capability based on its two-finger claw component, which is capable of gripping and holding the object, and the object's weight limit being greater than the pepper's weight.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_14s",
+        "answer": " the suitcase can be lifted because it has a lifting capability based on its mechanical hand and grip components, which are capable of holding parts, and the suitcase itself being touchable by the agent that wields the mechanical hand.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_15s",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability based on its manipulator component, which is capable of holding and manipulating objects, and the pot being part of the robot's end effector.",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_16s",
+        "answer": " the pepper can lift the bucket because it has a lifting capability based on its gripper component, which is part of the bucket and has a weight limit that allows for lifting.",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_17s",
+        "answer": " the robot can lift the bucket because it has a lifting capability based on its gripper component, which is capable of holding and manipulating objects, and the bucket being an object that can be held by the gripper.",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18s",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability based on its gripper component, which is part of the basket and allows for holding and manipulating objects, and the basket itself being lighter than the weight limit of the robot's two-finger claw.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19s",
+        "answer": " the robot can lift because it has a lifting capability based on its gripper component, which is part of a handle and a laundry basket that are both holdable parts, and the robot itself is capable of touching the laundry basket with its end effector.",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "weight limit",
+            "object_weight"
+        ]
+    }
+]

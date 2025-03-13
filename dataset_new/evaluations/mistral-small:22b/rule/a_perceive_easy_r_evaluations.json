@@ -1,0 +1,194 @@
+[
+    {
+        "question_id": "a_perceive_easy_0r",
+        "answer": " The pepper robot can perceive the appliance because it has a perceiving capability with an RGB camera as a component, and the appliance has a scannable part that is visible to the robot within its camera's maximum distance range.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_1r",
+        "answer": " the robot can perceive the cube because it has a perceiving capability with a webcam as its component, and the cube is within the webcam's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_2r",
+        "answer": " the pepper robot can perceive the cube because it has a perceiving capability with a webcam as its component, and the cube is within the camera's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_3r",
+        "answer": " the robot can perceive the appliance because it has a perceiving capability with a camera component that has a maximum distance range greater than the distance at which the appliance is located, and the appliance is visible to the robot and has a scannable part.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_4r",
+        "answer": " the robot can perceive the appliance because it has a perceiving capability with a camera that can see objects within its range, and the appliance is visible to the robot and within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr code",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_5r",
+        "answer": " the robot can perceive the table because it has a perceiving capability with a webcam as its component, and the table is within the camera's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr code",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_6r",
+        "answer": " the pepper robot can perceive the cube because it has a perceiving capability with a webcam as its component, and the cube is within the camera's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_7r",
+        "answer": " the robot can perceive the table because it has a perceiving capability with a camera component that has a maximum distance range greater than the distance at which the table is located, and the table is visible to the robot and has a scannable part.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_8r",
+        "answer": " the agent can perceive the box because it has a perceiving capability with a camera component that has a maximum distance range greater than the current distance of the box, which is visible to the agent and has a scannable part.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_9r",
+        "answer": " the robot can perceive the box because it has a perceiving capability with an RGB camera that can see objects within its range, and the box is visible to the robot and within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr code",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_10r",
+        "answer": " the robot can perceive the plate because it has a perceiving capability with an RGB camera as a component, and the plate is within the camera's visible range and distance limit.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_11r",
+        "answer": " the PR2 robot can perceive the cube because it has a perceiving capability with a webcam as its component, and the cube is within the camera's visible range and distance limit.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_12r",
+        "answer": " the agent can perceive the luggage because it has a perceiving capability with a camera component that can see objects within its range, and the luggage is visible to the agent and within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_13r",
+        "answer": " the PR2 robot can perceive the table because it has a perceiving capability with its Realsense L515 camera, and the table is within the camera's visible range and has a scannable part that makes it perceivable by the robot.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_perceive_easy_14r",
+        "answer": " the robot can perceive the cube because it has a perceiving capability with a Kinect V2 camera, and the cube is within the camera's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_15r",
+        "answer": " the agent can perceive the book because it has a perceiving capability with a camera component that has a maximum distance range greater than the distance at which the book is located, and the book is visible to the agent and has a scannable part.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_16r",
+        "answer": " the pepper robot can perceive the box because it has a perceiving capability with a camera component that can see the box within its maximum distance range.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "2d barcode",
+            "perceivable",
+            "object_visible_by_robot"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_17r",
+        "answer": " the pepper robot can perceive the table because it has a perceiving capability with a camera component that can see objects within its range, and the table is visible to the robot and within the camera's maximum distance range.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr code",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_18r",
+        "answer": " the robot can perceive the box because it has a perceiving capability with a webcam as its component, and the box is within the camera's maximum distance range while being visible to the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "qr code",
+            "perceivable"
+        ]
+    },
+    {
+        "question_id": "a_perceive_easy_19r",
+        "answer": " the robot can perceive the cube because it has a perceiving capability with a camera that has a maximum distance range greater than the distance at which the cube is located, and the cube is visible to the robot and has a scannable part.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "perceivable"
+        ]
+    }
+]

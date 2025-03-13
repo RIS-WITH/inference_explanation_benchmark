@@ -1,0 +1,226 @@
+[
+    {
+        "question_id": "a_lift_hard_0r",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers and a motion planning algorithm, and the bucket is considered liftable due to its handles that are not attached to anything and can be used. Additionally, the bucket is within the robot's accessible area and moving range, and the weight of the bucket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_1r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The laundry basket is considered liftable due to having at least two detachable handles that can be used. Additionally, the basket is within the robot's accessible area and moving range, and the weight of the basket is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_2r",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers and a motion planning algorithm, and the bucket is considered liftable due to its handles being detached and usable. Additionally, the bucket is within the robot's accessible area and moving range, and the weight of the bucket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_3r",
+        "answer": " the robot can lift the oven tray because it has a lifting capability with two gripper components and a motion planning algorithm, and the oven tray is considered liftable based on its parts being holdable and detached, and within the weight limit of the robot's gripper. Additionally, the oven tray is touchable by the robot as it is on a support in an accessible area within the robot's moving range.",
+        "is_correct": true,
+        "score": 0.8947368421052632,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_4r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The laundry basket is considered liftable due to having at least two detachable handles that can be used. Additionally, the basket is within the robot's accessible area and moving range, and the weight of the basket is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_5r",
+        "answer": " the robot can lift the oven tray because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The oven tray is considered liftable due to having at least two detachable holdable parts and being usable. Additionally, the oven tray is within the robot's accessible area and moving range, and the weight of the oven tray is less than the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_6r",
+        "answer": " the robot can lift the toolbox because it has a lifting capability with mechanical hands and motion planning algorithms, and the toolbox is liftable with holdable parts that are not attached to anything else and can be used. Additionally, the toolbox is within the robot's accessible area and moving range, and its weight is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_7r",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The cooking pot is considered liftable due to having at least two detachable grip parts that can be used. Additionally, the cooking pot is within the robot's accessible area and moving range, and the weight of the cooking pot is within the weight limit of the robot's gripper.",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_8r",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The cooking pot is considered liftable due to having at least two holdable parts that are not attached to anything else and can be used. Additionally, the cooking pot is within the robot's accessible area and moving range, and the weight of the cooking pot is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8947368421052632,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_9r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The laundry basket is considered liftable due to having at least two holdable parts that are not attached to anything else and can be used. Additionally, the laundry basket is within the robot's accessible area and moving range, and the weight of the laundry basket is less than the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8947368421052632,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_10r",
+        "answer": " the robot can lift the suitcase because it has a lifting capability with grippers and motion planning algorithms, and the suitcase is liftable with parts that are holdable and not attached to anything else. Additionally, the suitcase is within the robot's accessible area and moving range, and its weight is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "motion_planing_algo",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_11r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with two grippers and a motion planning algorithm, and nothing in its hands. The laundry basket is considered liftable due to its holdable parts and being usable. Additionally, the basket is within the robot's accessible area and moving range, and the weight of the basket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_12r",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with at least two grippers and a motion planning algorithm, and its hands are empty. The cooking pot is considered liftable due to having at least two holdable parts that are not attached to anything else and can be used. Additionally, the cooking pot is within the robot's accessible area and moving range, and the weight of the cooking pot is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8947368421052632,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_13r",
+        "answer": " the robot can lift the suitcase because it has a lifting capability with at least two grippers and a motion planning algorithm, and the suitcase is considered liftable due to its holdable parts and disposition. Additionally, the suitcase is within the robot's accessible area and moving range, and the weight of the suitcase is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "can_be_used",
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_14r",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers and a motion planning algorithm, and the bucket is considered liftable due to its parts being holdable and detached, and it is within the robot's accessible area and moving range. Additionally, the weight of the bucket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_15r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with two grippers and a motion planning algorithm, and the basket is considered liftable due to its handles which are detached and usable. Additionally, the basket is within the robot's accessible area and moving range, and the weight of the basket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.7894736842105263,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_16r",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The bucket is considered liftable due to having at least two detachable grip parts that can be used. Additionally, the bucket is within the robot's accessible area and moving range, and the weight of the bucket is within the weight limit of the robot's end effector (gripper).",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_17r",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers and a motion planning algorithm, and its hands are empty. The bucket is considered liftable as it has at least two holdable parts that are not attached to anything and can be used. Additionally, the bucket is within the robot's accessible area and moving range, and the weight of the bucket is less than the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.8947368421052632,
+        "missing_concepts": [
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_18r",
+        "answer": " the robot can lift the oven tray because it has a lifting capability with at least two grippers and a motion planning algorithm, and the oven tray is considered liftable due to its holdable parts and being within the robot's accessible area and moving range. Additionally, the weight of the oven tray is within the gripper's weight limit.",
+        "is_correct": false,
+        "score": 0.7368421052631579,
+        "missing_concepts": [
+            "can_be_used",
+            "holding_parts_not_attached",
+            "empty_hands",
+            "touchable",
+            "on_touchable_support"
+        ]
+    },
+    {
+        "question_id": "a_lift_hard_19r",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers and a motion planning algorithm, and nothing in its hands. The laundry basket is considered liftable due to having at least two detachable grip parts that can be used. Additionally, the basket is within the robot's accessible area and moving range, and the weight of the basket is within the weight limit of the robot's end effector (gripper).",
+        "is_correct": false,
+        "score": 0.8421052631578947,
+        "missing_concepts": [
+            "holding_parts_not_attached",
+            "touchable",
+            "on_touchable_support"
+        ]
+    }
+]

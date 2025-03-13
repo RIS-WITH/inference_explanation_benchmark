@@ -1,0 +1,287 @@
+[
+    {
+        "question_id": "a_lift_easy_0s",
+        "answer": "The robot can lift the cooking pot because it has a lifting capability that allows it to hold and lift objects with its gripper. The robot's gripper is designed for two-finger claw, and it can lift objects up to a certain weight limit.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1s",
+        "answer": "The robot can lift the laundry basket because it has a lifting capability and is able to hold objects thanks to its gripper.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_2s",
+        "answer": "The robot can lift the object because it has a lifting capability and can hold objects with its grip. The object weighs less than the robot's lifting capacity, and the robot has a gripper that can be used to lift the object.  ",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3s",
+        "answer": "The robot can lift the pot because it has a component that allows it to grip and lift objects. The robot's gripper is capable of lifting objects with a weight limit of 75 units, and it can be used to pick up the pot.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4s",
+        "answer": "The robot can lift the laundry basket because it has a claw that can hold and lift objects. The robot's claw is capable of lifting objects with a weight limit of 79, and it can be used to pick up and move laundry baskets.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5s",
+        "answer": "The robot can lift the oven tray because it has a gripper that can hold and lift objects, with a weight limit of 68.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_6s",
+        "answer": "The robot can lift a suitcase because it has a gripper that can hold objects and the robot has a lifting capability.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_7s",
+        "answer": "The robot can lift the bucket because it has a lifting capability and is equipped with a claw that can hold objects. The robot's claw is capable of lifting objects, and the bucket is a type of object that can be lifted by the robot's claw.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_8s",
+        "answer": "The robot can lift the laundry basket because it has a gripper component and can hold objects, which are capable of lifting. The robot's lifting capability is equivalent to having at least two grippers.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9s",
+        "answer": "The robot can lift the bucket because it has a two-finger claw that can hold and lift objects with a weight limit of 49. The bucket is a type of object that can be lifted by the robot, which also has a lifting capability.  ",
+        "is_correct": false,
+        "score": 0.5833333333333334,
+        "missing_concepts": [
+            "handle",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10s",
+        "answer": "The robot can lift the cooking pot because it has a lifting capability and is able to hold objects with its gripper.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_11s",
+        "answer": "The robot can lift the object because it has a lifting capability and can grip objects thanks to its gripper.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "hand grip",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12s",
+        "answer": "The Tiago can lift the bucket because it has a lifting capability and is able to hold objects thanks to its gripper component.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_13s",
+        "answer": "The robot can lift a suitcase because it has a two-finger claw that can hold objects with a weight limit of 46 and the ability to grip. The robot's gripper is capable of lifting the suitcase, which is a type of object.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_14s",
+        "answer": "The robot can lift a suitcase because it has the capability to grip and lift objects thanks to its mechanical hand. The robot's lifting capability is equivalent to having at least two grippers.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_15s",
+        "answer": "The robot can lift the cooking pot because it has a lifting capability and is able to hold the pot thanks to its gripper component.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_16s",
+        "answer": "The robot can lift the bucket because it has a hand grip and a lifting capability that allows it to hold and lift objects. The robot's hand grip is capable of holding the bucket, which weighs 60 units.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "claw",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "weight limit"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_17s",
+        "answer": "The robot can lift the object because it has a grip that can hold and lift objects. The robot's lifting capability is equivalent to having a gripper with a weight limit of 53, which allows it to lift objects weighing up to 53.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18s",
+        "answer": "The robot can lift the laundry basket because it has a lifting capability and can hold objects with its grip. The robot's lifting capacity is limited to 53 kg.  ",
+        "is_correct": false,
+        "score": 0.4166666666666667,
+        "missing_concepts": [
+            "handle",
+            "two-finger claw",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19s",
+        "answer": "The robot can lift the object because it has a gripper that can hold and lift objects. The gripper is capable of lifting an object with a weight limit of 78.  ",
+        "is_correct": false,
+        "score": 0.5,
+        "missing_concepts": [
+            "handle",
+            "liftable disposition",
+            "min2holdable_part",
+            "min2gripper",
+            "touchable",
+            "object_weight"
+        ]
+    }
+]

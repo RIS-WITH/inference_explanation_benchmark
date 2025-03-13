@@ -1,0 +1,197 @@
+[
+    {
+        "question_id": "a_push_easy_0s",
+        "answer": " the robot can push the toy wagon because it has a gripper that can apply sufficient force to move the wagon, which has rollable parts and requires that amount of force for movement.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "pushable",
+            "pushing",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_1s",
+        "answer": " The robot can push the remote-controlled car because it has a gripper that applies sufficient force, and the car has a rollable part and requires that same amount of force to be moved, making it approachable by the robot.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushable",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_2s",
+        "answer": " the robot can push the office chair because it has a gripper capable of applying sufficient force, and the chair has a rollable part that makes it approachable by the robot.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushable",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_3s",
+        "answer": " the robot can push the shopping cart because it has a gripper that applies sufficient force, and the cart has a rollable part and is approachable by the robot.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushable",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_4s",
+        "answer": " the robot can push the roomba robot because it has a gripper with sufficient force to apply, and the roomba robot is approachable and has a part that is rollable, making it pushable.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_5s",
+        "answer": " The robot can push the chair because it has a gripper that allows for pushing, and the chair is approachable and requires a force within the gripper's capability.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "roller",
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_6s",
+        "answer": " The robot can push the remote-controlled car because it has a gripper that applies sufficient force to move the car, which has a roller part and requires that force for movement.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "pushable",
+            "pushing",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_7s",
+        "answer": " the robot can push the mini shopping cart because it has a pushing capability with its gripper, and the cart has a rollable part that makes it approachable by the robot. The required force for pushing matches the gripper's applicable force.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_8s",
+        "answer": " The robot can push the office chair because it has a gripper with sufficient force to apply, and the chair has rollable parts and an approachable disposition for pushing.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_9s",
+        "answer": " The pepper robot can push the remote-controlled car because it has a gripper that can apply sufficient force to move the car, which has wheels and requires a specific amount of force to be pushed.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "pushable",
+            "pushing",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_10s",
+        "answer": " The robot can push the remote-controlled car because it has a pushing capability with a gripper that applies sufficient force to match the required force of the car, and the car is approachable by the robot and has a rollable part that allows it to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "required_force"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_11s",
+        "answer": " the robot can push the object because it has a gripper that can apply sufficient force to approach and interact with the object, which has a disposition for being pushed due to its rollable part.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_12s",
+        "answer": " The robot can push the Roomba because it has a gripper that applies sufficient force to the Roomba's wheel, which is part of its rollable component, and the Roomba has a disposition for being pushed.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushing",
+            "approachable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_13s",
+        "answer": " the robot can push the office chair because it has a pushing capability with its gripper that applies sufficient force, and the chair has a rollable part making it approachable by the robot.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_14s",
+        "answer": " The robot can push the Roomba because it has a pushing capability with a gripper that applies sufficient force to move the Roomba, which is approachable and has a disposition for being pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_15s",
+        "answer": " the robot can push the remote-controlled car because it has a gripper that can apply sufficient force to the car's rollable part, and the car is approachable by the robot.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushable",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_16s",
+        "answer": " The robot can push the mini shopping cart because it has a gripper with sufficient force, and the cart is approachable and has a rollable part that makes it pushable.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_17s",
+        "answer": " the robot can push the Roomba because it has a gripper with sufficient force to apply, and the Roomba is approachable and requires that amount of force for pushing, as indicated by its disposition and rollable part.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_18s",
+        "answer": " The robot can push the Roomba because it has a gripper with sufficient force to apply, and the Roomba is approachable and requires a force within the gripper's capability.",
+        "is_correct": true,
+        "score": 0.7,
+        "missing_concepts": [
+            "wheel",
+            "pushable",
+            "pushing"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_19s",
+        "answer": " The robot can push the remote-controlled car because it has a gripper with sufficient force to apply, and the car has a pivot wheel that makes it rollable, thus having a pushable disposition.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "pushing",
+            "approachable"
+        ]
+    }
+]

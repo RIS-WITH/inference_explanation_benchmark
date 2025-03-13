@@ -1,0 +1,266 @@
+{
+  "id": "a_lift_easy_s",
+  "template": [
+    "__var0__|canLift|__var1__",
+    [
+      "__var0__|Type|__agent__",
+      "__agent__|SubClassOf|Agent",
+      "__var0__|hasCapability|__var3__",
+      "LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper)",
+      "__var3__|isCapabilityOf|__var0__",
+      "__var0__|hasComponent|__var4__",
+      "__var4__|Type|__component__",
+      "__component__|SubClassOf|Gripper",
+      "__var0__|hasComponent|__var5__",
+      "__var5__|Type|__component__",
+      "__component__|SubClassOf|Gripper",
+      "__var1__|Type|__object__",
+      "__object__|SubClassOf|Object",
+      "__var1__|hasDisposition|__var2__",
+      "LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart))",
+      "__var2__|isDispositionOf|__var1__",
+      "__var1__|hasPart|__var6__",
+      "__var6__|Type|__part__",
+      "__part__|SubClassOf|HoldablePart",
+      "__var1__|hasPart|__var7__",
+      "__var7__|Type|__part__",
+      "__part__|SubClassOf|HoldablePart",
+      "__var1__|isTouchableBy|__var0__",
+      "__var4__|Type|Gripper",
+      "Gripper|SubClassOf|EndEffector",
+      "__var0__|hasComponent|__var4__",
+      "__var4__|hasWeightLimit|integer#2",
+      "__var1__|hasWeight|integer#1",
+      "lesserThan(integer#1,integer#2)"
+    ]
+  ],
+  "concepts" : [
+  "can lift", 
+  "liftable disposition", "min2holdable_part",
+  "lifting capability", "min2gripper", 
+  "touchable", 
+  "weight limit", "object_weight"  
+],
+  "answers": [
+    {
+      "id": "a_lift_easy_0s",
+      "selected_classes": [
+        "cooking pot",
+        "handle",
+        "robot",
+        "two-finger claw"
+      ],
+      "question": "-Inference : jkcp|canLift|kaax \n -Justifications : LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), jkcp|Type|Robot, qnuy|Type|TwoFingerClaw, lesserThan(integer#30,integer#62), jkcp|hasComponent|kke, kke|Type|Gripper, o|Type|Hold, kke|Type|TwoFingerClaw, gn|Type|Hold, Gripper|SubClassOf|EndEffector, kaax|hasPart|gn, kke|hasWeightLimit|integer#62, kaax|Type|CookingPot, Hold|SubClassOf|HoldablePart, jkcp|hasCapability|sq, kaax|hasDisposition|fjqf, fjqf|isDispositionOf|kaax, kaax|hasPart|o, kaax|isTouchableBy|jkcp, Hold|SubClassOf|HoldablePart, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), TwoFingerClaw|SubClassOf|Gripper, TwoFingerClaw|SubClassOf|Gripper, kaax|hasWeight|integer#30, sq|isCapabilityOf|jkcp, jkcp|hasComponent|qnuy, Robot|SubClassOf|Agent, jkcp|hasComponent|kke, CookingPot|SubClassOf|Object. ",
+      "answer": "\nThe robot can lift the cooking pot because it has a lifting capability that allows it to hold and lift objects with its gripper. The robot's gripper is designed for two-finger claw, and it can lift objects up to a certain weight limit.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_1s",
+      "selected_classes": [
+        "laundry basket",
+        "hand grip",
+        "robot",
+        "mechanical hand"
+      ],
+      "question": "-Inference : oek|canLift|fph \n -Justifications : HandGrip|SubClassOf|HoldablePart, ntu|Type|Gripper, fph|Type|LaundryBasket, lesserThan(integer#44,integer#52), fph|hasPart|mqav, pu|isCapabilityOf|oek, fph|hasDisposition|inu, ntu|Type|MechanicalHand, tp|Type|MechanicalHand, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), Robot|SubClassOf|Agent, HandGrip|SubClassOf|HoldablePart, ntu|hasWeightLimit|integer#52, Gripper|SubClassOf|EndEffector, oek|hasComponent|ntu, oek|Type|Robot, fph|hasPart|fum, mqav|Type|HandGrip, fph|hasWeight|integer#44, fum|Type|HandGrip, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), oek|hasComponent|ntu, oek|hasComponent|tp, LaundryBasket|SubClassOf|Object, inu|isDispositionOf|fph, MechanicalHand|SubClassOf|Gripper, fph|isTouchableBy|oek, oek|hasCapability|pu, MechanicalHand|SubClassOf|Gripper. ",
+      "answer": "\nThe robot can lift the laundry basket because it has a lifting capability and is able to hold objects thanks to its gripper.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_2s",
+      "selected_classes": [
+        "laundry basket",
+        "handle",
+        "pr2",
+        "manipulator"
+      ],
+      "question": "-Inference : mhq|canLift|j \n -Justifications : mhq|hasComponent|rvwm, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), rvwm|hasWeightLimit|integer#66, j|hasPart|u, u|Type|Grip, rvwm|Type|Manipulator, mhq|hasComponent|s, mhq|Type|Pr2, mhq|hasComponent|rvwm, oka|isDispositionOf|j, Gripper|SubClassOf|EndEffector, j|hasWeight|integer#63, vpxv|isCapabilityOf|mhq, mhq|hasCapability|vpxv, LaundryBasket|SubClassOf|Object, lesserThan(integer#63,integer#66), rvwm|Type|Gripper, Pr2|SubClassOf|Agent, j|hasPart|iubd, Grip|SubClassOf|HoldablePart, Grip|SubClassOf|HoldablePart, j|hasDisposition|oka, j|isTouchableBy|mhq, j|Type|LaundryBasket, Manipulator|SubClassOf|Gripper, Manipulator|SubClassOf|Gripper, iubd|Type|Grip, s|Type|Manipulator, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper). ",
+      "answer": "\nThe robot can lift the object because it has a lifting capability and can hold objects with its grip. The object weighs less than the robot's lifting capacity, and the robot has a gripper that can be used to lift the object.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_3s",
+      "selected_classes": [
+        "cooking pot",
+        "handle",
+        "tiago",
+        "two-finger claw"
+      ],
+      "question": "-Inference : fm|canLift|c \n -Justifications : ijdk|Type|TwoFingerClaw, Tiago|SubClassOf|Agent, c|hasPart|q, c|Type|CookingPot, Grip|SubClassOf|HoldablePart, TwoFingerClaw|SubClassOf|Gripper, lesserThan(integer#61,integer#75), m|Type|TwoFingerClaw, ijdk|Type|Gripper, fm|hasComponent|ijdk, c|hasPart|vqtj, c|isTouchableBy|fm, c|hasDisposition|oq, TwoFingerClaw|SubClassOf|Gripper, ijdk|hasWeightLimit|integer#75, fm|hasCapability|p, q|Type|Grip, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), Gripper|SubClassOf|EndEffector, fm|hasComponent|m, vqtj|Type|Grip, c|hasWeight|integer#61, p|isCapabilityOf|fm, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Grip|SubClassOf|HoldablePart, fm|hasComponent|ijdk, CookingPot|SubClassOf|Object, oq|isDispositionOf|c, fm|Type|Tiago. ",
+      "answer": "\nThe robot can lift the pot because it has a component that allows it to grip and lift objects. The robot's gripper is capable of lifting objects with a weight limit of 75 units, and it can be used to pick up the pot.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_4s",
+      "selected_classes": [
+        "laundry basket",
+        "handle",
+        "robot",
+        "claw"
+      ],
+      "question": "-Inference : efej|canLift|lw \n -Justifications : jul|Type|Claw, efej|hasComponent|ktt, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), ktt|Type|Claw, Robot|SubClassOf|Agent, ktt|Type|Gripper, LaundryBasket|SubClassOf|Object, Claw|SubClassOf|Gripper, Claw|SubClassOf|Gripper, lw|isTouchableBy|efej, kt|isDispositionOf|lw, Gripper|SubClassOf|EndEffector, lesserThan(integer#46,integer#79), lw|hasPart|dnxj, Grip|SubClassOf|HoldablePart, ktt|hasWeightLimit|integer#79, dnxj|Type|Grip, efej|Type|Robot, efej|hasComponent|jul, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), efej|hasComponent|ktt, h|Type|Grip, lw|Type|LaundryBasket, lw|hasWeight|integer#46, efej|hasCapability|fasc, lw|hasDisposition|kt, lw|hasPart|h, fasc|isCapabilityOf|efej, Grip|SubClassOf|HoldablePart. ",
+      "answer": "\nThe robot can lift the laundry basket because it has a claw that can hold and lift objects. The robot's claw is capable of lifting objects with a weight limit of 79, and it can be used to pick up and move laundry baskets.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_5s",
+      "selected_classes": [
+        "oven tray",
+        "handle",
+        "pepper",
+        "claw"
+      ],
+      "question": "-Inference : i|canLift|ziqo \n -Justifications : kalt|isDispositionOf|ziqo, i|hasComponent|cuo, ezg|Type|Claw, lesserThan(integer#49,integer#68), ziqo|Type|OvenTray, i|hasCapability|p, Gripper|SubClassOf|EndEffector, ziqo|hasPart|o, o|Type|Grip, i|hasComponent|ezg, Claw|SubClassOf|Gripper, ziqo|hasWeight|integer#49, ziqo|hasPart|wdfz, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), i|Type|Pepper, ziqo|hasDisposition|kalt, cuo|Type|Claw, cuo|hasWeightLimit|integer#68, i|hasComponent|cuo, p|isCapabilityOf|i, Claw|SubClassOf|Gripper, cuo|Type|Gripper, wdfz|Type|Grip, Grip|SubClassOf|HoldablePart, Pepper|SubClassOf|Agent, ziqo|isTouchableBy|i, Grip|SubClassOf|HoldablePart, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), OvenTray|SubClassOf|Object. ",
+      "answer": "\nThe robot can lift the oven tray because it has a gripper that can hold and lift objects, with a weight limit of 68.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_6s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "pepper",
+        "claw"
+      ],
+      "question": "-Inference : lg|canLift|ucw \n -Justifications : Gripper|SubClassOf|EndEffector, sma|hasWeightLimit|integer#73, Claw|SubClassOf|Gripper, u|Type|Claw, sma|Type|Gripper, lg|hasComponent|sma, bj|Type|Grip, noo|Type|Grip, Pepper|SubClassOf|Agent, Grip|SubClassOf|HoldablePart, lg|hasCapability|gm, ucw|hasPart|noo, Suitcase|SubClassOf|Object, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), gm|isCapabilityOf|lg, ucw|hasWeight|integer#35, lg|hasComponent|u, lg|Type|Pepper, Claw|SubClassOf|Gripper, lesserThan(integer#35,integer#73), xauj|isDispositionOf|ucw, ucw|hasDisposition|xauj, Grip|SubClassOf|HoldablePart, ucw|Type|Suitcase, lg|hasComponent|sma, sma|Type|Claw, ucw|isTouchableBy|lg, ucw|hasPart|bj. ",
+      "answer": "\nThe robot can lift a suitcase because it has a gripper that can hold objects and the robot has a lifting capability.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can lift something based on its ability to grip and lift. \n* **Justifications:** The justifications provide details about the robot's capabilities, including its gripper type, weight limit, and lifting capacity.\n\n\nLet me know if you have any other inferences or need further clarification! "
+    },
+    {
+      "id": "a_lift_easy_7s",
+      "selected_classes": [
+        "bucket",
+        "handle",
+        "robot",
+        "claw"
+      ],
+      "question": "-Inference : wr|canLift|xbl \n -Justifications : z|Type|Claw, Handle|SubClassOf|HoldablePart, Gripper|SubClassOf|EndEffector, lesserThan(integer#30,integer#77), qxv|Type|Handle, z|Type|Gripper, wr|hasCapability|py, Claw|SubClassOf|Gripper, xbl|hasDisposition|uj, xbl|Type|Bucket, Handle|SubClassOf|HoldablePart, xbl|isTouchableBy|wr, wr|hasComponent|z, wr|hasComponent|mw, xbl|hasWeight|integer#30, k|Type|Handle, wr|Type|Robot, mw|Type|Claw, z|hasWeightLimit|integer#77, py|isCapabilityOf|wr, uj|isDispositionOf|xbl, xbl|hasPart|qxv, wr|hasComponent|z, Robot|SubClassOf|Agent, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), Claw|SubClassOf|Gripper, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Bucket|SubClassOf|Object, xbl|hasPart|k. ",
+      "answer": "\nThe robot can lift the bucket because it has a lifting capability and is equipped with a claw that can hold objects. The robot's claw is capable of lifting objects, and the bucket is a type of object that can be lifted by the robot's claw.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_8s",
+      "selected_classes": [
+        "laundry basket",
+        "handle",
+        "pepper",
+        "two-finger claw"
+      ],
+      "question": "-Inference : sprt|canLift|lc \n -Justifications : mydl|hasWeightLimit|integer#68, TwoFingerClaw|SubClassOf|Gripper, Hold|SubClassOf|HoldablePart, LaundryBasket|SubClassOf|Object, sprt|hasComponent|mydl, f|isDispositionOf|lc, Hold|SubClassOf|HoldablePart, lesserThan(integer#64,integer#68), lc|hasPart|x, mydl|Type|TwoFingerClaw, lc|hasPart|iixy, sprt|Type|Pepper, sprt|hasComponent|ahqx, zeha|isCapabilityOf|sprt, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), sprt|hasComponent|mydl, ahqx|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, x|Type|Hold, Pepper|SubClassOf|Agent, lc|hasWeight|integer#64, lc|Type|LaundryBasket, Gripper|SubClassOf|EndEffector, mydl|Type|Gripper, lc|hasDisposition|f, sprt|hasCapability|zeha, iixy|Type|Hold, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), lc|isTouchableBy|sprt. ",
+      "answer": "\nThe robot can lift the laundry basket because it has a gripper component and can hold objects, which are capable of lifting. The robot's lifting capability is equivalent to having at least two grippers.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_9s",
+      "selected_classes": [
+        "bucket",
+        "handle",
+        "tiago",
+        "two-finger claw"
+      ],
+      "question": "-Inference : xe|canLift|yr \n -Justifications : bkp|Type|TwoFingerClaw, qeo|isDispositionOf|yr, Bucket|SubClassOf|Object, lesserThan(integer#38,integer#49), yr|isTouchableBy|xe, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), xe|hasComponent|bkp, Grip|SubClassOf|HoldablePart, Tiago|SubClassOf|Agent, xe|Type|Tiago, yr|Type|Bucket, TwoFingerClaw|SubClassOf|Gripper, xe|hasComponent|bkp, Gripper|SubClassOf|EndEffector, bkp|hasWeightLimit|integer#49, yr|hasWeight|integer#38, ztg|isCapabilityOf|xe, x|Type|TwoFingerClaw, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Grip|SubClassOf|HoldablePart, u|Type|Grip, yr|hasPart|u, xe|hasComponent|x, yr|hasPart|zdt, bkp|Type|Gripper, zdt|Type|Grip, xe|hasCapability|ztg, TwoFingerClaw|SubClassOf|Gripper, yr|hasDisposition|qeo. ",
+      "answer": "\nThe robot can lift the bucket because it has a two-finger claw that can hold and lift objects with a weight limit of 49. The bucket is a type of object that can be lifted by the robot, which also has a lifting capability.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_10s",
+      "selected_classes": [
+        "cooking pot",
+        "handle",
+        "pepper",
+        "manipulator"
+      ],
+      "question": "-Inference : miko|canLift|smi \n -Justifications : CookingPot|SubClassOf|Object, Pepper|SubClassOf|Agent, miko|hasComponent|btl, lesserThan(integer#37,integer#54), miko|hasComponent|btl, kj|Type|Hold, smi|hasPart|xp, Manipulator|SubClassOf|Gripper, smi|isTouchableBy|miko, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), btl|hasWeightLimit|integer#54, miko|hasComponent|zkwc, miko|Type|Pepper, smi|Type|CookingPot, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), xx|isCapabilityOf|miko, smi|hasPart|kj, btl|Type|Gripper, Hold|SubClassOf|HoldablePart, ruy|isDispositionOf|smi, Hold|SubClassOf|HoldablePart, btl|Type|Manipulator, Manipulator|SubClassOf|Gripper, Gripper|SubClassOf|EndEffector, zkwc|Type|Manipulator, miko|hasCapability|xx, smi|hasWeight|integer#37, smi|hasDisposition|ruy, xp|Type|Hold. ",
+      "answer": "\nThe robot can lift the cooking pot because it has a lifting capability and is able to hold objects with its gripper.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_11s",
+      "selected_classes": [
+        "suitcase",
+        "hand grip",
+        "pepper",
+        "two-finger claw"
+      ],
+      "question": "-Inference : rote|canLift|g \n -Justifications : pcnk|Type|HandGrip, g|isTouchableBy|rote, rote|hasCapability|kr, g|hasPart|ypug, Pepper|SubClassOf|Agent, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), u|Type|Gripper, lesserThan(integer#38,integer#66), rote|Type|Pepper, HandGrip|SubClassOf|HoldablePart, rote|hasComponent|ff, Gripper|SubClassOf|EndEffector, TwoFingerClaw|SubClassOf|Gripper, ff|Type|TwoFingerClaw, g|hasPart|pcnk, TwoFingerClaw|SubClassOf|Gripper, rote|hasComponent|u, u|hasWeightLimit|integer#66, kr|isCapabilityOf|rote, g|hasDisposition|gaxw, gaxw|isDispositionOf|g, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), g|Type|Suitcase, u|Type|TwoFingerClaw, HandGrip|SubClassOf|HoldablePart, g|hasWeight|integer#38, ypug|Type|HandGrip, Suitcase|SubClassOf|Object, rote|hasComponent|u. ",
+      "answer": "\nThe robot can lift the object because it has a lifting capability and can grip objects thanks to its gripper.  \n\n\n\n**Explanation:**\n\n* **Inference:** The inference states that the robot can lift an object.\n* **Justifications:** The justifications explain how the robot can lift the object:\n    * It has a gripper (g) with a weight limit of 66.\n    * The gripper is capable of lifting objects. \n\n\nLet me know if you'd like to explore more examples! "
+    },
+    {
+      "id": "a_lift_easy_12s",
+      "selected_classes": [
+        "bucket",
+        "handle",
+        "tiago",
+        "mechanical hand"
+      ],
+      "question": "-Inference : junx|canLift|tho \n -Justifications : tho|hasDisposition|c, tho|hasPart|rrbv, junx|Type|Tiago, crtc|Type|Gripper, uzz|Type|MechanicalHand, rrbv|Type|Hold, crtc|Type|MechanicalHand, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), junx|hasCapability|l, l|isCapabilityOf|junx, junx|hasComponent|crtc, Tiago|SubClassOf|Agent, tho|Type|Bucket, crtc|hasWeightLimit|integer#63, c|isDispositionOf|tho, tho|hasPart|srge, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), MechanicalHand|SubClassOf|Gripper, Bucket|SubClassOf|Object, tho|isTouchableBy|junx, Hold|SubClassOf|HoldablePart, Gripper|SubClassOf|EndEffector, junx|hasComponent|uzz, junx|hasComponent|crtc, lesserThan(integer#48,integer#63), srge|Type|Hold, MechanicalHand|SubClassOf|Gripper, tho|hasWeight|integer#48, Hold|SubClassOf|HoldablePart. ",
+      "answer": "\nThe Tiago can lift the bucket because it has a lifting capability and is able to hold objects thanks to its gripper component.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_13s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "pepper",
+        "two-finger claw"
+      ],
+      "question": "-Inference : lfkg|canLift|mc \n -Justifications : bsn|Type|TwoFingerClaw, mc|hasWeight|integer#46, lfkg|Type|Pepper, ys|Type|Gripper, lfkg|hasComponent|bsn, Grip|SubClassOf|HoldablePart, TwoFingerClaw|SubClassOf|Gripper, mc|Type|Suitcase, TwoFingerClaw|SubClassOf|Gripper, Pepper|SubClassOf|Agent, lfkg|hasComponent|ys, mc|hasDisposition|kdf, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), lesserThan(integer#46,integer#59), ys|hasWeightLimit|integer#59, lfkg|hasComponent|ys, c|isCapabilityOf|lfkg, lfkg|hasCapability|c, utmv|Type|Grip, Gripper|SubClassOf|EndEffector, mc|hasPart|utmv, mc|isTouchableBy|lfkg, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), ys|Type|TwoFingerClaw, Suitcase|SubClassOf|Object, Grip|SubClassOf|HoldablePart, mc|hasPart|xi, xi|Type|Grip, kdf|isDispositionOf|mc. ",
+      "answer": "\nThe robot can lift a suitcase because it has a two-finger claw that can hold objects with a weight limit of 46 and the ability to grip. The robot's gripper is capable of lifting the suitcase, which is a type of object.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_14s",
+      "selected_classes": [
+        "suitcase",
+        "handle",
+        "tiago",
+        "mechanical hand"
+      ],
+      "question": "-Inference : imrq|canLift|uwv \n -Justifications : Suitcase|SubClassOf|Object, y|Type|Grip, qvi|Type|Gripper, Grip|SubClassOf|HoldablePart, Gripper|SubClassOf|EndEffector, Tiago|SubClassOf|Agent, uwv|Type|Suitcase, uwv|hasDisposition|xr, MechanicalHand|SubClassOf|Gripper, MechanicalHand|SubClassOf|Gripper, tp|isCapabilityOf|imrq, imrq|hasCapability|tp, Grip|SubClassOf|HoldablePart, imrq|hasComponent|qvi, qvi|Type|MechanicalHand, lesserThan(integer#57,integer#69), imrq|Type|Tiago, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), uwv|isTouchableBy|imrq, imrq|hasComponent|zgr, imrq|hasComponent|qvi, zgr|Type|MechanicalHand, uwv|hasPart|fap, uwv|hasWeight|integer#57, qvi|hasWeightLimit|integer#69, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), fap|Type|Grip, uwv|hasPart|y, xr|isDispositionOf|uwv. ",
+      "answer": "\nThe robot can lift a suitcase because it has the capability to grip and lift objects thanks to its mechanical hand. The robot's lifting capability is equivalent to having at least two grippers.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_15s",
+      "selected_classes": [
+        "cooking pot",
+        "handle",
+        "robot",
+        "manipulator"
+      ],
+      "question": "-Inference : vbf|canLift|gox \n -Justifications : gox|Type|CookingPot, lsjt|hasWeightLimit|integer#77, Hold|SubClassOf|HoldablePart, Gripper|SubClassOf|EndEffector, Manipulator|SubClassOf|Gripper, CookingPot|SubClassOf|Object, Robot|SubClassOf|Agent, lesserThan(integer#38,integer#77), s|isDispositionOf|gox, vbf|Type|Robot, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Manipulator|SubClassOf|Gripper, gox|hasPart|nm, gox|isTouchableBy|vbf, vbf|hasComponent|cted, vbf|hasComponent|lsjt, gox|hasDisposition|s, cted|Type|Manipulator, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), i|isCapabilityOf|vbf, nm|Type|Hold, gox|hasPart|kufx, vbf|hasCapability|i, Hold|SubClassOf|HoldablePart, kufx|Type|Hold, vbf|hasComponent|lsjt, gox|hasWeight|integer#38, lsjt|Type|Manipulator, lsjt|Type|Gripper. ",
+      "answer": "\nThe robot can lift the cooking pot because it has a lifting capability and is able to hold the pot thanks to its gripper component.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_16s",
+      "selected_classes": [
+        "bucket",
+        "hand grip",
+        "pepper",
+        "claw"
+      ],
+      "question": "-Inference : q|canLift|wpaq \n -Justifications : q|hasComponent|fqiy, qy|Type|HandGrip, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), wpaq|Type|Bucket, voeg|Type|Claw, HandGrip|SubClassOf|HoldablePart, blfe|isDispositionOf|wpaq, wpaq|hasPart|e, Bucket|SubClassOf|Object, wpaq|hasWeight|integer#60, Claw|SubClassOf|Gripper, Pepper|SubClassOf|Agent, vurv|isCapabilityOf|q, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), wpaq|hasPart|qy, Claw|SubClassOf|Gripper, Gripper|SubClassOf|EndEffector, voeg|Type|Gripper, q|Type|Pepper, e|Type|HandGrip, fqiy|Type|Claw, q|hasComponent|voeg, wpaq|isTouchableBy|q, lesserThan(integer#60,integer#68), q|hasCapability|vurv, HandGrip|SubClassOf|HoldablePart, voeg|hasWeightLimit|integer#68, wpaq|hasDisposition|blfe, q|hasComponent|voeg. ",
+      "answer": "\nThe robot can lift the bucket because it has a hand grip and a lifting capability that allows it to hold and lift objects. The robot's hand grip is capable of holding the bucket, which weighs 60 units.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_17s",
+      "selected_classes": [
+        "bucket",
+        "handle",
+        "pr2",
+        "two-finger claw"
+      ],
+      "question": "-Inference : eae|canLift|ab \n -Justifications : eae|hasComponent|tdm, h|isCapabilityOf|eae, umpu|Type|Grip, hfv|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ab|hasPart|ta, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Grip|SubClassOf|HoldablePart, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), ab|Type|Bucket, eae|Type|Pr2, Bucket|SubClassOf|Object, TwoFingerClaw|SubClassOf|Gripper, tdm|Type|TwoFingerClaw, ab|hasPart|umpu, ab|hasWeight|integer#42, lesserThan(integer#42,integer#53), hfv|Type|Gripper, ta|Type|Grip, c|isDispositionOf|ab, hfv|hasWeightLimit|integer#53, Gripper|SubClassOf|EndEffector, ab|isTouchableBy|eae, Pr2|SubClassOf|Agent, Grip|SubClassOf|HoldablePart, eae|hasCapability|h, ab|hasDisposition|c, eae|hasComponent|hfv, eae|hasComponent|hfv. ",
+      "answer": "\nThe robot can lift the object because it has a grip that can hold and lift objects. The robot's lifting capability is equivalent to having a gripper with a weight limit of 53, which allows it to lift objects weighing up to 53.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_18s",
+      "selected_classes": [
+        "laundry basket",
+        "handle",
+        "robot",
+        "two-finger claw"
+      ],
+      "question": "-Inference : r|canLift|zjcr \n -Justifications : rdxz|isDispositionOf|zjcr, agb|Type|Grip, LaundryBasket|SubClassOf|Object, t|hasWeightLimit|integer#69, r|hasComponent|tzlg, t|Type|TwoFingerClaw, t|Type|Gripper, zjcr|hasPart|agb, TwoFingerClaw|SubClassOf|Gripper, r|hasComponent|t, zjcr|Type|LaundryBasket, zjcr|isTouchableBy|r, tzlg|Type|TwoFingerClaw, r|hasCapability|zzz, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), zjcr|hasPart|emdq, TwoFingerClaw|SubClassOf|Gripper, Gripper|SubClassOf|EndEffector, Grip|SubClassOf|HoldablePart, Robot|SubClassOf|Agent, zjcr|hasDisposition|rdxz, Grip|SubClassOf|HoldablePart, lesserThan(integer#53,integer#69), LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), zzz|isCapabilityOf|r, zjcr|hasWeight|integer#53, emdq|Type|Grip, r|Type|Robot, r|hasComponent|t. ",
+      "answer": "\nThe robot can lift the laundry basket because it has a lifting capability and can hold objects with its grip. The robot's lifting capacity is limited to 53 kg.  \n\n\n\n"
+    },
+    {
+      "id": "a_lift_easy_19s",
+      "selected_classes": [
+        "laundry basket",
+        "handle",
+        "tiago",
+        "claw"
+      ],
+      "question": "-Inference : q|canLift|vs \n -Justifications : q|hasComponent|wjx, vs|hasPart|qhl, LiftableDisposition|EquivalentTo|(isDispositionOf some (hasPart min 2 HoldablePart)), Claw|SubClassOf|Gripper, lesserThan(integer#31,integer#78), exd|Type|Claw, Handle|SubClassOf|HoldablePart, eu|isCapabilityOf|q, Claw|SubClassOf|Gripper, q|hasCapability|eu, LiftingCapability|EquivalentTo|(isCapabilityOf some (hasComponent min 2 Gripper), vs|isTouchableBy|q, q|hasComponent|wjx, Tiago|SubClassOf|Agent, LaundryBasket|SubClassOf|Object, vs|hasPart|hmdu, wjx|Type|Gripper, Handle|SubClassOf|HoldablePart, vs|hasDisposition|emc, q|hasComponent|exd, vs|Type|LaundryBasket, q|Type|Tiago, hmdu|Type|Handle, vs|hasWeight|integer#31, emc|isDispositionOf|vs, Gripper|SubClassOf|EndEffector, wjx|Type|Claw, wjx|hasWeightLimit|integer#78, qhl|Type|Handle. ",
+      "answer": "\nThe robot can lift the object because it has a gripper that can hold and lift objects. The gripper is capable of lifting an object with a weight limit of 78.  \n\n\n\n"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+[
+    {
+        "question_id": "a_perceive_hard_0s",
+        "answer": "The robot can perceive the object because it has a camera that is active and registered, and it is in front of the object.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_1s",
+        "answer": "The robot can perceive the cube because it has a scannable code and is in front of the camera.  ",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_2s",
+        "answer": "The robot can perceive the book because it has a perceiving capability that allows it to detect and register QR codes on the book. The robot's camera is capable of detecting the QR code on the book, which is registered and visible.  ",
+        "is_correct": false,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "perceivable",
+            "active",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_3s",
+        "answer": "The robot can perceive because it has a camera that is active and registered, and the camera is in front of the object.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_4s",
+        "answer": "The robot can perceive the QR code because it has a capability to detect and register the QR code through its camera. The robot is registered, visible, and at a distance of 68 units from the QR code.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "appliance",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_5s",
+        "answer": "The robot can perceive the table because it has a disposition to perceive the table, which is registered and visible. The robot's camera is active and capable of detecting QR codes.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_6s",
+        "answer": "The robot can perceive the object because it has a capability to scan and detect objects in its environment. The object is registered, visible, and within the robot's range of perception.  ",
+        "is_correct": false,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "qr tag",
+            "realsense d435i",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_7s",
+        "answer": "The robot can perceive because it has a camera that is active and registered, and the camera is able to detect 2D barcodes. The robot also has a component that is capable of detecting 2D barcodes.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "plate",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_8s",
+        "answer": "The robot can perceive because it has a scannable code detection algorithm that is active and registered, and the robot is in front of the camera with a scannable part.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "cube",
+            "scan tag",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_9s",
+        "answer": "The robot can perceive the object because it has a camera that is registered and visible, and the object is within its maximum distance range.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_10s",
+        "answer": "The robot can perceive the plate because it has a camera that can detect QR codes and is at a distance of 67 from the plate.  ",
+        "is_correct": true,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_11s",
+        "answer": "The robot can perceive because it has a camera and scan code detection algorithm that are active and visible.  It also has a part that is registered and in front of the object being perceived.",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "qr code",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_12s",
+        "answer": "The robot can perceive because it has a scannable code that is registered and visible to the camera. The camera is active and has a maximum distance range of 61 units.  ",
+        "is_correct": false,
+        "score": 0.5333333333333333,
+        "missing_concepts": [
+            "appliance",
+            "perceivable",
+            "perceiving",
+            "scan_detection_algo",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_13s",
+        "answer": "The Pepper robot can perceive the luggage because it has a camera that is active and registered, and the luggage is visible to the camera. The camera is capable of detecting QR codes on the luggage.  ",
+        "is_correct": false,
+        "score": 0.6,
+        "missing_concepts": [
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_14s",
+        "answer": "The robot can perceive the object because it has a scannable code and is registered, and the object is visible to the robot. The robot also has a camera that can detect the object.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "scan_detection_algo",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_15s",
+        "answer": "The robot can perceive because it has a camera that is registered and active, and the camera is able to detect QR codes. The robot also has a scannable code detection algorithm.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "box",
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_16s",
+        "answer": "The robot can perceive the book because it has a camera, which is capable of detecting QR codes, and the book is in front of the camera.  ",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_17s",
+        "answer": "The robot can perceive the cube because it has a camera that can detect 2D barcodes and is in front of the cube.  ",
+        "is_correct": true,
+        "score": 0.4,
+        "missing_concepts": [
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_18s",
+        "answer": "The robot can perceive because it has a camera that is registered and visible to the object being scanned. The robot's camera is capable of detecting 2D barcodes.  ",
+        "is_correct": false,
+        "score": 0.4666666666666667,
+        "missing_concepts": [
+            "perceivable",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "object_visible_by_robot",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    },
+    {
+        "question_id": "a_perceive_hard_19s",
+        "answer": "The robot can perceive the object because it has a camera and scan code detection capability. The object is visible to the robot, and the robot is in front of the object.  ",
+        "is_correct": false,
+        "score": 0.4,
+        "missing_concepts": [
+            "scan tag",
+            "perceivable",
+            "registered",
+            "scannable_part_visible",
+            "perceiving",
+            "active",
+            "code_in_front_of_robot_camera",
+            "range",
+            "object_distance"
+        ]
+    }
+]

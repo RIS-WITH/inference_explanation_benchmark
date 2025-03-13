@@ -1,0 +1,160 @@
+[
+    {
+        "question_id": "a_push_easy_0b",
+        "answer": " the robot can push the toy wagon because it has a pushing capability with a gripper that can apply sufficient force, and the wagon is approachable and has a rollable part that requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_1b",
+        "answer": " The pepper robot can push the remote-controlled car because it has a pushing capability with at least one gripper, and the car has a pushable disposition due to its rollable part (caster), making it approachable by the robot. Additionally, the force exerted by the robot's gripper matches the required force for pushing the car.",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_2b",
+        "answer": " the robot can push the office chair because it has a pushing capability with at least one gripper, and the chair has a rollable part and is approachable by the robot. Additionally, the force exerted by the robot's gripper matches the required force to move the chair.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_3b",
+        "answer": " the robot can push the mini shopping cart because it has a pushing capability with a two-finger claw gripper that applies sufficient force, and the cart is approachable and has a rollable part that requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_4b",
+        "answer": " the robot can push the Roomba because it has a pushing capability with at least one gripper, and the Roomba is approachable and has a rollable part that makes it pushable. The force required to push the Roomba matches the applicable force of the robot's gripper.",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_5b",
+        "answer": " The pepper robot can push the office chair because it has a pushing capability with its two-finger claw gripper, and the chair is approachable and requires a force that matches the gripper's applicable force.",
+        "is_correct": true,
+        "score": 0.8,
+        "missing_concepts": [
+            "roller",
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_6b",
+        "answer": " The pepper robot can push the remote-controlled car because it has a pushing capability with a gripper that can apply sufficient force, and the car is approachable and requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "roller"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_7b",
+        "answer": " the robot can push the mini shopping cart because it has a pushing capability with its two-finger claw gripper, and the cart is approachable and has a rollable part that requires a force equal to what the gripper can apply.",
+        "is_correct": false,
+        "score": 0.9,
+        "missing_concepts": [
+            "pushable"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_8b",
+        "answer": " The PR2 robot can push the office chair because it has a pushing capability with a gripper that can apply sufficient force, and the chair is approachable and requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "pivot wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_9b",
+        "answer": " The pepper robot can push the remote-controlled car because it has a pushing capability with a mechanical hand that can apply sufficient force, and the car is approachable and has rollable parts, making it pushable.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_10b",
+        "answer": " The robot can push the remote-controlled car because it has a pushing capability with a gripper that can apply sufficient force, and the car is approachable and has rollable parts that make it pushable.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_11b",
+        "answer": " the robot can push the Roomba because it has a pushing capability with a gripper that can apply sufficient force, and the Roomba is approachable and has a rollable part that requires the same amount of force to be pushed.",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_12b",
+        "answer": " The pepper robot can push the Roomba robot because it has a pushing capability with its claw gripper, and the Roomba robot is approachable and has wheels that make it rollable, thus pushable. Additionally, the force exerted by the gripper matches the required force for pushing.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_13b",
+        "answer": " the robot can push the office chair because it has a pushing capability with its two-finger claw gripper, and the chair is approachable and has rollers that make it pushable. The force required to move the chair matches the applicable force of the gripper.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_14b",
+        "answer": " The Tiago robot can push the Roomba robot because it has a pushing capability with its two-finger claw gripper, and the Roomba robot is approachable and has wheels that make it rollable, thus pushable. Additionally, the force exerted by the gripper matches the required force for pushing.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_15b",
+        "answer": " the robot can push the remote-controlled car because it has a pushing capability with a claw gripper that can apply sufficient force, and the car is approachable and has rollable parts that make it pushable.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_16b",
+        "answer": " The robot can push the shopping cart because it has a pushing capability with a gripper that can apply sufficient force, and the cart is approachable and requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_17b",
+        "answer": " the robot can push the Roomba because it has a pushing capability with its claw gripper, and the Roomba has a rollable part that makes it pushable. The robot's approachable to the Roomba, and the force exerted by the gripper matches the required force for pushing.",
+        "is_correct": false,
+        "score": 1.0,
+        "missing_concepts": []
+    },
+    {
+        "question_id": "a_push_easy_18b",
+        "answer": " The pepper robot can push the Roomba robot because it has a pushing capability with a mechanical hand that can apply sufficient force, and the Roomba robot is approachable and requires the same amount of force to be pushed.",
+        "is_correct": true,
+        "score": 0.9,
+        "missing_concepts": [
+            "wheel"
+        ]
+    },
+    {
+        "question_id": "a_push_easy_19b",
+        "answer": " the robot can push the remote-controlled car because it has a pushing capability with its two-finger claw gripper, and the car has a rollable part that makes it approachable and pushable by the robot.",
+        "is_correct": false,
+        "score": 0.8,
+        "missing_concepts": [
+            "applicable force",
+            "required_force"
+        ]
+    }
+]

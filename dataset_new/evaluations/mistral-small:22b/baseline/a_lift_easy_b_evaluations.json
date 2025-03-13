@@ -1,0 +1,180 @@
+[
+    {
+        "question_id": "a_lift_easy_0b",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with at least two grippers, and the pot is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_1b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_2b",
+        "answer": " the PR2 robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is touchable by the robot, has at least two holdable parts, and its weight is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_3b",
+        "answer": " The robot can lift the cooking pot because it has a lifting capability with at least two grippers, and the pot is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_4b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_5b",
+        "answer": " The pepper robot can lift the oven tray because it has a lifting capability with at least two grippers, and the oven tray is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_6b",
+        "answer": " the robot can lift the suitcase because it has a lifting capability with at least two grippers, and the suitcase is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_7b",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers, and the bucket is liftable with at least two holdable parts. Additionally, the weight of the bucket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_8b",
+        "answer": " the pepper robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_9b",
+        "answer": " the robot can lift the bucket because it has a lifting capability with at least two grippers, and the bucket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_10b",
+        "answer": " The pepper robot can lift the cooking pot because it has a lifting capability with at least two grippers, and the cooking pot is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_11b",
+        "answer": " The pepper robot can lift the suitcase because it has a lifting capability with at least two gripper components, and the suitcase is liftable due to having at least two holdable parts. Additionally, the weight of the suitcase is within the weight limit of one of the robot's grippers.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_12b",
+        "answer": " The robot can lift the bucket because it has a lifting capability with at least two grippers, and the bucket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_13b",
+        "answer": " the pepper robot can lift the suitcase because it has a lifting capability with at least two grippers, and the suitcase is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_14b",
+        "answer": " The robot can lift the suitcase because it has a lifting capability with at least two grippers, and the suitcase has a liftable disposition with at least two holdable parts, all of which are within the weight limit of the robot's gripper.",
+        "is_correct": false,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_15b",
+        "answer": " the robot can lift the cooking pot because it has a lifting capability with at least two grippers, and the pot is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_16b",
+        "answer": " The pepper robot can lift the bucket because it has a lifting capability with at least two grippers, and the bucket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_17b",
+        "answer": " the PR2 robot can lift the bucket because it has a lifting capability with at least two grippers, and the bucket is liftable with at least two holdable parts. The weight of the bucket is within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "touchable"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_18b",
+        "answer": " the robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is touchable by the robot and has at least two holdable parts, with its weight being within the gripper's weight limit.",
+        "is_correct": true,
+        "score": 0.9166666666666666,
+        "missing_concepts": [
+            "liftable disposition"
+        ]
+    },
+    {
+        "question_id": "a_lift_easy_19b",
+        "answer": " The robot can lift the laundry basket because it has a lifting capability with at least two grippers, and the basket is liftable due to having at least two holdable parts. Additionally, the basket's weight is within the gripper's weight limit, and the robot can touch the basket.",
+        "is_correct": true,
+        "score": 1.0,
+        "missing_concepts": []
+    }
+]
