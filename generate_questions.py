@@ -1,17 +1,17 @@
-from data.canGrasp import question_grasp_easy, question_grasp_medium, question_grasp_hard
-from data.canLift import question_lift_easy, question_lift_medium, question_lift_hard
-from data.canPush import question_push_easy, question_push_medium, question_push_hard
-from data.canPerceive import question_perceive_easy, question_perceive_medium, question_perceive_hard
+from data_elements.canGrasp import question_grasp_easy, question_grasp_medium, question_grasp_hard
+from data_elements.canLift import question_lift_easy, question_lift_medium, question_lift_hard
+from data_elements.canPush import question_push_easy, question_push_medium, question_push_hard
+from data_elements.canPerceive import question_perceive_easy, question_perceive_medium, question_perceive_hard
 
-from data.examples import example_1, example_2, example_3, example_4
-from data.prompts import prompt_without_ontology_explanations
+from data_elements.examples import example_1, example_2, example_3, example_4
+from data_elements.prompts import prompt_without_ontology_explanations
 
 from src.DataHandler import QuestionHandler
 from src.ExampleHandler import ExampleHandler
 from src.QuestionGenerator import QuestionGenerator, PromptGenerator
 
 if __name__ == '__main__':
-    print(" -- hellollama : generating questions -- ")
+
     examples_list = [example_1, example_2, example_3, example_4]
     example_handler = ExampleHandler(examples_list)
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     generator = QuestionGenerator(prompt_generator)
     
-    saving_path = "/home/bdussard/inference_explanation/dataset"
+    saving_path = "/home/bdussard/inference_explanation/dataset_test/"
     directory_name = "questions"
     data_saver = QuestionHandler(saving_path, directory_name)
  

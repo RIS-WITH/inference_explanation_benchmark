@@ -6,22 +6,22 @@ import copy
 if __name__ == '__main__':
     # models in the paper
     models = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]  
-    question_path = "/home/bdussard/inference_explanation/dataset/"
+  
+    directory_path =  "/home/bdussard/inference_explanation/dataset_test/"
     questions_folder = "questions"
 
     for model in models:
         ollama = OllamaHandler(model)
     
-        answer_path = "/home/bdussard/inference_explanation/dataset/"
         answer_folder = "answers"
         answer_model = model
         
-        answer_saver = AnswerHandler(answer_path, answer_folder, model)
+        answer_saver = AnswerHandler(directory_path, answer_folder, model)
         
         #  ================ LOAD QUESTIONS FROM FILE =============
-        questions_baseline = answer_saver.load_questions(question_path + questions_folder, "baseline")
-        questions_shuffle = answer_saver.load_questions(question_path + questions_folder, "shuffle")
-        questions_rule = answer_saver.load_questions(question_path + questions_folder, "rule")
+        questions_baseline = answer_saver.load_questions(directory_path + questions_folder, "baseline")
+        questions_shuffle = answer_saver.load_questions(directory_path + questions_folder, "shuffle")
+        questions_rule = answer_saver.load_questions(directory_path + questions_folder, "rule")
         
         #  ================ LINK CONDITIONS =============
         questions_dict = {'baseline': questions_baseline, 'shuffle': questions_shuffle, 'rule' :questions_rule}

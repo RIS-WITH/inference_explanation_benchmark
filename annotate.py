@@ -245,7 +245,7 @@ def display_variant_menu(base_path, eval_path, question, model):
     return variations[int(choice) - 1]
 
 def main():
-    root_path = "/home/bdussard/inference_explanation/dataset/"
+    root_path = "/home/bdussard/inference_explanation/dataset_test/"
     base_path = root_path + "answers"
     evaluations_path = root_path + "evaluations"
 
