@@ -1,3 +1,6 @@
+## Evaluating Embeddable Language Models in Verbalizing Rule-based Inferences through Justifications
+This repository contains the code for the generation/annotation of the dataset, as well as the dataset files used for the paper's evaluation.
+
 # Data 
 The template questions are created in this folder, with their complexity levels as well as the SWRL rule.
 Each question is composed of a set of semantic triples, which represent the justifications used to validate the given SWRL rule.
