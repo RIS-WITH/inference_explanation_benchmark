@@ -12,9 +12,6 @@ import matplotlib.lines as mlines
 
 pd.options.mode.chained_assignment = None
 
-# Path to the dataset directory
-data_directory = "/home/bdussard/inference_explanation/dataset/evaluations"
-
 # Enable LaTeX-style font rendering
 plt.rcParams.update({
     "text.usetex": True,  # Use LaTeX for text
@@ -55,17 +52,6 @@ def explore_and_store_data(base_dir):
                     data_structure[model][condition][question_name].extend(file_data)
     return data_structure
 
-
-answers_array = explore_and_store_data(data_directory)
-
-model = "llama3.1:8b"
-condition = "baseline"
-question = "grasp_easy"
-question_id = "a_grasp_easy_1b"
-
-# Example: Accessing data for a specific model, condition, and variation
-example_data = answers_array["llama3.1:8b"]["baseline"]["grasp_easy"]
-
 def compute_stats(data):
     total_questions = len(data)
     correct_answers = sum(1 for answer in data if answer["is_correct"])
@@ -83,26 +69,6 @@ def compute_stats(data):
         "missing_concepts_count": dict(missing_concepts_count)
     }
 
-# Example usage of compute_stats
-stats = compute_stats(example_data)
-
-models = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
-
-conditions = ["baseline", "rule", "shuffle"]
-questions = ["grasp", "lift", "push", "perceive"]
-difficulties = ["easy", "medium", "hard"]
-
-scores = []
-for model in models:
-    for question in questions:
-        for difficulty in difficulties:         
-            for condition in conditions:
-                data = answers_array[model][condition][question+"_"+difficulty]
-                stats = compute_stats(data)
-                id = "_".join([model, question, difficulty, condition])
-                scores.append([id, stats['average_score']])
-   
-# Flatten the data structure into a DataFrame for plotting
 def flatten_data(data_structure):
     flat_data = []
     for model, conditions in data_structure.items():
@@ -136,8 +102,6 @@ def sturge_optimal_bins(data: np.array) -> int:
     nbins = max(1, nbins)
     
     return nbins
-
-df = flatten_data(answers_array)
 
 def generate_distplot(dataframe, model, condition = "baseline", difficulties = ["easy", "medium", "hard"]):
     datas = []
@@ -291,32 +255,6 @@ def generate_histplot_all_models_single_plot(dataframe, models, condition = "bas
     ax.add_artist(legend_hist)
     plt.tight_layout()
     plt.show()
-
-# ==================== 6 subplots with each difficulty level ================
-models_reordered = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
-
-models_colored = {"llama3.2:3b": 'green',
-                 "gemma2:2b": 'red',
-                 "llama3.1:8b" :'blue',
-                 "gemma2:9b": 'purple',
-                 "mistral-nemo:12b": 'orange',
-                 "mistral-small:22b": 'brown'}
-
-# ======== generate 6 subplots with each model and average of difficulty levels ===
-condition_colors = {"baseline": "blue"}
-generate_average_histplot(df, models_reordered, condition_colors)
-condition_colors = {"baseline": "blue", "rule": "orange"}
-generate_average_histplot(df, models_reordered, condition_colors)
-condition_colors = {"baseline": "blue", "shuffle": "red"}
-generate_average_histplot(df, models_reordered, condition_colors)
-
-# ======== generate 1 plot with each model and average of difficulty levels ===
-# generate_histplot_all_models_single_plot(df, models_reordered, "baseline")
-# generate_histplot_all_models_single_plot(df, models_reordered, "rule")
-# generate_histplot_all_models_single_plot(df, models_reordered, "shuffle")
-
-# ======== generate 6 subplots with each model and each difficulty level, on baseline ===
-generate_histplot(df, models_reordered)
 
 def compute_correlations(dataframe, models):
     for model in models:
@@ -553,4 +491,62 @@ def compare_scores(data_old, data_new, models, questions = ["grasp", "lift", "pu
         #     compute_scoring_table(data_new, [model], conditions = ["baseline"], 
         #                           difficulties = ["easy", "medium", "hard"], question_id=question)
 
+# Path to the dataset directory
+data_directory = "/home/bdussard/inference_explanation/dataset/evaluations"
+
+answers_array = explore_and_store_data(data_directory)
+
+model = "llama3.1:8b"
+condition = "baseline"
+question = "grasp_easy"
+question_id = "a_grasp_easy_1b"
+
+# Example: Accessing data for a specific model, condition, and variation
+example_data = answers_array["llama3.1:8b"]["baseline"]["grasp_easy"]
+dataframe = pd.DataFrame.from_records(example_data)
+
+print(dataframe.head())
+
+# Example usage of compute_stats
+res_stats = compute_stats(example_data)
+
+models = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
+
+conditions = ["baseline", "rule", "shuffle"]
+questions = ["grasp", "lift", "push", "perceive"]
+difficulties = ["easy", "medium", "hard"]
+
+scores = []
+for model in models:
+    for question in questions:
+        for difficulty in difficulties:         
+            for condition in conditions:
+                data = answers_array[model][condition][question+"_"+difficulty]
+                stats = compute_stats(data)
+                id = "_".join([model, question, difficulty, condition])
+                scores.append([id, stats['average_score']])
+   
+df = flatten_data(answers_array)
+
 compute_scoring_table(df, ["gemma2:2b", "llama3.2:3b", "llama3.1:8b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"])
+
+# ==================== 6 subplots with each difficulty level ================
+models_reordered = ["llama3.2:3b", "llama3.1:8b", "gemma2:2b", "gemma2:9b", "mistral-nemo:12b", "mistral-small:22b"]
+
+models_colored = {"llama3.2:3b": 'green',
+                 "gemma2:2b": 'red',
+                 "llama3.1:8b" :'blue',
+                 "gemma2:9b": 'purple',
+                 "mistral-nemo:12b": 'orange',
+                 "mistral-small:22b": 'brown'}
+
+# ======== generate 6 subplots with each model and average of difficulty levels ===
+condition_colors = {"baseline": "blue"}
+generate_average_histplot(df, models_reordered, condition_colors)
+condition_colors = {"baseline": "blue", "rule": "orange"}
+generate_average_histplot(df, models_reordered, condition_colors)
+condition_colors = {"baseline": "blue", "shuffle": "red"}
+generate_average_histplot(df, models_reordered, condition_colors)
+
+# ======== generate 6 subplots with each model and each difficulty level, on baseline ===
+generate_histplot(df, models_reordered)
