@@ -36,3 +36,16 @@ The annotation process goes as following:
 - choose the condition
 
 The annotations are automatically saved once you complete the annotation of a sample (question + condition + complexity).
+
+## Citation
+If you use this work in your research, please cite the following paper as below:
+
+BibTeX:
+```bibtex
+@article{dussard2025evaluating,
+  author    = {Dussard, Bastien and Clodic, Aur{\'e}lie and Sarthou, Guillaume},
+  title     = {Evaluating Embeddable Language Models in Verbalizing Rule-based Inferences through Justifications},
+  booktitle = {34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)},
+  year      = {2025},
+  note      = {accepted for publication}
+}
