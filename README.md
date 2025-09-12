@@ -37,6 +37,9 @@ The annotation process goes as following:
 
 The annotations are automatically saved once you complete the annotation of a sample (question + condition + complexity).
 
+## Full paper 
+The full paper can be found at the following url: <a href="https://laas.hal.science/hal-05245534"> Full paper resource </a>
+
 ## Citation
 If you use this work in your research, please cite the following paper as below:
 
