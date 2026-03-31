@@ -1,45 +1,28 @@
-from data_elements.canGrasp import question_grasp_easy, question_grasp_medium, question_grasp_hard
-from data_elements.canLift import question_lift_easy, question_lift_medium, question_lift_hard
-from data_elements.canPush import question_push_easy, question_push_medium, question_push_hard
-from data_elements.canPerceive import question_perceive_easy, question_perceive_medium, question_perceive_hard
+from data_elements.canGrasp import grasp_manager
+from data_elements.canLift import lift_manager
+from data_elements.canPush import push_manager
+from data_elements.canPerceive import perceive_manager
 
-from data_elements.examples import example_1, example_2, example_3, example_4
+from data_elements.examples import question_1, question_2, question_3, question_4
 from data_elements.prompts import prompt_without_ontology_explanations
 
-from src.DataHandler import QuestionHandler
-from src.ExampleHandler import ExampleHandler
-from src.QuestionGenerator import QuestionGenerator, PromptGenerator
+from src.QuestionGenerator import QuestionGenerator
 
 if __name__ == '__main__':
 
-    examples_list = [example_1, example_2, example_3, example_4]
-    example_handler = ExampleHandler(examples_list)
+    examples_list = [question_1, question_2, question_3, question_4]
+    for example in examples_list:
+        example.generate()
 
-    # set the list of questions
-    question_list = [question_grasp_easy, question_grasp_medium, question_grasp_hard,
-                     question_lift_easy, question_lift_medium, question_lift_hard,
-                     question_push_easy, question_push_medium, question_push_hard,
-                     question_perceive_easy, question_perceive_medium, question_perceive_hard]
-
-    prompt_generator = PromptGenerator(prompt_without_ontology_explanations)
-
-    generator = QuestionGenerator(prompt_generator)
+    question_managers = [grasp_manager, lift_manager, push_manager, perceive_manager]
+    for manager in question_managers:
+        manager.generate(integrate_class_expressions_in_explanation=False, count=20)
     
-    saving_path = "/home/bdussard/inference_explanation/dataset_test/"
-    directory_name = "questions"
-    data_saver = QuestionHandler(saving_path, directory_name)
- 
-    # ============== ADDING EXAMPLES TO GENERATOR ================
-    for example in example_handler.examples_:
-        generator.add_example(example)
-
-    # ============== ADDING QUESTIONS TO GENERATOR ===============
-    for question in question_list:
-        generator.add_question(question, with_CoT=True, verbose = False)
-    
-    # # =============== GENERATE QUESTION VARIATIONS ===========
-    generator.generate_question_variations()
-    
-     # ============== GENERATE QUESTION FILES AND SAVE TO FILE ===============
-    for question in generator.questions_:
-        data_saver.create_and_save_question_variation(question, generator)
+    saving_path = "/home/gsarthou/Documents/LAAS/Code/inference_explanation_benchmark/dataset_2026"
+    generator = QuestionGenerator(saving_path,
+                                  prompt_without_ontology_explanations,
+                                  examples_list,
+                                  question_managers)
+     
+    generator.generateBaseline()
+    generator.generateLabeled()
