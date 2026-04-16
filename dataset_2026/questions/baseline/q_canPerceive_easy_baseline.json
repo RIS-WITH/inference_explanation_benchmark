@@ -46,7 +46,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : jih|canSpeakWith|pchbyk\n-Justifications : jih|Type|Robot, jih|hasCapability|nhbhmg, nhbhmg|Type|VerbalCommunicationCapability,\\ pchbyk|Type|Human, pchbyk|hasDisposition|frj, frj|Type|VerbalCommunicationDisposition, jih|isFacing|pchbyk, pchbyk|isAvailable|boolean#true, jih|isInFrontOf|wtbrl, wtbrl|hasAgentSeatedOn|pchbyk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
+      "content": "-Inference : gu|canSpeakWith|zvk\n-Justifications : gu|Type|Robot, gu|hasCapability|kitw, kitw|Type|VerbalCommunicationCapability, zvk|Type|Human, zvk|hasDisposition|roro, roro|Type|VerbalCommunicationDisposition, gu|isFacing|zvk, zvk|isAvailable|boolean#true, gu|isInFrontOf|kkwbej, kkwbej|hasAgentSeatedOn|zvk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
     },
     {
       "role": "assistant",
@@ -54,7 +54,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : lgvee|canBeTowedBy|va\n-Justifications : va|Type|Vehicle, va|hasCapability|fidzjg, fidzjg|Type|TowingCapability, lgvee|Type|Car, Car|SubClassOf|Towable, lgvee|hasWeight|integer#2000, va|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
+      "content": "-Inference : fzbt|canBeTowedBy|eavkgt\n-Justifications : eavkgt|Type|Vehicle, eavkgt|hasCapability|lzj, lzj|Type|TowingCapability, fzbt|Type|Car, Car|SubClassOf|Towable, fzbt|hasWeight|integer#2000, eavkgt|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
     },
     {
       "role": "assistant",
@@ -62,7 +62,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : dj|canInspect|kjbhb\n-Justifications : dj|Type|Drone, dj|hasCapability|igitb, igitb|Type|AerialInspectionCapability, kjbhb|Type|Bridge, Bridge|SubClassOf|Inspectable, kjbhb|hasHeight|integer#100, dj|hasMaxInspectionHeight|integer#200, igitb|isCapabilityOf|dj, dj|hasCamera|audeha, audeha|Type|SecurityCamera, igitb|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
+      "content": "-Inference : hfbzx|canInspect|eovov\n-Justifications : hfbzx|Type|Drone, hfbzx|hasCapability|vean, vean|Type|AerialInspectionCapability, eovov|Type|Bridge, Bridge|SubClassOf|Inspectable, eovov|hasHeight|integer#100, hfbzx|hasMaxInspectionHeight|integer#200, vean|isCapabilityOf|hfbzx, hfbzx|hasCamera|eycgfn, eycgfn|Type|SecurityCamera, vean|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
     },
     {
       "role": "assistant",
@@ -70,7 +70,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : aek|canChargeAt|ll\n-Justifications : aek|Type|DeliveryRobot, aek|hasCapability|hizq, hizq|Type|ChargingCapability, ll|Type|ChargingStation, ll|hasPort|ktn, ktn|Type|ChargingConnector, ll|isPowered|boolean#true, aek|hasBatteryLevel|integer#15, aek|hasBatteryThresholdForCharging|integer#20), aek|hasChargingConnector|inj, inj|hasType|string#USB_TypeC, ktn|hasType|string#USB_TypeC, hizq|isCapabilityOf|aek, aek|hasComponent|inj, inj|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
+      "content": "-Inference : jodgbx|canChargeAt|ih\n-Justifications : jodgbx|Type|DeliveryRobot, jodgbx|hasCapability|xn, xn|Type|ChargingCapability, ih|Type|ChargingStation, ih|hasPort|jlbsv, jlbsv|Type|ChargingConnector, ih|isPowered|boolean#true, jodgbx|hasBatteryLevel|integer#15, jodgbx|hasBatteryThresholdForCharging|integer#20), jodgbx|hasChargingConnector|vqoos, vqoos|hasType|string#USB_TypeC, jlbsv|hasType|string#USB_TypeC, xn|isCapabilityOf|jodgbx, jodgbx|hasComponent|vqoos, vqoos|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
     },
     {
       "role": "assistant",
@@ -81,362 +81,362 @@
     {
       "id": "q_canPerceive_easy_0b",
       "selected_classes": [
-        "Pr2",
-        "RGBCamera",
-        "QRTag",
-        "Plate"
+        "Robot",
+        "KinectV2",
+        "2DBarcode",
+        "Book"
       ],
       "selected_names": [
-        "vayv",
-        "vwxcnb",
-        "ms",
-        "slmt",
-        "lhoom",
-        "vzwu"
+        "tlpns",
+        "vjimq",
+        "rysvl",
+        "rmmrsb",
+        "njgpb",
+        "wl"
       ],
-      "question": "-Inference : lhoom|canPerceive|ms \n -Justifications : lhoom|Type|Pr2, Pr2|SubClassOf|Agent, lhoom|hasCapability|vwxcnb, vwxcnb|isCapabilityOf|lhoom, lhoom|hasComponent|slmt, slmt|Type|RGBCamera, RGBCamera|SubClassOf|Camera, ms|Type|Plate, Plate|SubClassOf|Object, ms|hasDisposition|vzwu, vzwu|isDispositionOf|ms, ms|hasPart|vayv, vayv|Type|QRTag, QRTag|SubClassOf|ScannablePart, ms|isVisibleBy|lhoom, slmt|Type|RGBCamera, RGBCamera|SubClassOf|Camera, lhoom|hasComponent|slmt, slmt|hasMaximumDistanceRange|integer#53, ms|isAtDistance|integer#36, greaterThan(integer#53,integer#36) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : rmmrsb|canPerceive|vjimq \n -Justifications : rmmrsb|Type|Robot, Robot|SubClassOf|Agent, rmmrsb|hasCapability|tlpns, tlpns|isCapabilityOf|rmmrsb, rmmrsb|hasComponent|njgpb, njgpb|Type|KinectV2, KinectV2|SubClassOf|Camera, vjimq|Type|Book, Book|SubClassOf|Object, vjimq|hasDisposition|rysvl, rysvl|isDispositionOf|vjimq, vjimq|hasPart|wl, wl|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, vjimq|isVisibleBy|rmmrsb, njgpb|Type|KinectV2, KinectV2|SubClassOf|Camera, rmmrsb|hasComponent|njgpb, njgpb|hasMaximumDistanceRange|integer#90, vjimq|isAtDistance|integer#59, greaterThan(integer#90,integer#59) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_1b",
       "selected_classes": [
-        "Pr2",
-        "RealsenseD435i",
-        "ScanTag",
+        "Tiago",
+        "RGBCamera",
+        "QRCode",
         "Luggage"
       ],
       "selected_names": [
-        "ra",
-        "fcz",
-        "zbppx",
-        "klo",
-        "fbwdyi",
-        "ihma"
+        "wtkncc",
+        "jnnni",
+        "gxwqv",
+        "lvvqzy",
+        "jhxqep",
+        "tpt"
       ],
-      "question": "-Inference : fbwdyi|canPerceive|zbppx \n -Justifications : fbwdyi|Type|Pr2, Pr2|SubClassOf|Agent, fbwdyi|hasCapability|fcz, fcz|isCapabilityOf|fbwdyi, fbwdyi|hasComponent|klo, klo|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, zbppx|Type|Luggage, Luggage|SubClassOf|Object, zbppx|hasDisposition|ihma, ihma|isDispositionOf|zbppx, zbppx|hasPart|ra, ra|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, zbppx|isVisibleBy|fbwdyi, klo|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, fbwdyi|hasComponent|klo, klo|hasMaximumDistanceRange|integer#61, zbppx|isAtDistance|integer#31, greaterThan(integer#61,integer#31) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : lvvqzy|canPerceive|jnnni \n -Justifications : lvvqzy|Type|Tiago, Tiago|SubClassOf|Agent, lvvqzy|hasCapability|wtkncc, wtkncc|isCapabilityOf|lvvqzy, lvvqzy|hasComponent|jhxqep, jhxqep|Type|RGBCamera, RGBCamera|SubClassOf|Camera, jnnni|Type|Luggage, Luggage|SubClassOf|Object, jnnni|hasDisposition|gxwqv, gxwqv|isDispositionOf|jnnni, jnnni|hasPart|tpt, tpt|Type|QRCode, QRCode|SubClassOf|ScannablePart, jnnni|isVisibleBy|lvvqzy, jhxqep|Type|RGBCamera, RGBCamera|SubClassOf|Camera, lvvqzy|hasComponent|jhxqep, jhxqep|hasMaximumDistanceRange|integer#87, jnnni|isAtDistance|integer#61, greaterThan(integer#87,integer#61) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_2b",
       "selected_classes": [
         "Pepper",
-        "RealsenseL515",
-        "QRTag",
+        "KinectV2",
+        "QRCode",
         "Plate"
       ],
       "selected_names": [
-        "tgid",
-        "qcce",
-        "ybspjs",
-        "ogp",
-        "ys",
-        "myne"
+        "liib",
+        "ztzes",
+        "ey",
+        "ekpfs",
+        "xo",
+        "ajolru"
       ],
-      "question": "-Inference : ys|canPerceive|ybspjs \n -Justifications : ys|Type|Pepper, Pepper|SubClassOf|Agent, ys|hasCapability|qcce, qcce|isCapabilityOf|ys, ys|hasComponent|ogp, ogp|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, ybspjs|Type|Plate, Plate|SubClassOf|Object, ybspjs|hasDisposition|myne, myne|isDispositionOf|ybspjs, ybspjs|hasPart|tgid, tgid|Type|QRTag, QRTag|SubClassOf|ScannablePart, ybspjs|isVisibleBy|ys, ogp|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, ys|hasComponent|ogp, ogp|hasMaximumDistanceRange|integer#58, ybspjs|isAtDistance|integer#27, greaterThan(integer#58,integer#27) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : ekpfs|canPerceive|ztzes \n -Justifications : ekpfs|Type|Pepper, Pepper|SubClassOf|Agent, ekpfs|hasCapability|liib, liib|isCapabilityOf|ekpfs, ekpfs|hasComponent|xo, xo|Type|KinectV2, KinectV2|SubClassOf|Camera, ztzes|Type|Plate, Plate|SubClassOf|Object, ztzes|hasDisposition|ey, ey|isDispositionOf|ztzes, ztzes|hasPart|ajolru, ajolru|Type|QRCode, QRCode|SubClassOf|ScannablePart, ztzes|isVisibleBy|ekpfs, xo|Type|KinectV2, KinectV2|SubClassOf|Camera, ekpfs|hasComponent|xo, xo|hasMaximumDistanceRange|integer#95, ztzes|isAtDistance|integer#21, greaterThan(integer#95,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_3b",
       "selected_classes": [
-        "Pepper",
-        "RGBCamera",
+        "Pr2",
+        "RealsenseL515",
         "2DBarcode",
-        "Cube"
+        "Plate"
       ],
       "selected_names": [
-        "raoz",
-        "aa",
-        "vb",
-        "cdzwf",
-        "uawlqo",
-        "qcf"
+        "zvfaqp",
+        "vtslo",
+        "alrc",
+        "pzrfjs",
+        "wpafkw",
+        "nbwruq"
       ],
-      "question": "-Inference : uawlqo|canPerceive|vb \n -Justifications : uawlqo|Type|Pepper, Pepper|SubClassOf|Agent, uawlqo|hasCapability|aa, aa|isCapabilityOf|uawlqo, uawlqo|hasComponent|cdzwf, cdzwf|Type|RGBCamera, RGBCamera|SubClassOf|Camera, vb|Type|Cube, Cube|SubClassOf|Object, vb|hasDisposition|qcf, qcf|isDispositionOf|vb, vb|hasPart|raoz, raoz|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, vb|isVisibleBy|uawlqo, cdzwf|Type|RGBCamera, RGBCamera|SubClassOf|Camera, uawlqo|hasComponent|cdzwf, cdzwf|hasMaximumDistanceRange|integer#53, vb|isAtDistance|integer#52, greaterThan(integer#53,integer#52) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : pzrfjs|canPerceive|vtslo \n -Justifications : pzrfjs|Type|Pr2, Pr2|SubClassOf|Agent, pzrfjs|hasCapability|zvfaqp, zvfaqp|isCapabilityOf|pzrfjs, pzrfjs|hasComponent|wpafkw, wpafkw|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, vtslo|Type|Plate, Plate|SubClassOf|Object, vtslo|hasDisposition|alrc, alrc|isDispositionOf|vtslo, vtslo|hasPart|nbwruq, nbwruq|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, vtslo|isVisibleBy|pzrfjs, wpafkw|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, pzrfjs|hasComponent|wpafkw, wpafkw|hasMaximumDistanceRange|integer#98, vtslo|isAtDistance|integer#35, greaterThan(integer#98,integer#35) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_4b",
       "selected_classes": [
         "Pepper",
-        "Webcam",
-        "QRCode",
-        "Cube"
+        "KinectV2",
+        "ScanTag",
+        "Plate"
       ],
       "selected_names": [
-        "rbgy",
-        "pmpj",
-        "sapoha",
-        "nfqiv",
-        "nfxxfa",
-        "yvj"
+        "jpw",
+        "nnlxt",
+        "jtlzce",
+        "msj",
+        "mlxmm",
+        "xqxkx"
       ],
-      "question": "-Inference : nfxxfa|canPerceive|sapoha \n -Justifications : nfxxfa|Type|Pepper, Pepper|SubClassOf|Agent, nfxxfa|hasCapability|pmpj, pmpj|isCapabilityOf|nfxxfa, nfxxfa|hasComponent|nfqiv, nfqiv|Type|Webcam, Webcam|SubClassOf|Camera, sapoha|Type|Cube, Cube|SubClassOf|Object, sapoha|hasDisposition|yvj, yvj|isDispositionOf|sapoha, sapoha|hasPart|rbgy, rbgy|Type|QRCode, QRCode|SubClassOf|ScannablePart, sapoha|isVisibleBy|nfxxfa, nfqiv|Type|Webcam, Webcam|SubClassOf|Camera, nfxxfa|hasComponent|nfqiv, nfqiv|hasMaximumDistanceRange|integer#41, sapoha|isAtDistance|integer#36, greaterThan(integer#41,integer#36) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : msj|canPerceive|nnlxt \n -Justifications : msj|Type|Pepper, Pepper|SubClassOf|Agent, msj|hasCapability|jpw, jpw|isCapabilityOf|msj, msj|hasComponent|mlxmm, mlxmm|Type|KinectV2, KinectV2|SubClassOf|Camera, nnlxt|Type|Plate, Plate|SubClassOf|Object, nnlxt|hasDisposition|jtlzce, jtlzce|isDispositionOf|nnlxt, nnlxt|hasPart|xqxkx, xqxkx|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, nnlxt|isVisibleBy|msj, mlxmm|Type|KinectV2, KinectV2|SubClassOf|Camera, msj|hasComponent|mlxmm, mlxmm|hasMaximumDistanceRange|integer#47, nnlxt|isAtDistance|integer#33, greaterThan(integer#47,integer#33) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_5b",
       "selected_classes": [
-        "Tiago",
+        "Pepper",
         "RealsenseL515",
-        "ScanTag",
-        "Box"
+        "2DBarcode",
+        "Book"
       ],
       "selected_names": [
-        "ybr",
-        "goxxg",
-        "furs",
-        "pvu",
-        "prqfmw",
-        "wmhije"
+        "qhjc",
+        "xfrh",
+        "cz",
+        "df",
+        "vtthy",
+        "rflomg"
       ],
-      "question": "-Inference : prqfmw|canPerceive|furs \n -Justifications : prqfmw|Type|Tiago, Tiago|SubClassOf|Agent, prqfmw|hasCapability|goxxg, goxxg|isCapabilityOf|prqfmw, prqfmw|hasComponent|pvu, pvu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, furs|Type|Box, Box|SubClassOf|Object, furs|hasDisposition|wmhije, wmhije|isDispositionOf|furs, furs|hasPart|ybr, ybr|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, furs|isVisibleBy|prqfmw, pvu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, prqfmw|hasComponent|pvu, pvu|hasMaximumDistanceRange|integer#84, furs|isAtDistance|integer#64, greaterThan(integer#84,integer#64) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : df|canPerceive|xfrh \n -Justifications : df|Type|Pepper, Pepper|SubClassOf|Agent, df|hasCapability|qhjc, qhjc|isCapabilityOf|df, df|hasComponent|vtthy, vtthy|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, xfrh|Type|Book, Book|SubClassOf|Object, xfrh|hasDisposition|cz, cz|isDispositionOf|xfrh, xfrh|hasPart|rflomg, rflomg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, xfrh|isVisibleBy|df, vtthy|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, df|hasComponent|vtthy, vtthy|hasMaximumDistanceRange|integer#59, xfrh|isAtDistance|integer#53, greaterThan(integer#59,integer#53) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_6b",
       "selected_classes": [
-        "Pepper",
-        "RGBCamera",
-        "QRTag",
+        "Tiago",
+        "Webcam",
+        "2DBarcode",
         "Box"
       ],
       "selected_names": [
-        "parwd",
-        "khor",
-        "yy",
-        "io",
-        "yilkvs",
-        "qnrdz"
+        "icw",
+        "ara",
+        "zcima",
+        "hpx",
+        "evog",
+        "pyalk"
       ],
-      "question": "-Inference : yilkvs|canPerceive|yy \n -Justifications : yilkvs|Type|Pepper, Pepper|SubClassOf|Agent, yilkvs|hasCapability|khor, khor|isCapabilityOf|yilkvs, yilkvs|hasComponent|io, io|Type|RGBCamera, RGBCamera|SubClassOf|Camera, yy|Type|Box, Box|SubClassOf|Object, yy|hasDisposition|qnrdz, qnrdz|isDispositionOf|yy, yy|hasPart|parwd, parwd|Type|QRTag, QRTag|SubClassOf|ScannablePart, yy|isVisibleBy|yilkvs, io|Type|RGBCamera, RGBCamera|SubClassOf|Camera, yilkvs|hasComponent|io, io|hasMaximumDistanceRange|integer#30, yy|isAtDistance|integer#25, greaterThan(integer#30,integer#25) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : hpx|canPerceive|ara \n -Justifications : hpx|Type|Tiago, Tiago|SubClassOf|Agent, hpx|hasCapability|icw, icw|isCapabilityOf|hpx, hpx|hasComponent|evog, evog|Type|Webcam, Webcam|SubClassOf|Camera, ara|Type|Box, Box|SubClassOf|Object, ara|hasDisposition|zcima, zcima|isDispositionOf|ara, ara|hasPart|pyalk, pyalk|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, ara|isVisibleBy|hpx, evog|Type|Webcam, Webcam|SubClassOf|Camera, hpx|hasComponent|evog, evog|hasMaximumDistanceRange|integer#35, ara|isAtDistance|integer#34, greaterThan(integer#35,integer#34) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_7b",
       "selected_classes": [
         "Tiago",
-        "KinectV2",
-        "2DBarcode",
-        "Book"
-      ],
-      "selected_names": [
-        "wmg",
-        "gpqn",
-        "cegvm",
-        "nmucpq",
-        "rrnh",
-        "iuycuc"
-      ],
-      "question": "-Inference : rrnh|canPerceive|cegvm \n -Justifications : rrnh|Type|Tiago, Tiago|SubClassOf|Agent, rrnh|hasCapability|gpqn, gpqn|isCapabilityOf|rrnh, rrnh|hasComponent|nmucpq, nmucpq|Type|KinectV2, KinectV2|SubClassOf|Camera, cegvm|Type|Book, Book|SubClassOf|Object, cegvm|hasDisposition|iuycuc, iuycuc|isDispositionOf|cegvm, cegvm|hasPart|wmg, wmg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, cegvm|isVisibleBy|rrnh, nmucpq|Type|KinectV2, KinectV2|SubClassOf|Camera, rrnh|hasComponent|nmucpq, nmucpq|hasMaximumDistanceRange|integer#47, cegvm|isAtDistance|integer#13, greaterThan(integer#47,integer#13) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_8b",
-      "selected_classes": [
-        "Robot",
-        "RealsenseL515",
-        "QRTag",
-        "Plate"
-      ],
-      "selected_names": [
-        "nmlqz",
-        "ahkx",
-        "jmifdp",
-        "lg",
-        "ogtycb",
-        "oesyb"
-      ],
-      "question": "-Inference : ogtycb|canPerceive|jmifdp \n -Justifications : ogtycb|Type|Robot, Robot|SubClassOf|Agent, ogtycb|hasCapability|ahkx, ahkx|isCapabilityOf|ogtycb, ogtycb|hasComponent|lg, lg|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, jmifdp|Type|Plate, Plate|SubClassOf|Object, jmifdp|hasDisposition|oesyb, oesyb|isDispositionOf|jmifdp, jmifdp|hasPart|nmlqz, nmlqz|Type|QRTag, QRTag|SubClassOf|ScannablePart, jmifdp|isVisibleBy|ogtycb, lg|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, ogtycb|hasComponent|lg, lg|hasMaximumDistanceRange|integer#60, jmifdp|isAtDistance|integer#14, greaterThan(integer#60,integer#14) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_9b",
-      "selected_classes": [
-        "Pepper",
-        "KinectV2",
-        "ScanTag",
-        "Book"
-      ],
-      "selected_names": [
-        "uvcmd",
-        "on",
-        "dxuj",
-        "jecf",
-        "bd",
-        "tdzvm"
-      ],
-      "question": "-Inference : bd|canPerceive|dxuj \n -Justifications : bd|Type|Pepper, Pepper|SubClassOf|Agent, bd|hasCapability|on, on|isCapabilityOf|bd, bd|hasComponent|jecf, jecf|Type|KinectV2, KinectV2|SubClassOf|Camera, dxuj|Type|Book, Book|SubClassOf|Object, dxuj|hasDisposition|tdzvm, tdzvm|isDispositionOf|dxuj, dxuj|hasPart|uvcmd, uvcmd|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, dxuj|isVisibleBy|bd, jecf|Type|KinectV2, KinectV2|SubClassOf|Camera, bd|hasComponent|jecf, jecf|hasMaximumDistanceRange|integer#60, dxuj|isAtDistance|integer#12, greaterThan(integer#60,integer#12) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_10b",
-      "selected_classes": [
-        "Tiago",
-        "RealsenseL515",
+        "Webcam",
         "2DBarcode",
         "Appliance"
       ],
       "selected_names": [
-        "fpws",
-        "rdbnyv",
-        "hk",
-        "mm",
-        "ue",
-        "ly"
+        "dwk",
+        "bfe",
+        "fxquai",
+        "tr",
+        "qiwva",
+        "kqari"
       ],
-      "question": "-Inference : ue|canPerceive|hk \n -Justifications : ue|Type|Tiago, Tiago|SubClassOf|Agent, ue|hasCapability|rdbnyv, rdbnyv|isCapabilityOf|ue, ue|hasComponent|mm, mm|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, hk|Type|Appliance, Appliance|SubClassOf|Object, hk|hasDisposition|ly, ly|isDispositionOf|hk, hk|hasPart|fpws, fpws|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, hk|isVisibleBy|ue, mm|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, ue|hasComponent|mm, mm|hasMaximumDistanceRange|integer#85, hk|isAtDistance|integer#55, greaterThan(integer#85,integer#55) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : tr|canPerceive|bfe \n -Justifications : tr|Type|Tiago, Tiago|SubClassOf|Agent, tr|hasCapability|dwk, dwk|isCapabilityOf|tr, tr|hasComponent|qiwva, qiwva|Type|Webcam, Webcam|SubClassOf|Camera, bfe|Type|Appliance, Appliance|SubClassOf|Object, bfe|hasDisposition|fxquai, fxquai|isDispositionOf|bfe, bfe|hasPart|kqari, kqari|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, bfe|isVisibleBy|tr, qiwva|Type|Webcam, Webcam|SubClassOf|Camera, tr|hasComponent|qiwva, qiwva|hasMaximumDistanceRange|integer#89, bfe|isAtDistance|integer#50, greaterThan(integer#89,integer#50) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
-      "id": "q_canPerceive_easy_11b",
-      "selected_classes": [
-        "Tiago",
-        "RealsenseL515",
-        "2DBarcode",
-        "Table"
-      ],
-      "selected_names": [
-        "zjtgx",
-        "gixb",
-        "yx",
-        "ndstu",
-        "tpphn",
-        "ivy"
-      ],
-      "question": "-Inference : tpphn|canPerceive|yx \n -Justifications : tpphn|Type|Tiago, Tiago|SubClassOf|Agent, tpphn|hasCapability|gixb, gixb|isCapabilityOf|tpphn, tpphn|hasComponent|ndstu, ndstu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, yx|Type|Table, Table|SubClassOf|Object, yx|hasDisposition|ivy, ivy|isDispositionOf|yx, yx|hasPart|zjtgx, zjtgx|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, yx|isVisibleBy|tpphn, ndstu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, tpphn|hasComponent|ndstu, ndstu|hasMaximumDistanceRange|integer#35, yx|isAtDistance|integer#12, greaterThan(integer#35,integer#12) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_12b",
+      "id": "q_canPerceive_easy_8b",
       "selected_classes": [
         "Pr2",
+        "RealsenseL515",
+        "QRCode",
+        "Cube"
+      ],
+      "selected_names": [
+        "hysxn",
+        "eblbm",
+        "csw",
+        "jdflzd",
+        "vb",
+        "qgw"
+      ],
+      "question": "-Inference : jdflzd|canPerceive|eblbm \n -Justifications : jdflzd|Type|Pr2, Pr2|SubClassOf|Agent, jdflzd|hasCapability|hysxn, hysxn|isCapabilityOf|jdflzd, jdflzd|hasComponent|vb, vb|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, eblbm|Type|Cube, Cube|SubClassOf|Object, eblbm|hasDisposition|csw, csw|isDispositionOf|eblbm, eblbm|hasPart|qgw, qgw|Type|QRCode, QRCode|SubClassOf|ScannablePart, eblbm|isVisibleBy|jdflzd, vb|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, jdflzd|hasComponent|vb, vb|hasMaximumDistanceRange|integer#67, eblbm|isAtDistance|integer#15, greaterThan(integer#67,integer#15) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_9b",
+      "selected_classes": [
+        "Pr2",
+        "KinectV2",
+        "2DBarcode",
+        "Appliance"
+      ],
+      "selected_names": [
+        "sr",
+        "ezhzwp",
+        "ui",
+        "ef",
+        "qe",
+        "vgd"
+      ],
+      "question": "-Inference : ef|canPerceive|ezhzwp \n -Justifications : ef|Type|Pr2, Pr2|SubClassOf|Agent, ef|hasCapability|sr, sr|isCapabilityOf|ef, ef|hasComponent|qe, qe|Type|KinectV2, KinectV2|SubClassOf|Camera, ezhzwp|Type|Appliance, Appliance|SubClassOf|Object, ezhzwp|hasDisposition|ui, ui|isDispositionOf|ezhzwp, ezhzwp|hasPart|vgd, vgd|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, ezhzwp|isVisibleBy|ef, qe|Type|KinectV2, KinectV2|SubClassOf|Camera, ef|hasComponent|qe, qe|hasMaximumDistanceRange|integer#85, ezhzwp|isAtDistance|integer#45, greaterThan(integer#85,integer#45) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_10b",
+      "selected_classes": [
+        "Robot",
         "RGBCamera",
         "QRTag",
         "Luggage"
       ],
       "selected_names": [
-        "ddpzjl",
-        "mernkl",
-        "adg",
-        "ucuozo",
-        "xl",
-        "hqpxi"
+        "hccozp",
+        "zcy",
+        "udkan",
+        "xkxke",
+        "ta",
+        "mxyzvb"
       ],
-      "question": "-Inference : xl|canPerceive|adg \n -Justifications : xl|Type|Pr2, Pr2|SubClassOf|Agent, xl|hasCapability|mernkl, mernkl|isCapabilityOf|xl, xl|hasComponent|ucuozo, ucuozo|Type|RGBCamera, RGBCamera|SubClassOf|Camera, adg|Type|Luggage, Luggage|SubClassOf|Object, adg|hasDisposition|hqpxi, hqpxi|isDispositionOf|adg, adg|hasPart|ddpzjl, ddpzjl|Type|QRTag, QRTag|SubClassOf|ScannablePart, adg|isVisibleBy|xl, ucuozo|Type|RGBCamera, RGBCamera|SubClassOf|Camera, xl|hasComponent|ucuozo, ucuozo|hasMaximumDistanceRange|integer#44, adg|isAtDistance|integer#29, greaterThan(integer#44,integer#29) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : xkxke|canPerceive|zcy \n -Justifications : xkxke|Type|Robot, Robot|SubClassOf|Agent, xkxke|hasCapability|hccozp, hccozp|isCapabilityOf|xkxke, xkxke|hasComponent|ta, ta|Type|RGBCamera, RGBCamera|SubClassOf|Camera, zcy|Type|Luggage, Luggage|SubClassOf|Object, zcy|hasDisposition|udkan, udkan|isDispositionOf|zcy, zcy|hasPart|mxyzvb, mxyzvb|Type|QRTag, QRTag|SubClassOf|ScannablePart, zcy|isVisibleBy|xkxke, ta|Type|RGBCamera, RGBCamera|SubClassOf|Camera, xkxke|hasComponent|ta, ta|hasMaximumDistanceRange|integer#71, zcy|isAtDistance|integer#68, greaterThan(integer#71,integer#68) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_11b",
+      "selected_classes": [
+        "Pepper",
+        "KinectV2",
+        "ScanTag",
+        "Book"
+      ],
+      "selected_names": [
+        "whnmks",
+        "kczw",
+        "zradox",
+        "ko",
+        "cylr",
+        "vih"
+      ],
+      "question": "-Inference : ko|canPerceive|kczw \n -Justifications : ko|Type|Pepper, Pepper|SubClassOf|Agent, ko|hasCapability|whnmks, whnmks|isCapabilityOf|ko, ko|hasComponent|cylr, cylr|Type|KinectV2, KinectV2|SubClassOf|Camera, kczw|Type|Book, Book|SubClassOf|Object, kczw|hasDisposition|zradox, zradox|isDispositionOf|kczw, kczw|hasPart|vih, vih|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, kczw|isVisibleBy|ko, cylr|Type|KinectV2, KinectV2|SubClassOf|Camera, ko|hasComponent|cylr, cylr|hasMaximumDistanceRange|integer#22, kczw|isAtDistance|integer#21, greaterThan(integer#22,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_12b",
+      "selected_classes": [
+        "Pepper",
+        "Webcam",
+        "QRCode",
+        "Plate"
+      ],
+      "selected_names": [
+        "vhbz",
+        "dlqg",
+        "ivp",
+        "pyemet",
+        "vjqtgp",
+        "zsph"
+      ],
+      "question": "-Inference : pyemet|canPerceive|dlqg \n -Justifications : pyemet|Type|Pepper, Pepper|SubClassOf|Agent, pyemet|hasCapability|vhbz, vhbz|isCapabilityOf|pyemet, pyemet|hasComponent|vjqtgp, vjqtgp|Type|Webcam, Webcam|SubClassOf|Camera, dlqg|Type|Plate, Plate|SubClassOf|Object, dlqg|hasDisposition|ivp, ivp|isDispositionOf|dlqg, dlqg|hasPart|zsph, zsph|Type|QRCode, QRCode|SubClassOf|ScannablePart, dlqg|isVisibleBy|pyemet, vjqtgp|Type|Webcam, Webcam|SubClassOf|Camera, pyemet|hasComponent|vjqtgp, vjqtgp|hasMaximumDistanceRange|integer#47, dlqg|isAtDistance|integer#42, greaterThan(integer#47,integer#42) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_13b",
       "selected_classes": [
-        "Pepper",
-        "RealsenseD435i",
-        "QRTag",
-        "Book"
-      ],
-      "selected_names": [
-        "lpjedn",
-        "vmer",
-        "vuttc",
-        "hzyrc",
-        "boxey",
-        "ogfuyp"
-      ],
-      "question": "-Inference : boxey|canPerceive|vuttc \n -Justifications : boxey|Type|Pepper, Pepper|SubClassOf|Agent, boxey|hasCapability|vmer, vmer|isCapabilityOf|boxey, boxey|hasComponent|hzyrc, hzyrc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, vuttc|Type|Book, Book|SubClassOf|Object, vuttc|hasDisposition|ogfuyp, ogfuyp|isDispositionOf|vuttc, vuttc|hasPart|lpjedn, lpjedn|Type|QRTag, QRTag|SubClassOf|ScannablePart, vuttc|isVisibleBy|boxey, hzyrc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, boxey|hasComponent|hzyrc, hzyrc|hasMaximumDistanceRange|integer#75, vuttc|isAtDistance|integer#14, greaterThan(integer#75,integer#14) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_14b",
-      "selected_classes": [
-        "Robot",
-        "RGBCamera",
-        "ScanTag",
-        "Plate"
-      ],
-      "selected_names": [
-        "pix",
-        "dxgmth",
-        "gijfjw",
-        "ufrhs",
-        "bvy",
-        "onm"
-      ],
-      "question": "-Inference : bvy|canPerceive|gijfjw \n -Justifications : bvy|Type|Robot, Robot|SubClassOf|Agent, bvy|hasCapability|dxgmth, dxgmth|isCapabilityOf|bvy, bvy|hasComponent|ufrhs, ufrhs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, gijfjw|Type|Plate, Plate|SubClassOf|Object, gijfjw|hasDisposition|onm, onm|isDispositionOf|gijfjw, gijfjw|hasPart|pix, pix|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, gijfjw|isVisibleBy|bvy, ufrhs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, bvy|hasComponent|ufrhs, ufrhs|hasMaximumDistanceRange|integer#93, gijfjw|isAtDistance|integer#55, greaterThan(integer#93,integer#55) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_15b",
-      "selected_classes": [
         "Pr2",
-        "RealsenseD435i",
-        "QRTag",
-        "Book"
-      ],
-      "selected_names": [
-        "qiyzsp",
-        "eyoch",
-        "fa",
-        "yzmby",
-        "xi",
-        "eq"
-      ],
-      "question": "-Inference : xi|canPerceive|fa \n -Justifications : xi|Type|Pr2, Pr2|SubClassOf|Agent, xi|hasCapability|eyoch, eyoch|isCapabilityOf|xi, xi|hasComponent|yzmby, yzmby|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, fa|Type|Book, Book|SubClassOf|Object, fa|hasDisposition|eq, eq|isDispositionOf|fa, fa|hasPart|qiyzsp, qiyzsp|Type|QRTag, QRTag|SubClassOf|ScannablePart, fa|isVisibleBy|xi, yzmby|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, xi|hasComponent|yzmby, yzmby|hasMaximumDistanceRange|integer#88, fa|isAtDistance|integer#44, greaterThan(integer#88,integer#44) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-    },
-    {
-      "id": "q_canPerceive_easy_16b",
-      "selected_classes": [
-        "Tiago",
         "RGBCamera",
         "2DBarcode",
         "Appliance"
       ],
       "selected_names": [
-        "zh",
-        "csfxme",
-        "vpjjb",
-        "mpeus",
-        "uifqri",
-        "ugjc"
+        "ill",
+        "rejf",
+        "ps",
+        "lqcxbs",
+        "swjs",
+        "qxy"
       ],
-      "question": "-Inference : uifqri|canPerceive|vpjjb \n -Justifications : uifqri|Type|Tiago, Tiago|SubClassOf|Agent, uifqri|hasCapability|csfxme, csfxme|isCapabilityOf|uifqri, uifqri|hasComponent|mpeus, mpeus|Type|RGBCamera, RGBCamera|SubClassOf|Camera, vpjjb|Type|Appliance, Appliance|SubClassOf|Object, vpjjb|hasDisposition|ugjc, ugjc|isDispositionOf|vpjjb, vpjjb|hasPart|zh, zh|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, vpjjb|isVisibleBy|uifqri, mpeus|Type|RGBCamera, RGBCamera|SubClassOf|Camera, uifqri|hasComponent|mpeus, mpeus|hasMaximumDistanceRange|integer#39, vpjjb|isAtDistance|integer#21, greaterThan(integer#39,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : lqcxbs|canPerceive|rejf \n -Justifications : lqcxbs|Type|Pr2, Pr2|SubClassOf|Agent, lqcxbs|hasCapability|ill, ill|isCapabilityOf|lqcxbs, lqcxbs|hasComponent|swjs, swjs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, rejf|Type|Appliance, Appliance|SubClassOf|Object, rejf|hasDisposition|ps, ps|isDispositionOf|rejf, rejf|hasPart|qxy, qxy|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, rejf|isVisibleBy|lqcxbs, swjs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, lqcxbs|hasComponent|swjs, swjs|hasMaximumDistanceRange|integer#77, rejf|isAtDistance|integer#71, greaterThan(integer#77,integer#71) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_14b",
+      "selected_classes": [
+        "Pr2",
+        "KinectV2",
+        "2DBarcode",
+        "Book"
+      ],
+      "selected_names": [
+        "acoz",
+        "lkrc",
+        "lhe",
+        "cplhu",
+        "rczr",
+        "jr"
+      ],
+      "question": "-Inference : cplhu|canPerceive|lkrc \n -Justifications : cplhu|Type|Pr2, Pr2|SubClassOf|Agent, cplhu|hasCapability|acoz, acoz|isCapabilityOf|cplhu, cplhu|hasComponent|rczr, rczr|Type|KinectV2, KinectV2|SubClassOf|Camera, lkrc|Type|Book, Book|SubClassOf|Object, lkrc|hasDisposition|lhe, lhe|isDispositionOf|lkrc, lkrc|hasPart|jr, jr|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, lkrc|isVisibleBy|cplhu, rczr|Type|KinectV2, KinectV2|SubClassOf|Camera, cplhu|hasComponent|rczr, rczr|hasMaximumDistanceRange|integer#79, lkrc|isAtDistance|integer#27, greaterThan(integer#79,integer#27) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_15b",
+      "selected_classes": [
+        "Robot",
+        "RGBCamera",
+        "2DBarcode",
+        "Cube"
+      ],
+      "selected_names": [
+        "cu",
+        "dja",
+        "vasoeg",
+        "tn",
+        "ba",
+        "dle"
+      ],
+      "question": "-Inference : tn|canPerceive|dja \n -Justifications : tn|Type|Robot, Robot|SubClassOf|Agent, tn|hasCapability|cu, cu|isCapabilityOf|tn, tn|hasComponent|ba, ba|Type|RGBCamera, RGBCamera|SubClassOf|Camera, dja|Type|Cube, Cube|SubClassOf|Object, dja|hasDisposition|vasoeg, vasoeg|isDispositionOf|dja, dja|hasPart|dle, dle|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, dja|isVisibleBy|tn, ba|Type|RGBCamera, RGBCamera|SubClassOf|Camera, tn|hasComponent|ba, ba|hasMaximumDistanceRange|integer#49, dja|isAtDistance|integer#16, greaterThan(integer#49,integer#16) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+    },
+    {
+      "id": "q_canPerceive_easy_16b",
+      "selected_classes": [
+        "Pepper",
+        "Webcam",
+        "ScanTag",
+        "Appliance"
+      ],
+      "selected_names": [
+        "jxzkoc",
+        "hzzdjd",
+        "nvmdk",
+        "hzmix",
+        "hdqjie",
+        "mha"
+      ],
+      "question": "-Inference : hzmix|canPerceive|hzzdjd \n -Justifications : hzmix|Type|Pepper, Pepper|SubClassOf|Agent, hzmix|hasCapability|jxzkoc, jxzkoc|isCapabilityOf|hzmix, hzmix|hasComponent|hdqjie, hdqjie|Type|Webcam, Webcam|SubClassOf|Camera, hzzdjd|Type|Appliance, Appliance|SubClassOf|Object, hzzdjd|hasDisposition|nvmdk, nvmdk|isDispositionOf|hzzdjd, hzzdjd|hasPart|mha, mha|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, hzzdjd|isVisibleBy|hzmix, hdqjie|Type|Webcam, Webcam|SubClassOf|Camera, hzmix|hasComponent|hdqjie, hdqjie|hasMaximumDistanceRange|integer#27, hzzdjd|isAtDistance|integer#13, greaterThan(integer#27,integer#13) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_17b",
       "selected_classes": [
-        "Pr2",
+        "Tiago",
         "RealsenseD435i",
-        "2DBarcode",
+        "QRTag",
         "Box"
       ],
       "selected_names": [
-        "yg",
-        "utlhkg",
-        "xh",
-        "vlmc",
-        "joal",
-        "omuax"
+        "yeew",
+        "xwvkw",
+        "wjcu",
+        "wi",
+        "yd",
+        "ar"
       ],
-      "question": "-Inference : joal|canPerceive|xh \n -Justifications : joal|Type|Pr2, Pr2|SubClassOf|Agent, joal|hasCapability|utlhkg, utlhkg|isCapabilityOf|joal, joal|hasComponent|vlmc, vlmc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, xh|Type|Box, Box|SubClassOf|Object, xh|hasDisposition|omuax, omuax|isDispositionOf|xh, xh|hasPart|yg, yg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, xh|isVisibleBy|joal, vlmc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, joal|hasComponent|vlmc, vlmc|hasMaximumDistanceRange|integer#90, xh|isAtDistance|integer#88, greaterThan(integer#90,integer#88) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : wi|canPerceive|xwvkw \n -Justifications : wi|Type|Tiago, Tiago|SubClassOf|Agent, wi|hasCapability|yeew, yeew|isCapabilityOf|wi, wi|hasComponent|yd, yd|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, xwvkw|Type|Box, Box|SubClassOf|Object, xwvkw|hasDisposition|wjcu, wjcu|isDispositionOf|xwvkw, xwvkw|hasPart|ar, ar|Type|QRTag, QRTag|SubClassOf|ScannablePart, xwvkw|isVisibleBy|wi, yd|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, wi|hasComponent|yd, yd|hasMaximumDistanceRange|integer#98, xwvkw|isAtDistance|integer#19, greaterThan(integer#98,integer#19) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_18b",
       "selected_classes": [
-        "Tiago",
-        "Webcam",
+        "Pepper",
+        "RealsenseD435i",
         "ScanTag",
-        "Book"
+        "Luggage"
       ],
       "selected_names": [
-        "pu",
-        "xunze",
-        "co",
-        "jkizn",
-        "qtavgm",
-        "bfqc"
+        "szlwz",
+        "jxrpd",
+        "azhwkb",
+        "kgtq",
+        "uznn",
+        "wnegx"
       ],
-      "question": "-Inference : qtavgm|canPerceive|co \n -Justifications : qtavgm|Type|Tiago, Tiago|SubClassOf|Agent, qtavgm|hasCapability|xunze, xunze|isCapabilityOf|qtavgm, qtavgm|hasComponent|jkizn, jkizn|Type|Webcam, Webcam|SubClassOf|Camera, co|Type|Book, Book|SubClassOf|Object, co|hasDisposition|bfqc, bfqc|isDispositionOf|co, co|hasPart|pu, pu|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, co|isVisibleBy|qtavgm, jkizn|Type|Webcam, Webcam|SubClassOf|Camera, qtavgm|hasComponent|jkizn, jkizn|hasMaximumDistanceRange|integer#98, co|isAtDistance|integer#85, greaterThan(integer#98,integer#85) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : kgtq|canPerceive|jxrpd \n -Justifications : kgtq|Type|Pepper, Pepper|SubClassOf|Agent, kgtq|hasCapability|szlwz, szlwz|isCapabilityOf|kgtq, kgtq|hasComponent|uznn, uznn|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, jxrpd|Type|Luggage, Luggage|SubClassOf|Object, jxrpd|hasDisposition|azhwkb, azhwkb|isDispositionOf|jxrpd, jxrpd|hasPart|wnegx, wnegx|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, jxrpd|isVisibleBy|kgtq, uznn|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, kgtq|hasComponent|uznn, uznn|hasMaximumDistanceRange|integer#90, jxrpd|isAtDistance|integer#41, greaterThan(integer#90,integer#41) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     },
     {
       "id": "q_canPerceive_easy_19b",
       "selected_classes": [
         "Tiago",
-        "Webcam",
-        "ScanTag",
-        "Book"
+        "KinectV2",
+        "QRTag",
+        "Appliance"
       ],
       "selected_names": [
-        "vhv",
-        "dr",
-        "dsmn",
-        "zw",
-        "hfkl",
-        "hxgay"
+        "pv",
+        "xq",
+        "scd",
+        "msst",
+        "nlbaq",
+        "zbb"
       ],
-      "question": "-Inference : hfkl|canPerceive|dsmn \n -Justifications : hfkl|Type|Tiago, Tiago|SubClassOf|Agent, hfkl|hasCapability|dr, dr|isCapabilityOf|hfkl, hfkl|hasComponent|zw, zw|Type|Webcam, Webcam|SubClassOf|Camera, dsmn|Type|Book, Book|SubClassOf|Object, dsmn|hasDisposition|hxgay, hxgay|isDispositionOf|dsmn, dsmn|hasPart|vhv, vhv|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, dsmn|isVisibleBy|hfkl, zw|Type|Webcam, Webcam|SubClassOf|Camera, hfkl|hasComponent|zw, zw|hasMaximumDistanceRange|integer#78, dsmn|isAtDistance|integer#67, greaterThan(integer#78,integer#67) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
+      "question": "-Inference : msst|canPerceive|xq \n -Justifications : msst|Type|Tiago, Tiago|SubClassOf|Agent, msst|hasCapability|pv, pv|isCapabilityOf|msst, msst|hasComponent|nlbaq, nlbaq|Type|KinectV2, KinectV2|SubClassOf|Camera, xq|Type|Appliance, Appliance|SubClassOf|Object, xq|hasDisposition|scd, scd|isDispositionOf|xq, xq|hasPart|zbb, zbb|Type|QRTag, QRTag|SubClassOf|ScannablePart, xq|isVisibleBy|msst, nlbaq|Type|KinectV2, KinectV2|SubClassOf|Camera, msst|hasComponent|nlbaq, nlbaq|hasMaximumDistanceRange|integer#82, xq|isAtDistance|integer#70, greaterThan(integer#82,integer#70) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
     }
   ]
 }

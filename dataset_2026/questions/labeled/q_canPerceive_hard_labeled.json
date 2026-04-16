@@ -54,7 +54,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : robot_jih|canSpeakWith|human_pchbyk\n-Justifications : robot_jih|Type|Robot, robot_jih|hasCapability|robot_capa_nhbhmg, robot_capa_nhbhmg|Type|VerbalCommunicationCapability,\\ human_pchbyk|Type|Human, human_pchbyk|hasDisposition|human_disp_frj, human_disp_frj|Type|VerbalCommunicationDisposition, robot_jih|isFacing|human_pchbyk, human_pchbyk|isAvailable|boolean#true, robot_jih|isInFrontOf|object_wtbrl, object_wtbrl|hasAgentSeatedOn|human_pchbyk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
+      "content": "-Inference : robot_gu|canSpeakWith|human_zvk\n-Justifications : robot_gu|Type|Robot, robot_gu|hasCapability|robot_capa_kitw, robot_capa_kitw|Type|VerbalCommunicationCapability, human_zvk|Type|Human, human_zvk|hasDisposition|human_disp_roro, human_disp_roro|Type|VerbalCommunicationDisposition, robot_gu|isFacing|human_zvk, human_zvk|isAvailable|boolean#true, robot_gu|isInFrontOf|object_kkwbej, object_kkwbej|hasAgentSeatedOn|human_zvk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
     },
     {
       "role": "assistant",
@@ -62,7 +62,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : car_lgvee|canBeTowedBy|vehicule_va\n-Justifications : vehicule_va|Type|Vehicle, vehicule_va|hasCapability|vehicule_capa_fidzjg, vehicule_capa_fidzjg|Type|TowingCapability, car_lgvee|Type|Car, Car|SubClassOf|Towable, car_lgvee|hasWeight|integer#2000, vehicule_va|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
+      "content": "-Inference : car_fzbt|canBeTowedBy|vehicule_eavkgt\n-Justifications : vehicule_eavkgt|Type|Vehicle, vehicule_eavkgt|hasCapability|vehicule_capa_lzj, vehicule_capa_lzj|Type|TowingCapability, car_fzbt|Type|Car, Car|SubClassOf|Towable, car_fzbt|hasWeight|integer#2000, vehicule_eavkgt|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
     },
     {
       "role": "assistant",
@@ -70,7 +70,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : drone_dj|canInspect|bridge_kjbhb\n-Justifications : drone_dj|Type|Drone, drone_dj|hasCapability|drone_capa_igitb, drone_capa_igitb|Type|AerialInspectionCapability, bridge_kjbhb|Type|Bridge, Bridge|SubClassOf|Inspectable, bridge_kjbhb|hasHeight|integer#100, drone_dj|hasMaxInspectionHeight|integer#200, drone_capa_igitb|isCapabilityOf|drone_dj, drone_dj|hasCamera|camera_audeha, camera_audeha|Type|SecurityCamera, drone_capa_igitb|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
+      "content": "-Inference : drone_hfbzx|canInspect|bridge_eovov\n-Justifications : drone_hfbzx|Type|Drone, drone_hfbzx|hasCapability|drone_capa_vean, drone_capa_vean|Type|AerialInspectionCapability, bridge_eovov|Type|Bridge, Bridge|SubClassOf|Inspectable, bridge_eovov|hasHeight|integer#100, drone_hfbzx|hasMaxInspectionHeight|integer#200, drone_capa_vean|isCapabilityOf|drone_hfbzx, drone_hfbzx|hasCamera|camera_eycgfn, camera_eycgfn|Type|SecurityCamera, drone_capa_vean|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
     },
     {
       "role": "assistant",
@@ -78,7 +78,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : robot_aek|canChargeAt|charging_station_ll\n-Justifications : robot_aek|Type|DeliveryRobot, robot_aek|hasCapability|robot_capa_hizq, robot_capa_hizq|Type|ChargingCapability, charging_station_ll|Type|ChargingStation, charging_station_ll|hasPort|station_port_ktn, station_port_ktn|Type|ChargingConnector, charging_station_ll|isPowered|boolean#true, robot_aek|hasBatteryLevel|integer#15, robot_aek|hasBatteryThresholdForCharging|integer#20), robot_aek|hasChargingConnector|robot_part_inj, robot_part_inj|hasType|string#USB_TypeC, station_port_ktn|hasType|string#USB_TypeC, robot_capa_hizq|isCapabilityOf|robot_aek, robot_aek|hasComponent|robot_part_inj, robot_part_inj|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
+      "content": "-Inference : robot_jodgbx|canChargeAt|charging_station_ih\n-Justifications : robot_jodgbx|Type|DeliveryRobot, robot_jodgbx|hasCapability|robot_capa_xn, robot_capa_xn|Type|ChargingCapability, charging_station_ih|Type|ChargingStation, charging_station_ih|hasPort|station_port_jlbsv, station_port_jlbsv|Type|ChargingConnector, charging_station_ih|isPowered|boolean#true, robot_jodgbx|hasBatteryLevel|integer#15, robot_jodgbx|hasBatteryThresholdForCharging|integer#20), robot_jodgbx|hasChargingConnector|robot_part_vqoos, robot_part_vqoos|hasType|string#USB_TypeC, station_port_jlbsv|hasType|string#USB_TypeC, robot_capa_xn|isCapabilityOf|robot_jodgbx, robot_jodgbx|hasComponent|robot_part_vqoos, robot_part_vqoos|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
     },
     {
       "role": "assistant",
@@ -89,382 +89,382 @@
     {
       "id": "q_canPerceive_hard_0l",
       "selected_classes": [
-        "Pr2",
-        "RGBCamera",
-        "QRTag",
-        "Plate"
+        "Robot",
+        "KinectV2",
+        "2DBarcode",
+        "Book"
       ],
       "selected_names": [
-        "scannable_part_vayv",
-        "agent_capa_vwxcnb",
-        "object_ms",
-        "camera_slmt",
-        "algo_rlr",
-        "agent_lhoom",
-        "object_disp_vzwu"
+        "agent_capa_tlpns",
+        "object_vjimq",
+        "object_disp_rysvl",
+        "agent_rmmrsb",
+        "camera_njgpb",
+        "scannable_part_wl",
+        "algo_owvjlx"
       ],
-      "question": "-Inference : agent_lhoom|canPerceive|object_ms \n -Justifications : agent_lhoom|Type|Pr2, Pr2|SubClassOf|Agent, agent_lhoom|hasCapability|agent_capa_vwxcnb, agent_capa_vwxcnb|isCapabilityOf|agent_lhoom, agent_lhoom|hasComponent|camera_slmt, camera_slmt|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_slmt|isActive|boolean#true, agent_lhoom|hasComponent|algo_rlr, algo_rlr|Type|ScanCodeDetectionAlgo, object_ms|Type|Plate, Plate|SubClassOf|Object, object_ms|hasDisposition|object_disp_vzwu, object_disp_vzwu|isDispositionOf|object_ms, object_ms|hasPart|scannable_part_vayv, scannable_part_vayv|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_vayv|isRegistered|boolean#true, scannable_part_vayv|isVisible|boolean#true, object_ms|hasScannableCode|scannable_part_vayv, scannable_part_vayv|isInFrontOf|camera_slmt, camera_slmt|isCameraOf|agent_lhoom, camera_slmt|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_lhoom|hasComponent|camera_slmt, camera_slmt|hasMaximumDistanceRange|integer#53, object_ms|isAtDistance|integer#36, greaterThan(integer#53,integer#36) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_rmmrsb|canPerceive|object_vjimq \n -Justifications : agent_rmmrsb|Type|Robot, Robot|SubClassOf|Agent, agent_rmmrsb|hasCapability|agent_capa_tlpns, agent_capa_tlpns|isCapabilityOf|agent_rmmrsb, agent_rmmrsb|hasComponent|camera_njgpb, camera_njgpb|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_njgpb|isActive|boolean#true, agent_rmmrsb|hasComponent|algo_owvjlx, algo_owvjlx|Type|ScanCodeDetectionAlgo, object_vjimq|Type|Book, Book|SubClassOf|Object, object_vjimq|hasDisposition|object_disp_rysvl, object_disp_rysvl|isDispositionOf|object_vjimq, object_vjimq|hasPart|scannable_part_wl, scannable_part_wl|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_wl|isRegistered|boolean#true, scannable_part_wl|isVisible|boolean#true, object_vjimq|hasScannableCode|scannable_part_wl, scannable_part_wl|isInFrontOf|camera_njgpb, camera_njgpb|isCameraOf|agent_rmmrsb, camera_njgpb|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_rmmrsb|hasComponent|camera_njgpb, camera_njgpb|hasMaximumDistanceRange|integer#90, object_vjimq|isAtDistance|integer#59, greaterThan(integer#90,integer#59) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_1l",
       "selected_classes": [
-        "Pr2",
-        "RealsenseD435i",
-        "ScanTag",
+        "Tiago",
+        "RGBCamera",
+        "QRCode",
         "Luggage"
       ],
       "selected_names": [
-        "scannable_part_ra",
-        "agent_capa_fcz",
-        "object_zbppx",
-        "camera_klo",
-        "algo_xkudl",
-        "agent_fbwdyi",
-        "object_disp_ihma"
+        "agent_capa_wtkncc",
+        "object_jnnni",
+        "object_disp_gxwqv",
+        "agent_lvvqzy",
+        "camera_jhxqep",
+        "scannable_part_tpt",
+        "algo_tp"
       ],
-      "question": "-Inference : agent_fbwdyi|canPerceive|object_zbppx \n -Justifications : agent_fbwdyi|Type|Pr2, Pr2|SubClassOf|Agent, agent_fbwdyi|hasCapability|agent_capa_fcz, agent_capa_fcz|isCapabilityOf|agent_fbwdyi, agent_fbwdyi|hasComponent|camera_klo, camera_klo|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_klo|isActive|boolean#true, agent_fbwdyi|hasComponent|algo_xkudl, algo_xkudl|Type|ScanCodeDetectionAlgo, object_zbppx|Type|Luggage, Luggage|SubClassOf|Object, object_zbppx|hasDisposition|object_disp_ihma, object_disp_ihma|isDispositionOf|object_zbppx, object_zbppx|hasPart|scannable_part_ra, scannable_part_ra|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_ra|isRegistered|boolean#true, scannable_part_ra|isVisible|boolean#true, object_zbppx|hasScannableCode|scannable_part_ra, scannable_part_ra|isInFrontOf|camera_klo, camera_klo|isCameraOf|agent_fbwdyi, camera_klo|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_fbwdyi|hasComponent|camera_klo, camera_klo|hasMaximumDistanceRange|integer#61, object_zbppx|isAtDistance|integer#31, greaterThan(integer#61,integer#31) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_lvvqzy|canPerceive|object_jnnni \n -Justifications : agent_lvvqzy|Type|Tiago, Tiago|SubClassOf|Agent, agent_lvvqzy|hasCapability|agent_capa_wtkncc, agent_capa_wtkncc|isCapabilityOf|agent_lvvqzy, agent_lvvqzy|hasComponent|camera_jhxqep, camera_jhxqep|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_jhxqep|isActive|boolean#true, agent_lvvqzy|hasComponent|algo_tp, algo_tp|Type|ScanCodeDetectionAlgo, object_jnnni|Type|Luggage, Luggage|SubClassOf|Object, object_jnnni|hasDisposition|object_disp_gxwqv, object_disp_gxwqv|isDispositionOf|object_jnnni, object_jnnni|hasPart|scannable_part_tpt, scannable_part_tpt|Type|QRCode, QRCode|SubClassOf|ScannablePart, scannable_part_tpt|isRegistered|boolean#true, scannable_part_tpt|isVisible|boolean#true, object_jnnni|hasScannableCode|scannable_part_tpt, scannable_part_tpt|isInFrontOf|camera_jhxqep, camera_jhxqep|isCameraOf|agent_lvvqzy, camera_jhxqep|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_lvvqzy|hasComponent|camera_jhxqep, camera_jhxqep|hasMaximumDistanceRange|integer#87, object_jnnni|isAtDistance|integer#61, greaterThan(integer#87,integer#61) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_2l",
       "selected_classes": [
         "Pepper",
-        "RealsenseL515",
-        "QRTag",
+        "KinectV2",
+        "QRCode",
         "Plate"
       ],
       "selected_names": [
-        "scannable_part_tgid",
-        "agent_capa_qcce",
-        "object_ybspjs",
-        "camera_ogp",
-        "algo_cogae",
-        "agent_ys",
-        "object_disp_myne"
+        "agent_capa_liib",
+        "object_ztzes",
+        "object_disp_ey",
+        "agent_ekpfs",
+        "camera_xo",
+        "scannable_part_ajolru",
+        "algo_oaq"
       ],
-      "question": "-Inference : agent_ys|canPerceive|object_ybspjs \n -Justifications : agent_ys|Type|Pepper, Pepper|SubClassOf|Agent, agent_ys|hasCapability|agent_capa_qcce, agent_capa_qcce|isCapabilityOf|agent_ys, agent_ys|hasComponent|camera_ogp, camera_ogp|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_ogp|isActive|boolean#true, agent_ys|hasComponent|algo_cogae, algo_cogae|Type|ScanCodeDetectionAlgo, object_ybspjs|Type|Plate, Plate|SubClassOf|Object, object_ybspjs|hasDisposition|object_disp_myne, object_disp_myne|isDispositionOf|object_ybspjs, object_ybspjs|hasPart|scannable_part_tgid, scannable_part_tgid|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_tgid|isRegistered|boolean#true, scannable_part_tgid|isVisible|boolean#true, object_ybspjs|hasScannableCode|scannable_part_tgid, scannable_part_tgid|isInFrontOf|camera_ogp, camera_ogp|isCameraOf|agent_ys, camera_ogp|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_ys|hasComponent|camera_ogp, camera_ogp|hasMaximumDistanceRange|integer#58, object_ybspjs|isAtDistance|integer#27, greaterThan(integer#58,integer#27) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_ekpfs|canPerceive|object_ztzes \n -Justifications : agent_ekpfs|Type|Pepper, Pepper|SubClassOf|Agent, agent_ekpfs|hasCapability|agent_capa_liib, agent_capa_liib|isCapabilityOf|agent_ekpfs, agent_ekpfs|hasComponent|camera_xo, camera_xo|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_xo|isActive|boolean#true, agent_ekpfs|hasComponent|algo_oaq, algo_oaq|Type|ScanCodeDetectionAlgo, object_ztzes|Type|Plate, Plate|SubClassOf|Object, object_ztzes|hasDisposition|object_disp_ey, object_disp_ey|isDispositionOf|object_ztzes, object_ztzes|hasPart|scannable_part_ajolru, scannable_part_ajolru|Type|QRCode, QRCode|SubClassOf|ScannablePart, scannable_part_ajolru|isRegistered|boolean#true, scannable_part_ajolru|isVisible|boolean#true, object_ztzes|hasScannableCode|scannable_part_ajolru, scannable_part_ajolru|isInFrontOf|camera_xo, camera_xo|isCameraOf|agent_ekpfs, camera_xo|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_ekpfs|hasComponent|camera_xo, camera_xo|hasMaximumDistanceRange|integer#95, object_ztzes|isAtDistance|integer#21, greaterThan(integer#95,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_3l",
       "selected_classes": [
-        "Pepper",
-        "RGBCamera",
+        "Pr2",
+        "RealsenseL515",
         "2DBarcode",
-        "Cube"
+        "Plate"
       ],
       "selected_names": [
-        "scannable_part_raoz",
-        "agent_capa_aa",
-        "object_vb",
-        "camera_cdzwf",
-        "algo_sno",
-        "agent_uawlqo",
-        "object_disp_qcf"
+        "agent_capa_zvfaqp",
+        "object_vtslo",
+        "object_disp_alrc",
+        "agent_pzrfjs",
+        "camera_wpafkw",
+        "scannable_part_nbwruq",
+        "algo_tsajm"
       ],
-      "question": "-Inference : agent_uawlqo|canPerceive|object_vb \n -Justifications : agent_uawlqo|Type|Pepper, Pepper|SubClassOf|Agent, agent_uawlqo|hasCapability|agent_capa_aa, agent_capa_aa|isCapabilityOf|agent_uawlqo, agent_uawlqo|hasComponent|camera_cdzwf, camera_cdzwf|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_cdzwf|isActive|boolean#true, agent_uawlqo|hasComponent|algo_sno, algo_sno|Type|ScanCodeDetectionAlgo, object_vb|Type|Cube, Cube|SubClassOf|Object, object_vb|hasDisposition|object_disp_qcf, object_disp_qcf|isDispositionOf|object_vb, object_vb|hasPart|scannable_part_raoz, scannable_part_raoz|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_raoz|isRegistered|boolean#true, scannable_part_raoz|isVisible|boolean#true, object_vb|hasScannableCode|scannable_part_raoz, scannable_part_raoz|isInFrontOf|camera_cdzwf, camera_cdzwf|isCameraOf|agent_uawlqo, camera_cdzwf|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_uawlqo|hasComponent|camera_cdzwf, camera_cdzwf|hasMaximumDistanceRange|integer#53, object_vb|isAtDistance|integer#52, greaterThan(integer#53,integer#52) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_pzrfjs|canPerceive|object_vtslo \n -Justifications : agent_pzrfjs|Type|Pr2, Pr2|SubClassOf|Agent, agent_pzrfjs|hasCapability|agent_capa_zvfaqp, agent_capa_zvfaqp|isCapabilityOf|agent_pzrfjs, agent_pzrfjs|hasComponent|camera_wpafkw, camera_wpafkw|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_wpafkw|isActive|boolean#true, agent_pzrfjs|hasComponent|algo_tsajm, algo_tsajm|Type|ScanCodeDetectionAlgo, object_vtslo|Type|Plate, Plate|SubClassOf|Object, object_vtslo|hasDisposition|object_disp_alrc, object_disp_alrc|isDispositionOf|object_vtslo, object_vtslo|hasPart|scannable_part_nbwruq, scannable_part_nbwruq|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_nbwruq|isRegistered|boolean#true, scannable_part_nbwruq|isVisible|boolean#true, object_vtslo|hasScannableCode|scannable_part_nbwruq, scannable_part_nbwruq|isInFrontOf|camera_wpafkw, camera_wpafkw|isCameraOf|agent_pzrfjs, camera_wpafkw|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_pzrfjs|hasComponent|camera_wpafkw, camera_wpafkw|hasMaximumDistanceRange|integer#98, object_vtslo|isAtDistance|integer#35, greaterThan(integer#98,integer#35) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_4l",
       "selected_classes": [
         "Pepper",
-        "Webcam",
-        "QRCode",
-        "Cube"
+        "KinectV2",
+        "ScanTag",
+        "Plate"
       ],
       "selected_names": [
-        "scannable_part_rbgy",
-        "agent_capa_pmpj",
-        "object_sapoha",
-        "camera_nfqiv",
-        "algo_rcvce",
-        "agent_nfxxfa",
-        "object_disp_yvj"
+        "agent_capa_jpw",
+        "object_nnlxt",
+        "object_disp_jtlzce",
+        "agent_msj",
+        "camera_mlxmm",
+        "scannable_part_xqxkx",
+        "algo_se"
       ],
-      "question": "-Inference : agent_nfxxfa|canPerceive|object_sapoha \n -Justifications : agent_nfxxfa|Type|Pepper, Pepper|SubClassOf|Agent, agent_nfxxfa|hasCapability|agent_capa_pmpj, agent_capa_pmpj|isCapabilityOf|agent_nfxxfa, agent_nfxxfa|hasComponent|camera_nfqiv, camera_nfqiv|Type|Webcam, Webcam|SubClassOf|Camera, camera_nfqiv|isActive|boolean#true, agent_nfxxfa|hasComponent|algo_rcvce, algo_rcvce|Type|ScanCodeDetectionAlgo, object_sapoha|Type|Cube, Cube|SubClassOf|Object, object_sapoha|hasDisposition|object_disp_yvj, object_disp_yvj|isDispositionOf|object_sapoha, object_sapoha|hasPart|scannable_part_rbgy, scannable_part_rbgy|Type|QRCode, QRCode|SubClassOf|ScannablePart, scannable_part_rbgy|isRegistered|boolean#true, scannable_part_rbgy|isVisible|boolean#true, object_sapoha|hasScannableCode|scannable_part_rbgy, scannable_part_rbgy|isInFrontOf|camera_nfqiv, camera_nfqiv|isCameraOf|agent_nfxxfa, camera_nfqiv|Type|Webcam, Webcam|SubClassOf|Camera, agent_nfxxfa|hasComponent|camera_nfqiv, camera_nfqiv|hasMaximumDistanceRange|integer#41, object_sapoha|isAtDistance|integer#36, greaterThan(integer#41,integer#36) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_msj|canPerceive|object_nnlxt \n -Justifications : agent_msj|Type|Pepper, Pepper|SubClassOf|Agent, agent_msj|hasCapability|agent_capa_jpw, agent_capa_jpw|isCapabilityOf|agent_msj, agent_msj|hasComponent|camera_mlxmm, camera_mlxmm|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_mlxmm|isActive|boolean#true, agent_msj|hasComponent|algo_se, algo_se|Type|ScanCodeDetectionAlgo, object_nnlxt|Type|Plate, Plate|SubClassOf|Object, object_nnlxt|hasDisposition|object_disp_jtlzce, object_disp_jtlzce|isDispositionOf|object_nnlxt, object_nnlxt|hasPart|scannable_part_xqxkx, scannable_part_xqxkx|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_xqxkx|isRegistered|boolean#true, scannable_part_xqxkx|isVisible|boolean#true, object_nnlxt|hasScannableCode|scannable_part_xqxkx, scannable_part_xqxkx|isInFrontOf|camera_mlxmm, camera_mlxmm|isCameraOf|agent_msj, camera_mlxmm|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_msj|hasComponent|camera_mlxmm, camera_mlxmm|hasMaximumDistanceRange|integer#47, object_nnlxt|isAtDistance|integer#33, greaterThan(integer#47,integer#33) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_5l",
       "selected_classes": [
-        "Tiago",
+        "Pepper",
         "RealsenseL515",
-        "ScanTag",
-        "Box"
+        "2DBarcode",
+        "Book"
       ],
       "selected_names": [
-        "scannable_part_ybr",
-        "agent_capa_goxxg",
-        "object_furs",
-        "camera_pvu",
-        "algo_sjxvu",
-        "agent_prqfmw",
-        "object_disp_wmhije"
+        "agent_capa_qhjc",
+        "object_xfrh",
+        "object_disp_cz",
+        "agent_df",
+        "camera_vtthy",
+        "scannable_part_rflomg",
+        "algo_btk"
       ],
-      "question": "-Inference : agent_prqfmw|canPerceive|object_furs \n -Justifications : agent_prqfmw|Type|Tiago, Tiago|SubClassOf|Agent, agent_prqfmw|hasCapability|agent_capa_goxxg, agent_capa_goxxg|isCapabilityOf|agent_prqfmw, agent_prqfmw|hasComponent|camera_pvu, camera_pvu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_pvu|isActive|boolean#true, agent_prqfmw|hasComponent|algo_sjxvu, algo_sjxvu|Type|ScanCodeDetectionAlgo, object_furs|Type|Box, Box|SubClassOf|Object, object_furs|hasDisposition|object_disp_wmhije, object_disp_wmhije|isDispositionOf|object_furs, object_furs|hasPart|scannable_part_ybr, scannable_part_ybr|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_ybr|isRegistered|boolean#true, scannable_part_ybr|isVisible|boolean#true, object_furs|hasScannableCode|scannable_part_ybr, scannable_part_ybr|isInFrontOf|camera_pvu, camera_pvu|isCameraOf|agent_prqfmw, camera_pvu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_prqfmw|hasComponent|camera_pvu, camera_pvu|hasMaximumDistanceRange|integer#84, object_furs|isAtDistance|integer#64, greaterThan(integer#84,integer#64) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_df|canPerceive|object_xfrh \n -Justifications : agent_df|Type|Pepper, Pepper|SubClassOf|Agent, agent_df|hasCapability|agent_capa_qhjc, agent_capa_qhjc|isCapabilityOf|agent_df, agent_df|hasComponent|camera_vtthy, camera_vtthy|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_vtthy|isActive|boolean#true, agent_df|hasComponent|algo_btk, algo_btk|Type|ScanCodeDetectionAlgo, object_xfrh|Type|Book, Book|SubClassOf|Object, object_xfrh|hasDisposition|object_disp_cz, object_disp_cz|isDispositionOf|object_xfrh, object_xfrh|hasPart|scannable_part_rflomg, scannable_part_rflomg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_rflomg|isRegistered|boolean#true, scannable_part_rflomg|isVisible|boolean#true, object_xfrh|hasScannableCode|scannable_part_rflomg, scannable_part_rflomg|isInFrontOf|camera_vtthy, camera_vtthy|isCameraOf|agent_df, camera_vtthy|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_df|hasComponent|camera_vtthy, camera_vtthy|hasMaximumDistanceRange|integer#59, object_xfrh|isAtDistance|integer#53, greaterThan(integer#59,integer#53) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_6l",
       "selected_classes": [
-        "Pepper",
-        "RGBCamera",
-        "QRTag",
+        "Tiago",
+        "Webcam",
+        "2DBarcode",
         "Box"
       ],
       "selected_names": [
-        "scannable_part_parwd",
-        "agent_capa_khor",
-        "object_yy",
-        "camera_io",
-        "algo_kuu",
-        "agent_yilkvs",
-        "object_disp_qnrdz"
+        "agent_capa_icw",
+        "object_ara",
+        "object_disp_zcima",
+        "agent_hpx",
+        "camera_evog",
+        "scannable_part_pyalk",
+        "algo_jyugj"
       ],
-      "question": "-Inference : agent_yilkvs|canPerceive|object_yy \n -Justifications : agent_yilkvs|Type|Pepper, Pepper|SubClassOf|Agent, agent_yilkvs|hasCapability|agent_capa_khor, agent_capa_khor|isCapabilityOf|agent_yilkvs, agent_yilkvs|hasComponent|camera_io, camera_io|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_io|isActive|boolean#true, agent_yilkvs|hasComponent|algo_kuu, algo_kuu|Type|ScanCodeDetectionAlgo, object_yy|Type|Box, Box|SubClassOf|Object, object_yy|hasDisposition|object_disp_qnrdz, object_disp_qnrdz|isDispositionOf|object_yy, object_yy|hasPart|scannable_part_parwd, scannable_part_parwd|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_parwd|isRegistered|boolean#true, scannable_part_parwd|isVisible|boolean#true, object_yy|hasScannableCode|scannable_part_parwd, scannable_part_parwd|isInFrontOf|camera_io, camera_io|isCameraOf|agent_yilkvs, camera_io|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_yilkvs|hasComponent|camera_io, camera_io|hasMaximumDistanceRange|integer#30, object_yy|isAtDistance|integer#25, greaterThan(integer#30,integer#25) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_hpx|canPerceive|object_ara \n -Justifications : agent_hpx|Type|Tiago, Tiago|SubClassOf|Agent, agent_hpx|hasCapability|agent_capa_icw, agent_capa_icw|isCapabilityOf|agent_hpx, agent_hpx|hasComponent|camera_evog, camera_evog|Type|Webcam, Webcam|SubClassOf|Camera, camera_evog|isActive|boolean#true, agent_hpx|hasComponent|algo_jyugj, algo_jyugj|Type|ScanCodeDetectionAlgo, object_ara|Type|Box, Box|SubClassOf|Object, object_ara|hasDisposition|object_disp_zcima, object_disp_zcima|isDispositionOf|object_ara, object_ara|hasPart|scannable_part_pyalk, scannable_part_pyalk|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_pyalk|isRegistered|boolean#true, scannable_part_pyalk|isVisible|boolean#true, object_ara|hasScannableCode|scannable_part_pyalk, scannable_part_pyalk|isInFrontOf|camera_evog, camera_evog|isCameraOf|agent_hpx, camera_evog|Type|Webcam, Webcam|SubClassOf|Camera, agent_hpx|hasComponent|camera_evog, camera_evog|hasMaximumDistanceRange|integer#35, object_ara|isAtDistance|integer#34, greaterThan(integer#35,integer#34) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_7l",
       "selected_classes": [
         "Tiago",
-        "KinectV2",
-        "2DBarcode",
-        "Book"
-      ],
-      "selected_names": [
-        "scannable_part_wmg",
-        "agent_capa_gpqn",
-        "object_cegvm",
-        "camera_nmucpq",
-        "algo_nm",
-        "agent_rrnh",
-        "object_disp_iuycuc"
-      ],
-      "question": "-Inference : agent_rrnh|canPerceive|object_cegvm \n -Justifications : agent_rrnh|Type|Tiago, Tiago|SubClassOf|Agent, agent_rrnh|hasCapability|agent_capa_gpqn, agent_capa_gpqn|isCapabilityOf|agent_rrnh, agent_rrnh|hasComponent|camera_nmucpq, camera_nmucpq|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_nmucpq|isActive|boolean#true, agent_rrnh|hasComponent|algo_nm, algo_nm|Type|ScanCodeDetectionAlgo, object_cegvm|Type|Book, Book|SubClassOf|Object, object_cegvm|hasDisposition|object_disp_iuycuc, object_disp_iuycuc|isDispositionOf|object_cegvm, object_cegvm|hasPart|scannable_part_wmg, scannable_part_wmg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_wmg|isRegistered|boolean#true, scannable_part_wmg|isVisible|boolean#true, object_cegvm|hasScannableCode|scannable_part_wmg, scannable_part_wmg|isInFrontOf|camera_nmucpq, camera_nmucpq|isCameraOf|agent_rrnh, camera_nmucpq|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_rrnh|hasComponent|camera_nmucpq, camera_nmucpq|hasMaximumDistanceRange|integer#47, object_cegvm|isAtDistance|integer#13, greaterThan(integer#47,integer#13) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_8l",
-      "selected_classes": [
-        "Robot",
-        "RealsenseL515",
-        "QRTag",
-        "Plate"
-      ],
-      "selected_names": [
-        "scannable_part_nmlqz",
-        "agent_capa_ahkx",
-        "object_jmifdp",
-        "camera_lg",
-        "algo_yzkvfx",
-        "agent_ogtycb",
-        "object_disp_oesyb"
-      ],
-      "question": "-Inference : agent_ogtycb|canPerceive|object_jmifdp \n -Justifications : agent_ogtycb|Type|Robot, Robot|SubClassOf|Agent, agent_ogtycb|hasCapability|agent_capa_ahkx, agent_capa_ahkx|isCapabilityOf|agent_ogtycb, agent_ogtycb|hasComponent|camera_lg, camera_lg|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_lg|isActive|boolean#true, agent_ogtycb|hasComponent|algo_yzkvfx, algo_yzkvfx|Type|ScanCodeDetectionAlgo, object_jmifdp|Type|Plate, Plate|SubClassOf|Object, object_jmifdp|hasDisposition|object_disp_oesyb, object_disp_oesyb|isDispositionOf|object_jmifdp, object_jmifdp|hasPart|scannable_part_nmlqz, scannable_part_nmlqz|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_nmlqz|isRegistered|boolean#true, scannable_part_nmlqz|isVisible|boolean#true, object_jmifdp|hasScannableCode|scannable_part_nmlqz, scannable_part_nmlqz|isInFrontOf|camera_lg, camera_lg|isCameraOf|agent_ogtycb, camera_lg|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_ogtycb|hasComponent|camera_lg, camera_lg|hasMaximumDistanceRange|integer#60, object_jmifdp|isAtDistance|integer#14, greaterThan(integer#60,integer#14) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_9l",
-      "selected_classes": [
-        "Pepper",
-        "KinectV2",
-        "ScanTag",
-        "Book"
-      ],
-      "selected_names": [
-        "scannable_part_uvcmd",
-        "agent_capa_on",
-        "object_dxuj",
-        "camera_jecf",
-        "algo_nwuru",
-        "agent_bd",
-        "object_disp_tdzvm"
-      ],
-      "question": "-Inference : agent_bd|canPerceive|object_dxuj \n -Justifications : agent_bd|Type|Pepper, Pepper|SubClassOf|Agent, agent_bd|hasCapability|agent_capa_on, agent_capa_on|isCapabilityOf|agent_bd, agent_bd|hasComponent|camera_jecf, camera_jecf|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_jecf|isActive|boolean#true, agent_bd|hasComponent|algo_nwuru, algo_nwuru|Type|ScanCodeDetectionAlgo, object_dxuj|Type|Book, Book|SubClassOf|Object, object_dxuj|hasDisposition|object_disp_tdzvm, object_disp_tdzvm|isDispositionOf|object_dxuj, object_dxuj|hasPart|scannable_part_uvcmd, scannable_part_uvcmd|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_uvcmd|isRegistered|boolean#true, scannable_part_uvcmd|isVisible|boolean#true, object_dxuj|hasScannableCode|scannable_part_uvcmd, scannable_part_uvcmd|isInFrontOf|camera_jecf, camera_jecf|isCameraOf|agent_bd, camera_jecf|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_bd|hasComponent|camera_jecf, camera_jecf|hasMaximumDistanceRange|integer#60, object_dxuj|isAtDistance|integer#12, greaterThan(integer#60,integer#12) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_10l",
-      "selected_classes": [
-        "Tiago",
-        "RealsenseL515",
+        "Webcam",
         "2DBarcode",
         "Appliance"
       ],
       "selected_names": [
-        "scannable_part_fpws",
-        "agent_capa_rdbnyv",
-        "object_hk",
-        "camera_mm",
-        "algo_rrio",
-        "agent_ue",
-        "object_disp_ly"
+        "agent_capa_dwk",
+        "object_bfe",
+        "object_disp_fxquai",
+        "agent_tr",
+        "camera_qiwva",
+        "scannable_part_kqari",
+        "algo_ynhszk"
       ],
-      "question": "-Inference : agent_ue|canPerceive|object_hk \n -Justifications : agent_ue|Type|Tiago, Tiago|SubClassOf|Agent, agent_ue|hasCapability|agent_capa_rdbnyv, agent_capa_rdbnyv|isCapabilityOf|agent_ue, agent_ue|hasComponent|camera_mm, camera_mm|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_mm|isActive|boolean#true, agent_ue|hasComponent|algo_rrio, algo_rrio|Type|ScanCodeDetectionAlgo, object_hk|Type|Appliance, Appliance|SubClassOf|Object, object_hk|hasDisposition|object_disp_ly, object_disp_ly|isDispositionOf|object_hk, object_hk|hasPart|scannable_part_fpws, scannable_part_fpws|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_fpws|isRegistered|boolean#true, scannable_part_fpws|isVisible|boolean#true, object_hk|hasScannableCode|scannable_part_fpws, scannable_part_fpws|isInFrontOf|camera_mm, camera_mm|isCameraOf|agent_ue, camera_mm|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_ue|hasComponent|camera_mm, camera_mm|hasMaximumDistanceRange|integer#85, object_hk|isAtDistance|integer#55, greaterThan(integer#85,integer#55) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_tr|canPerceive|object_bfe \n -Justifications : agent_tr|Type|Tiago, Tiago|SubClassOf|Agent, agent_tr|hasCapability|agent_capa_dwk, agent_capa_dwk|isCapabilityOf|agent_tr, agent_tr|hasComponent|camera_qiwva, camera_qiwva|Type|Webcam, Webcam|SubClassOf|Camera, camera_qiwva|isActive|boolean#true, agent_tr|hasComponent|algo_ynhszk, algo_ynhszk|Type|ScanCodeDetectionAlgo, object_bfe|Type|Appliance, Appliance|SubClassOf|Object, object_bfe|hasDisposition|object_disp_fxquai, object_disp_fxquai|isDispositionOf|object_bfe, object_bfe|hasPart|scannable_part_kqari, scannable_part_kqari|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_kqari|isRegistered|boolean#true, scannable_part_kqari|isVisible|boolean#true, object_bfe|hasScannableCode|scannable_part_kqari, scannable_part_kqari|isInFrontOf|camera_qiwva, camera_qiwva|isCameraOf|agent_tr, camera_qiwva|Type|Webcam, Webcam|SubClassOf|Camera, agent_tr|hasComponent|camera_qiwva, camera_qiwva|hasMaximumDistanceRange|integer#89, object_bfe|isAtDistance|integer#50, greaterThan(integer#89,integer#50) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
-      "id": "q_canPerceive_hard_11l",
-      "selected_classes": [
-        "Tiago",
-        "RealsenseL515",
-        "2DBarcode",
-        "Table"
-      ],
-      "selected_names": [
-        "scannable_part_zjtgx",
-        "agent_capa_gixb",
-        "object_yx",
-        "camera_ndstu",
-        "algo_nhdcun",
-        "agent_tpphn",
-        "object_disp_ivy"
-      ],
-      "question": "-Inference : agent_tpphn|canPerceive|object_yx \n -Justifications : agent_tpphn|Type|Tiago, Tiago|SubClassOf|Agent, agent_tpphn|hasCapability|agent_capa_gixb, agent_capa_gixb|isCapabilityOf|agent_tpphn, agent_tpphn|hasComponent|camera_ndstu, camera_ndstu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_ndstu|isActive|boolean#true, agent_tpphn|hasComponent|algo_nhdcun, algo_nhdcun|Type|ScanCodeDetectionAlgo, object_yx|Type|Table, Table|SubClassOf|Object, object_yx|hasDisposition|object_disp_ivy, object_disp_ivy|isDispositionOf|object_yx, object_yx|hasPart|scannable_part_zjtgx, scannable_part_zjtgx|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_zjtgx|isRegistered|boolean#true, scannable_part_zjtgx|isVisible|boolean#true, object_yx|hasScannableCode|scannable_part_zjtgx, scannable_part_zjtgx|isInFrontOf|camera_ndstu, camera_ndstu|isCameraOf|agent_tpphn, camera_ndstu|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_tpphn|hasComponent|camera_ndstu, camera_ndstu|hasMaximumDistanceRange|integer#35, object_yx|isAtDistance|integer#12, greaterThan(integer#35,integer#12) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_12l",
+      "id": "q_canPerceive_hard_8l",
       "selected_classes": [
         "Pr2",
+        "RealsenseL515",
+        "QRCode",
+        "Cube"
+      ],
+      "selected_names": [
+        "agent_capa_hysxn",
+        "object_eblbm",
+        "object_disp_csw",
+        "agent_jdflzd",
+        "camera_vb",
+        "scannable_part_qgw",
+        "algo_lbztct"
+      ],
+      "question": "-Inference : agent_jdflzd|canPerceive|object_eblbm \n -Justifications : agent_jdflzd|Type|Pr2, Pr2|SubClassOf|Agent, agent_jdflzd|hasCapability|agent_capa_hysxn, agent_capa_hysxn|isCapabilityOf|agent_jdflzd, agent_jdflzd|hasComponent|camera_vb, camera_vb|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, camera_vb|isActive|boolean#true, agent_jdflzd|hasComponent|algo_lbztct, algo_lbztct|Type|ScanCodeDetectionAlgo, object_eblbm|Type|Cube, Cube|SubClassOf|Object, object_eblbm|hasDisposition|object_disp_csw, object_disp_csw|isDispositionOf|object_eblbm, object_eblbm|hasPart|scannable_part_qgw, scannable_part_qgw|Type|QRCode, QRCode|SubClassOf|ScannablePart, scannable_part_qgw|isRegistered|boolean#true, scannable_part_qgw|isVisible|boolean#true, object_eblbm|hasScannableCode|scannable_part_qgw, scannable_part_qgw|isInFrontOf|camera_vb, camera_vb|isCameraOf|agent_jdflzd, camera_vb|Type|RealsenseL515, RealsenseL515|SubClassOf|Camera, agent_jdflzd|hasComponent|camera_vb, camera_vb|hasMaximumDistanceRange|integer#67, object_eblbm|isAtDistance|integer#15, greaterThan(integer#67,integer#15) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_9l",
+      "selected_classes": [
+        "Pr2",
+        "KinectV2",
+        "2DBarcode",
+        "Appliance"
+      ],
+      "selected_names": [
+        "agent_capa_sr",
+        "object_ezhzwp",
+        "object_disp_ui",
+        "agent_ef",
+        "camera_qe",
+        "scannable_part_vgd",
+        "algo_tsbhgx"
+      ],
+      "question": "-Inference : agent_ef|canPerceive|object_ezhzwp \n -Justifications : agent_ef|Type|Pr2, Pr2|SubClassOf|Agent, agent_ef|hasCapability|agent_capa_sr, agent_capa_sr|isCapabilityOf|agent_ef, agent_ef|hasComponent|camera_qe, camera_qe|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_qe|isActive|boolean#true, agent_ef|hasComponent|algo_tsbhgx, algo_tsbhgx|Type|ScanCodeDetectionAlgo, object_ezhzwp|Type|Appliance, Appliance|SubClassOf|Object, object_ezhzwp|hasDisposition|object_disp_ui, object_disp_ui|isDispositionOf|object_ezhzwp, object_ezhzwp|hasPart|scannable_part_vgd, scannable_part_vgd|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_vgd|isRegistered|boolean#true, scannable_part_vgd|isVisible|boolean#true, object_ezhzwp|hasScannableCode|scannable_part_vgd, scannable_part_vgd|isInFrontOf|camera_qe, camera_qe|isCameraOf|agent_ef, camera_qe|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_ef|hasComponent|camera_qe, camera_qe|hasMaximumDistanceRange|integer#85, object_ezhzwp|isAtDistance|integer#45, greaterThan(integer#85,integer#45) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_10l",
+      "selected_classes": [
+        "Robot",
         "RGBCamera",
         "QRTag",
         "Luggage"
       ],
       "selected_names": [
-        "scannable_part_ddpzjl",
-        "agent_capa_mernkl",
-        "object_adg",
-        "camera_ucuozo",
-        "algo_ycshm",
-        "agent_xl",
-        "object_disp_hqpxi"
+        "agent_capa_hccozp",
+        "object_zcy",
+        "object_disp_udkan",
+        "agent_xkxke",
+        "camera_ta",
+        "scannable_part_mxyzvb",
+        "algo_uxjt"
       ],
-      "question": "-Inference : agent_xl|canPerceive|object_adg \n -Justifications : agent_xl|Type|Pr2, Pr2|SubClassOf|Agent, agent_xl|hasCapability|agent_capa_mernkl, agent_capa_mernkl|isCapabilityOf|agent_xl, agent_xl|hasComponent|camera_ucuozo, camera_ucuozo|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_ucuozo|isActive|boolean#true, agent_xl|hasComponent|algo_ycshm, algo_ycshm|Type|ScanCodeDetectionAlgo, object_adg|Type|Luggage, Luggage|SubClassOf|Object, object_adg|hasDisposition|object_disp_hqpxi, object_disp_hqpxi|isDispositionOf|object_adg, object_adg|hasPart|scannable_part_ddpzjl, scannable_part_ddpzjl|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_ddpzjl|isRegistered|boolean#true, scannable_part_ddpzjl|isVisible|boolean#true, object_adg|hasScannableCode|scannable_part_ddpzjl, scannable_part_ddpzjl|isInFrontOf|camera_ucuozo, camera_ucuozo|isCameraOf|agent_xl, camera_ucuozo|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_xl|hasComponent|camera_ucuozo, camera_ucuozo|hasMaximumDistanceRange|integer#44, object_adg|isAtDistance|integer#29, greaterThan(integer#44,integer#29) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_xkxke|canPerceive|object_zcy \n -Justifications : agent_xkxke|Type|Robot, Robot|SubClassOf|Agent, agent_xkxke|hasCapability|agent_capa_hccozp, agent_capa_hccozp|isCapabilityOf|agent_xkxke, agent_xkxke|hasComponent|camera_ta, camera_ta|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_ta|isActive|boolean#true, agent_xkxke|hasComponent|algo_uxjt, algo_uxjt|Type|ScanCodeDetectionAlgo, object_zcy|Type|Luggage, Luggage|SubClassOf|Object, object_zcy|hasDisposition|object_disp_udkan, object_disp_udkan|isDispositionOf|object_zcy, object_zcy|hasPart|scannable_part_mxyzvb, scannable_part_mxyzvb|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_mxyzvb|isRegistered|boolean#true, scannable_part_mxyzvb|isVisible|boolean#true, object_zcy|hasScannableCode|scannable_part_mxyzvb, scannable_part_mxyzvb|isInFrontOf|camera_ta, camera_ta|isCameraOf|agent_xkxke, camera_ta|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_xkxke|hasComponent|camera_ta, camera_ta|hasMaximumDistanceRange|integer#71, object_zcy|isAtDistance|integer#68, greaterThan(integer#71,integer#68) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_11l",
+      "selected_classes": [
+        "Pepper",
+        "KinectV2",
+        "ScanTag",
+        "Book"
+      ],
+      "selected_names": [
+        "agent_capa_whnmks",
+        "object_kczw",
+        "object_disp_zradox",
+        "agent_ko",
+        "camera_cylr",
+        "scannable_part_vih",
+        "algo_qvr"
+      ],
+      "question": "-Inference : agent_ko|canPerceive|object_kczw \n -Justifications : agent_ko|Type|Pepper, Pepper|SubClassOf|Agent, agent_ko|hasCapability|agent_capa_whnmks, agent_capa_whnmks|isCapabilityOf|agent_ko, agent_ko|hasComponent|camera_cylr, camera_cylr|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_cylr|isActive|boolean#true, agent_ko|hasComponent|algo_qvr, algo_qvr|Type|ScanCodeDetectionAlgo, object_kczw|Type|Book, Book|SubClassOf|Object, object_kczw|hasDisposition|object_disp_zradox, object_disp_zradox|isDispositionOf|object_kczw, object_kczw|hasPart|scannable_part_vih, scannable_part_vih|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_vih|isRegistered|boolean#true, scannable_part_vih|isVisible|boolean#true, object_kczw|hasScannableCode|scannable_part_vih, scannable_part_vih|isInFrontOf|camera_cylr, camera_cylr|isCameraOf|agent_ko, camera_cylr|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_ko|hasComponent|camera_cylr, camera_cylr|hasMaximumDistanceRange|integer#22, object_kczw|isAtDistance|integer#21, greaterThan(integer#22,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_12l",
+      "selected_classes": [
+        "Pepper",
+        "Webcam",
+        "QRCode",
+        "Plate"
+      ],
+      "selected_names": [
+        "agent_capa_vhbz",
+        "object_dlqg",
+        "object_disp_ivp",
+        "agent_pyemet",
+        "camera_vjqtgp",
+        "scannable_part_zsph",
+        "algo_cwof"
+      ],
+      "question": "-Inference : agent_pyemet|canPerceive|object_dlqg \n -Justifications : agent_pyemet|Type|Pepper, Pepper|SubClassOf|Agent, agent_pyemet|hasCapability|agent_capa_vhbz, agent_capa_vhbz|isCapabilityOf|agent_pyemet, agent_pyemet|hasComponent|camera_vjqtgp, camera_vjqtgp|Type|Webcam, Webcam|SubClassOf|Camera, camera_vjqtgp|isActive|boolean#true, agent_pyemet|hasComponent|algo_cwof, algo_cwof|Type|ScanCodeDetectionAlgo, object_dlqg|Type|Plate, Plate|SubClassOf|Object, object_dlqg|hasDisposition|object_disp_ivp, object_disp_ivp|isDispositionOf|object_dlqg, object_dlqg|hasPart|scannable_part_zsph, scannable_part_zsph|Type|QRCode, QRCode|SubClassOf|ScannablePart, scannable_part_zsph|isRegistered|boolean#true, scannable_part_zsph|isVisible|boolean#true, object_dlqg|hasScannableCode|scannable_part_zsph, scannable_part_zsph|isInFrontOf|camera_vjqtgp, camera_vjqtgp|isCameraOf|agent_pyemet, camera_vjqtgp|Type|Webcam, Webcam|SubClassOf|Camera, agent_pyemet|hasComponent|camera_vjqtgp, camera_vjqtgp|hasMaximumDistanceRange|integer#47, object_dlqg|isAtDistance|integer#42, greaterThan(integer#47,integer#42) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_13l",
       "selected_classes": [
-        "Pepper",
-        "RealsenseD435i",
-        "QRTag",
-        "Book"
-      ],
-      "selected_names": [
-        "scannable_part_lpjedn",
-        "agent_capa_vmer",
-        "object_vuttc",
-        "camera_hzyrc",
-        "algo_oklcyc",
-        "agent_boxey",
-        "object_disp_ogfuyp"
-      ],
-      "question": "-Inference : agent_boxey|canPerceive|object_vuttc \n -Justifications : agent_boxey|Type|Pepper, Pepper|SubClassOf|Agent, agent_boxey|hasCapability|agent_capa_vmer, agent_capa_vmer|isCapabilityOf|agent_boxey, agent_boxey|hasComponent|camera_hzyrc, camera_hzyrc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_hzyrc|isActive|boolean#true, agent_boxey|hasComponent|algo_oklcyc, algo_oklcyc|Type|ScanCodeDetectionAlgo, object_vuttc|Type|Book, Book|SubClassOf|Object, object_vuttc|hasDisposition|object_disp_ogfuyp, object_disp_ogfuyp|isDispositionOf|object_vuttc, object_vuttc|hasPart|scannable_part_lpjedn, scannable_part_lpjedn|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_lpjedn|isRegistered|boolean#true, scannable_part_lpjedn|isVisible|boolean#true, object_vuttc|hasScannableCode|scannable_part_lpjedn, scannable_part_lpjedn|isInFrontOf|camera_hzyrc, camera_hzyrc|isCameraOf|agent_boxey, camera_hzyrc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_boxey|hasComponent|camera_hzyrc, camera_hzyrc|hasMaximumDistanceRange|integer#75, object_vuttc|isAtDistance|integer#14, greaterThan(integer#75,integer#14) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_14l",
-      "selected_classes": [
-        "Robot",
-        "RGBCamera",
-        "ScanTag",
-        "Plate"
-      ],
-      "selected_names": [
-        "scannable_part_pix",
-        "agent_capa_dxgmth",
-        "object_gijfjw",
-        "camera_ufrhs",
-        "algo_yzf",
-        "agent_bvy",
-        "object_disp_onm"
-      ],
-      "question": "-Inference : agent_bvy|canPerceive|object_gijfjw \n -Justifications : agent_bvy|Type|Robot, Robot|SubClassOf|Agent, agent_bvy|hasCapability|agent_capa_dxgmth, agent_capa_dxgmth|isCapabilityOf|agent_bvy, agent_bvy|hasComponent|camera_ufrhs, camera_ufrhs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_ufrhs|isActive|boolean#true, agent_bvy|hasComponent|algo_yzf, algo_yzf|Type|ScanCodeDetectionAlgo, object_gijfjw|Type|Plate, Plate|SubClassOf|Object, object_gijfjw|hasDisposition|object_disp_onm, object_disp_onm|isDispositionOf|object_gijfjw, object_gijfjw|hasPart|scannable_part_pix, scannable_part_pix|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_pix|isRegistered|boolean#true, scannable_part_pix|isVisible|boolean#true, object_gijfjw|hasScannableCode|scannable_part_pix, scannable_part_pix|isInFrontOf|camera_ufrhs, camera_ufrhs|isCameraOf|agent_bvy, camera_ufrhs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_bvy|hasComponent|camera_ufrhs, camera_ufrhs|hasMaximumDistanceRange|integer#93, object_gijfjw|isAtDistance|integer#55, greaterThan(integer#93,integer#55) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_15l",
-      "selected_classes": [
         "Pr2",
-        "RealsenseD435i",
-        "QRTag",
-        "Book"
-      ],
-      "selected_names": [
-        "scannable_part_qiyzsp",
-        "agent_capa_eyoch",
-        "object_fa",
-        "camera_yzmby",
-        "algo_uwsu",
-        "agent_xi",
-        "object_disp_eq"
-      ],
-      "question": "-Inference : agent_xi|canPerceive|object_fa \n -Justifications : agent_xi|Type|Pr2, Pr2|SubClassOf|Agent, agent_xi|hasCapability|agent_capa_eyoch, agent_capa_eyoch|isCapabilityOf|agent_xi, agent_xi|hasComponent|camera_yzmby, camera_yzmby|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_yzmby|isActive|boolean#true, agent_xi|hasComponent|algo_uwsu, algo_uwsu|Type|ScanCodeDetectionAlgo, object_fa|Type|Book, Book|SubClassOf|Object, object_fa|hasDisposition|object_disp_eq, object_disp_eq|isDispositionOf|object_fa, object_fa|hasPart|scannable_part_qiyzsp, scannable_part_qiyzsp|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_qiyzsp|isRegistered|boolean#true, scannable_part_qiyzsp|isVisible|boolean#true, object_fa|hasScannableCode|scannable_part_qiyzsp, scannable_part_qiyzsp|isInFrontOf|camera_yzmby, camera_yzmby|isCameraOf|agent_xi, camera_yzmby|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_xi|hasComponent|camera_yzmby, camera_yzmby|hasMaximumDistanceRange|integer#88, object_fa|isAtDistance|integer#44, greaterThan(integer#88,integer#44) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
-    },
-    {
-      "id": "q_canPerceive_hard_16l",
-      "selected_classes": [
-        "Tiago",
         "RGBCamera",
         "2DBarcode",
         "Appliance"
       ],
       "selected_names": [
-        "scannable_part_zh",
-        "agent_capa_csfxme",
-        "object_vpjjb",
-        "camera_mpeus",
-        "algo_knbaaw",
-        "agent_uifqri",
-        "object_disp_ugjc"
+        "agent_capa_ill",
+        "object_rejf",
+        "object_disp_ps",
+        "agent_lqcxbs",
+        "camera_swjs",
+        "scannable_part_qxy",
+        "algo_njcg"
       ],
-      "question": "-Inference : agent_uifqri|canPerceive|object_vpjjb \n -Justifications : agent_uifqri|Type|Tiago, Tiago|SubClassOf|Agent, agent_uifqri|hasCapability|agent_capa_csfxme, agent_capa_csfxme|isCapabilityOf|agent_uifqri, agent_uifqri|hasComponent|camera_mpeus, camera_mpeus|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_mpeus|isActive|boolean#true, agent_uifqri|hasComponent|algo_knbaaw, algo_knbaaw|Type|ScanCodeDetectionAlgo, object_vpjjb|Type|Appliance, Appliance|SubClassOf|Object, object_vpjjb|hasDisposition|object_disp_ugjc, object_disp_ugjc|isDispositionOf|object_vpjjb, object_vpjjb|hasPart|scannable_part_zh, scannable_part_zh|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_zh|isRegistered|boolean#true, scannable_part_zh|isVisible|boolean#true, object_vpjjb|hasScannableCode|scannable_part_zh, scannable_part_zh|isInFrontOf|camera_mpeus, camera_mpeus|isCameraOf|agent_uifqri, camera_mpeus|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_uifqri|hasComponent|camera_mpeus, camera_mpeus|hasMaximumDistanceRange|integer#39, object_vpjjb|isAtDistance|integer#21, greaterThan(integer#39,integer#21) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_lqcxbs|canPerceive|object_rejf \n -Justifications : agent_lqcxbs|Type|Pr2, Pr2|SubClassOf|Agent, agent_lqcxbs|hasCapability|agent_capa_ill, agent_capa_ill|isCapabilityOf|agent_lqcxbs, agent_lqcxbs|hasComponent|camera_swjs, camera_swjs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_swjs|isActive|boolean#true, agent_lqcxbs|hasComponent|algo_njcg, algo_njcg|Type|ScanCodeDetectionAlgo, object_rejf|Type|Appliance, Appliance|SubClassOf|Object, object_rejf|hasDisposition|object_disp_ps, object_disp_ps|isDispositionOf|object_rejf, object_rejf|hasPart|scannable_part_qxy, scannable_part_qxy|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_qxy|isRegistered|boolean#true, scannable_part_qxy|isVisible|boolean#true, object_rejf|hasScannableCode|scannable_part_qxy, scannable_part_qxy|isInFrontOf|camera_swjs, camera_swjs|isCameraOf|agent_lqcxbs, camera_swjs|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_lqcxbs|hasComponent|camera_swjs, camera_swjs|hasMaximumDistanceRange|integer#77, object_rejf|isAtDistance|integer#71, greaterThan(integer#77,integer#71) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_14l",
+      "selected_classes": [
+        "Pr2",
+        "KinectV2",
+        "2DBarcode",
+        "Book"
+      ],
+      "selected_names": [
+        "agent_capa_acoz",
+        "object_lkrc",
+        "object_disp_lhe",
+        "agent_cplhu",
+        "camera_rczr",
+        "scannable_part_jr",
+        "algo_muqlx"
+      ],
+      "question": "-Inference : agent_cplhu|canPerceive|object_lkrc \n -Justifications : agent_cplhu|Type|Pr2, Pr2|SubClassOf|Agent, agent_cplhu|hasCapability|agent_capa_acoz, agent_capa_acoz|isCapabilityOf|agent_cplhu, agent_cplhu|hasComponent|camera_rczr, camera_rczr|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_rczr|isActive|boolean#true, agent_cplhu|hasComponent|algo_muqlx, algo_muqlx|Type|ScanCodeDetectionAlgo, object_lkrc|Type|Book, Book|SubClassOf|Object, object_lkrc|hasDisposition|object_disp_lhe, object_disp_lhe|isDispositionOf|object_lkrc, object_lkrc|hasPart|scannable_part_jr, scannable_part_jr|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_jr|isRegistered|boolean#true, scannable_part_jr|isVisible|boolean#true, object_lkrc|hasScannableCode|scannable_part_jr, scannable_part_jr|isInFrontOf|camera_rczr, camera_rczr|isCameraOf|agent_cplhu, camera_rczr|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_cplhu|hasComponent|camera_rczr, camera_rczr|hasMaximumDistanceRange|integer#79, object_lkrc|isAtDistance|integer#27, greaterThan(integer#79,integer#27) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_15l",
+      "selected_classes": [
+        "Robot",
+        "RGBCamera",
+        "2DBarcode",
+        "Cube"
+      ],
+      "selected_names": [
+        "agent_capa_cu",
+        "object_dja",
+        "object_disp_vasoeg",
+        "agent_tn",
+        "camera_ba",
+        "scannable_part_dle",
+        "algo_uwmr"
+      ],
+      "question": "-Inference : agent_tn|canPerceive|object_dja \n -Justifications : agent_tn|Type|Robot, Robot|SubClassOf|Agent, agent_tn|hasCapability|agent_capa_cu, agent_capa_cu|isCapabilityOf|agent_tn, agent_tn|hasComponent|camera_ba, camera_ba|Type|RGBCamera, RGBCamera|SubClassOf|Camera, camera_ba|isActive|boolean#true, agent_tn|hasComponent|algo_uwmr, algo_uwmr|Type|ScanCodeDetectionAlgo, object_dja|Type|Cube, Cube|SubClassOf|Object, object_dja|hasDisposition|object_disp_vasoeg, object_disp_vasoeg|isDispositionOf|object_dja, object_dja|hasPart|scannable_part_dle, scannable_part_dle|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_dle|isRegistered|boolean#true, scannable_part_dle|isVisible|boolean#true, object_dja|hasScannableCode|scannable_part_dle, scannable_part_dle|isInFrontOf|camera_ba, camera_ba|isCameraOf|agent_tn, camera_ba|Type|RGBCamera, RGBCamera|SubClassOf|Camera, agent_tn|hasComponent|camera_ba, camera_ba|hasMaximumDistanceRange|integer#49, object_dja|isAtDistance|integer#16, greaterThan(integer#49,integer#16) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+    },
+    {
+      "id": "q_canPerceive_hard_16l",
+      "selected_classes": [
+        "Pepper",
+        "Webcam",
+        "ScanTag",
+        "Appliance"
+      ],
+      "selected_names": [
+        "agent_capa_jxzkoc",
+        "object_hzzdjd",
+        "object_disp_nvmdk",
+        "agent_hzmix",
+        "camera_hdqjie",
+        "scannable_part_mha",
+        "algo_wvly"
+      ],
+      "question": "-Inference : agent_hzmix|canPerceive|object_hzzdjd \n -Justifications : agent_hzmix|Type|Pepper, Pepper|SubClassOf|Agent, agent_hzmix|hasCapability|agent_capa_jxzkoc, agent_capa_jxzkoc|isCapabilityOf|agent_hzmix, agent_hzmix|hasComponent|camera_hdqjie, camera_hdqjie|Type|Webcam, Webcam|SubClassOf|Camera, camera_hdqjie|isActive|boolean#true, agent_hzmix|hasComponent|algo_wvly, algo_wvly|Type|ScanCodeDetectionAlgo, object_hzzdjd|Type|Appliance, Appliance|SubClassOf|Object, object_hzzdjd|hasDisposition|object_disp_nvmdk, object_disp_nvmdk|isDispositionOf|object_hzzdjd, object_hzzdjd|hasPart|scannable_part_mha, scannable_part_mha|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_mha|isRegistered|boolean#true, scannable_part_mha|isVisible|boolean#true, object_hzzdjd|hasScannableCode|scannable_part_mha, scannable_part_mha|isInFrontOf|camera_hdqjie, camera_hdqjie|isCameraOf|agent_hzmix, camera_hdqjie|Type|Webcam, Webcam|SubClassOf|Camera, agent_hzmix|hasComponent|camera_hdqjie, camera_hdqjie|hasMaximumDistanceRange|integer#27, object_hzzdjd|isAtDistance|integer#13, greaterThan(integer#27,integer#13) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_17l",
       "selected_classes": [
-        "Pr2",
+        "Tiago",
         "RealsenseD435i",
-        "2DBarcode",
+        "QRTag",
         "Box"
       ],
       "selected_names": [
-        "scannable_part_yg",
-        "agent_capa_utlhkg",
-        "object_xh",
-        "camera_vlmc",
-        "algo_joawb",
-        "agent_joal",
-        "object_disp_omuax"
+        "agent_capa_yeew",
+        "object_xwvkw",
+        "object_disp_wjcu",
+        "agent_wi",
+        "camera_yd",
+        "scannable_part_ar",
+        "algo_tkv"
       ],
-      "question": "-Inference : agent_joal|canPerceive|object_xh \n -Justifications : agent_joal|Type|Pr2, Pr2|SubClassOf|Agent, agent_joal|hasCapability|agent_capa_utlhkg, agent_capa_utlhkg|isCapabilityOf|agent_joal, agent_joal|hasComponent|camera_vlmc, camera_vlmc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_vlmc|isActive|boolean#true, agent_joal|hasComponent|algo_joawb, algo_joawb|Type|ScanCodeDetectionAlgo, object_xh|Type|Box, Box|SubClassOf|Object, object_xh|hasDisposition|object_disp_omuax, object_disp_omuax|isDispositionOf|object_xh, object_xh|hasPart|scannable_part_yg, scannable_part_yg|Type|2DBarcode, 2DBarcode|SubClassOf|ScannablePart, scannable_part_yg|isRegistered|boolean#true, scannable_part_yg|isVisible|boolean#true, object_xh|hasScannableCode|scannable_part_yg, scannable_part_yg|isInFrontOf|camera_vlmc, camera_vlmc|isCameraOf|agent_joal, camera_vlmc|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_joal|hasComponent|camera_vlmc, camera_vlmc|hasMaximumDistanceRange|integer#90, object_xh|isAtDistance|integer#88, greaterThan(integer#90,integer#88) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_wi|canPerceive|object_xwvkw \n -Justifications : agent_wi|Type|Tiago, Tiago|SubClassOf|Agent, agent_wi|hasCapability|agent_capa_yeew, agent_capa_yeew|isCapabilityOf|agent_wi, agent_wi|hasComponent|camera_yd, camera_yd|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_yd|isActive|boolean#true, agent_wi|hasComponent|algo_tkv, algo_tkv|Type|ScanCodeDetectionAlgo, object_xwvkw|Type|Box, Box|SubClassOf|Object, object_xwvkw|hasDisposition|object_disp_wjcu, object_disp_wjcu|isDispositionOf|object_xwvkw, object_xwvkw|hasPart|scannable_part_ar, scannable_part_ar|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_ar|isRegistered|boolean#true, scannable_part_ar|isVisible|boolean#true, object_xwvkw|hasScannableCode|scannable_part_ar, scannable_part_ar|isInFrontOf|camera_yd, camera_yd|isCameraOf|agent_wi, camera_yd|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_wi|hasComponent|camera_yd, camera_yd|hasMaximumDistanceRange|integer#98, object_xwvkw|isAtDistance|integer#19, greaterThan(integer#98,integer#19) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_18l",
       "selected_classes": [
-        "Tiago",
-        "Webcam",
+        "Pepper",
+        "RealsenseD435i",
         "ScanTag",
-        "Book"
+        "Luggage"
       ],
       "selected_names": [
-        "scannable_part_pu",
-        "agent_capa_xunze",
-        "object_co",
-        "camera_jkizn",
-        "algo_iot",
-        "agent_qtavgm",
-        "object_disp_bfqc"
+        "agent_capa_szlwz",
+        "object_jxrpd",
+        "object_disp_azhwkb",
+        "agent_kgtq",
+        "camera_uznn",
+        "scannable_part_wnegx",
+        "algo_szd"
       ],
-      "question": "-Inference : agent_qtavgm|canPerceive|object_co \n -Justifications : agent_qtavgm|Type|Tiago, Tiago|SubClassOf|Agent, agent_qtavgm|hasCapability|agent_capa_xunze, agent_capa_xunze|isCapabilityOf|agent_qtavgm, agent_qtavgm|hasComponent|camera_jkizn, camera_jkizn|Type|Webcam, Webcam|SubClassOf|Camera, camera_jkizn|isActive|boolean#true, agent_qtavgm|hasComponent|algo_iot, algo_iot|Type|ScanCodeDetectionAlgo, object_co|Type|Book, Book|SubClassOf|Object, object_co|hasDisposition|object_disp_bfqc, object_disp_bfqc|isDispositionOf|object_co, object_co|hasPart|scannable_part_pu, scannable_part_pu|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_pu|isRegistered|boolean#true, scannable_part_pu|isVisible|boolean#true, object_co|hasScannableCode|scannable_part_pu, scannable_part_pu|isInFrontOf|camera_jkizn, camera_jkizn|isCameraOf|agent_qtavgm, camera_jkizn|Type|Webcam, Webcam|SubClassOf|Camera, agent_qtavgm|hasComponent|camera_jkizn, camera_jkizn|hasMaximumDistanceRange|integer#98, object_co|isAtDistance|integer#85, greaterThan(integer#98,integer#85) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_kgtq|canPerceive|object_jxrpd \n -Justifications : agent_kgtq|Type|Pepper, Pepper|SubClassOf|Agent, agent_kgtq|hasCapability|agent_capa_szlwz, agent_capa_szlwz|isCapabilityOf|agent_kgtq, agent_kgtq|hasComponent|camera_uznn, camera_uznn|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, camera_uznn|isActive|boolean#true, agent_kgtq|hasComponent|algo_szd, algo_szd|Type|ScanCodeDetectionAlgo, object_jxrpd|Type|Luggage, Luggage|SubClassOf|Object, object_jxrpd|hasDisposition|object_disp_azhwkb, object_disp_azhwkb|isDispositionOf|object_jxrpd, object_jxrpd|hasPart|scannable_part_wnegx, scannable_part_wnegx|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_wnegx|isRegistered|boolean#true, scannable_part_wnegx|isVisible|boolean#true, object_jxrpd|hasScannableCode|scannable_part_wnegx, scannable_part_wnegx|isInFrontOf|camera_uznn, camera_uznn|isCameraOf|agent_kgtq, camera_uznn|Type|RealsenseD435i, RealsenseD435i|SubClassOf|Camera, agent_kgtq|hasComponent|camera_uznn, camera_uznn|hasMaximumDistanceRange|integer#90, object_jxrpd|isAtDistance|integer#41, greaterThan(integer#90,integer#41) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     },
     {
       "id": "q_canPerceive_hard_19l",
       "selected_classes": [
         "Tiago",
-        "Webcam",
-        "ScanTag",
-        "Book"
+        "KinectV2",
+        "QRTag",
+        "Appliance"
       ],
       "selected_names": [
-        "scannable_part_vhv",
-        "agent_capa_dr",
-        "object_dsmn",
-        "camera_zw",
-        "algo_oob",
-        "agent_hfkl",
-        "object_disp_hxgay"
+        "agent_capa_pv",
+        "object_xq",
+        "object_disp_scd",
+        "agent_msst",
+        "camera_nlbaq",
+        "scannable_part_zbb",
+        "algo_hmes"
       ],
-      "question": "-Inference : agent_hfkl|canPerceive|object_dsmn \n -Justifications : agent_hfkl|Type|Tiago, Tiago|SubClassOf|Agent, agent_hfkl|hasCapability|agent_capa_dr, agent_capa_dr|isCapabilityOf|agent_hfkl, agent_hfkl|hasComponent|camera_zw, camera_zw|Type|Webcam, Webcam|SubClassOf|Camera, camera_zw|isActive|boolean#true, agent_hfkl|hasComponent|algo_oob, algo_oob|Type|ScanCodeDetectionAlgo, object_dsmn|Type|Book, Book|SubClassOf|Object, object_dsmn|hasDisposition|object_disp_hxgay, object_disp_hxgay|isDispositionOf|object_dsmn, object_dsmn|hasPart|scannable_part_vhv, scannable_part_vhv|Type|ScanTag, ScanTag|SubClassOf|ScannablePart, scannable_part_vhv|isRegistered|boolean#true, scannable_part_vhv|isVisible|boolean#true, object_dsmn|hasScannableCode|scannable_part_vhv, scannable_part_vhv|isInFrontOf|camera_zw, camera_zw|isCameraOf|agent_hfkl, camera_zw|Type|Webcam, Webcam|SubClassOf|Camera, agent_hfkl|hasComponent|camera_zw, camera_zw|hasMaximumDistanceRange|integer#78, object_dsmn|isAtDistance|integer#67, greaterThan(integer#78,integer#67) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
+      "question": "-Inference : agent_msst|canPerceive|object_xq \n -Justifications : agent_msst|Type|Tiago, Tiago|SubClassOf|Agent, agent_msst|hasCapability|agent_capa_pv, agent_capa_pv|isCapabilityOf|agent_msst, agent_msst|hasComponent|camera_nlbaq, camera_nlbaq|Type|KinectV2, KinectV2|SubClassOf|Camera, camera_nlbaq|isActive|boolean#true, agent_msst|hasComponent|algo_hmes, algo_hmes|Type|ScanCodeDetectionAlgo, object_xq|Type|Appliance, Appliance|SubClassOf|Object, object_xq|hasDisposition|object_disp_scd, object_disp_scd|isDispositionOf|object_xq, object_xq|hasPart|scannable_part_zbb, scannable_part_zbb|Type|QRTag, QRTag|SubClassOf|ScannablePart, scannable_part_zbb|isRegistered|boolean#true, scannable_part_zbb|isVisible|boolean#true, object_xq|hasScannableCode|scannable_part_zbb, scannable_part_zbb|isInFrontOf|camera_nlbaq, camera_nlbaq|isCameraOf|agent_msst, camera_nlbaq|Type|KinectV2, KinectV2|SubClassOf|Camera, agent_msst|hasComponent|camera_nlbaq, camera_nlbaq|hasMaximumDistanceRange|integer#82, object_xq|isAtDistance|integer#70, greaterThan(integer#82,integer#70) \n -Rules : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d), isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)\n\tPerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))\n\tPerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))\n\t(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy"
     }
   ]
 }

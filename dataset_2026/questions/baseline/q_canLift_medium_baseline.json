@@ -57,7 +57,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : jih|canSpeakWith|pchbyk\n-Justifications : jih|Type|Robot, jih|hasCapability|nhbhmg, nhbhmg|Type|VerbalCommunicationCapability,\\ pchbyk|Type|Human, pchbyk|hasDisposition|frj, frj|Type|VerbalCommunicationDisposition, jih|isFacing|pchbyk, pchbyk|isAvailable|boolean#true, jih|isInFrontOf|wtbrl, wtbrl|hasAgentSeatedOn|pchbyk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
+      "content": "-Inference : gu|canSpeakWith|zvk\n-Justifications : gu|Type|Robot, gu|hasCapability|kitw, kitw|Type|VerbalCommunicationCapability, zvk|Type|Human, zvk|hasDisposition|roro, roro|Type|VerbalCommunicationDisposition, gu|isFacing|zvk, zvk|isAvailable|boolean#true, gu|isInFrontOf|kkwbej, kkwbej|hasAgentSeatedOn|zvk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
     },
     {
       "role": "assistant",
@@ -65,7 +65,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : lgvee|canBeTowedBy|va\n-Justifications : va|Type|Vehicle, va|hasCapability|fidzjg, fidzjg|Type|TowingCapability, lgvee|Type|Car, Car|SubClassOf|Towable, lgvee|hasWeight|integer#2000, va|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
+      "content": "-Inference : fzbt|canBeTowedBy|eavkgt\n-Justifications : eavkgt|Type|Vehicle, eavkgt|hasCapability|lzj, lzj|Type|TowingCapability, fzbt|Type|Car, Car|SubClassOf|Towable, fzbt|hasWeight|integer#2000, eavkgt|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
     },
     {
       "role": "assistant",
@@ -73,7 +73,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : dj|canInspect|kjbhb\n-Justifications : dj|Type|Drone, dj|hasCapability|igitb, igitb|Type|AerialInspectionCapability, kjbhb|Type|Bridge, Bridge|SubClassOf|Inspectable, kjbhb|hasHeight|integer#100, dj|hasMaxInspectionHeight|integer#200, igitb|isCapabilityOf|dj, dj|hasCamera|audeha, audeha|Type|SecurityCamera, igitb|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
+      "content": "-Inference : hfbzx|canInspect|eovov\n-Justifications : hfbzx|Type|Drone, hfbzx|hasCapability|vean, vean|Type|AerialInspectionCapability, eovov|Type|Bridge, Bridge|SubClassOf|Inspectable, eovov|hasHeight|integer#100, hfbzx|hasMaxInspectionHeight|integer#200, vean|isCapabilityOf|hfbzx, hfbzx|hasCamera|eycgfn, eycgfn|Type|SecurityCamera, vean|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
     },
     {
       "role": "assistant",
@@ -81,7 +81,7 @@
     },
     {
       "role": "user",
-      "content": "-Inference : aek|canChargeAt|ll\n-Justifications : aek|Type|DeliveryRobot, aek|hasCapability|hizq, hizq|Type|ChargingCapability, ll|Type|ChargingStation, ll|hasPort|ktn, ktn|Type|ChargingConnector, ll|isPowered|boolean#true, aek|hasBatteryLevel|integer#15, aek|hasBatteryThresholdForCharging|integer#20), aek|hasChargingConnector|inj, inj|hasType|string#USB_TypeC, ktn|hasType|string#USB_TypeC, hizq|isCapabilityOf|aek, aek|hasComponent|inj, inj|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
+      "content": "-Inference : jodgbx|canChargeAt|ih\n-Justifications : jodgbx|Type|DeliveryRobot, jodgbx|hasCapability|xn, xn|Type|ChargingCapability, ih|Type|ChargingStation, ih|hasPort|jlbsv, jlbsv|Type|ChargingConnector, ih|isPowered|boolean#true, jodgbx|hasBatteryLevel|integer#15, jodgbx|hasBatteryThresholdForCharging|integer#20), jodgbx|hasChargingConnector|vqoos, vqoos|hasType|string#USB_TypeC, jlbsv|hasType|string#USB_TypeC, xn|isCapabilityOf|jodgbx, jodgbx|hasComponent|vqoos, vqoos|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
     },
     {
       "role": "assistant",
@@ -92,269 +92,93 @@
     {
       "id": "q_canLift_medium_0b",
       "selected_classes": [
-        "Pr2",
+        "Pepper",
         "TwoFingerClaw",
         "Handle",
-        "OvenTray"
+        "CookingPot"
       ],
       "selected_names": [
-        "dvohb",
-        "lwujhp",
-        "djrrij",
-        "qhzsl",
-        "hhq",
-        "tugkz",
-        "vcmfx",
-        "xirxi",
-        "wxnxk",
-        "ot"
+        "rwukem",
+        "ugef",
+        "ieqqo",
+        "agbhg",
+        "xkce",
+        "gsxbn",
+        "ij",
+        "oyy",
+        "hfxw",
+        "vwhhdp"
       ],
-      "question": "-Inference : hhq|canLift|lwujhp \n -Justifications : hhq|Type|Pr2, Pr2|SubClassOf|Agent, hhq|hasCapability|dvohb, dvohb|isCapabilityOf|hhq, hhq|hasComponent|djrrij, djrrij|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, hhq|hasComponent|vcmfx, vcmfx|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, hhq|hasComponent|qhzsl, qhzsl|Type|MotionPlanningAlgo, lwujhp|Type|OvenTray, OvenTray|SubClassOf|Object, lwujhp|hasDisposition|wxnxk, wxnxk|isDispositionOf|lwujhp, lwujhp|hasPart|tugkz, tugkz|Type|Handle, Handle|SubClassOf|HoldablePart, lwujhp|hasPart|ot, ot|Type|Handle, Handle|SubClassOf|HoldablePart, lwujhp|canBeUsed|boolean#true, lwujhp|isOnTouchableSupport|xirxi, xirxi|isWithinMovingRangeOf|hhq, djrrij|Type|Gripper, Gripper|SubClassOf|EndEffector, hhq|hasComponent|djrrij, djrrij|hasWeightLimit|integer#94, lwujhp|hasWeight|integer#23, lesserThan(integer#23,integer#94) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : ij|canLift|ugef \n -Justifications : ij|Type|Pepper, Pepper|SubClassOf|Agent, ij|hasCapability|rwukem, rwukem|isCapabilityOf|ij, ij|hasComponent|oyy, oyy|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ij|hasComponent|hfxw, hfxw|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ij|hasComponent|vwhhdp, vwhhdp|Type|MotionPlanningAlgo, ugef|Type|CookingPot, CookingPot|SubClassOf|Object, ugef|hasDisposition|xkce, xkce|isDispositionOf|ugef, ugef|hasPart|agbhg, agbhg|Type|Handle, Handle|SubClassOf|HoldablePart, ugef|hasPart|gsxbn, gsxbn|Type|Handle, Handle|SubClassOf|HoldablePart, ugef|canBeUsed|boolean#true, ugef|isOnTouchableSupport|ieqqo, ieqqo|isWithinMovingRangeOf|ij, oyy|Type|Gripper, Gripper|SubClassOf|EndEffector, ij|hasComponent|oyy, oyy|hasWeightLimit|integer#79, ugef|hasWeight|integer#60, lesserThan(integer#60,integer#79) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_1b",
       "selected_classes": [
-        "Robot",
-        "MechanicalHand",
+        "Pr2",
+        "TwoFingerClaw",
         "Handle",
         "Suitcase"
       ],
       "selected_names": [
-        "lv",
-        "ypui",
-        "stopha",
-        "ivqdlk",
-        "ff",
-        "gtdel",
-        "gaxsz",
-        "modk",
-        "qpopmp",
-        "ojkmit"
+        "wgzq",
+        "nata",
+        "awzka",
+        "okfy",
+        "rp",
+        "jfdqfo",
+        "ba",
+        "xcuh",
+        "fwzndw",
+        "ntdk"
       ],
-      "question": "-Inference : ff|canLift|ypui \n -Justifications : ff|Type|Robot, Robot|SubClassOf|Agent, ff|hasCapability|lv, lv|isCapabilityOf|ff, ff|hasComponent|stopha, stopha|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, ff|hasComponent|gaxsz, gaxsz|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, ff|hasComponent|ivqdlk, ivqdlk|Type|MotionPlanningAlgo, ypui|Type|Suitcase, Suitcase|SubClassOf|Object, ypui|hasDisposition|qpopmp, qpopmp|isDispositionOf|ypui, ypui|hasPart|gtdel, gtdel|Type|Handle, Handle|SubClassOf|HoldablePart, ypui|hasPart|ojkmit, ojkmit|Type|Handle, Handle|SubClassOf|HoldablePart, ypui|canBeUsed|boolean#true, ypui|isOnTouchableSupport|modk, modk|isWithinMovingRangeOf|ff, stopha|Type|Gripper, Gripper|SubClassOf|EndEffector, ff|hasComponent|stopha, stopha|hasWeightLimit|integer#72, ypui|hasWeight|integer#62, lesserThan(integer#62,integer#72) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : ba|canLift|nata \n -Justifications : ba|Type|Pr2, Pr2|SubClassOf|Agent, ba|hasCapability|wgzq, wgzq|isCapabilityOf|ba, ba|hasComponent|xcuh, xcuh|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ba|hasComponent|fwzndw, fwzndw|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ba|hasComponent|ntdk, ntdk|Type|MotionPlanningAlgo, nata|Type|Suitcase, Suitcase|SubClassOf|Object, nata|hasDisposition|rp, rp|isDispositionOf|nata, nata|hasPart|okfy, okfy|Type|Handle, Handle|SubClassOf|HoldablePart, nata|hasPart|jfdqfo, jfdqfo|Type|Handle, Handle|SubClassOf|HoldablePart, nata|canBeUsed|boolean#true, nata|isOnTouchableSupport|awzka, awzka|isWithinMovingRangeOf|ba, xcuh|Type|Gripper, Gripper|SubClassOf|EndEffector, ba|hasComponent|xcuh, xcuh|hasWeightLimit|integer#96, nata|hasWeight|integer#23, lesserThan(integer#23,integer#96) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_2b",
       "selected_classes": [
-        "Pepper",
-        "Claw",
-        "HandGrip",
-        "CookingPot"
+        "Tiago",
+        "MechanicalHand",
+        "Handle",
+        "OvenTray"
       ],
       "selected_names": [
-        "cd",
-        "eeo",
-        "wl",
-        "vbvxy",
-        "eyoc",
-        "zrmam",
-        "mb",
-        "gxwtp",
-        "rqg",
-        "yd"
+        "ifhu",
+        "tkf",
+        "pm",
+        "ivtf",
+        "jyet",
+        "wvsqz",
+        "apve",
+        "awdgr",
+        "pdkey",
+        "uz"
       ],
-      "question": "-Inference : eyoc|canLift|eeo \n -Justifications : eyoc|Type|Pepper, Pepper|SubClassOf|Agent, eyoc|hasCapability|cd, cd|isCapabilityOf|eyoc, eyoc|hasComponent|wl, wl|Type|Claw, Claw|SubClassOf|Gripper, eyoc|hasComponent|mb, mb|Type|Claw, Claw|SubClassOf|Gripper, eyoc|hasComponent|vbvxy, vbvxy|Type|MotionPlanningAlgo, eeo|Type|CookingPot, CookingPot|SubClassOf|Object, eeo|hasDisposition|rqg, rqg|isDispositionOf|eeo, eeo|hasPart|zrmam, zrmam|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, eeo|hasPart|yd, yd|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, eeo|canBeUsed|boolean#true, eeo|isOnTouchableSupport|gxwtp, gxwtp|isWithinMovingRangeOf|eyoc, wl|Type|Gripper, Gripper|SubClassOf|EndEffector, eyoc|hasComponent|wl, wl|hasWeightLimit|integer#72, eeo|hasWeight|integer#27, lesserThan(integer#27,integer#72) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : apve|canLift|tkf \n -Justifications : apve|Type|Tiago, Tiago|SubClassOf|Agent, apve|hasCapability|ifhu, ifhu|isCapabilityOf|apve, apve|hasComponent|awdgr, awdgr|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, apve|hasComponent|pdkey, pdkey|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, apve|hasComponent|uz, uz|Type|MotionPlanningAlgo, tkf|Type|OvenTray, OvenTray|SubClassOf|Object, tkf|hasDisposition|jyet, jyet|isDispositionOf|tkf, tkf|hasPart|ivtf, ivtf|Type|Handle, Handle|SubClassOf|HoldablePart, tkf|hasPart|wvsqz, wvsqz|Type|Handle, Handle|SubClassOf|HoldablePart, tkf|canBeUsed|boolean#true, tkf|isOnTouchableSupport|pm, pm|isWithinMovingRangeOf|apve, awdgr|Type|Gripper, Gripper|SubClassOf|EndEffector, apve|hasComponent|awdgr, awdgr|hasWeightLimit|integer#25, tkf|hasWeight|integer#23, lesserThan(integer#23,integer#25) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_3b",
       "selected_classes": [
-        "Robot",
-        "TwoFingerClaw",
-        "Handle",
-        "LaundryBasket"
+        "Pepper",
+        "Claw",
+        "Grip",
+        "Suitcase"
       ],
       "selected_names": [
-        "tmmc",
-        "gcmy",
-        "fza",
-        "iroe",
-        "ekrc",
-        "iag",
-        "xejfh",
-        "jcg",
-        "bdhqt",
-        "anccm"
+        "va",
+        "bn",
+        "pndk",
+        "tgxglh",
+        "rc",
+        "bcwfg",
+        "mcffja",
+        "vkgm",
+        "asaqu",
+        "vo"
       ],
-      "question": "-Inference : ekrc|canLift|gcmy \n -Justifications : ekrc|Type|Robot, Robot|SubClassOf|Agent, ekrc|hasCapability|tmmc, tmmc|isCapabilityOf|ekrc, ekrc|hasComponent|fza, fza|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ekrc|hasComponent|xejfh, xejfh|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ekrc|hasComponent|iroe, iroe|Type|MotionPlanningAlgo, gcmy|Type|LaundryBasket, LaundryBasket|SubClassOf|Object, gcmy|hasDisposition|bdhqt, bdhqt|isDispositionOf|gcmy, gcmy|hasPart|iag, iag|Type|Handle, Handle|SubClassOf|HoldablePart, gcmy|hasPart|anccm, anccm|Type|Handle, Handle|SubClassOf|HoldablePart, gcmy|canBeUsed|boolean#true, gcmy|isOnTouchableSupport|jcg, jcg|isWithinMovingRangeOf|ekrc, fza|Type|Gripper, Gripper|SubClassOf|EndEffector, ekrc|hasComponent|fza, fza|hasWeightLimit|integer#57, gcmy|hasWeight|integer#38, lesserThan(integer#38,integer#57) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : mcffja|canLift|bn \n -Justifications : mcffja|Type|Pepper, Pepper|SubClassOf|Agent, mcffja|hasCapability|va, va|isCapabilityOf|mcffja, mcffja|hasComponent|vkgm, vkgm|Type|Claw, Claw|SubClassOf|Gripper, mcffja|hasComponent|asaqu, asaqu|Type|Claw, Claw|SubClassOf|Gripper, mcffja|hasComponent|vo, vo|Type|MotionPlanningAlgo, bn|Type|Suitcase, Suitcase|SubClassOf|Object, bn|hasDisposition|rc, rc|isDispositionOf|bn, bn|hasPart|tgxglh, tgxglh|Type|Grip, Grip|SubClassOf|HoldablePart, bn|hasPart|bcwfg, bcwfg|Type|Grip, Grip|SubClassOf|HoldablePart, bn|canBeUsed|boolean#true, bn|isOnTouchableSupport|pndk, pndk|isWithinMovingRangeOf|mcffja, vkgm|Type|Gripper, Gripper|SubClassOf|EndEffector, mcffja|hasComponent|vkgm, vkgm|hasWeightLimit|integer#79, bn|hasWeight|integer#34, lesserThan(integer#34,integer#79) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_4b",
-      "selected_classes": [
-        "Pepper",
-        "MechanicalHand",
-        "Handle",
-        "LaundryBasket"
-      ],
-      "selected_names": [
-        "vc",
-        "eisrn",
-        "ikefhm",
-        "tpu",
-        "kc",
-        "br",
-        "vzuajd",
-        "vjczs",
-        "lhkerk",
-        "kqok"
-      ],
-      "question": "-Inference : kc|canLift|eisrn \n -Justifications : kc|Type|Pepper, Pepper|SubClassOf|Agent, kc|hasCapability|vc, vc|isCapabilityOf|kc, kc|hasComponent|ikefhm, ikefhm|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, kc|hasComponent|vzuajd, vzuajd|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, kc|hasComponent|tpu, tpu|Type|MotionPlanningAlgo, eisrn|Type|LaundryBasket, LaundryBasket|SubClassOf|Object, eisrn|hasDisposition|lhkerk, lhkerk|isDispositionOf|eisrn, eisrn|hasPart|br, br|Type|Handle, Handle|SubClassOf|HoldablePart, eisrn|hasPart|kqok, kqok|Type|Handle, Handle|SubClassOf|HoldablePart, eisrn|canBeUsed|boolean#true, eisrn|isOnTouchableSupport|vjczs, vjczs|isWithinMovingRangeOf|kc, ikefhm|Type|Gripper, Gripper|SubClassOf|EndEffector, kc|hasComponent|ikefhm, ikefhm|hasWeightLimit|integer#42, eisrn|hasWeight|integer#11, lesserThan(integer#11,integer#42) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_5b",
-      "selected_classes": [
-        "Pr2",
-        "MechanicalHand",
-        "Grip",
-        "CookingPot"
-      ],
-      "selected_names": [
-        "conl",
-        "hkz",
-        "nylmr",
-        "cq",
-        "ju",
-        "aqc",
-        "uidckc",
-        "mybcl",
-        "yevxha",
-        "qbhn"
-      ],
-      "question": "-Inference : ju|canLift|hkz \n -Justifications : ju|Type|Pr2, Pr2|SubClassOf|Agent, ju|hasCapability|conl, conl|isCapabilityOf|ju, ju|hasComponent|nylmr, nylmr|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, ju|hasComponent|uidckc, uidckc|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, ju|hasComponent|cq, cq|Type|MotionPlanningAlgo, hkz|Type|CookingPot, CookingPot|SubClassOf|Object, hkz|hasDisposition|yevxha, yevxha|isDispositionOf|hkz, hkz|hasPart|aqc, aqc|Type|Grip, Grip|SubClassOf|HoldablePart, hkz|hasPart|qbhn, qbhn|Type|Grip, Grip|SubClassOf|HoldablePart, hkz|canBeUsed|boolean#true, hkz|isOnTouchableSupport|mybcl, mybcl|isWithinMovingRangeOf|ju, nylmr|Type|Gripper, Gripper|SubClassOf|EndEffector, ju|hasComponent|nylmr, nylmr|hasWeightLimit|integer#96, hkz|hasWeight|integer#90, lesserThan(integer#90,integer#96) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_6b",
-      "selected_classes": [
-        "Pepper",
-        "TwoFingerClaw",
-        "HandGrip",
-        "OvenTray"
-      ],
-      "selected_names": [
-        "isln",
-        "wpdz",
-        "ysimx",
-        "xkzrw",
-        "ctifyx",
-        "spaic",
-        "qvdd",
-        "ikejud",
-        "krmkox",
-        "oxq"
-      ],
-      "question": "-Inference : ctifyx|canLift|wpdz \n -Justifications : ctifyx|Type|Pepper, Pepper|SubClassOf|Agent, ctifyx|hasCapability|isln, isln|isCapabilityOf|ctifyx, ctifyx|hasComponent|ysimx, ysimx|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ctifyx|hasComponent|qvdd, qvdd|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, ctifyx|hasComponent|xkzrw, xkzrw|Type|MotionPlanningAlgo, wpdz|Type|OvenTray, OvenTray|SubClassOf|Object, wpdz|hasDisposition|krmkox, krmkox|isDispositionOf|wpdz, wpdz|hasPart|spaic, spaic|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, wpdz|hasPart|oxq, oxq|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, wpdz|canBeUsed|boolean#true, wpdz|isOnTouchableSupport|ikejud, ikejud|isWithinMovingRangeOf|ctifyx, ysimx|Type|Gripper, Gripper|SubClassOf|EndEffector, ctifyx|hasComponent|ysimx, ysimx|hasWeightLimit|integer#73, wpdz|hasWeight|integer#59, lesserThan(integer#59,integer#73) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_7b",
-      "selected_classes": [
-        "Pr2",
-        "Claw",
-        "HandGrip",
-        "OvenTray"
-      ],
-      "selected_names": [
-        "mnsmb",
-        "xa",
-        "pl",
-        "eraunt",
-        "mbsyvk",
-        "xb",
-        "byq",
-        "cvyxt",
-        "augwkx",
-        "ps"
-      ],
-      "question": "-Inference : mbsyvk|canLift|xa \n -Justifications : mbsyvk|Type|Pr2, Pr2|SubClassOf|Agent, mbsyvk|hasCapability|mnsmb, mnsmb|isCapabilityOf|mbsyvk, mbsyvk|hasComponent|pl, pl|Type|Claw, Claw|SubClassOf|Gripper, mbsyvk|hasComponent|byq, byq|Type|Claw, Claw|SubClassOf|Gripper, mbsyvk|hasComponent|eraunt, eraunt|Type|MotionPlanningAlgo, xa|Type|OvenTray, OvenTray|SubClassOf|Object, xa|hasDisposition|augwkx, augwkx|isDispositionOf|xa, xa|hasPart|xb, xb|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, xa|hasPart|ps, ps|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, xa|canBeUsed|boolean#true, xa|isOnTouchableSupport|cvyxt, cvyxt|isWithinMovingRangeOf|mbsyvk, pl|Type|Gripper, Gripper|SubClassOf|EndEffector, mbsyvk|hasComponent|pl, pl|hasWeightLimit|integer#95, xa|hasWeight|integer#18, lesserThan(integer#18,integer#95) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_8b",
-      "selected_classes": [
-        "Pepper",
-        "Manipulator",
-        "Handle",
-        "LaundryBasket"
-      ],
-      "selected_names": [
-        "svbkth",
-        "rbwdic",
-        "cez",
-        "cjn",
-        "hjvrt",
-        "qg",
-        "udbu",
-        "pdrc",
-        "dzzuy",
-        "vaokv"
-      ],
-      "question": "-Inference : hjvrt|canLift|rbwdic \n -Justifications : hjvrt|Type|Pepper, Pepper|SubClassOf|Agent, hjvrt|hasCapability|svbkth, svbkth|isCapabilityOf|hjvrt, hjvrt|hasComponent|cez, cez|Type|Manipulator, Manipulator|SubClassOf|Gripper, hjvrt|hasComponent|udbu, udbu|Type|Manipulator, Manipulator|SubClassOf|Gripper, hjvrt|hasComponent|cjn, cjn|Type|MotionPlanningAlgo, rbwdic|Type|LaundryBasket, LaundryBasket|SubClassOf|Object, rbwdic|hasDisposition|dzzuy, dzzuy|isDispositionOf|rbwdic, rbwdic|hasPart|qg, qg|Type|Handle, Handle|SubClassOf|HoldablePart, rbwdic|hasPart|vaokv, vaokv|Type|Handle, Handle|SubClassOf|HoldablePart, rbwdic|canBeUsed|boolean#true, rbwdic|isOnTouchableSupport|pdrc, pdrc|isWithinMovingRangeOf|hjvrt, cez|Type|Gripper, Gripper|SubClassOf|EndEffector, hjvrt|hasComponent|cez, cez|hasWeightLimit|integer#97, rbwdic|hasWeight|integer#47, lesserThan(integer#47,integer#97) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_9b",
-      "selected_classes": [
-        "Pr2",
-        "Claw",
-        "HandGrip",
-        "OvenTray"
-      ],
-      "selected_names": [
-        "ugzh",
-        "caynr",
-        "iajgn",
-        "lsxboe",
-        "aowhu",
-        "nx",
-        "dtvn",
-        "vwby",
-        "pdgile",
-        "inzv"
-      ],
-      "question": "-Inference : aowhu|canLift|caynr \n -Justifications : aowhu|Type|Pr2, Pr2|SubClassOf|Agent, aowhu|hasCapability|ugzh, ugzh|isCapabilityOf|aowhu, aowhu|hasComponent|iajgn, iajgn|Type|Claw, Claw|SubClassOf|Gripper, aowhu|hasComponent|dtvn, dtvn|Type|Claw, Claw|SubClassOf|Gripper, aowhu|hasComponent|lsxboe, lsxboe|Type|MotionPlanningAlgo, caynr|Type|OvenTray, OvenTray|SubClassOf|Object, caynr|hasDisposition|pdgile, pdgile|isDispositionOf|caynr, caynr|hasPart|nx, nx|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, caynr|hasPart|inzv, inzv|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, caynr|canBeUsed|boolean#true, caynr|isOnTouchableSupport|vwby, vwby|isWithinMovingRangeOf|aowhu, iajgn|Type|Gripper, Gripper|SubClassOf|EndEffector, aowhu|hasComponent|iajgn, iajgn|hasWeightLimit|integer#91, caynr|hasWeight|integer#74, lesserThan(integer#74,integer#91) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_10b",
-      "selected_classes": [
-        "Pepper",
-        "TwoFingerClaw",
-        "Handle",
-        "Toolbox"
-      ],
-      "selected_names": [
-        "qsycfn",
-        "sb",
-        "wad",
-        "kr",
-        "nuhkah",
-        "zff",
-        "ksy",
-        "ovvee",
-        "fvip",
-        "ki"
-      ],
-      "question": "-Inference : nuhkah|canLift|sb \n -Justifications : nuhkah|Type|Pepper, Pepper|SubClassOf|Agent, nuhkah|hasCapability|qsycfn, qsycfn|isCapabilityOf|nuhkah, nuhkah|hasComponent|wad, wad|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, nuhkah|hasComponent|ksy, ksy|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, nuhkah|hasComponent|kr, kr|Type|MotionPlanningAlgo, sb|Type|Toolbox, Toolbox|SubClassOf|Object, sb|hasDisposition|fvip, fvip|isDispositionOf|sb, sb|hasPart|zff, zff|Type|Handle, Handle|SubClassOf|HoldablePart, sb|hasPart|ki, ki|Type|Handle, Handle|SubClassOf|HoldablePart, sb|canBeUsed|boolean#true, sb|isOnTouchableSupport|ovvee, ovvee|isWithinMovingRangeOf|nuhkah, wad|Type|Gripper, Gripper|SubClassOf|EndEffector, nuhkah|hasComponent|wad, wad|hasWeightLimit|integer#43, sb|hasWeight|integer#38, lesserThan(integer#38,integer#43) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_11b",
-      "selected_classes": [
-        "Pepper",
-        "Claw",
-        "Grip",
-        "OvenTray"
-      ],
-      "selected_names": [
-        "xir",
-        "ox",
-        "zxb",
-        "inhjbp",
-        "mmtnhi",
-        "uc",
-        "sfgfg",
-        "qtbyb",
-        "pr",
-        "xz"
-      ],
-      "question": "-Inference : mmtnhi|canLift|ox \n -Justifications : mmtnhi|Type|Pepper, Pepper|SubClassOf|Agent, mmtnhi|hasCapability|xir, xir|isCapabilityOf|mmtnhi, mmtnhi|hasComponent|zxb, zxb|Type|Claw, Claw|SubClassOf|Gripper, mmtnhi|hasComponent|sfgfg, sfgfg|Type|Claw, Claw|SubClassOf|Gripper, mmtnhi|hasComponent|inhjbp, inhjbp|Type|MotionPlanningAlgo, ox|Type|OvenTray, OvenTray|SubClassOf|Object, ox|hasDisposition|pr, pr|isDispositionOf|ox, ox|hasPart|uc, uc|Type|Grip, Grip|SubClassOf|HoldablePart, ox|hasPart|xz, xz|Type|Grip, Grip|SubClassOf|HoldablePart, ox|canBeUsed|boolean#true, ox|isOnTouchableSupport|qtbyb, qtbyb|isWithinMovingRangeOf|mmtnhi, zxb|Type|Gripper, Gripper|SubClassOf|EndEffector, mmtnhi|hasComponent|zxb, zxb|hasWeightLimit|integer#58, ox|hasWeight|integer#12, lesserThan(integer#12,integer#58) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
-    },
-    {
-      "id": "q_canLift_medium_12b",
       "selected_classes": [
         "Tiago",
         "Manipulator",
@@ -362,172 +186,348 @@
         "Bucket"
       ],
       "selected_names": [
-        "dckj",
-        "csqace",
-        "sxpl",
-        "wl",
-        "ndz",
-        "wwq",
-        "ul",
-        "xp",
-        "uahym",
-        "hwwtbu"
+        "mszqgx",
+        "avh",
+        "moqi",
+        "jsbmd",
+        "ue",
+        "rujtg",
+        "ou",
+        "lpbvsp",
+        "iqq",
+        "xl"
       ],
-      "question": "-Inference : ndz|canLift|csqace \n -Justifications : ndz|Type|Tiago, Tiago|SubClassOf|Agent, ndz|hasCapability|dckj, dckj|isCapabilityOf|ndz, ndz|hasComponent|sxpl, sxpl|Type|Manipulator, Manipulator|SubClassOf|Gripper, ndz|hasComponent|ul, ul|Type|Manipulator, Manipulator|SubClassOf|Gripper, ndz|hasComponent|wl, wl|Type|MotionPlanningAlgo, csqace|Type|Bucket, Bucket|SubClassOf|Object, csqace|hasDisposition|uahym, uahym|isDispositionOf|csqace, csqace|hasPart|wwq, wwq|Type|Grip, Grip|SubClassOf|HoldablePart, csqace|hasPart|hwwtbu, hwwtbu|Type|Grip, Grip|SubClassOf|HoldablePart, csqace|canBeUsed|boolean#true, csqace|isOnTouchableSupport|xp, xp|isWithinMovingRangeOf|ndz, sxpl|Type|Gripper, Gripper|SubClassOf|EndEffector, ndz|hasComponent|sxpl, sxpl|hasWeightLimit|integer#100, csqace|hasWeight|integer#56, lesserThan(integer#56,integer#100) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : ou|canLift|avh \n -Justifications : ou|Type|Tiago, Tiago|SubClassOf|Agent, ou|hasCapability|mszqgx, mszqgx|isCapabilityOf|ou, ou|hasComponent|lpbvsp, lpbvsp|Type|Manipulator, Manipulator|SubClassOf|Gripper, ou|hasComponent|iqq, iqq|Type|Manipulator, Manipulator|SubClassOf|Gripper, ou|hasComponent|xl, xl|Type|MotionPlanningAlgo, avh|Type|Bucket, Bucket|SubClassOf|Object, avh|hasDisposition|ue, ue|isDispositionOf|avh, avh|hasPart|jsbmd, jsbmd|Type|Grip, Grip|SubClassOf|HoldablePart, avh|hasPart|rujtg, rujtg|Type|Grip, Grip|SubClassOf|HoldablePart, avh|canBeUsed|boolean#true, avh|isOnTouchableSupport|moqi, moqi|isWithinMovingRangeOf|ou, lpbvsp|Type|Gripper, Gripper|SubClassOf|EndEffector, ou|hasComponent|lpbvsp, lpbvsp|hasWeightLimit|integer#59, avh|hasWeight|integer#17, lesserThan(integer#17,integer#59) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
-      "id": "q_canLift_medium_13b",
+      "id": "q_canLift_medium_5b",
       "selected_classes": [
         "Tiago",
         "Manipulator",
         "HandGrip",
-        "CookingPot"
+        "Toolbox"
       ],
       "selected_names": [
-        "uv",
-        "urhq",
-        "xrmy",
-        "ltz",
-        "bcff",
-        "qirr",
-        "sixtm",
-        "qer",
-        "md",
-        "zq"
+        "mazow",
+        "emycac",
+        "nkbu",
+        "dptmb",
+        "wphxl",
+        "uf",
+        "zbcz",
+        "sard",
+        "sptz",
+        "py"
       ],
-      "question": "-Inference : bcff|canLift|urhq \n -Justifications : bcff|Type|Tiago, Tiago|SubClassOf|Agent, bcff|hasCapability|uv, uv|isCapabilityOf|bcff, bcff|hasComponent|xrmy, xrmy|Type|Manipulator, Manipulator|SubClassOf|Gripper, bcff|hasComponent|sixtm, sixtm|Type|Manipulator, Manipulator|SubClassOf|Gripper, bcff|hasComponent|ltz, ltz|Type|MotionPlanningAlgo, urhq|Type|CookingPot, CookingPot|SubClassOf|Object, urhq|hasDisposition|md, md|isDispositionOf|urhq, urhq|hasPart|qirr, qirr|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, urhq|hasPart|zq, zq|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, urhq|canBeUsed|boolean#true, urhq|isOnTouchableSupport|qer, qer|isWithinMovingRangeOf|bcff, xrmy|Type|Gripper, Gripper|SubClassOf|EndEffector, bcff|hasComponent|xrmy, xrmy|hasWeightLimit|integer#59, urhq|hasWeight|integer#39, lesserThan(integer#39,integer#59) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : zbcz|canLift|emycac \n -Justifications : zbcz|Type|Tiago, Tiago|SubClassOf|Agent, zbcz|hasCapability|mazow, mazow|isCapabilityOf|zbcz, zbcz|hasComponent|sard, sard|Type|Manipulator, Manipulator|SubClassOf|Gripper, zbcz|hasComponent|sptz, sptz|Type|Manipulator, Manipulator|SubClassOf|Gripper, zbcz|hasComponent|py, py|Type|MotionPlanningAlgo, emycac|Type|Toolbox, Toolbox|SubClassOf|Object, emycac|hasDisposition|wphxl, wphxl|isDispositionOf|emycac, emycac|hasPart|dptmb, dptmb|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, emycac|hasPart|uf, uf|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, emycac|canBeUsed|boolean#true, emycac|isOnTouchableSupport|nkbu, nkbu|isWithinMovingRangeOf|zbcz, sard|Type|Gripper, Gripper|SubClassOf|EndEffector, zbcz|hasComponent|sard, sard|hasWeightLimit|integer#93, emycac|hasWeight|integer#56, lesserThan(integer#56,integer#93) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
-      "id": "q_canLift_medium_14b",
+      "id": "q_canLift_medium_6b",
       "selected_classes": [
-        "Pepper",
+        "Pr2",
+        "TwoFingerClaw",
+        "Handle",
+        "Bucket"
+      ],
+      "selected_names": [
+        "bnfjd",
+        "xv",
+        "pdqxcr",
+        "cn",
+        "wb",
+        "wfsg",
+        "btpy",
+        "ivy",
+        "qhflxa",
+        "aiv"
+      ],
+      "question": "-Inference : btpy|canLift|xv \n -Justifications : btpy|Type|Pr2, Pr2|SubClassOf|Agent, btpy|hasCapability|bnfjd, bnfjd|isCapabilityOf|btpy, btpy|hasComponent|ivy, ivy|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, btpy|hasComponent|qhflxa, qhflxa|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, btpy|hasComponent|aiv, aiv|Type|MotionPlanningAlgo, xv|Type|Bucket, Bucket|SubClassOf|Object, xv|hasDisposition|wb, wb|isDispositionOf|xv, xv|hasPart|cn, cn|Type|Handle, Handle|SubClassOf|HoldablePart, xv|hasPart|wfsg, wfsg|Type|Handle, Handle|SubClassOf|HoldablePart, xv|canBeUsed|boolean#true, xv|isOnTouchableSupport|pdqxcr, pdqxcr|isWithinMovingRangeOf|btpy, ivy|Type|Gripper, Gripper|SubClassOf|EndEffector, btpy|hasComponent|ivy, ivy|hasWeightLimit|integer#83, xv|hasWeight|integer#38, lesserThan(integer#38,integer#83) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_7b",
+      "selected_classes": [
+        "Tiago",
         "Claw",
         "Handle",
         "OvenTray"
       ],
       "selected_names": [
-        "xav",
-        "xkwi",
-        "adywa",
-        "wtxxv",
-        "etmsis",
-        "tkml",
-        "ymlwtp",
-        "ovxtdl",
-        "wamhi",
-        "nfi"
+        "hlqhm",
+        "ko",
+        "ayl",
+        "vtx",
+        "ohdj",
+        "yufs",
+        "bc",
+        "ctlumt",
+        "qunpsu",
+        "pstqb"
       ],
-      "question": "-Inference : etmsis|canLift|xkwi \n -Justifications : etmsis|Type|Pepper, Pepper|SubClassOf|Agent, etmsis|hasCapability|xav, xav|isCapabilityOf|etmsis, etmsis|hasComponent|adywa, adywa|Type|Claw, Claw|SubClassOf|Gripper, etmsis|hasComponent|ymlwtp, ymlwtp|Type|Claw, Claw|SubClassOf|Gripper, etmsis|hasComponent|wtxxv, wtxxv|Type|MotionPlanningAlgo, xkwi|Type|OvenTray, OvenTray|SubClassOf|Object, xkwi|hasDisposition|wamhi, wamhi|isDispositionOf|xkwi, xkwi|hasPart|tkml, tkml|Type|Handle, Handle|SubClassOf|HoldablePart, xkwi|hasPart|nfi, nfi|Type|Handle, Handle|SubClassOf|HoldablePart, xkwi|canBeUsed|boolean#true, xkwi|isOnTouchableSupport|ovxtdl, ovxtdl|isWithinMovingRangeOf|etmsis, adywa|Type|Gripper, Gripper|SubClassOf|EndEffector, etmsis|hasComponent|adywa, adywa|hasWeightLimit|integer#35, xkwi|hasWeight|integer#33, lesserThan(integer#33,integer#35) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : bc|canLift|ko \n -Justifications : bc|Type|Tiago, Tiago|SubClassOf|Agent, bc|hasCapability|hlqhm, hlqhm|isCapabilityOf|bc, bc|hasComponent|ctlumt, ctlumt|Type|Claw, Claw|SubClassOf|Gripper, bc|hasComponent|qunpsu, qunpsu|Type|Claw, Claw|SubClassOf|Gripper, bc|hasComponent|pstqb, pstqb|Type|MotionPlanningAlgo, ko|Type|OvenTray, OvenTray|SubClassOf|Object, ko|hasDisposition|ohdj, ohdj|isDispositionOf|ko, ko|hasPart|vtx, vtx|Type|Handle, Handle|SubClassOf|HoldablePart, ko|hasPart|yufs, yufs|Type|Handle, Handle|SubClassOf|HoldablePart, ko|canBeUsed|boolean#true, ko|isOnTouchableSupport|ayl, ayl|isWithinMovingRangeOf|bc, ctlumt|Type|Gripper, Gripper|SubClassOf|EndEffector, bc|hasComponent|ctlumt, ctlumt|hasWeightLimit|integer#55, ko|hasWeight|integer#19, lesserThan(integer#19,integer#55) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
-      "id": "q_canLift_medium_15b",
+      "id": "q_canLift_medium_8b",
+      "selected_classes": [
+        "Pepper",
+        "TwoFingerClaw",
+        "Handle",
+        "CookingPot"
+      ],
+      "selected_names": [
+        "kv",
+        "vf",
+        "ojlzl",
+        "hoa",
+        "ri",
+        "kjxt",
+        "vxrc",
+        "aih",
+        "dmc",
+        "ksy"
+      ],
+      "question": "-Inference : vxrc|canLift|vf \n -Justifications : vxrc|Type|Pepper, Pepper|SubClassOf|Agent, vxrc|hasCapability|kv, kv|isCapabilityOf|vxrc, vxrc|hasComponent|aih, aih|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, vxrc|hasComponent|dmc, dmc|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, vxrc|hasComponent|ksy, ksy|Type|MotionPlanningAlgo, vf|Type|CookingPot, CookingPot|SubClassOf|Object, vf|hasDisposition|ri, ri|isDispositionOf|vf, vf|hasPart|hoa, hoa|Type|Handle, Handle|SubClassOf|HoldablePart, vf|hasPart|kjxt, kjxt|Type|Handle, Handle|SubClassOf|HoldablePart, vf|canBeUsed|boolean#true, vf|isOnTouchableSupport|ojlzl, ojlzl|isWithinMovingRangeOf|vxrc, aih|Type|Gripper, Gripper|SubClassOf|EndEffector, vxrc|hasComponent|aih, aih|hasWeightLimit|integer#94, vf|hasWeight|integer#65, lesserThan(integer#65,integer#94) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_9b",
+      "selected_classes": [
+        "Robot",
+        "Manipulator",
+        "Handle",
+        "Suitcase"
+      ],
+      "selected_names": [
+        "hmofm",
+        "tff",
+        "wehn",
+        "rudiu",
+        "kwrc",
+        "ahk",
+        "rqfayw",
+        "mrvbl",
+        "uti",
+        "tokrgc"
+      ],
+      "question": "-Inference : rqfayw|canLift|tff \n -Justifications : rqfayw|Type|Robot, Robot|SubClassOf|Agent, rqfayw|hasCapability|hmofm, hmofm|isCapabilityOf|rqfayw, rqfayw|hasComponent|mrvbl, mrvbl|Type|Manipulator, Manipulator|SubClassOf|Gripper, rqfayw|hasComponent|uti, uti|Type|Manipulator, Manipulator|SubClassOf|Gripper, rqfayw|hasComponent|tokrgc, tokrgc|Type|MotionPlanningAlgo, tff|Type|Suitcase, Suitcase|SubClassOf|Object, tff|hasDisposition|kwrc, kwrc|isDispositionOf|tff, tff|hasPart|rudiu, rudiu|Type|Handle, Handle|SubClassOf|HoldablePart, tff|hasPart|ahk, ahk|Type|Handle, Handle|SubClassOf|HoldablePart, tff|canBeUsed|boolean#true, tff|isOnTouchableSupport|wehn, wehn|isWithinMovingRangeOf|rqfayw, mrvbl|Type|Gripper, Gripper|SubClassOf|EndEffector, rqfayw|hasComponent|mrvbl, mrvbl|hasWeightLimit|integer#62, tff|hasWeight|integer#16, lesserThan(integer#16,integer#62) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_10b",
       "selected_classes": [
         "Pr2",
+        "MechanicalHand",
+        "Handle",
+        "Toolbox"
+      ],
+      "selected_names": [
+        "vxxzps",
+        "szwb",
+        "tgjdw",
+        "gx",
+        "vag",
+        "xc",
+        "vdw",
+        "iaack",
+        "rlonve",
+        "lc"
+      ],
+      "question": "-Inference : vdw|canLift|szwb \n -Justifications : vdw|Type|Pr2, Pr2|SubClassOf|Agent, vdw|hasCapability|vxxzps, vxxzps|isCapabilityOf|vdw, vdw|hasComponent|iaack, iaack|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, vdw|hasComponent|rlonve, rlonve|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, vdw|hasComponent|lc, lc|Type|MotionPlanningAlgo, szwb|Type|Toolbox, Toolbox|SubClassOf|Object, szwb|hasDisposition|vag, vag|isDispositionOf|szwb, szwb|hasPart|gx, gx|Type|Handle, Handle|SubClassOf|HoldablePart, szwb|hasPart|xc, xc|Type|Handle, Handle|SubClassOf|HoldablePart, szwb|canBeUsed|boolean#true, szwb|isOnTouchableSupport|tgjdw, tgjdw|isWithinMovingRangeOf|vdw, iaack|Type|Gripper, Gripper|SubClassOf|EndEffector, vdw|hasComponent|iaack, iaack|hasWeightLimit|integer#47, szwb|hasWeight|integer#22, lesserThan(integer#22,integer#47) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_11b",
+      "selected_classes": [
+        "Pr2",
+        "Claw",
+        "Handle",
+        "Suitcase"
+      ],
+      "selected_names": [
+        "rpb",
+        "gcpc",
+        "wzc",
+        "jaxp",
+        "rh",
+        "wh",
+        "qwzr",
+        "in",
+        "povlw",
+        "inr"
+      ],
+      "question": "-Inference : qwzr|canLift|gcpc \n -Justifications : qwzr|Type|Pr2, Pr2|SubClassOf|Agent, qwzr|hasCapability|rpb, rpb|isCapabilityOf|qwzr, qwzr|hasComponent|in, in|Type|Claw, Claw|SubClassOf|Gripper, qwzr|hasComponent|povlw, povlw|Type|Claw, Claw|SubClassOf|Gripper, qwzr|hasComponent|inr, inr|Type|MotionPlanningAlgo, gcpc|Type|Suitcase, Suitcase|SubClassOf|Object, gcpc|hasDisposition|rh, rh|isDispositionOf|gcpc, gcpc|hasPart|jaxp, jaxp|Type|Handle, Handle|SubClassOf|HoldablePart, gcpc|hasPart|wh, wh|Type|Handle, Handle|SubClassOf|HoldablePart, gcpc|canBeUsed|boolean#true, gcpc|isOnTouchableSupport|wzc, wzc|isWithinMovingRangeOf|qwzr, in|Type|Gripper, Gripper|SubClassOf|EndEffector, qwzr|hasComponent|in, in|hasWeightLimit|integer#94, gcpc|hasWeight|integer#30, lesserThan(integer#30,integer#94) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_12b",
+      "selected_classes": [
+        "Tiago",
+        "MechanicalHand",
+        "Grip",
+        "OvenTray"
+      ],
+      "selected_names": [
+        "obme",
+        "dzo",
+        "vy",
+        "ogez",
+        "yrkcl",
+        "xb",
+        "qjcjq",
+        "iwxlm",
+        "vrit",
+        "vtalnk"
+      ],
+      "question": "-Inference : qjcjq|canLift|dzo \n -Justifications : qjcjq|Type|Tiago, Tiago|SubClassOf|Agent, qjcjq|hasCapability|obme, obme|isCapabilityOf|qjcjq, qjcjq|hasComponent|iwxlm, iwxlm|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, qjcjq|hasComponent|vrit, vrit|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, qjcjq|hasComponent|vtalnk, vtalnk|Type|MotionPlanningAlgo, dzo|Type|OvenTray, OvenTray|SubClassOf|Object, dzo|hasDisposition|yrkcl, yrkcl|isDispositionOf|dzo, dzo|hasPart|ogez, ogez|Type|Grip, Grip|SubClassOf|HoldablePart, dzo|hasPart|xb, xb|Type|Grip, Grip|SubClassOf|HoldablePart, dzo|canBeUsed|boolean#true, dzo|isOnTouchableSupport|vy, vy|isWithinMovingRangeOf|qjcjq, iwxlm|Type|Gripper, Gripper|SubClassOf|EndEffector, qjcjq|hasComponent|iwxlm, iwxlm|hasWeightLimit|integer#80, dzo|hasWeight|integer#40, lesserThan(integer#40,integer#80) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_13b",
+      "selected_classes": [
+        "Robot",
+        "TwoFingerClaw",
+        "HandGrip",
+        "LaundryBasket"
+      ],
+      "selected_names": [
+        "zdr",
+        "tizg",
+        "uqsubf",
+        "jtl",
+        "ie",
+        "yus",
+        "zwwky",
+        "crua",
+        "oika",
+        "mn"
+      ],
+      "question": "-Inference : zwwky|canLift|tizg \n -Justifications : zwwky|Type|Robot, Robot|SubClassOf|Agent, zwwky|hasCapability|zdr, zdr|isCapabilityOf|zwwky, zwwky|hasComponent|crua, crua|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, zwwky|hasComponent|oika, oika|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, zwwky|hasComponent|mn, mn|Type|MotionPlanningAlgo, tizg|Type|LaundryBasket, LaundryBasket|SubClassOf|Object, tizg|hasDisposition|ie, ie|isDispositionOf|tizg, tizg|hasPart|jtl, jtl|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, tizg|hasPart|yus, yus|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, tizg|canBeUsed|boolean#true, tizg|isOnTouchableSupport|uqsubf, uqsubf|isWithinMovingRangeOf|zwwky, crua|Type|Gripper, Gripper|SubClassOf|EndEffector, zwwky|hasComponent|crua, crua|hasWeightLimit|integer#83, tizg|hasWeight|integer#29, lesserThan(integer#29,integer#83) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_14b",
+      "selected_classes": [
+        "Pepper",
         "Manipulator",
         "Grip",
         "Toolbox"
       ],
       "selected_names": [
-        "rvsdyz",
-        "aief",
-        "rehgp",
-        "xg",
-        "xye",
-        "jvlrm",
-        "nwdg",
-        "ojws",
-        "zwn",
-        "ffz"
+        "fbql",
+        "pmfd",
+        "tpddny",
+        "grphvr",
+        "btl",
+        "lwwaxn",
+        "tio",
+        "naqm",
+        "yje",
+        "lss"
       ],
-      "question": "-Inference : xye|canLift|aief \n -Justifications : xye|Type|Pr2, Pr2|SubClassOf|Agent, xye|hasCapability|rvsdyz, rvsdyz|isCapabilityOf|xye, xye|hasComponent|rehgp, rehgp|Type|Manipulator, Manipulator|SubClassOf|Gripper, xye|hasComponent|nwdg, nwdg|Type|Manipulator, Manipulator|SubClassOf|Gripper, xye|hasComponent|xg, xg|Type|MotionPlanningAlgo, aief|Type|Toolbox, Toolbox|SubClassOf|Object, aief|hasDisposition|zwn, zwn|isDispositionOf|aief, aief|hasPart|jvlrm, jvlrm|Type|Grip, Grip|SubClassOf|HoldablePart, aief|hasPart|ffz, ffz|Type|Grip, Grip|SubClassOf|HoldablePart, aief|canBeUsed|boolean#true, aief|isOnTouchableSupport|ojws, ojws|isWithinMovingRangeOf|xye, rehgp|Type|Gripper, Gripper|SubClassOf|EndEffector, xye|hasComponent|rehgp, rehgp|hasWeightLimit|integer#99, aief|hasWeight|integer#42, lesserThan(integer#42,integer#99) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : tio|canLift|pmfd \n -Justifications : tio|Type|Pepper, Pepper|SubClassOf|Agent, tio|hasCapability|fbql, fbql|isCapabilityOf|tio, tio|hasComponent|naqm, naqm|Type|Manipulator, Manipulator|SubClassOf|Gripper, tio|hasComponent|yje, yje|Type|Manipulator, Manipulator|SubClassOf|Gripper, tio|hasComponent|lss, lss|Type|MotionPlanningAlgo, pmfd|Type|Toolbox, Toolbox|SubClassOf|Object, pmfd|hasDisposition|btl, btl|isDispositionOf|pmfd, pmfd|hasPart|grphvr, grphvr|Type|Grip, Grip|SubClassOf|HoldablePart, pmfd|hasPart|lwwaxn, lwwaxn|Type|Grip, Grip|SubClassOf|HoldablePart, pmfd|canBeUsed|boolean#true, pmfd|isOnTouchableSupport|tpddny, tpddny|isWithinMovingRangeOf|tio, naqm|Type|Gripper, Gripper|SubClassOf|EndEffector, tio|hasComponent|naqm, naqm|hasWeightLimit|integer#99, pmfd|hasWeight|integer#24, lesserThan(integer#24,integer#99) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+    },
+    {
+      "id": "q_canLift_medium_15b",
+      "selected_classes": [
+        "Robot",
+        "MechanicalHand",
+        "Handle",
+        "OvenTray"
+      ],
+      "selected_names": [
+        "xxc",
+        "sqi",
+        "kyvxuw",
+        "xnadv",
+        "soqz",
+        "wwblf",
+        "csuyb",
+        "hozh",
+        "lzwsj",
+        "uo"
+      ],
+      "question": "-Inference : csuyb|canLift|sqi \n -Justifications : csuyb|Type|Robot, Robot|SubClassOf|Agent, csuyb|hasCapability|xxc, xxc|isCapabilityOf|csuyb, csuyb|hasComponent|hozh, hozh|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, csuyb|hasComponent|lzwsj, lzwsj|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, csuyb|hasComponent|uo, uo|Type|MotionPlanningAlgo, sqi|Type|OvenTray, OvenTray|SubClassOf|Object, sqi|hasDisposition|soqz, soqz|isDispositionOf|sqi, sqi|hasPart|xnadv, xnadv|Type|Handle, Handle|SubClassOf|HoldablePart, sqi|hasPart|wwblf, wwblf|Type|Handle, Handle|SubClassOf|HoldablePart, sqi|canBeUsed|boolean#true, sqi|isOnTouchableSupport|kyvxuw, kyvxuw|isWithinMovingRangeOf|csuyb, hozh|Type|Gripper, Gripper|SubClassOf|EndEffector, csuyb|hasComponent|hozh, hozh|hasWeightLimit|integer#13, sqi|hasWeight|integer#10, lesserThan(integer#10,integer#13) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_16b",
       "selected_classes": [
-        "Pepper",
-        "MechanicalHand",
+        "Robot",
+        "TwoFingerClaw",
         "HandGrip",
-        "Suitcase"
+        "Bucket"
       ],
       "selected_names": [
-        "vl",
-        "vadly",
-        "djfku",
-        "chrtp",
-        "sxct",
-        "nv",
-        "mkk",
-        "ro",
-        "kerm",
-        "vy"
+        "bdg",
+        "der",
+        "gpvu",
+        "njr",
+        "rndujd",
+        "noh",
+        "plztpx",
+        "gcltt",
+        "jzf",
+        "jgpzzk"
       ],
-      "question": "-Inference : sxct|canLift|vadly \n -Justifications : sxct|Type|Pepper, Pepper|SubClassOf|Agent, sxct|hasCapability|vl, vl|isCapabilityOf|sxct, sxct|hasComponent|djfku, djfku|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, sxct|hasComponent|mkk, mkk|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, sxct|hasComponent|chrtp, chrtp|Type|MotionPlanningAlgo, vadly|Type|Suitcase, Suitcase|SubClassOf|Object, vadly|hasDisposition|kerm, kerm|isDispositionOf|vadly, vadly|hasPart|nv, nv|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, vadly|hasPart|vy, vy|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, vadly|canBeUsed|boolean#true, vadly|isOnTouchableSupport|ro, ro|isWithinMovingRangeOf|sxct, djfku|Type|Gripper, Gripper|SubClassOf|EndEffector, sxct|hasComponent|djfku, djfku|hasWeightLimit|integer#66, vadly|hasWeight|integer#21, lesserThan(integer#21,integer#66) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : plztpx|canLift|der \n -Justifications : plztpx|Type|Robot, Robot|SubClassOf|Agent, plztpx|hasCapability|bdg, bdg|isCapabilityOf|plztpx, plztpx|hasComponent|gcltt, gcltt|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, plztpx|hasComponent|jzf, jzf|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, plztpx|hasComponent|jgpzzk, jgpzzk|Type|MotionPlanningAlgo, der|Type|Bucket, Bucket|SubClassOf|Object, der|hasDisposition|rndujd, rndujd|isDispositionOf|der, der|hasPart|njr, njr|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, der|hasPart|noh, noh|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, der|canBeUsed|boolean#true, der|isOnTouchableSupport|gpvu, gpvu|isWithinMovingRangeOf|plztpx, gcltt|Type|Gripper, Gripper|SubClassOf|EndEffector, plztpx|hasComponent|gcltt, gcltt|hasWeightLimit|integer#76, der|hasWeight|integer#26, lesserThan(integer#26,integer#76) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_17b",
       "selected_classes": [
         "Pr2",
         "Claw",
-        "Handle",
+        "HandGrip",
         "Bucket"
       ],
       "selected_names": [
-        "sfjufe",
-        "unhr",
-        "ifxoyx",
-        "tmrdh",
-        "qtrqme",
-        "fu",
-        "sjsjb",
-        "uerevd",
-        "jx",
-        "xxej"
+        "yc",
+        "mrv",
+        "hlegxv",
+        "pteyn",
+        "tgu",
+        "yd",
+        "nu",
+        "nxrvc",
+        "lqspt",
+        "at"
       ],
-      "question": "-Inference : qtrqme|canLift|unhr \n -Justifications : qtrqme|Type|Pr2, Pr2|SubClassOf|Agent, qtrqme|hasCapability|sfjufe, sfjufe|isCapabilityOf|qtrqme, qtrqme|hasComponent|ifxoyx, ifxoyx|Type|Claw, Claw|SubClassOf|Gripper, qtrqme|hasComponent|sjsjb, sjsjb|Type|Claw, Claw|SubClassOf|Gripper, qtrqme|hasComponent|tmrdh, tmrdh|Type|MotionPlanningAlgo, unhr|Type|Bucket, Bucket|SubClassOf|Object, unhr|hasDisposition|jx, jx|isDispositionOf|unhr, unhr|hasPart|fu, fu|Type|Handle, Handle|SubClassOf|HoldablePart, unhr|hasPart|xxej, xxej|Type|Handle, Handle|SubClassOf|HoldablePart, unhr|canBeUsed|boolean#true, unhr|isOnTouchableSupport|uerevd, uerevd|isWithinMovingRangeOf|qtrqme, ifxoyx|Type|Gripper, Gripper|SubClassOf|EndEffector, qtrqme|hasComponent|ifxoyx, ifxoyx|hasWeightLimit|integer#88, unhr|hasWeight|integer#21, lesserThan(integer#21,integer#88) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : nu|canLift|mrv \n -Justifications : nu|Type|Pr2, Pr2|SubClassOf|Agent, nu|hasCapability|yc, yc|isCapabilityOf|nu, nu|hasComponent|nxrvc, nxrvc|Type|Claw, Claw|SubClassOf|Gripper, nu|hasComponent|lqspt, lqspt|Type|Claw, Claw|SubClassOf|Gripper, nu|hasComponent|at, at|Type|MotionPlanningAlgo, mrv|Type|Bucket, Bucket|SubClassOf|Object, mrv|hasDisposition|tgu, tgu|isDispositionOf|mrv, mrv|hasPart|pteyn, pteyn|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, mrv|hasPart|yd, yd|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, mrv|canBeUsed|boolean#true, mrv|isOnTouchableSupport|hlegxv, hlegxv|isWithinMovingRangeOf|nu, nxrvc|Type|Gripper, Gripper|SubClassOf|EndEffector, nu|hasComponent|nxrvc, nxrvc|hasWeightLimit|integer#98, mrv|hasWeight|integer#63, lesserThan(integer#63,integer#98) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_18b",
       "selected_classes": [
-        "Pepper",
-        "Manipulator",
-        "Handle",
-        "Suitcase"
+        "Pr2",
+        "MechanicalHand",
+        "HandGrip",
+        "LaundryBasket"
       ],
       "selected_names": [
-        "ljrc",
-        "zxjwzg",
-        "ebspmz",
-        "ajb",
-        "mg",
-        "ynjqll",
-        "xw",
-        "mjkwgt",
-        "prehmf",
-        "kngw"
+        "ma",
+        "lqs",
+        "mrwwp",
+        "uzisiz",
+        "grlzns",
+        "lssll",
+        "rgz",
+        "oxhgjx",
+        "vcvrm",
+        "bv"
       ],
-      "question": "-Inference : mg|canLift|zxjwzg \n -Justifications : mg|Type|Pepper, Pepper|SubClassOf|Agent, mg|hasCapability|ljrc, ljrc|isCapabilityOf|mg, mg|hasComponent|ebspmz, ebspmz|Type|Manipulator, Manipulator|SubClassOf|Gripper, mg|hasComponent|xw, xw|Type|Manipulator, Manipulator|SubClassOf|Gripper, mg|hasComponent|ajb, ajb|Type|MotionPlanningAlgo, zxjwzg|Type|Suitcase, Suitcase|SubClassOf|Object, zxjwzg|hasDisposition|prehmf, prehmf|isDispositionOf|zxjwzg, zxjwzg|hasPart|ynjqll, ynjqll|Type|Handle, Handle|SubClassOf|HoldablePart, zxjwzg|hasPart|kngw, kngw|Type|Handle, Handle|SubClassOf|HoldablePart, zxjwzg|canBeUsed|boolean#true, zxjwzg|isOnTouchableSupport|mjkwgt, mjkwgt|isWithinMovingRangeOf|mg, ebspmz|Type|Gripper, Gripper|SubClassOf|EndEffector, mg|hasComponent|ebspmz, ebspmz|hasWeightLimit|integer#48, zxjwzg|hasWeight|integer#19, lesserThan(integer#19,integer#48) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : rgz|canLift|lqs \n -Justifications : rgz|Type|Pr2, Pr2|SubClassOf|Agent, rgz|hasCapability|ma, ma|isCapabilityOf|rgz, rgz|hasComponent|oxhgjx, oxhgjx|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, rgz|hasComponent|vcvrm, vcvrm|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, rgz|hasComponent|bv, bv|Type|MotionPlanningAlgo, lqs|Type|LaundryBasket, LaundryBasket|SubClassOf|Object, lqs|hasDisposition|grlzns, grlzns|isDispositionOf|lqs, lqs|hasPart|uzisiz, uzisiz|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, lqs|hasPart|lssll, lssll|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, lqs|canBeUsed|boolean#true, lqs|isOnTouchableSupport|mrwwp, mrwwp|isWithinMovingRangeOf|rgz, oxhgjx|Type|Gripper, Gripper|SubClassOf|EndEffector, rgz|hasComponent|oxhgjx, oxhgjx|hasWeightLimit|integer#61, lqs|hasWeight|integer#38, lesserThan(integer#38,integer#61) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     },
     {
       "id": "q_canLift_medium_19b",
       "selected_classes": [
         "Tiago",
-        "MechanicalHand",
-        "Handle",
-        "Bucket"
+        "Manipulator",
+        "HandGrip",
+        "CookingPot"
       ],
       "selected_names": [
-        "jfcj",
-        "rlkf",
-        "yhftck",
-        "ksvfh",
-        "py",
-        "weptl",
-        "wex",
-        "ye",
-        "woos",
-        "hw"
+        "gfanen",
+        "vui",
+        "qv",
+        "wmmtpu",
+        "uffov",
+        "vx",
+        "uuq",
+        "howwu",
+        "jmdl",
+        "ldow"
       ],
-      "question": "-Inference : py|canLift|rlkf \n -Justifications : py|Type|Tiago, Tiago|SubClassOf|Agent, py|hasCapability|jfcj, jfcj|isCapabilityOf|py, py|hasComponent|yhftck, yhftck|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, py|hasComponent|wex, wex|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, py|hasComponent|ksvfh, ksvfh|Type|MotionPlanningAlgo, rlkf|Type|Bucket, Bucket|SubClassOf|Object, rlkf|hasDisposition|woos, woos|isDispositionOf|rlkf, rlkf|hasPart|weptl, weptl|Type|Handle, Handle|SubClassOf|HoldablePart, rlkf|hasPart|hw, hw|Type|Handle, Handle|SubClassOf|HoldablePart, rlkf|canBeUsed|boolean#true, rlkf|isOnTouchableSupport|ye, ye|isWithinMovingRangeOf|py, yhftck|Type|Gripper, Gripper|SubClassOf|EndEffector, py|hasComponent|yhftck, yhftck|hasWeightLimit|integer#72, rlkf|hasWeight|integer#33, lesserThan(integer#33,integer#72) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
+      "question": "-Inference : uuq|canLift|vui \n -Justifications : uuq|Type|Tiago, Tiago|SubClassOf|Agent, uuq|hasCapability|gfanen, gfanen|isCapabilityOf|uuq, uuq|hasComponent|howwu, howwu|Type|Manipulator, Manipulator|SubClassOf|Gripper, uuq|hasComponent|jmdl, jmdl|Type|Manipulator, Manipulator|SubClassOf|Gripper, uuq|hasComponent|ldow, ldow|Type|MotionPlanningAlgo, vui|Type|CookingPot, CookingPot|SubClassOf|Object, vui|hasDisposition|uffov, uffov|isDispositionOf|vui, vui|hasPart|wmmtpu, wmmtpu|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, vui|hasPart|vx, vx|Type|HandGrip, HandGrip|SubClassOf|HoldablePart, vui|canBeUsed|boolean#true, vui|isOnTouchableSupport|qv, qv|isWithinMovingRangeOf|uuq, howwu|Type|Gripper, Gripper|SubClassOf|EndEffector, uuq|hasComponent|howwu, howwu|hasWeightLimit|integer#94, vui|hasWeight|integer#76, lesserThan(integer#76,integer#94) \n -Rules : Agent(?a), hasCapability(?a, ?c), LiftingCapability(?c), Object(?o), hasDisposition(?o, ?d), LiftableDisposition(?d), isTouchableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasWeightLimit(?g,?w1), hasWeight(?o,?w2), lesserThan(?w2,?w1) -> canLift(?a, ?o)\n\tLiftingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent min 2 Gripper) and (hasComponent some MotionPlanningAlgo))\n\tLiftableDisposition|EquivalentTo|(isDispositionOf some ((hasPart min 2 HoldablePart) and (canBeUsed value boolean#true)))\n\t(isOnTouchableSupport o isWithinMovingRangeOf)|SubPropertyOf|isTouchableBy"
     }
   ]
 }
