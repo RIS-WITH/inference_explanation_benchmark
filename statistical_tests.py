@@ -66,15 +66,15 @@ baseline_df = df_grouped[df_grouped["condition"] == "baseline"]
 # ======== Correctness ======
 model_perc_correct_baseline = ols("perc_correct ~ C(complexity) + C(model)", data=baseline_df).fit()
 anova_perc_correct = sm.stats.anova_lm(model_perc_correct_baseline, typ=2)
-print("\nTwo-Way ANOVA for perc_correct (Baseline Condition):\n", anova_perc_correct)
+print("Two-Way ANOVA for perc_correct (Baseline Condition):\n", anova_perc_correct)
 tukey_baseline_complexity = pairwise_tukeyhsd(baseline_df['perc_correct'], baseline_df['complexity'], alpha=0.05)
 print("Post-hoc test for perc_correct (complexity):", tukey_baseline_complexity)
 
 # ======== Mean Completeness ======
-model_mean_baseline = ols("mean_score ~ C(complexity) + C(model)", data=baseline_df).fit()
+model_mean_baseline = ols("median_score ~ C(complexity) + C(model)", data=baseline_df).fit()
 anova_mean = sm.stats.anova_lm(model_mean_baseline, typ=2)
-print("\Two-Way ANOVA for Mean score (Baseline Condition):\n", anova_mean)
-tukey_baseline_complexity = pairwise_tukeyhsd(baseline_df['mean_score'], baseline_df['complexity'], alpha=0.05)
+print("Two-Way ANOVA for Mean score (Baseline Condition):\n", anova_mean)
+tukey_baseline_complexity = pairwise_tukeyhsd(baseline_df['median_score'], baseline_df['complexity'], alpha=0.05)
 print("Post-hoc test for mean_score (complexity):", tukey_baseline_complexity)
 
 # Step 3: Perform Three-Way ANOVA for correctness and mean completeness according to complexity/condition/model
@@ -91,14 +91,14 @@ tukey_complexity = pairwise_tukeyhsd(df_grouped['perc_correct'], df_grouped['com
 print("Post-hoc test for perc_correct (complexity):", tukey_complexity)
 
 # ======== Mean Completeness ======
-model_mean_all = ols('mean_score ~ C(condition) + C(complexity) + C(model)', data=df_grouped).fit()
+model_mean_all = ols('median_score ~ C(condition) + C(complexity) + C(model)', data=df_grouped).fit()
 anova_result = anova_lm(model_mean_all, typ=3)
 print("\nANOVA Results for mean_score:", anova_result)
 # Condition on mean_score
-tukey_condition = pairwise_tukeyhsd(df_grouped['mean_score'], df_grouped['condition'], alpha=0.05)
+tukey_condition = pairwise_tukeyhsd(df_grouped['median_score'], df_grouped['condition'], alpha=0.05)
 print("Post-hoc test for mean_score (condition):", tukey_condition)
 # Complexity on mean_score
-tukey_complexity = pairwise_tukeyhsd(df_grouped['mean_score'], df_grouped['complexity'], alpha=0.05)
+tukey_complexity = pairwise_tukeyhsd(df_grouped['median_score'], df_grouped['complexity'], alpha=0.05)
 print("Post-hoc test for mean_score (complexity):", tukey_complexity)
 
 
