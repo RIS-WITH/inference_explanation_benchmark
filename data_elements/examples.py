@@ -11,7 +11,7 @@ question_1 = QuestionExample(infered_fact="__robot__|canSpeakWith|__human__",
                              rule="Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),\
                                    hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),\
                                    isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)",
-                              explanation='''__robot__|Type|Robot, __robot__|hasCapability|__robot_capa__, __robot_capa__|Type|VerbalCommunicationCapability,\ 
+                              explanation='''__robot__|Type|Robot, __robot__|hasCapability|__robot_capa__, __robot_capa__|Type|VerbalCommunicationCapability,\
                                           __human__|Type|Human, __human__|hasDisposition|__human_disp__, __human_disp__|Type|VerbalCommunicationDisposition,\
                                           __robot__|isFacing|__human__, __human__|isAvailable|boolean#true''',
                               translation="the robot can speak with the human because it has a verbal communication capability, the human is available and has a \
