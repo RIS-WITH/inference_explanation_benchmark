@@ -1,0 +1,442 @@
+{
+  "id": "q_canGrasp_easy",
+  "template": {
+    "fact": "__agent__|canGrasp|__object__",
+    "explanation": [
+      "__agent__|Type|__Agent__",
+      "__Agent__|SubClassOf|Agent",
+      "__agent__|hasCapability|__agent_capa__",
+      "__agent_capa__|isCapabilityOf|__agent__",
+      "__agent__|hasComponent|__gripper__",
+      "__gripper__|Type|__Gripper__",
+      "__Gripper__|SubClassOf|Gripper",
+      "__object__|Type|__Object__",
+      "__Object__|SubClassOf|Object",
+      "__object__|hasDisposition|__object_disp__",
+      "__object_disp__|isDispositionOf|__object__",
+      "__object__|hasPart|__handle__",
+      "__handle__|Type|__Handle__",
+      "__Handle__|SubClassOf|GraspablePart",
+      "__object__|isReachableBy|__agent__",
+      "__gripper__|Type|Gripper",
+      "Gripper|SubClassOf|EndEffector",
+      "__agent__|hasComponent|__gripper__",
+      "__gripper__|hasOpeningWidth|integer#2",
+      "__object__|hasHoldingPartWidth|integer#1",
+      "greaterThan(integer#2,integer#1)"
+    ]
+  },
+  "rules": [
+    "Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)",
+    "GraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)",
+    "GraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+  ],
+  "concepts": [
+    "grasping",
+    "graspable",
+    "reach",
+    "opening",
+    "object_width",
+    "can grasp"
+  ],
+  "init_prompt": [
+    {
+      "role": "user",
+      "content": "You are an AI model specialized in explaining formal logical inferences and their justifications in natural language. Task Overview: Convert inferences and justifications from rules into concise, clear, and natural language explanations. Rules infer new facts in ontologies based on known facts and logical conditions. Input: Inference: A statement derived from the rules. Justifications: Triples specifying semantic relationships between entities or concepts. Rules: The rules used to make such an inference. Output Requirements: Clarity: Write a single, fluent sentence or short paragraph without any break-down or bullet points. Completeness: Include all justifications into the explanation. Concept-Driven: Don't refer to individual names (e.g., indiv_1|Type|Human becomes 'The human'). Edge Case: For inferences involving chains, equivalent concepts, subclasses or subproperties, explicitly reflect these relationships in the explanation."
+    },
+    {
+      "role": "user",
+      "content": "-Inference : jih|canSpeakWith|pchbyk\n-Justifications : jih|Type|Robot, jih|hasCapability|nhbhmg, nhbhmg|Type|VerbalCommunicationCapability,\\ pchbyk|Type|Human, pchbyk|hasDisposition|frj, frj|Type|VerbalCommunicationDisposition, jih|isFacing|pchbyk, pchbyk|isAvailable|boolean#true, jih|isInFrontOf|wtbrl, wtbrl|hasAgentSeatedOn|pchbyk\n-Rules : Robot(?r), hasCapability(?r,?c), VerbalCommunicationCapability(?c), Human(?a),                                   hasDisposition(?a, ?d), VerbalCommunicationDisposition(?d), isFacing(?r,?a),                                   isAvailable(?a, boolean#true) -> canSpeakWith(?r, ?a)\n(isInFrontOf o hasAgentSeatedOn)|SubPropertyOf|isFacing"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's translate. Translation is the robot can speak with the human because it has a verbal communication capability, the human is available and has a reciprocal disposition for verbal communication. Additionally, the robot is in front of an object that has the human seated on it, ensuring that it is facing the human."
+    },
+    {
+      "role": "user",
+      "content": "-Inference : lgvee|canBeTowedBy|va\n-Justifications : va|Type|Vehicle, va|hasCapability|fidzjg, fidzjg|Type|TowingCapability, lgvee|Type|Car, Car|SubClassOf|Towable, lgvee|hasWeight|integer#2000, va|hasTowingCapacity|integer#3000.\n-Rules : Vehicle(?v), hasCapability(?v,?c), TowingCapability(?c), Towable(?o), hasWeight(?o,?w1),                                   hasTowingCapacity(?v,?w2), greaterThan(?w2,?w1) -> canBeTowedBy(?o,?v)"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's translate. Translation is the vehicle can tow the car because it has a towing capability with sufficient capacity, and the car is a towable object with a weight within the vehicle's towing capacity."
+    },
+    {
+      "role": "user",
+      "content": "-Inference : dj|canInspect|kjbhb\n-Justifications : dj|Type|Drone, dj|hasCapability|igitb, igitb|Type|AerialInspectionCapability, kjbhb|Type|Bridge, Bridge|SubClassOf|Inspectable, kjbhb|hasHeight|integer#100, dj|hasMaxInspectionHeight|integer#200, igitb|isCapabilityOf|dj, dj|hasCamera|audeha, audeha|Type|SecurityCamera, igitb|Type|FlyingCapability\n-Rules : Drone(?d), hasCapability(?d,?c), AerialInspectionCapability(?c), Inspectable(?o), hasHeight(?o,?h1),                                  hasMaxInspectionHeight(?d,?h2), greaterThan(?h2,?h1) -> canInspect(?d,?o)\nAerialInspectionCapability|EquivalentTo|((isCapabilityOf some (hasCamera min 1 SecurityCamera)) and FlyingCapability)"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's translate. Translation is the drone can inspect the bridge because it has an aerial inspection capability based on having at least one security camera and the capability to fly. The bridge is considered inspectable, and the drone's maximum inspection height is greater than the height of the bridge."
+    },
+    {
+      "role": "user",
+      "content": "-Inference : aek|canChargeAt|ll\n-Justifications : aek|Type|DeliveryRobot, aek|hasCapability|hizq, hizq|Type|ChargingCapability, ll|Type|ChargingStation, ll|hasPort|ktn, ktn|Type|ChargingConnector, ll|isPowered|boolean#true, aek|hasBatteryLevel|integer#15, aek|hasBatteryThresholdForCharging|integer#20), aek|hasChargingConnector|inj, inj|hasType|string#USB_TypeC, ktn|hasType|string#USB_TypeC, hizq|isCapabilityOf|aek, aek|hasComponent|inj, inj|Type|ChargingConnector\n-Rules : DeliveryRobot(?r), hasCapability(?r,?c), ChargingCapability(?c), ChargingStation(?s),                                     hasPort(?s,?p), ChargingConnector(?p), isPowered(?s,boolean#true), hasBatteryLevel(?r,?b1),                                     hasBatteryThresholdForCharging(?r,?b2), lesserThan(?b1,?b2), hasChargingConnector(?r,?c1),                                     hasType(?c1,?t1), hasType(?p,?t2), equal(?t1,?t2) -> canChargeAt(?r,?s)\nChargingCapability|EquivalentTo|(isCapabilityOf some (hasComponent exactly 1 ChargingConnector))"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's translate. Translation is the delivery robot can charge at the station because it has a charging capability thanks to its single charging connector which is compatible with the station's port as they both are usb C types, the station being powered, and the robot's battery level being below its charging threshold."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_canGrasp_easy_0b",
+      "selected_classes": [
+        "Tiago",
+        "TwoFingerClaw",
+        "Handle",
+        "Hammer"
+      ],
+      "selected_names": [
+        "deggk",
+        "tc",
+        "gi",
+        "im",
+        "stodj",
+        "skc"
+      ],
+      "question": "-Inference : stodj|canGrasp|gi \n -Justifications : stodj|Type|Tiago, Tiago|SubClassOf|Agent, stodj|hasCapability|tc, tc|isCapabilityOf|stodj, stodj|hasComponent|deggk, deggk|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, gi|Type|Hammer, Hammer|SubClassOf|Object, gi|hasDisposition|skc, skc|isDispositionOf|gi, gi|hasPart|im, im|Type|Handle, Handle|SubClassOf|GraspablePart, gi|isReachableBy|stodj, deggk|Type|Gripper, Gripper|SubClassOf|EndEffector, stodj|hasComponent|deggk, deggk|hasOpeningWidth|integer#81, gi|hasHoldingPartWidth|integer#80, greaterThan(integer#81,integer#80) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_1b",
+      "selected_classes": [
+        "Tiago",
+        "Claw",
+        "Grip",
+        "Lunchbox"
+      ],
+      "selected_names": [
+        "zqdd",
+        "quvbgl",
+        "cp",
+        "omv",
+        "sxdcgk",
+        "nlymm"
+      ],
+      "question": "-Inference : sxdcgk|canGrasp|cp \n -Justifications : sxdcgk|Type|Tiago, Tiago|SubClassOf|Agent, sxdcgk|hasCapability|quvbgl, quvbgl|isCapabilityOf|sxdcgk, sxdcgk|hasComponent|zqdd, zqdd|Type|Claw, Claw|SubClassOf|Gripper, cp|Type|Lunchbox, Lunchbox|SubClassOf|Object, cp|hasDisposition|nlymm, nlymm|isDispositionOf|cp, cp|hasPart|omv, omv|Type|Grip, Grip|SubClassOf|GraspablePart, cp|isReachableBy|sxdcgk, zqdd|Type|Gripper, Gripper|SubClassOf|EndEffector, sxdcgk|hasComponent|zqdd, zqdd|hasOpeningWidth|integer#25, cp|hasHoldingPartWidth|integer#14, greaterThan(integer#25,integer#14) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_2b",
+      "selected_classes": [
+        "Pr2",
+        "Manipulator",
+        "Handle",
+        "Mug"
+      ],
+      "selected_names": [
+        "raejr",
+        "sakjuy",
+        "hgm",
+        "xnaogg",
+        "wehrje",
+        "oub"
+      ],
+      "question": "-Inference : wehrje|canGrasp|hgm \n -Justifications : wehrje|Type|Pr2, Pr2|SubClassOf|Agent, wehrje|hasCapability|sakjuy, sakjuy|isCapabilityOf|wehrje, wehrje|hasComponent|raejr, raejr|Type|Manipulator, Manipulator|SubClassOf|Gripper, hgm|Type|Mug, Mug|SubClassOf|Object, hgm|hasDisposition|oub, oub|isDispositionOf|hgm, hgm|hasPart|xnaogg, xnaogg|Type|Handle, Handle|SubClassOf|GraspablePart, hgm|isReachableBy|wehrje, raejr|Type|Gripper, Gripper|SubClassOf|EndEffector, wehrje|hasComponent|raejr, raejr|hasOpeningWidth|integer#64, hgm|hasHoldingPartWidth|integer#58, greaterThan(integer#64,integer#58) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_3b",
+      "selected_classes": [
+        "Tiago",
+        "Manipulator",
+        "Grip",
+        "ToyBucket"
+      ],
+      "selected_names": [
+        "dcnxa",
+        "cma",
+        "ytzx",
+        "awco",
+        "qeduk",
+        "bdtkr"
+      ],
+      "question": "-Inference : qeduk|canGrasp|ytzx \n -Justifications : qeduk|Type|Tiago, Tiago|SubClassOf|Agent, qeduk|hasCapability|cma, cma|isCapabilityOf|qeduk, qeduk|hasComponent|dcnxa, dcnxa|Type|Manipulator, Manipulator|SubClassOf|Gripper, ytzx|Type|ToyBucket, ToyBucket|SubClassOf|Object, ytzx|hasDisposition|bdtkr, bdtkr|isDispositionOf|ytzx, ytzx|hasPart|awco, awco|Type|Grip, Grip|SubClassOf|GraspablePart, ytzx|isReachableBy|qeduk, dcnxa|Type|Gripper, Gripper|SubClassOf|EndEffector, qeduk|hasComponent|dcnxa, dcnxa|hasOpeningWidth|integer#95, ytzx|hasHoldingPartWidth|integer#30, greaterThan(integer#95,integer#30) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_4b",
+      "selected_classes": [
+        "Tiago",
+        "Manipulator",
+        "Grip",
+        "ToyBucket"
+      ],
+      "selected_names": [
+        "nnjtnx",
+        "pk",
+        "zh",
+        "ea",
+        "gkmzu",
+        "ocafkq"
+      ],
+      "question": "-Inference : gkmzu|canGrasp|zh \n -Justifications : gkmzu|Type|Tiago, Tiago|SubClassOf|Agent, gkmzu|hasCapability|pk, pk|isCapabilityOf|gkmzu, gkmzu|hasComponent|nnjtnx, nnjtnx|Type|Manipulator, Manipulator|SubClassOf|Gripper, zh|Type|ToyBucket, ToyBucket|SubClassOf|Object, zh|hasDisposition|ocafkq, ocafkq|isDispositionOf|zh, zh|hasPart|ea, ea|Type|Grip, Grip|SubClassOf|GraspablePart, zh|isReachableBy|gkmzu, nnjtnx|Type|Gripper, Gripper|SubClassOf|EndEffector, gkmzu|hasComponent|nnjtnx, nnjtnx|hasOpeningWidth|integer#81, zh|hasHoldingPartWidth|integer#28, greaterThan(integer#81,integer#28) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_5b",
+      "selected_classes": [
+        "Tiago",
+        "MechanicalHand",
+        "Handle",
+        "Mug"
+      ],
+      "selected_names": [
+        "awiir",
+        "lxwrt",
+        "pku",
+        "jfxq",
+        "qmuzts",
+        "auo"
+      ],
+      "question": "-Inference : qmuzts|canGrasp|pku \n -Justifications : qmuzts|Type|Tiago, Tiago|SubClassOf|Agent, qmuzts|hasCapability|lxwrt, lxwrt|isCapabilityOf|qmuzts, qmuzts|hasComponent|awiir, awiir|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, pku|Type|Mug, Mug|SubClassOf|Object, pku|hasDisposition|auo, auo|isDispositionOf|pku, pku|hasPart|jfxq, jfxq|Type|Handle, Handle|SubClassOf|GraspablePart, pku|isReachableBy|qmuzts, awiir|Type|Gripper, Gripper|SubClassOf|EndEffector, qmuzts|hasComponent|awiir, awiir|hasOpeningWidth|integer#82, pku|hasHoldingPartWidth|integer#57, greaterThan(integer#82,integer#57) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_6b",
+      "selected_classes": [
+        "Robot",
+        "Manipulator",
+        "HandGrip",
+        "Suitcase"
+      ],
+      "selected_names": [
+        "cxuvn",
+        "bczyn",
+        "nhbsjx",
+        "nsqh",
+        "sd",
+        "psosrl"
+      ],
+      "question": "-Inference : sd|canGrasp|nhbsjx \n -Justifications : sd|Type|Robot, Robot|SubClassOf|Agent, sd|hasCapability|bczyn, bczyn|isCapabilityOf|sd, sd|hasComponent|cxuvn, cxuvn|Type|Manipulator, Manipulator|SubClassOf|Gripper, nhbsjx|Type|Suitcase, Suitcase|SubClassOf|Object, nhbsjx|hasDisposition|psosrl, psosrl|isDispositionOf|nhbsjx, nhbsjx|hasPart|nsqh, nsqh|Type|HandGrip, HandGrip|SubClassOf|GraspablePart, nhbsjx|isReachableBy|sd, cxuvn|Type|Gripper, Gripper|SubClassOf|EndEffector, sd|hasComponent|cxuvn, cxuvn|hasOpeningWidth|integer#67, nhbsjx|hasHoldingPartWidth|integer#38, greaterThan(integer#67,integer#38) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_7b",
+      "selected_classes": [
+        "Robot",
+        "MechanicalHand",
+        "Grip",
+        "Mug"
+      ],
+      "selected_names": [
+        "krj",
+        "tv",
+        "qcxaie",
+        "pvxni",
+        "pr",
+        "olxs"
+      ],
+      "question": "-Inference : pr|canGrasp|qcxaie \n -Justifications : pr|Type|Robot, Robot|SubClassOf|Agent, pr|hasCapability|tv, tv|isCapabilityOf|pr, pr|hasComponent|krj, krj|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, qcxaie|Type|Mug, Mug|SubClassOf|Object, qcxaie|hasDisposition|olxs, olxs|isDispositionOf|qcxaie, qcxaie|hasPart|pvxni, pvxni|Type|Grip, Grip|SubClassOf|GraspablePart, qcxaie|isReachableBy|pr, krj|Type|Gripper, Gripper|SubClassOf|EndEffector, pr|hasComponent|krj, krj|hasOpeningWidth|integer#89, qcxaie|hasHoldingPartWidth|integer#39, greaterThan(integer#89,integer#39) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_8b",
+      "selected_classes": [
+        "Tiago",
+        "Claw",
+        "Grip",
+        "ToyBucket"
+      ],
+      "selected_names": [
+        "hcwfm",
+        "qgrzm",
+        "atuwx",
+        "pzsjp",
+        "iiby",
+        "qqwv"
+      ],
+      "question": "-Inference : iiby|canGrasp|atuwx \n -Justifications : iiby|Type|Tiago, Tiago|SubClassOf|Agent, iiby|hasCapability|qgrzm, qgrzm|isCapabilityOf|iiby, iiby|hasComponent|hcwfm, hcwfm|Type|Claw, Claw|SubClassOf|Gripper, atuwx|Type|ToyBucket, ToyBucket|SubClassOf|Object, atuwx|hasDisposition|qqwv, qqwv|isDispositionOf|atuwx, atuwx|hasPart|pzsjp, pzsjp|Type|Grip, Grip|SubClassOf|GraspablePart, atuwx|isReachableBy|iiby, hcwfm|Type|Gripper, Gripper|SubClassOf|EndEffector, iiby|hasComponent|hcwfm, hcwfm|hasOpeningWidth|integer#59, atuwx|hasHoldingPartWidth|integer#50, greaterThan(integer#59,integer#50) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_9b",
+      "selected_classes": [
+        "Pr2",
+        "Claw",
+        "Grip",
+        "Lunchbox"
+      ],
+      "selected_names": [
+        "md",
+        "swzp",
+        "ykti",
+        "sih",
+        "ioviny",
+        "rvg"
+      ],
+      "question": "-Inference : ioviny|canGrasp|ykti \n -Justifications : ioviny|Type|Pr2, Pr2|SubClassOf|Agent, ioviny|hasCapability|swzp, swzp|isCapabilityOf|ioviny, ioviny|hasComponent|md, md|Type|Claw, Claw|SubClassOf|Gripper, ykti|Type|Lunchbox, Lunchbox|SubClassOf|Object, ykti|hasDisposition|rvg, rvg|isDispositionOf|ykti, ykti|hasPart|sih, sih|Type|Grip, Grip|SubClassOf|GraspablePart, ykti|isReachableBy|ioviny, md|Type|Gripper, Gripper|SubClassOf|EndEffector, ioviny|hasComponent|md, md|hasOpeningWidth|integer#86, ykti|hasHoldingPartWidth|integer#64, greaterThan(integer#86,integer#64) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_10b",
+      "selected_classes": [
+        "Tiago",
+        "TwoFingerClaw",
+        "Grip",
+        "Lunchbox"
+      ],
+      "selected_names": [
+        "hvpusu",
+        "ndbtmr",
+        "xeltht",
+        "nxlo",
+        "ujiq",
+        "bjzrlo"
+      ],
+      "question": "-Inference : ujiq|canGrasp|xeltht \n -Justifications : ujiq|Type|Tiago, Tiago|SubClassOf|Agent, ujiq|hasCapability|ndbtmr, ndbtmr|isCapabilityOf|ujiq, ujiq|hasComponent|hvpusu, hvpusu|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, xeltht|Type|Lunchbox, Lunchbox|SubClassOf|Object, xeltht|hasDisposition|bjzrlo, bjzrlo|isDispositionOf|xeltht, xeltht|hasPart|nxlo, nxlo|Type|Grip, Grip|SubClassOf|GraspablePart, xeltht|isReachableBy|ujiq, hvpusu|Type|Gripper, Gripper|SubClassOf|EndEffector, ujiq|hasComponent|hvpusu, hvpusu|hasOpeningWidth|integer#92, xeltht|hasHoldingPartWidth|integer#43, greaterThan(integer#92,integer#43) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_11b",
+      "selected_classes": [
+        "Pr2",
+        "MechanicalHand",
+        "HandGrip",
+        "Hammer"
+      ],
+      "selected_names": [
+        "ylvh",
+        "izwgo",
+        "bbafp",
+        "glzyr",
+        "wagbmg",
+        "wrg"
+      ],
+      "question": "-Inference : wagbmg|canGrasp|bbafp \n -Justifications : wagbmg|Type|Pr2, Pr2|SubClassOf|Agent, wagbmg|hasCapability|izwgo, izwgo|isCapabilityOf|wagbmg, wagbmg|hasComponent|ylvh, ylvh|Type|MechanicalHand, MechanicalHand|SubClassOf|Gripper, bbafp|Type|Hammer, Hammer|SubClassOf|Object, bbafp|hasDisposition|wrg, wrg|isDispositionOf|bbafp, bbafp|hasPart|glzyr, glzyr|Type|HandGrip, HandGrip|SubClassOf|GraspablePart, bbafp|isReachableBy|wagbmg, ylvh|Type|Gripper, Gripper|SubClassOf|EndEffector, wagbmg|hasComponent|ylvh, ylvh|hasOpeningWidth|integer#99, bbafp|hasHoldingPartWidth|integer#44, greaterThan(integer#99,integer#44) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_12b",
+      "selected_classes": [
+        "Tiago",
+        "Manipulator",
+        "Handle",
+        "Hammer"
+      ],
+      "selected_names": [
+        "khx",
+        "ig",
+        "nzqhx",
+        "fa",
+        "nzfr",
+        "fdftb"
+      ],
+      "question": "-Inference : nzfr|canGrasp|nzqhx \n -Justifications : nzfr|Type|Tiago, Tiago|SubClassOf|Agent, nzfr|hasCapability|ig, ig|isCapabilityOf|nzfr, nzfr|hasComponent|khx, khx|Type|Manipulator, Manipulator|SubClassOf|Gripper, nzqhx|Type|Hammer, Hammer|SubClassOf|Object, nzqhx|hasDisposition|fdftb, fdftb|isDispositionOf|nzqhx, nzqhx|hasPart|fa, fa|Type|Handle, Handle|SubClassOf|GraspablePart, nzqhx|isReachableBy|nzfr, khx|Type|Gripper, Gripper|SubClassOf|EndEffector, nzfr|hasComponent|khx, khx|hasOpeningWidth|integer#62, nzqhx|hasHoldingPartWidth|integer#42, greaterThan(integer#62,integer#42) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_13b",
+      "selected_classes": [
+        "Tiago",
+        "Claw",
+        "HandGrip",
+        "Shovel"
+      ],
+      "selected_names": [
+        "anufjh",
+        "fhpw",
+        "tb",
+        "vw",
+        "ym",
+        "ue"
+      ],
+      "question": "-Inference : ym|canGrasp|tb \n -Justifications : ym|Type|Tiago, Tiago|SubClassOf|Agent, ym|hasCapability|fhpw, fhpw|isCapabilityOf|ym, ym|hasComponent|anufjh, anufjh|Type|Claw, Claw|SubClassOf|Gripper, tb|Type|Shovel, Shovel|SubClassOf|Object, tb|hasDisposition|ue, ue|isDispositionOf|tb, tb|hasPart|vw, vw|Type|HandGrip, HandGrip|SubClassOf|GraspablePart, tb|isReachableBy|ym, anufjh|Type|Gripper, Gripper|SubClassOf|EndEffector, ym|hasComponent|anufjh, anufjh|hasOpeningWidth|integer#63, tb|hasHoldingPartWidth|integer#10, greaterThan(integer#63,integer#10) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_14b",
+      "selected_classes": [
+        "Tiago",
+        "TwoFingerClaw",
+        "Handle",
+        "CookingPot"
+      ],
+      "selected_names": [
+        "zcjy",
+        "yxy",
+        "vugk",
+        "vs",
+        "gkngyx",
+        "lvz"
+      ],
+      "question": "-Inference : gkngyx|canGrasp|vugk \n -Justifications : gkngyx|Type|Tiago, Tiago|SubClassOf|Agent, gkngyx|hasCapability|yxy, yxy|isCapabilityOf|gkngyx, gkngyx|hasComponent|zcjy, zcjy|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, vugk|Type|CookingPot, CookingPot|SubClassOf|Object, vugk|hasDisposition|lvz, lvz|isDispositionOf|vugk, vugk|hasPart|vs, vs|Type|Handle, Handle|SubClassOf|GraspablePart, vugk|isReachableBy|gkngyx, zcjy|Type|Gripper, Gripper|SubClassOf|EndEffector, gkngyx|hasComponent|zcjy, zcjy|hasOpeningWidth|integer#44, vugk|hasHoldingPartWidth|integer#38, greaterThan(integer#44,integer#38) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_15b",
+      "selected_classes": [
+        "Tiago",
+        "Manipulator",
+        "Handle",
+        "Hammer"
+      ],
+      "selected_names": [
+        "di",
+        "tl",
+        "jjnfrc",
+        "hhx",
+        "ucprmd",
+        "soz"
+      ],
+      "question": "-Inference : ucprmd|canGrasp|jjnfrc \n -Justifications : ucprmd|Type|Tiago, Tiago|SubClassOf|Agent, ucprmd|hasCapability|tl, tl|isCapabilityOf|ucprmd, ucprmd|hasComponent|di, di|Type|Manipulator, Manipulator|SubClassOf|Gripper, jjnfrc|Type|Hammer, Hammer|SubClassOf|Object, jjnfrc|hasDisposition|soz, soz|isDispositionOf|jjnfrc, jjnfrc|hasPart|hhx, hhx|Type|Handle, Handle|SubClassOf|GraspablePart, jjnfrc|isReachableBy|ucprmd, di|Type|Gripper, Gripper|SubClassOf|EndEffector, ucprmd|hasComponent|di, di|hasOpeningWidth|integer#79, jjnfrc|hasHoldingPartWidth|integer#38, greaterThan(integer#79,integer#38) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_16b",
+      "selected_classes": [
+        "Tiago",
+        "Claw",
+        "HandGrip",
+        "Mug"
+      ],
+      "selected_names": [
+        "sldu",
+        "uz",
+        "vtihm",
+        "xtp",
+        "omca",
+        "vnbav"
+      ],
+      "question": "-Inference : omca|canGrasp|vtihm \n -Justifications : omca|Type|Tiago, Tiago|SubClassOf|Agent, omca|hasCapability|uz, uz|isCapabilityOf|omca, omca|hasComponent|sldu, sldu|Type|Claw, Claw|SubClassOf|Gripper, vtihm|Type|Mug, Mug|SubClassOf|Object, vtihm|hasDisposition|vnbav, vnbav|isDispositionOf|vtihm, vtihm|hasPart|xtp, xtp|Type|HandGrip, HandGrip|SubClassOf|GraspablePart, vtihm|isReachableBy|omca, sldu|Type|Gripper, Gripper|SubClassOf|EndEffector, omca|hasComponent|sldu, sldu|hasOpeningWidth|integer#87, vtihm|hasHoldingPartWidth|integer#25, greaterThan(integer#87,integer#25) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_17b",
+      "selected_classes": [
+        "Tiago",
+        "Claw",
+        "HandGrip",
+        "ToyBucket"
+      ],
+      "selected_names": [
+        "mjcgs",
+        "mng",
+        "afs",
+        "gg",
+        "jpmh",
+        "at"
+      ],
+      "question": "-Inference : jpmh|canGrasp|afs \n -Justifications : jpmh|Type|Tiago, Tiago|SubClassOf|Agent, jpmh|hasCapability|mng, mng|isCapabilityOf|jpmh, jpmh|hasComponent|mjcgs, mjcgs|Type|Claw, Claw|SubClassOf|Gripper, afs|Type|ToyBucket, ToyBucket|SubClassOf|Object, afs|hasDisposition|at, at|isDispositionOf|afs, afs|hasPart|gg, gg|Type|HandGrip, HandGrip|SubClassOf|GraspablePart, afs|isReachableBy|jpmh, mjcgs|Type|Gripper, Gripper|SubClassOf|EndEffector, jpmh|hasComponent|mjcgs, mjcgs|hasOpeningWidth|integer#82, afs|hasHoldingPartWidth|integer#28, greaterThan(integer#82,integer#28) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_18b",
+      "selected_classes": [
+        "Pr2",
+        "TwoFingerClaw",
+        "Grip",
+        "Suitcase"
+      ],
+      "selected_names": [
+        "ehdd",
+        "bpez",
+        "cajymq",
+        "ikuu",
+        "hvpe",
+        "hzze"
+      ],
+      "question": "-Inference : hvpe|canGrasp|cajymq \n -Justifications : hvpe|Type|Pr2, Pr2|SubClassOf|Agent, hvpe|hasCapability|bpez, bpez|isCapabilityOf|hvpe, hvpe|hasComponent|ehdd, ehdd|Type|TwoFingerClaw, TwoFingerClaw|SubClassOf|Gripper, cajymq|Type|Suitcase, Suitcase|SubClassOf|Object, cajymq|hasDisposition|hzze, hzze|isDispositionOf|cajymq, cajymq|hasPart|ikuu, ikuu|Type|Grip, Grip|SubClassOf|GraspablePart, cajymq|isReachableBy|hvpe, ehdd|Type|Gripper, Gripper|SubClassOf|EndEffector, hvpe|hasComponent|ehdd, ehdd|hasOpeningWidth|integer#93, cajymq|hasHoldingPartWidth|integer#61, greaterThan(integer#93,integer#61) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    },
+    {
+      "id": "q_canGrasp_easy_19b",
+      "selected_classes": [
+        "Robot",
+        "Claw",
+        "Grip",
+        "Shovel"
+      ],
+      "selected_names": [
+        "sd",
+        "zzntqn",
+        "fhxbpy",
+        "lm",
+        "pshron",
+        "jlaz"
+      ],
+      "question": "-Inference : pshron|canGrasp|fhxbpy \n -Justifications : pshron|Type|Robot, Robot|SubClassOf|Agent, pshron|hasCapability|zzntqn, zzntqn|isCapabilityOf|pshron, pshron|hasComponent|sd, sd|Type|Claw, Claw|SubClassOf|Gripper, fhxbpy|Type|Shovel, Shovel|SubClassOf|Object, fhxbpy|hasDisposition|jlaz, jlaz|isDispositionOf|fhxbpy, fhxbpy|hasPart|lm, lm|Type|Grip, Grip|SubClassOf|GraspablePart, fhxbpy|isReachableBy|pshron, sd|Type|Gripper, Gripper|SubClassOf|EndEffector, pshron|hasComponent|sd, sd|hasOpeningWidth|integer#83, fhxbpy|hasHoldingPartWidth|integer#20, greaterThan(integer#83,integer#20) \n -Rules : Agent(?a), hasCapability(?a, ?c), GraspingCapability(?c), Object(?o), hasDisposition(?o, ?d), GraspableDisposition(?d), isReachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasOpeningWidth(?g,?w1), hasHoldingPartWidth(?o,?w2), greaterThan(?w1,?w2) -> canGrasp(?a, ?o)\n\tGraspingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Gripper)\n\tGraspableDisposition|EquivalentTo|isDispositionOf some (hasPart some GraspablePart)"
+    }
+  ]
+}

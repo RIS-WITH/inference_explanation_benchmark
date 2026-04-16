@@ -1,208 +1,94 @@
-from data_elements.questions import QuestionInstance
+from data_elements.QuestionManager import QuestionRule, QuestionManager
+from data_elements.VariableManager import VariableManager
+from data_elements.Explanation import AffordanceBase, ClassExpression, ClassExpressionExplanation
 
-# ====================== canPush ===================
-explanation_robot_capa = [
-                           "pepper|Type|Robot",
-                           "Robot|SubClassOf|Agent",
-                           "pepper|hasCapability|pepper_capa"
-                         ]
+# ====================== Rule ===================
 
-explanation_object_disp = [
-                            "chair_1|Type|Chair",
-                            "Chair|SubClassOf|Object",
-                            "chair_1|hasDisposition|chair_1_disp"
-                          ]
+push_rule = QuestionRule(property = "canPush",
+                         rule = "Agent(?a), hasCapability(?a, ?c), PushingCapability(?c),\
+                                 Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),\
+                                 isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g),\
+                                 hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1)\
+                                 -> canPush(?a, ?o)",
+                          concepts = ['pushing', 'pushable', 'approachable', 'applicable_force', 'required_force', 'can push'])
 
-explanation_force = [
-                    "pepper_left_gripper|Type|Gripper",
-                    "Gripper|SubClassOf|EndEffector",
-                    "pepper|hasComponent|pepper_left_gripper",
-                    "pepper_left_gripper|hasApplicableForce|integer#1",
-                    "chair_1|requiresForce|integer#1",
-                    "equal(integer#1,integer#1)"
-                    ]
+# ====================== Variables ===================
 
-# =============== Explanations why the class PushableDisposition is inferred =============
-pushable_easy = "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart))"
-pushable_medium= "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true)))"
-pushable_hard = "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false)))"
+variable_manager = VariableManager()
+variable_manager.addClassVariable('__Object__',
+                                  {'ToyWagon' : 'toy wagon',
+                                   'RemoteControlledCar' : 'remote controlled car',
+                                   'MiniShoppingCart' : 'shopping cart',
+                                   'OfficeChair' : 'office chair',
+                                   'RoombaRobot' : 'roomba'})
 
-explanations_pushable_easy= [
-                                pushable_easy,
-                                "chair_1_disp|isDispositionOf|chair_1",
-                                "chair_1|hasPart|wheel_1",
-                                "wheel_1|Type|Roller",
-                                "Roller|SubClassOf|RollablePart"
-                                ]
+# ====================== Affordance ===================
 
-explanations_pushable_medium = [
-                                pushable_medium,
-                                "chair_1_disp|isDispositionOf|chair_1",
-                                "chair_1|hasPart|wheel_1",
-                                "wheel_1|Type|Roller",
-                                "Roller|SubClassOf|RollablePart",
-                                "wheel_1|isOnRollableSurface|boolean#true"
-                                ]
+affordance = AffordanceBase(capa=None, # Use the default capability
+                            disp=None, # Use the default disposition
+                            match=[
+                                  "__gripper__|Type|Gripper",
+                                  "Gripper|SubClassOf|EndEffector",
+                                  "__agent__|hasComponent|__gripper__",
+                                  "__gripper__|hasApplicableForce|integer#1",
+                                  "__object__|requiresForce|integer#1",
+                                  "equal(integer#1,integer#1)"
+                                  ])
 
-explanations_pushable_hard = [
-                                pushable_hard,
-                                "chair_1_disp|isDispositionOf|chair_1",
-                                "chair_1|hasPart|wheel_1",
-                                "wheel_1|Type|Roller",
-                                "Roller|SubClassOf|RollablePart",
-                                "wheel_1|isOnRollableSurface|boolean#true",
-                                "wheel_1|isBlockedBySomething|boolean#false"
-                            ]
+# =============== Disposition Explanation =============
+disposition_expression = ClassExpression(easy= "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some RollablePart))",
+                                         medium= "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true)))",
+                                         hard = "PushableDisposition|EquivalentTo|(isDispositionOf some (hasPart some (RollablePart and (isOnRollableSurface value boolean#true) and (isBlockedBySomething value boolean#false)))")
 
-# =============== Explanations why the class PushingCapability is inferred =============
-pushing_easy = "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper)"
-pushing_medium= "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false))"
-pushing_hard = "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector))"
+diposition_explanation = ClassExpressionExplanation(disposition_expression,
+                                                    easy=["chair_1_disp|isDispositionOf|__object__",
+                                                          "__object__|hasPart|__wheel__",
+                                                          "__wheel__|Type|__Wheel__",
+                                                          "__Wheel__|SubClassOf|RollablePart"],
+                                                    medium=["__wheel__|isOnRollableSurface|boolean#true"],
+                                                    hard=["__wheel__|isBlockedBySomething|boolean#false"],
+                                                    concatenate=True)
 
-explanations_pushing_easy= [
-                                pushing_easy,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasGripper|pepper_left_gripper",
-                                "pepper_left_gripper|Type|MechanicalHand",
-                                "MechanicalHand|SubClassOf|Gripper"
-                                ]
+# =============== Capability Explanation =============
+capability_expression = ClassExpression(easy= "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 Gripper)",
+                                        medium= "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false))",
+                                        hard= "PushingCapability|EquivalentTo|(isCapabilityOf some (hasGripper min 1 (Gripper and (holdsSomething value boolean#false) and RigidEndEffector))")
 
-explanations_pushing_medium = [
-                                pushing_medium,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasGripper|pepper_left_gripper",
-                                "pepper_left_gripper|Type|MechanicalHand",
-                                "MechanicalHand|SubClassOf|Gripper",
-                                "pepper_left_gripper|holdsSomething|boolean#false"
-                                ]
+capability_explanation = ClassExpressionExplanation(capability_expression,
+                                                    easy=["__agent_capa__|isCapabilityOf|__agent__",
+                                                          "__agent__|hasGripper|__gripper__",
+                                                          "__gripper__|Type|__Gripper__",
+                                                          "__Gripper__|SubClassOf|Gripper"],
+                                                    medium=["__gripper__|holdsSomething|boolean#false"],
+                                                    hard=["__gripper__|Type|RigidEndEffector"],
+                                                    concatenate=True)
 
-explanations_pushing_hard = [
-                                pushing_hard,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasGripper|pepper_left_gripper",
-                                "pepper_left_gripper|Type|MechanicalHand",
-                                "MechanicalHand|SubClassOf|Gripper",
-                                "pepper_left_gripper|holdsSomething|boolean#false",
-                                "pepper_left_gripper|Type|RigidEndEffector"
-                                ]
+# =============== Property Explanation =============
+property_expression = ClassExpression(easy = "", # chair isApproachableBy agent
+                                      medium = "(isOnTable o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy", # box isOnTable table isWithinMovingRangeOf agent
+                                      hard = "(isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy") # box isOnTable table isInSafeArea __room__ isWithinMovingRangeOf agent
 
-# =============== Explanations why the property isApproachableBy exists =============
-object_push_available_easy = "isApproachableBy" # chair isApproachableBy agent
-object_push_available_medium = "(isOnTable o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy" # box isOnTable table isWithinMovingRangeOf agent
-object_push_available_hard = "(isOnTable o isInSafeArea o isWithinMovingRangeOf)|SubPropertyOf|isApproachableBy" # box isOnTable table isInSafeArea kitchen isWithinMovingRangeOf agent
+property_explanation = ClassExpressionExplanation(property_expression,
+                                                  easy= ["__object__|isApproachableBy|__agent__"],
+                                                  medium= [],
+                                                  hard=[],
+                                                  concatenate = True)
 
-explanations_object_push_easy = ["chair_1|isApproachableBy|pepper"]
+property_explanation.medium = ["__object__|isOnTable|__table__",
+                               "__table__|isWithinMovingRangeOf|__agent__"]
 
-explanations_object_push_medium = [
-                                object_push_available_medium,
-                                "chair_1|isOnTable|table_1",
-                                "table_1|isWithinMovingRangeOf|pepper"
-                                ]
+property_explanation.hard = ["__object__|isOnTable|__table__",
+                             "__table__|isInSafeArea|__room__",
+                             "__room__|isWithinMovingRangeOf|__agent__"]
 
-explanations_object_push_hard = [
-                                object_push_available_hard,
-                                "chair_1|isOnTable|table_1",
-                                "table_1|isInSafeArea|kitchen",
-                                "kitchen|isWithinMovingRangeOf|pepper"
-                                ]
+# =============== QuestionManager =============
 
-# Concatenate the explanations according to the complexity level (easy, medium, hard)
-explanations_push_easy = explanation_robot_capa + explanations_pushing_easy + explanation_object_disp + explanations_pushable_easy + explanations_object_push_easy + explanation_force
-explanations_push_medium = explanation_robot_capa + explanations_pushing_medium + explanation_object_disp + explanations_pushable_medium + explanations_object_push_medium + explanation_force
-explanations_push_hard= explanation_robot_capa + explanations_pushing_hard + explanation_object_disp + explanations_pushable_hard + explanations_object_push_hard + explanation_force
-
-# print("easy : ", explanations_push_easy)
-# print("medium : ", explanations_push_medium)
-# print("hard : ", explanations_push_hard)
-
-fact_push = "pepper|canPush|chair_1"
-
-template_dict_push = {'pepper': '__var0__',  
-                    'chair_1': '__var1__',
-                    'chair_1_disp': '__var2__',
-                    'pepper_capa': '__var3__',
-                    'pepper_left_gripper' : '__var4__',
-                    'wheel_1' : '__var5__',
-                    'table_1' : '__var6__',
-                    'kitchen' : '__var7__',
-                    'Robot': '__agent__',
-                    'MechanicalHand': '__component__',
-                    'Chair': '__object__',
-                    'Roller': '__part__'
-                    }
-
-
-class VariableConcept:
-  def __init__(self, concept, label):
-    self.concept_ = concept
-    self.label_ = label
-
-object_list = [
-              VariableConcept('ToyWagon', 'toy wagon'), 
-              VariableConcept('RemoteControlledCar', 'remote controlled car'), 
-              VariableConcept('MiniShoppingCart', 'shopping cart'), 
-              VariableConcept('OfficeChair', 'office chair'), 
-              VariableConcept('RoombaRobot', 'roomba')
-              ]
-
-part_list = [
-              VariableConcept('Wheel', 'wheel'), 
-              VariableConcept('Roller', 'roller'), 
-              VariableConcept('Caster', 'caster'), 
-              VariableConcept('PivotRoller', 'pivot roller'),
-              VariableConcept('PivotWheel', 'pivot wheel')
-              ]
-
-agent_list = [
-              VariableConcept('Robot', 'robot'), 
-              VariableConcept('Pr2', 'pr2'), 
-              VariableConcept('Pepper', 'pepper'), 
-              VariableConcept('Tiago', 'tiago')
-              ]
-
-component_list = [
-              VariableConcept('MechanicalHand', 'mechanical hand'), 
-              VariableConcept('Claw', 'claw'), 
-              VariableConcept('TwoFingerClaw', 'two-finger claw'), 
-              VariableConcept('Manipulator', 'manipulator')
-              ]
-
-class_variables_final_push = { 
-                            "__object__" : object_list,
-                            "__part__" :   part_list,
-                            "__agent__" :   agent_list,
-                            "__component__" : component_list
-                             }
-
-push_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), PushingCapability(?c), Object(?o), hasDisposition(?o, ?d), PushableDisposition(?d),\
-               isApproachableBy(?o,?a), EndEffector(?g), hasComponent(?a,?g), hasApplicableForce(?g,?w1), requiresForce(?o,?w2), equal(?w2,?w1) -> canPush(?a, ?o)."
-
-concepts_rule = ['pushing', 'pushable', 'approachable', 'applicable_force', 'required_force', 'can push']
-
-concept_easy = {
-                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
-                'disp' : ['pushable disposition', "min1rollable_part"], 
-                'capa': ['pushing capability', 'min1gripper'], 
-                'property' : ['approachable'],
-                'constraint' : ['applicable force', 'required_force']
-                }
-
-
-concept_medium = {
-                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
-                'disp' : ['pushable disposition', "min1rollable_part", "rollable_part_on_rollable_surface"], 
-                'capa': ['pushing capability', 'min1gripper', 'empty_hand'], 
-                'property' : ['approachable', 'object_on_table', 'table_in_moving_range_robot'],
-                'constraint' : ['applicable force', 'required_force']
-                }
-
-concept_hard = {
-                'rule' : ['can push', '__robot__', '__component__', '__object__', '__rollable_part__'],
-                'disp' : ['pushable disposition', "min1rollable_part", "rollable_part_on_rollable_surface", 'rollable_part_unblocked'],
-                'capa': ['pushing capability', 'min1gripper', 'empty_hand', 'rigid' ], 
-                'property' : ['approachable', 'object_on_table', 'table_in_safe_area', 'table_in_moving_range_robot'],
-                'constraint' : ['applicable force', 'required_force']
-                }
+push_manager = QuestionManager(push_rule,
+                               variable_manager,
+                               affordance,
+                               capability_explanation,
+                               diposition_explanation,
+                               property_explanation)
 
 #easy
 # "concepts" : [
@@ -231,28 +117,16 @@ concept_hard = {
 #   "applicable force", "required_force"     
 # ]
 
-# gt_push_easy = "The __agent__ can push the __object__ because on one hand it has the pushing capability through having at least one gripper, \
-#                 thanks to its __component__. On the other hand, the __object__ has the disposition of being pushable because it has some __part__ which is a wheel. \
-#                 Moreover the __object__ is approachable by the __agent__."
+# gt_push_easy = "The __Agent__ can push the __Object__ because on one hand it has the pushing capability through having at least one gripper, \
+#                 thanks to its __Gripper__. On the other hand, the __Object__ has the disposition of being pushable because it has some __Wheel__ which is a wheel. \
+#                 Moreover the __Object__ is approachable by the __Agent__."
                 
-# gt_push_medium = "The __agent__ can push the __object__ because on one hand it has the pushing capability through having at least one gripper which\
-#                 doesn't hold anything, thanks to its __component__. On the other hand, the __object__ has the disposition of being pushable because it has\
-#                 some __part__ which is a wheel and on a rollable surface. \
-#                 Moreover the __object__ is approachable by the __agent__ because it is on a table that is within the moving range of the __agent__."
+# gt_push_medium = "The __Agent__ can push the __Object__ because on one hand it has the pushing capability through having at least one gripper which\
+#                 doesn't hold anything, thanks to its __Gripper__. On the other hand, the __Object__ has the disposition of being pushable because it has\
+#                 some __Wheel__ which is a wheel and on a rollable surface. \
+#                 Moreover the __Object__ is approachable by the __Agent__ because it is on a table that is within the moving range of the __Agent__."
                  
-# gt_push_hard = "The __agent__ can push the __object__ because on one hand it has the pushing capability through having at least one gripper which \
-#                   is also a rigid end effector and that doesn't hold anything, thanks to its __component__. On the other hand, the __object__ has the \
-#                   disposition of being pushable because it has some __part__ which is a wheel, on a rollable surface and unblocked. \
-#                   Moreover the __object__ is approachable by the __agent__ because it is on a table that is in a safe area, which is within the moving range of the __agent__."
-                              
-question_push_easy = QuestionInstance(name="q_push_easy", fact=fact_push, explanations=explanations_push_easy, rule=push_rule, 
-                                      classes_var=class_variables_final_push, template_dict=template_dict_push, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
-
-question_push_medium= QuestionInstance(name="q_push_medium", fact=fact_push, explanations=explanations_push_medium, rule=push_rule, 
-                                       classes_var=class_variables_final_push, template_dict=template_dict_push, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
-
-question_push_hard = QuestionInstance(name="q_push_hard", fact=fact_push, explanations=explanations_push_hard, rule=push_rule, 
-                                      classes_var=class_variables_final_push, template_dict=template_dict_push, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
+# gt_push_hard = "The __Agent__ can push the __Object__ because on one hand it has the pushing capability through having at least one gripper which \
+#                   is also a rigid end effector and that doesn't hold anything, thanks to its __Gripper__. On the other hand, the __Object__ has the \
+#                   disposition of being pushable because it has some __Wheel__ which is a wheel, on a rollable surface and unblocked. \
+#                   Moreover the __Object__ is approachable by the __Agent__ because it is on a table that is in a safe area, which is within the moving range of the __Agent__."

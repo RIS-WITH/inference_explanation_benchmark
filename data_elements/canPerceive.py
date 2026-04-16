@@ -1,211 +1,97 @@
-from data_elements.questions import QuestionInstance
-# ====================== canPerceive ===================
+from data_elements.QuestionManager import QuestionRule, QuestionManager
+from data_elements.VariableManager import VariableManager
+from data_elements.Explanation import AffordanceBase, ClassExpression, ClassExpressionExplanation
 
-explanation_robot_capa = [
-                           "pepper|Type|Robot",
-                           "Robot|SubClassOf|Agent",
-                           "pepper|hasCapability|pepper_capa"
-                         ]
+# ====================== Rule ===================
 
-explanation_object_disp = [
-                            "cube_1|Type|Cube",
-                            "Cube|SubClassOf|Object",
-                            "cube_1|hasDisposition|cube_1_disp"
-                          ]
+perceive_rule = QuestionRule(property = "canPerceive",
+                             rule = "Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o),\
+                                     hasDisposition(?o, ?d), PerceivingDisposition(?d),\
+                                     isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g),\
+                                     hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) \
+                                     -> canPerceive(?a, ?o)",
+                             concepts = ['perceiving', 'perceivable', 'visible', 'camera range', 'object_distance', 'can perceive'])
 
-explanation_force = [
-                    "realsense|Type|RGBCamera",
-                    "RGBCamera|SubClassOf|Camera",
-                    "pepper|hasComponent|realsense",
-                    "realsense|hasMaximumDistanceRange|integer#2",
-                    "cube_1|isAtDistance|integer#1",
-                    "greaterThan(integer#2,integer#1)"
-                    ]
+# ====================== Variables ===================
 
-# =============== Explanations why the class PerceivingDisposition is inferred =============
-perceivable_easy = "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))"
-perceivable_medium= "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true)))"
-perceivable_hard = "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))"
+variable_manager = VariableManager()
+variable_manager.addClassVariable('__Object__',
+                                  {'Book' : 'book',
+                                   'Box' : 'box',
+                                   'Luggage' : 'luggage',
+                                   'Appliance' : 'appliance',
+                                   'Cube' : 'cube',
+                                   'Table' : 'table',
+                                   'Plate' : 'plate'})
 
-explanations_perceivable_easy= [
-                                perceivable_easy,
-                                "cube_1_disp|isDispositionOf|cube_1",
-                                "cube_1|hasPart|qr_code_1",
-                                "qr_code_1|Type|QRCode",
-                                "QRCode|SubClassOf|ScannablePart"
-                                ]
+# ====================== Affordance ===================
 
-explanations_perceivable_medium = [
-                                perceivable_medium,
-                                "cube_1_disp|isDispositionOf|cube_1",
-                                "cube_1|hasPart|qr_code_1",
-                                "qr_code_1|Type|QRCode",
-                                "QRCode|SubClassOf|ScannablePart",
-                                "qr_code_1|isRegistered|boolean#true"
-                                ]
+affordance = AffordanceBase(capa=None, # Use the default capability
+                            disp=None, # Use the default disposition
+                            match=[
+                                  "__camera__|Type|__Camera__",
+                                  "__Camera__|SubClassOf|Camera",
+                                  "__agent__|hasComponent|__camera__",
+                                  "__camera__|hasMaximumDistanceRange|integer#2",
+                                  "__object__|isAtDistance|integer#1",
+                                  "greaterThan(integer#2,integer#1)"
+                                  ])
 
-explanations_perceivable_hard = [
-                                perceivable_hard,
-                                "cube_1_disp|isDispositionOf|cube_1",
-                                "cube_1|hasPart|qr_code_1",
-                                "qr_code_1|Type|QRCode",
-                                "QRCode|SubClassOf|ScannablePart",
-                                "qr_code_1|isRegistered|boolean#true",
-                                "qr_code_1|isVisible|boolean#true"
-                            ]
+# =============== Disposition explanation =============
+disposition_expression = ClassExpression(easy= "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some ScannablePart))",
+                                         medium= "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true)))",
+                                         hard= "PerceivingDisposition|EquivalentTo|(isDispositionOf some (hasPart some (ScannablePart and (isRegistered value boolean#true) and (isVisible value boolean#true)))")
 
-# =============== Explanations why the class PerceivingCapability is inferred =============
-perceiving_easy = "PerceivingCapability|SubClassOf|(isCapabilityOf some (hasComponent some Camera)"
-perceiving_medium= "PerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some (Camera and (isActive value boolean#true))"
-perceiving_hard = "PerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))"
+diposition_explanation = ClassExpressionExplanation(disposition_expression,
+                                                    easy=["__object_disp__|isDispositionOf|__object__",
+                                                          "__object__|hasPart|__scannable_part__",
+                                                          "__scannable_part__|Type|__ScanablePart__",
+                                                          "__ScanablePart__|SubClassOf|ScannablePart"],
+                                                    medium=["__scannable_part__|isRegistered|boolean#true"],
+                                                    hard=["__scannable_part__|isVisible|boolean#true"],
+                                                    concatenate=True)
 
-explanations_perceiving_easy= [
-                                perceiving_easy,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasComponent|realsense",
-                                "realsense|Type|RGBCamera",
-                                "RGBCamera|SubClassOf|Camera"
-                                ]
+# =============== Capability Explanation =============
+capability_expression = ClassExpression(easy= "PerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some Camera)",
+                                        medium= "PerceivingCapability|EquivalentTo|(isCapabilityOf some (hasComponent some (Camera and (isActive value boolean#true))",
+                                        hard= "PerceivingCapability|EquivalentTo|(isCapabilityOf some ((hasComponent some (Camera and (isActive value boolean#true)) and (hasComponent some ScanCodeDetectionAlgo))")
 
-explanations_perceiving_medium = [
-                                perceiving_medium,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasComponent|realsense",
-                                "realsense|Type|RGBCamera",
-                                "RGBCamera|SubClassOf|Camera",
-                                "realsense|isActive|boolean#true"
-                                ]
+capability_explanation = ClassExpressionExplanation(capability_expression,
+                                                    easy=["__agent_capa__|isCapabilityOf|__agent__",
+                                                          "__agent__|hasComponent|__camera__",
+                                                          "__camera__|Type|__Camera__",
+                                                          "__Camera__|SubClassOf|Camera"],
+                                                    medium=["__camera__|isActive|boolean#true"],
+                                                    hard=["__agent__|hasComponent|__algo__",
+                                                          "__algo__|Type|ScanCodeDetectionAlgo"],
+                                                    concatenate=True)
 
-explanations_perceiving_hard = [
-                                perceiving_hard,
-                                "pepper_capa|isCapabilityOf|pepper",
-                                "pepper|hasComponent|realsense",
-                                "realsense|Type|RGBCamera",
-                                "RGBCamera|SubClassOf|Camera",
-                                "realsense|isActive|boolean#true",
-                                "pepper|hasComponent|ar_track_alvar",
-                                "ar_track_alvar|Type|ScanCodeDetectionAlgo"
-                                ]
+# =============== Property Explanation =============
+property_expression = ClassExpression(easy= "", # cube isVisibleBy agent
+                                      medium= "(hasScannableCode o isInFrontOf)|SubPropertyOf|isVisibleBy", # box hasScannableCode __scannable_part__ isInFrontOf agent
+                                      hard= "(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy") # box hasScannableCode __scannable_part__ isInFrontOf camera isCameraOf __agent__
 
-# =============== Explanations why the property isApproachableBy exists =============
-object_perceive_available_easy = "isVisibleBy" # cube isVisibleBy agent
-object_perceive_available_medium = "(hasScannableCode o isInFrontOf)|SubPropertyOf|isVisibleBy" # box hasScannableCode qr_code_1 isInFrontOf agent
-object_perceive_available_hard = "(hasScannableCode o isInFrontOf o isCameraOf)|SubPropertyOf|isVisibleBy" # box hasScannableCode qr_code_1 isInFrontOf camera isCameraOf pepper
+property_explanation = ClassExpressionExplanation(property_expression,
+                                                  easy= ["__object__|isVisibleBy|__agent__"],
+                                                  medium= [],
+                                                  hard=[],
+                                                  concatenate = True)
 
-explanations_object_perceive_easy = ["cube_1|isVisibleBy|pepper"]
+property_explanation.medium = ["__object__|hasScannableCode|__scannable_part__",
+                               "__scannable_part__|isInFrontOf|__agent__"]
 
-explanations_object_perceive_medium = [
-                                object_perceive_available_medium,
-                                "cube_1|hasScannableCode|qr_code_1",
-                                "qr_code_1|isInFrontOf|pepper"
-                                ]
+property_explanation.hard = ["__object__|hasScannableCode|__scannable_part__",
+                             "__scannable_part__|isInFrontOf|__camera__",
+                             "__camera__|isCameraOf|__agent__"]
 
-explanations_object_perceive_hard = [
-                                object_perceive_available_hard,
-                                "cube_1|hasScannableCode|qr_code_1",
-                                "qr_code_1|isInFrontOf|realsense",
-                                "realsense|isCameraOf|pepper",
-                                ]
+# =============== QuestionManager =============
 
-# Concatenate the explanations according to the complexity level (easy, medium, hard)
-explanations_perceive_easy = explanation_robot_capa + explanations_perceiving_easy + explanation_object_disp + explanations_perceivable_easy + explanations_object_perceive_easy + explanation_force
-explanations_perceive_medium = explanation_robot_capa + explanations_perceiving_medium + explanation_object_disp + explanations_perceivable_medium + explanations_object_perceive_medium + explanation_force
-explanations_perceive_hard= explanation_robot_capa + explanations_perceiving_hard + explanation_object_disp + explanations_perceivable_hard + explanations_object_perceive_hard + explanation_force
-
-# print("easy : ", explanations_perceive_easy)
-# print("medium : ", explanations_perceive_medium)
-# print("hard : ", explanations_perceive_hard)
-
-fact_perceive = "pepper|canPerceive|cube_1"
-
-template_dict_perceive = {'pepper': '__var0__',  
-                    'cube_1': '__var1__',
-                    'cube_1_disp': '__var2__',
-                    'pepper_capa': '__var3__',
-                    'realsense' : '__var4__',
-                    'qr_code_1' : '__var5__',
-                    'table_1' : '__var6__',
-                    'ar_track_alvar' : '__var7__',
-                    'Robot': '__agent__',
-                    'RGBCamera': '__component__',
-                    'Cube': '__object__',
-                    'QRCode': '__part__'
-                    }
-
-new_objects = ["Book", "Box", "Luggage", "Appliance", "Cube", "Table"]
-class VariableConcept:
-  def __init__(self, concept, label):
-    self.concept_ = concept
-    self.label_ = label
-
-object_list = [
-              VariableConcept('Book', 'book'), 
-              VariableConcept('Box', 'box'), 
-              VariableConcept('Luggage', 'luggage'), 
-              VariableConcept('Appliance', 'appliance'), 
-              VariableConcept('Cube', 'cube'),
-              VariableConcept('Table', 'table'),
-              VariableConcept('Plate', 'plate')
-              ]
-
-part_list = [
-              VariableConcept('QRCode', 'qr code'), 
-              VariableConcept('2DBarcode', '2d barcode'), 
-              VariableConcept('QRTag', 'qr tag'), 
-              VariableConcept('ScanTag', 'scan tag')
-              ]
-
-agent_list = [
-              VariableConcept('Robot', 'robot'), 
-              VariableConcept('Pr2', 'pr2'), 
-              VariableConcept('Pepper', 'pepper'), 
-              VariableConcept('Tiago', 'tiago')
-              ]
-
-component_list = [
-              VariableConcept('RealsenseL515', 'realsense l515'), 
-              VariableConcept('RGBCamera', 'rgb camera'), 
-              VariableConcept('Webcam', 'webcam'),
-              VariableConcept('KinectV2', 'kinect v2'),
-              VariableConcept('RealsenseD435i', 'realsense d435i')
-              ]
-
-class_variables_final_perceive = { 
-                    "__object__" :  object_list,
-                    "__part__" :    part_list,
-                    "__agent__" :   agent_list,
-                    "__component__" : component_list
-                     }
-
-perceive_rule = "-Rule : Agent(?a), hasCapability(?a, ?c), PerceivingCapability(?c), Object(?o), hasDisposition(?o, ?d), PerceivingDisposition(?d),\
-                 isVisibleBy(?o,?a), Camera(?g), hasComponent(?a,?g), hasMaximumDistanceRange(?g,?w1), isAtDistance(?o,?w2), greaterThan(?w1,?w2) -> canPerceive(?a, ?o)."
-
-concepts_rule = ['perceiving', 'perceivable', 'visible', 'camera range', 'object_distance', 'can perceive']
-
-concept_easy = {
-                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
-                'disp' : ['perceivable disposition', "1scannable_part"], 
-                'capa': ['perceiving capability', '1camera'], 
-                'property' : ['object_visible_by_robot'],
-                'constraint' : ['camera range', 'object_distance']
-                }
-
-
-concept_medium = {
-                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
-                'disp' : ['perceivable disposition',"1scannable_part", "scannable_part_registered"], 
-                'capa': ['perceiving capability', '1camera', 'camera_active'], 
-                'property' : ['object_visible_by_robot', 'object_has_scannable_code', 'code_in_front_of_camera'],
-                'constraint' : ['camera range', 'object_distance']
-                }
-
-concept_hard = {
-                'rule' : ['can perceive', '__robot__', '__camera__', '__object__', '__scannable_code__'],
-                'disp' : ['perceivable disposition', "1scannable_part", "scannable_part_registered", 'scannable_part_visible'],
-                'capa': ['perceiving capability', '1camera', 'camera_active', 'scan_detection_algo' ], 
-                'property' : ['object_visible_by_robot', 'object_has_scannable_code', 'code_in_front_of_camera', 'camera_of_robot'],
-                'constraint' : ['camera range', 'object_distance']
-                }
+perceive_manager = QuestionManager(perceive_rule,
+                                   variable_manager,
+                                   affordance,
+                                   capability_explanation,
+                                   diposition_explanation,
+                                   property_explanation)
 
 #easy
 # "concepts" : [
@@ -234,27 +120,15 @@ concept_hard = {
 #   "camera range", "object_distance"   
 # ]
 
-# gt_perceive_easy = "The __agent__ can perceive the __object__ because on one hand it has the perceiving capability through its __component__ which is a camera. \
-#                  On the other hand, the __object__ has the disposition of being perceivable because it has a __part__, a scannable code. \
-#                  Moreover the __object__ is visible by the __agent__."
+# gt_perceive_easy = "The __Agent__ can perceive the __Object__ because on one hand it has the perceiving capability through its __Camera__ which is a camera. \
+#                  On the other hand, the __Object__ has the disposition of being perceivable because it has a __ScanablePart__, a scannable code. \
+#                  Moreover the __Object__ is visible by the __Agent__."
 
-# gt_perceive_medium = "The __agent__ can perceive the __object__ because on one hand it has the perceiving capability through its __component__, \
-#                 a camera, which is active. On the other hand, the __object__ has the disposition of being perceivable because it has a __part__, a scannable code\
-#                 which is registered. Moreover the __object__ is visible by the  because it has a scannable qr code which is in front of the __agent__."
+# gt_perceive_medium = "The __Agent__ can perceive the __Object__ because on one hand it has the perceiving capability through its __Camera__, \
+#                 a camera, which is active. On the other hand, the __Object__ has the disposition of being perceivable because it has a __ScanablePart__, a scannable code\
+#                 which is registered. Moreover the __Object__ is visible by the  because it has a scannable qr code which is in front of the __Agent__."
                  
-# gt_perceive_hard = "The __agent__ can perceive the __object__ because on one hand it has the perceiving capability through its __component__, \
-#                 a camera, which is active, and also being equipped with a detection algorithm for scannable code. On the other hand, the __object__ has the \
-#                 disposition of being perceivable because it has a __part__, a scannable code, which is registered and visible.\
-#                 Moreover the __object__ is visible by the  because it has a scannable qr code which is in front of the camera of the __agent__."
-                            
-question_perceive_easy = QuestionInstance(name="q_perceive_easy", fact=fact_perceive, explanations=explanations_perceive_easy, rule=perceive_rule, 
-                                          classes_var=class_variables_final_perceive, template_dict=template_dict_perceive, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
-
-question_perceive_medium= QuestionInstance(name="q_perceive_medium", fact=fact_perceive, explanations=explanations_perceive_medium, rule=perceive_rule,
-                                           classes_var=class_variables_final_perceive, template_dict=template_dict_perceive, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
-
-question_perceive_hard = QuestionInstance(name="q_perceive_hard", fact=fact_perceive, explanations=explanations_perceive_hard, rule=perceive_rule, 
-                                          classes_var=class_variables_final_perceive, template_dict=template_dict_perceive, ground_truth_sentence=None,
-                                      concept_rule=concepts_rule)
+# gt_perceive_hard = "The __Agent__ can perceive the __Object__ because on one hand it has the perceiving capability through its __Camera__, \
+#                 a camera, which is active, and also being equipped with a detection algorithm for scannable code. On the other hand, the __Object__ has the \
+#                 disposition of being perceivable because it has a __ScanablePart__, a scannable code, which is registered and visible.\
+#                 Moreover the __Object__ is visible by the  because it has a scannable qr code which is in front of the camera of the __Agent__."
