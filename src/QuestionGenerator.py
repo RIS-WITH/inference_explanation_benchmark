@@ -3,7 +3,7 @@ import json
 
 class QuestionGenerator:
   def __init__(self, path, base_prompt, examples, questions):
-    self.path = path + "/questions"
+    self.path = path / "questions"
     self.base_prompt = " ".join(base_prompt.split())
     self.examples = examples
     self.questions = questions
@@ -12,7 +12,7 @@ class QuestionGenerator:
 
   def generateBaseline(self):
     variation = "baseline"
-    self._createDirectory(self.path + "/" + variation)
+    self._createDirectory(self.path / variation)
 
     baseline_prompt = self.getBaselinePrompt(False)
 
@@ -27,7 +27,7 @@ class QuestionGenerator:
 
   def generateLabeled(self):
     variation = "labeled"
-    self._createDirectory(self.path + "/" + variation)
+    self._createDirectory(self.path / variation)
 
     baseline_prompt = self.getBaselinePrompt(True)
 
@@ -122,7 +122,8 @@ class QuestionGenerator:
   def _saveQestionSet(self, question_set, variation):
     json_object = json.dumps(question_set, indent=2)
 
-    with open(self.path + '/' + variation + '/' + question_set["id"] + '_' + variation + '.json', "w") as file:
+    file_name = question_set["id"] + '_' + variation + '.json'
+    with open(self.path / variation / file_name, "w") as file:
       file.write(json_object)
 
   def _createDirectory(self, directory):

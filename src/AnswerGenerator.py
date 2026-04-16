@@ -5,18 +5,18 @@ from src.OllamaHandler import OllamaHandler
 
 class AnswerGenerator:
   def __init__(self, path):
-    self.questions_path = path + "/questions"
-    self.answers_path = path + "/answers"
+    self.questions_path = path / "questions"
+    self.answers_path = path / "answers"
     self.conditions = []
 
     self._createDirectory(self.answers_path)
     self._listConditions()
 
   def generate(self, ollama, model_name):
-     model_answer_path = self.answers_path + "/" + model_name
+     model_answer_path = self.answers_path / model_name
      self._createDirectory(model_answer_path)
      for condition in self.conditions:
-        condition_answer_path = model_answer_path + "/" + condition
+        condition_answer_path = model_answer_path / condition
         condition_question_paths = self._getConditionQuestionPaths(condition)
 
         self._createDirectory(condition_answer_path)
@@ -26,7 +26,7 @@ class AnswerGenerator:
 
           file_name = answer['id'] + "_" + condition + ".json"
 
-          with open(condition_answer_path + "/" + file_name, 'w') as outfile:
+          with open(condition_answer_path / file_name, 'w') as outfile:
             json.dump(answer, outfile, indent = 2)
 
   def _answerQuestions(self, question_path, ollama):
@@ -56,9 +56,10 @@ class AnswerGenerator:
       formatted_question.append(self._buildCotElem("user", question["question"]))
       formatted_question.append(self._buildCotElem("assistant", "A: Let's translate. translation is "))
 
-      answer = ollama.call(formatted_question)
+      answer, duration = ollama.call(formatted_question)
 
       formatted_answer["answers"][-1]['answer'] = answer
+      formatted_answer["answers"][-1]['duration'] = duration
 
       print(answer)
     
@@ -83,7 +84,7 @@ class AnswerGenerator:
         self.conditions.append(file)
 
   def _getConditionQuestionPaths(self, condition_name):
-    path = self.questions_path + "/" + condition_name
+    path = self.questions_path / condition_name
     result = []
     files = os.listdir(path)
     for file in files:

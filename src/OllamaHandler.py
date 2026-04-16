@@ -19,5 +19,9 @@ class OllamaHandler:
 			else:
 				print("question is : ", question[-2]['content'])
 				print("answer is : ", response['message']['content'])
+
+		prompt_eval_duration = response['prompt_eval_duration']
+		eval_duration = response['eval_duration']
+		total_duration = (prompt_eval_duration + eval_duration) / 1000.
 		
-		return response['message']['content']
+		return (response['message']['content'], total_duration)

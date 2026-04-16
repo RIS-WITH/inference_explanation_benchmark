@@ -7,6 +7,7 @@ from data_elements.examples import question_1, question_2, question_3, question_
 from data_elements.prompts import prompt_without_ontology_explanations
 
 from src.QuestionGenerator import QuestionGenerator
+import config
 
 if __name__ == '__main__':
 
@@ -18,8 +19,7 @@ if __name__ == '__main__':
     for manager in question_managers:
         manager.generate(integrate_class_expressions_in_explanation=False, count=20)
     
-    saving_path = "/home/gsarthou/Documents/LAAS/Code/inference_explanation_benchmark/dataset_2026"
-    generator = QuestionGenerator(saving_path,
+    generator = QuestionGenerator(config.DATASET_DIR,
                                   prompt_without_ontology_explanations,
                                   examples_list,
                                   question_managers)
